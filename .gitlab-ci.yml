@@ -1,0 +1,25 @@
+image: node:17.1.0
+
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+
+before_script:
+  - apt-get update -qq && apt-get install
+
+stages:
+  - test
+
+test:
+  stage: test
+  before_script:
+    - yarn config set cache-folder .yarn
+    - yarn install --frozen-lockfile
+  script:
+    - npx nyc --reporter cobertura jest --coverage
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
