@@ -54,5 +54,5 @@ import Button from "@redapy/hotels-components-casbah/Button";
 or
 
 ```
-import {Button, Dropdown} from "@redapy/hotels-components-casbah/";
+import {Button, Dropdown} from "@redapy/hotels-components-casbah";
 ```
