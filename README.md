@@ -1,12 +1,7 @@
+
+![hotel-ui logo](https://user-images.githubusercontent.com/9310597/186230450-0c8117ca-05d9-4750-9a44-d121d528813d.png)
+
 ## Introduction
-
----
-
-<img src='https://res.cloudinary.com/casbah/image/upload/v1660900235/logos/1660584751398_dpb1ll.png' alt='Hotel UI logo' width="300" style="margin-left: 600px; margin-top:20px;" >
-
-<h1 style="margin-left: 720px; border-bottom: 0px;">Hotel UI</h1>
-
----
 
 - **Hotel UI** is a NextJS components Library that provides you with modern, reusable, fully tested UIs that follow accessibility best practices to help you build your amazing Hotel website.
 - You can check the different components, or even ready sections, that are available at [hotels-storybook](https://hotels-storybook.vercel.app/].)
