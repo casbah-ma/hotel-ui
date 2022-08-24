@@ -16,7 +16,7 @@ const headerProps = {
 
 const paragraphProps = {
   description:
-    'The Spa Royal Mansour is the place dedicated to the world of well-being in all its excellence; thus, it offers the best skincare brands designed to meet the specific needs of each and every one. Get ready to be swept',
+    'The Spa Hotel UI is the place dedicated to the world of well-being in all its excellence; thus, it offers the best skincare brands designed to meet the specific needs of each and every one. Get ready to be swept',
   fontSize: 'sm',
 }
 

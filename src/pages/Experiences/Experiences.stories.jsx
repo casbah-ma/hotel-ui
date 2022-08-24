@@ -21,7 +21,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'What could be more elegant than a beautiful',
     },
-    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Royal Mansour offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
+    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Hotel UI offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
   },
   blogProps1: {
     ...BlogStories.ImageOnRight.args,
@@ -38,7 +38,7 @@ Default.args = {
       ...BlogStories.ImageOnLeft.args.title,
       title: 'The Hammam: the quintessence of well-being',
     },
-    text: 'As the true signature treatment of the Royal Mansour Spa, the hammam plunges you in an immersive traditional Moroccan experience. Steam, beauty rituals, gentle exfoliation, ceremonial massage, ghassoul wrap and floral water sprays will take you away into a complete state of beautification.',
+    text: 'As the true signature treatment of the Hotel UI Spa, the hammam plunges you in an immersive traditional Moroccan experience. Steam, beauty rituals, gentle exfoliation, ceremonial massage, ghassoul wrap and floral water sprays will take you away into a complete state of beautification.',
     actionProps: { ...ButtonStories.Dark.args },
   },
 }

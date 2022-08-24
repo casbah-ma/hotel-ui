@@ -8,7 +8,7 @@ const props = {
   buttonProps: { ...Button.Primary.args, color: 'primary', bgColor: 'primary' },
   onDatesChange: () => {},
   onGuestChange: () => {},
-  baseUrl: 'https://dixil-garden-tanger-malabata.hotelrunner.com/',
+  baseUrl: 'https://Hotel UI-garden-tanger-malabata.hotelrunner.com/',
 }
 
 export default {

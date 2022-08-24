@@ -18,7 +18,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'Important Information',
     },
-    text: "A signature bedding imagined and designed exclusively for Dixil. The bed frames and mattresses are filled with sustainably sourced materials and guarantee an unrivaled comfort for Dixil's guests.",
+    text: "A signature bedding imagined and designed exclusively for Hotel UI. The bed frames and mattresses are filled with sustainably sourced materials and guarantee an unrivaled comfort for Hotel UI's guests.",
   },
   accordionProps: { ...AccordionStories.Default.args },
 }

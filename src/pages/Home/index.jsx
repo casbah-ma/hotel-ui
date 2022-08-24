@@ -51,7 +51,7 @@ const Home = function ({
             label: 'Check Availability',
             variant: 'primary',
           }}
-          baseUrl="https://dixil-garden-tanger-malabata.hotelrunner.com/"
+          baseUrl="https://Hotel UI-garden-tanger-malabata.hotelrunner.com/"
         />
       </Hero>
       <Spacing mt="lg" mb="lg" pl="md" pr="lg">
