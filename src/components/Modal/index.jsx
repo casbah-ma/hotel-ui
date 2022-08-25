@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import { XIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
 import { CloseButton } from './Modal.styles'
 
 function Modal({ children, isOpen, closeModal }) {
@@ -24,7 +24,7 @@ function Modal({ children, isOpen, closeModal }) {
           leaveTo="opacity-0 scale-95 "
         >
           <CloseButton onClick={closeModal}>
-            <XIcon />
+            <XMarkIcon />
           </CloseButton>
         </Transition.Child>
         <Transition.Child
