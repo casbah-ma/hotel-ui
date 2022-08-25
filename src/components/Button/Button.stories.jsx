@@ -2,8 +2,8 @@ import Button from '.'
 //decorator
 import Centre from '@/components/Centre'
 //icons
-import { PlayIcon } from '@heroicons/react/solid'
-import { PlusSmIcon } from '@heroicons/react/solid'
+import { PlayIcon } from '@heroicons/react/24/solid'
+import { PlusSmIcon } from '@heroicons/react/24/solid'
 //theming
 import { buttonsVariant } from './Button.styles'
 

@@ -2,7 +2,7 @@
 import Service from '.'
 import Centre from '@/components/Centre'
 //icons
-import { PlusIcon } from '@heroicons/react/solid'
+import { PlusIcon } from '@heroicons/react/24/solid'
 
 export default {
   title: 'Components/Service',

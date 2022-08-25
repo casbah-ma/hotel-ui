@@ -1,4 +1,3 @@
-import { getImage } from '@/styles/helpers'
 import tw, { styled } from 'twin.macro'
 
 export const HeroContainer = styled.div`

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment } from 'react'
-import { XIcon } from '@heroicons/react/outline'
+import { XIcon } from '@heroicons/react/24/outline'
 import { CloseButton } from './Modal.styles'
 
 function Modal({ children, isOpen, closeModal }) {

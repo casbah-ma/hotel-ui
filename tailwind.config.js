@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         primary: ['DAHILA', 'sans-serif'],
         secondary: ['Raleway', 'sans-serif'],
+        indie: ['Indie Flower', 'cursive'],
       },
       colors: {
         primary: '#000000',

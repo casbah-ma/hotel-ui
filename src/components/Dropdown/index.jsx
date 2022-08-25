@@ -1,6 +1,6 @@
 import { isEmpty } from '@/helpers/utils'
 import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
 import { Fragment, useState } from 'react'
 import Label from '@/components/Label'
