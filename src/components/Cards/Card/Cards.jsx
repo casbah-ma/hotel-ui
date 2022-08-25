@@ -13,7 +13,7 @@ export const DefaultCard = function ({ ImgUrl, direction, alt }) {
     <StyledCard direction={direction}>
       <CardImage direction={direction}>
         <Image
-          className="rounded-lg"
+          className="radius-lg"
           src={ImgUrl}
           width={direction === 'vertical' ? 400 : 542}
           height={direction === 'vertical' ? 480 : 342}
@@ -32,7 +32,7 @@ export const HeaderCard = function ({ header, ImgUrl, direction }) {
     <StyledCard direction={direction}>
       <CardImage direction={direction}>
         <Image
-          className="rounded-lg"
+          className="radius-lg"
           src={ImgUrl}
           width={direction === 'vertical' ? 400 : 542}
           height={direction === 'vertical' ? 480 : 342}
@@ -55,7 +55,7 @@ export const LinkCard = function ({ linkCard, ImgUrl, direction }) {
       <StyledCard data-testid="category-card" direction={direction}>
         <CardImage direction={direction}>
           <Image
-            className="rounded-lg"
+            className="radius-lg"
             src={ImgUrl}
             width={direction === 'vertical' ? 400 : 542}
             height={direction === 'vertical' ? 480 : 342}

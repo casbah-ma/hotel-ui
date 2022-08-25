@@ -3,33 +3,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'DAHILA';
-  src: url('/fonts/Dahila/dahlia-regular.otf');
-}
-
-@layer {
-  html,
-  body {
-    font-family: 'Raleway';
-    padding: 0;
-  }
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  font-size: 0.9rem !important;
-}
-
-@layer components {
-  .swiper-button-next,
-  .swiper-button-prev {
-    @apply invisible group-hover:visible bg-white rounded-full w-20 h-14 p-2 after:font-secondary after:text-black  cursor-pointer;
-  }
-}
-@layer base {
-  :root {
-    /* For rgba(255, 115, 179, <alpha-value>) */
-    --color-grey: 250, 250, 250;
-  }
-}

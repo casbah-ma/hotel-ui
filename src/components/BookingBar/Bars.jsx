@@ -3,10 +3,6 @@ import {
   MobileContainer,
   MobileSection,
   Column,
-  PanelClassName,
-  DesktopAction,
-  PanelMobileClassName,
-  guestPanelClassName,
 } from './BookingBar.styles'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import Button from '@/components/Button'
@@ -53,7 +49,7 @@ export const Desktop = function ({
   }
 
   return (
-    <Popover.Group className="relative">
+    <Popover.Group position="relative">
       <DesktopContainer data-testid="booking-bar">
         <Column>
           <Label role="label" labelText="Check in - Check out" fontSize="sm" />
@@ -72,14 +68,14 @@ export const Desktop = function ({
                 }}
               />
             </Popover.Button>
-            <Popover.Panel className={PanelClassName}>
+            <Popover.Panel className="panel">
               <DatePicker dates={dates} onDatesChange={onDatesChanges} />
             </Popover.Panel>
           </Popover>
         </Column>
         <Column>
           <Label role="label" labelText="Guests" fontSize="sm" />
-          <Popover className="z-10">
+          <Popover z-index="10">
             <Popover.Button ref={guestbtn}>
               <Button
                 as="div"
@@ -90,7 +86,7 @@ export const Desktop = function ({
                 }}
               />
             </Popover.Button>
-            <Popover.Panel className={PanelClassName}>
+            <Popover.Panel className="panel">
               <Guests
                 title="Guests :"
                 guestValues={guestValues}
@@ -100,7 +96,7 @@ export const Desktop = function ({
             </Popover.Panel>
           </Popover>
         </Column>
-        <div className={DesktopAction}>
+        <div className="desktop-action">
           <Button
             {...buttonProps}
             {...{ label: 'Check Availability' }}
@@ -138,7 +134,7 @@ export const Mobile = function ({
   return (
     <MobileContainer data-testid="booking-bar">
       {isOpen.dates && (
-        <div className={PanelMobileClassName}>
+        <div className="panel-mobile">
           <DatePicker
             dates={dates}
             onDatesChange={onDatesChanges}
@@ -166,7 +162,7 @@ export const Mobile = function ({
       </MobileSection>
 
       {isOpen.guests && (
-        <div className={guestPanelClassName}>
+        <div className="guest-panel">
           <Guests
             guestValues={guestValues}
             buttonProps={buttonProps}
@@ -191,7 +187,7 @@ export const Mobile = function ({
           />
         </Column>
       </MobileSection>
-      <div className="mt-6">
+      <div margin-top="1.5rem">
         <Button
           {...buttonProps}
           {...{ label: 'Check Availability' }}

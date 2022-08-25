@@ -54,7 +54,7 @@ function Footer({
     !isEmpty(inputValue.email) && alert('Thank you for subscribing!')
   }
   return (
-    <CloudinaryContext cloudName="casbah" className="w-full">
+    <CloudinaryContext cloudName="casbah" width="100%">
       <FooterContainer
         data-testid="footer-container"
         color={color}

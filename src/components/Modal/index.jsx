@@ -10,7 +10,7 @@ function Modal({ children, isOpen, closeModal }) {
       <Dialog
         data-testid="modal-container"
         as="div"
-        className="fixed bg-black/25 z-10 inset-0"
+        className="dialog"
         onClose={closeModal}
       >
         <Transition.Child
@@ -36,9 +36,7 @@ function Modal({ children, isOpen, closeModal }) {
           leaveFrom="opacity-100 translate-x-0"
           leaveTo="opacity-0 -translate-x-80"
         >
-          <Dialog.Panel className="w-3/4 h-screen max-w-md transform overflow-hidden bg-white p-6 text-left align-middle transition-all">
-            {children}
-          </Dialog.Panel>
+          <Dialog.Panel className="dialog-panel">{children}</Dialog.Panel>
         </Transition.Child>
       </Dialog>
     </Transition>

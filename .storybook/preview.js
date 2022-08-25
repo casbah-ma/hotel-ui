@@ -4,11 +4,11 @@ import * as NextImage from 'next/image'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { WithNextRouter } from 'storybook-addon-next-router/dist/decorators'
 //styles
-import '../src/styles/global.css'
+import '@/styles/global.css'
 import '@/styles/datepicker.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import { GlobalStyles } from 'twin.macro'
+import GlobalStyles from '@/components/GlobalStyles'
 import HotelUiProvider from '@/components/HotelUiProvider'
 import theme from '../theme'
 //

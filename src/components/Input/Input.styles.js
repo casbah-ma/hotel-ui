@@ -20,7 +20,7 @@ export const StyledInput = styled.input(
 )
 
 export const InputButton = styled.button(
-  ({ disabled, variant, color, bgColor }) => [
+  ({ disabled, variant, color, bgColor, theme }) => [
     //base style
     tw`absolute text-black w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem] border border-gray-700 
     font-secondary font-semibold text-sm

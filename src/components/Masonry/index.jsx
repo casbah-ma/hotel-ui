@@ -21,7 +21,7 @@ function Masonry({ images, barProps }) {
             <MasonryItem key={index} size={image.size}>
               <StyledImage>
                 <Image
-                  className="rounded-lg"
+                  className="radius-lg"
                   role="img"
                   src={image.imgUrl}
                   alt={image.alt}
