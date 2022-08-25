@@ -3,7 +3,7 @@ name: Quality
 on: push
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
@@ -18,10 +18,3 @@ jobs:
         run: npm run test:coverage
         env:
           CI: true
-      - name: Generate build
-        run: npm run build-storybook
-      - name: Share artifact inside workflow
-        uses: actions/upload-artifact@v3
-        with:
-          name: hotel-ui-artifact
-          path: build
