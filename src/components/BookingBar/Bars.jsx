@@ -49,7 +49,7 @@ export const Desktop = function ({
   }
 
   return (
-    <Popover.Group position="relative">
+    <Popover.Group style={{ position: 'relative' }}>
       <DesktopContainer data-testid="booking-bar">
         <Column>
           <Label role="label" labelText="Check in - Check out" fontSize="sm" />
@@ -75,7 +75,7 @@ export const Desktop = function ({
         </Column>
         <Column>
           <Label role="label" labelText="Guests" fontSize="sm" />
-          <Popover z-index="10">
+          <Popover style={{ zIndex: '10' }}>
             <Popover.Button ref={guestbtn}>
               <Button
                 as="div"
@@ -187,7 +187,7 @@ export const Mobile = function ({
           />
         </Column>
       </MobileSection>
-      <div margin-top="1.5rem">
+      <div style={{ marginTop: '1.5rem' }}>
         <Button
           {...buttonProps}
           {...{ label: 'Check Availability' }}
