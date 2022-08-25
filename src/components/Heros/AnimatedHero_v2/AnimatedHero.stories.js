@@ -15,6 +15,7 @@ Example1.args = {
   title: 'Feel the vibrancy',
   subtitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+  clickTitle: true,
   children: (
     <Button
       bgColor="#21B67C"
