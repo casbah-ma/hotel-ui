@@ -18,7 +18,7 @@ export const AnimatedHeroContent = styled.div((props) => [
 ])
 
 export const AnimatedHeroButton = styled.div((props) => [
-  tw`animate-bounce mt-16`,
+  tw`animate-bounce mt-14`,
   `animation: fadeInBottom 1.5s both;
     @keyframes fadeInBottom{
         0%{

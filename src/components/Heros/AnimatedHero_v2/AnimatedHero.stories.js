@@ -1,6 +1,6 @@
 import AnimatedHero_v2 from '.'
 import Button from '@/components/Button'
-import { PlayIcon } from '@heroicons/react/outline'
+import { PlayIcon } from '@heroicons/react/24/solid'
 
 export default {
   title: 'V2/Components/Heros/AnimatedHero_v2',
@@ -36,6 +36,7 @@ Example2.args = {
       bgColor="#21B67C"
       label="Check Availability"
       onClick={function noRefCheck() {}}
+      variant=""
     />
   ),
 }
