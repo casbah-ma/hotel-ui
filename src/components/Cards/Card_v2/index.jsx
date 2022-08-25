@@ -14,7 +14,7 @@ function Card_v2({ size, image, date, description }) {
     <CardContainer size={size}>
       <CardImageContainer>
         <Image
-          className="rounded-xl"
+          className="radius-xl"
           role="img"
           src={image}
           width={size === 'small' ? 340 : 593}
