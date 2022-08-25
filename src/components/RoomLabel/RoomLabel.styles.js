@@ -6,9 +6,11 @@ export const Container = styled.div(({ bgColor, borderColor, color }) => [
   tw`flex flex-col justify-center items-center rounded-lg
        max-w-min px-5 py-4 border-l-4 whitespace-nowrap`,
   //dynamic color
-  color ? `color: ${color};` : tw`text-primary`,
+  color && `color: ${color};`,
   //dynamic background color
-  bgColor ? `background-color: ${bgColor};` : tw`bg-tertiary`,
+  bgColor
+    ? `background-color: ${bgColor};`
+    : `background-color: ${theme.colors.primary};`,
   //dynamic border color
   ({ borderColor }) => borderColors[borderColor],
 ])

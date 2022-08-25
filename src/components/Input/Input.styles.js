@@ -22,13 +22,15 @@ export const StyledInput = styled.input(
 export const InputButton = styled.button(
   ({ disabled, variant, color, bgColor }) => [
     //base style
-    tw`absolute w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem] border border-gray-700 
+    tw`absolute text-black w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem] border border-gray-700 
     font-secondary font-semibold text-sm
     rounded-full max-w-[160px] min-w-min whitespace-nowrap
     `,
     //variants
-    color ? `color: ${color}` : tw`text-primary`,
-    bgColor ? `background-color: ${bgColor}` : tw`bg-secondary`,
+    color && `color: ${color}`,
+    bgColor
+      ? `background-color: ${bgColor}`
+      : `background-color: ${theme.colors.primary};`,
     disabled && tw`bg-gray-100`,
   ]
 )

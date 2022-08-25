@@ -9,10 +9,6 @@ export default {
       options: Object.keys(titleLeveles),
       control: { type: 'radio' },
     },
-    color: {
-      options: Object.keys(colors),
-      control: { type: 'radio' },
-    },
   },
 }
 
@@ -22,7 +18,6 @@ export const H1 = Template.bind({})
 H1.args = {
   title: 'Experience it all... vividly at Dixil Tangier!',
   level: '1',
-  color: 'primary',
 }
 
 export const H2 = Template.bind({})

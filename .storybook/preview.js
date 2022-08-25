@@ -1,12 +1,17 @@
+import 'react-dates/initialize'
 import * as NextImage from 'next/image'
+//Next router
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { WithNextRouter } from 'storybook-addon-next-router/dist/decorators'
-import 'react-dates/initialize'
+//styles
 import '../src/styles/global.css'
 import '@/styles/datepicker.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { GlobalStyles } from 'twin.macro'
+import HotelUiProvider from '@/components/HotelUiProvider'
+import theme from '../theme'
+//
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'twin.macro'
 
@@ -34,10 +39,10 @@ export const parameters = {
 export const decorators = [
   WithNextRouter,
   (Story) => (
-    <>
+    <HotelUiProvider theme={theme}>
       <GlobalStyles />
       <Story />
-    </>
+    </HotelUiProvider>
   ),
 ]
 
