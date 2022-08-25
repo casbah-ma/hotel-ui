@@ -1,4 +1,4 @@
-import { bgColors, borderColors } from '@/styles/theming'
+import { borderColors } from '@/styles/theming'
 import tw, { styled } from 'twin.macro'
 
 export const Container = styled.div(

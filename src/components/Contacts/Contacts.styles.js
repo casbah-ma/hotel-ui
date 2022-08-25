@@ -1,5 +1,6 @@
-import tw from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
-export const ContactsContainer = tw.div`w-full h-[23.75rem] bg-tertiary
-gap-8
-flex flex-col items-center justify-center`
+export const ContactsContainer = styled.div(({ theme }) => [
+  tw`w-full h-[23.75rem] gap-8 flex flex-col items-center justify-center`,
+  `background-color: ${theme.colors.tertiary};`,
+])

@@ -5,5 +5,7 @@ export const FlexWrapper = tw.div`
 `
 export const IconCircle = styled.div(({ circleBg }) => [
   tw`flex justify-center items-center py-[2.5rem] px-[2.5rem] rounded-full`,
-  circleBg ? `background-color: ${circleBg};` : tw`bg-tertiary`,
+  circleBg
+    ? `background-color: ${circleBg};`
+    : `background-color: ${theme.colors.tertiary};`,
 ])

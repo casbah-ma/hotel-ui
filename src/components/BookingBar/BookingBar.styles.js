@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 // Desktop Booking Bar Styles
 export const DesktopContainer = tw.section`
-        flex bg-primary h-20 md:w-[48rem] lg:w-[72rem] rounded-full text-secondary
+        flex bg-black h-20 md:w-[48rem] lg:w-[72rem] rounded-full text-white
         divide-x justify-center items-center p-2 lg:p-4 
     `
 export const Column = tw.div`
@@ -17,5 +17,5 @@ export const MobileContainer = tw.section`
      transition ease-in-out duration-75  
 `
 export const MobileSection = tw.section`
-    flex bg-primary h-16 w-full  rounded-full text-secondary
+    flex bg-black h-16 w-full  rounded-full text-white
     justify-center items-center mb-3 px-4`

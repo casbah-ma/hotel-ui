@@ -6,8 +6,11 @@ export const FooterContainer = styled.footer(({ color, bgColor }) => [
  px-5 lg:px-64 py-5  gap-y-10 flex flex-col items-center
  justify-between
 `,
-  color ? `color: ${color};` : tw`text-secondary`,
-  bgColor ? `background-color: ${bgColor};` : tw`bg-primary`,
+  color ? `color: ${color};` : tw`text-white`,
+  bgColor
+    ? `background-color: ${bgColor};`
+    : `background-color: ${theme.colors.primary};`,
+  ,
 ])
 
 export const InputContainer = tw.div`w-full flex flex-col items-center justify-center`

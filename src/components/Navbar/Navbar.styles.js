@@ -1,4 +1,3 @@
-import { bgColors, colors } from '@/styles/theming'
 import tw, { styled } from 'twin.macro'
 
 export const NavbarContainer = styled.nav(

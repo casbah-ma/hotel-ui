@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import tw from 'twin.macro'
+import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 
-const GlobalStyles = createGlobalStyle`
+const CustomStyles = createGlobalStyle`
 //images
 .radius-lg {
   ${tw`rounded-lg`}
@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
   ${tw`w-1/3 h-full flex justify-center items-center p-6`}
  }
 .guest-panel {
-  ${tw`p-3 rounded-xl bg-primary h-[12.75rem] w-full mb-3 flex justify-center items-center`}
+  ${tw`p-3 rounded-xl bg-black h-[12.75rem] w-full mb-3 flex justify-center items-center`}
 }
 
 //Hamburger menu
@@ -53,9 +53,12 @@ const GlobalStyles = createGlobalStyle`
   .swiper-button-next,
   .swiper-button-prev {
     ${tw`invisible group-hover:visible rounded-full w-20 h-14 p-2 after:font-secondary after:text-black cursor-pointer`}
-  }
-  
-  
+  } 
 `
-
+const GlobalStyles = () => (
+  <>
+    <BaseStyles />
+    <CustomStyles />
+  </>
+)
 export default GlobalStyles

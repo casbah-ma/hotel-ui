@@ -1,5 +1,4 @@
 import tw, { styled } from 'twin.macro'
-import { borderBottomColors, bgColors, colors } from '@/styles/theming'
 
 export const InputContainer = tw.div`relative w-full`
 
@@ -11,10 +10,16 @@ export const StyledInput = styled.input(
        border-b-2 border-solid font-secondary
        outline-none text-xs 
     `,
-    bgColor ? `background-color: ${bgColor}` : tw`bg-tertiary`,
-    color ? `border-bottom-color: ${color};` : tw`border-primary`,
+    bgColor
+      ? `background-color: ${bgColor}`
+      : `background-color: ${theme.colors.tertiary};`,
+    ,
+    color
+      ? `border-bottom-color: ${color};`
+      : `border-bottom-color: ${theme.colors.primary};`,
+    ,
     error && tw`border-b-red-500`,
-    withButton && tw`bg-colorgrey`,
+    withButton && `background-color: ${theme.colors.colorgrey};`,
     isTextaria && tw`w-full min-h-[12.5rem] pt-[1.625rem] pl-6`,
   ]
 )
