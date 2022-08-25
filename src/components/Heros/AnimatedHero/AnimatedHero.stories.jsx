@@ -1,6 +1,6 @@
 import AnimatedHero from '.'
 import Button from '@/components/Button'
-import { PlayIcon } from '@heroicons/react/solid'
+import { PlayIcon } from '@heroicons/react/24/solid'
 
 export default {
   title: 'Sections/AnimatedHero',

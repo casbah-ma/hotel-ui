@@ -23,7 +23,7 @@ import {
 import { isEmpty, bookNow } from '@/helpers/utils'
 import { useBreakpoint, useScrollPosition, useScrollDirection } from '@/hooks'
 //icons
-import { MenuAlt3Icon } from '@heroicons/react/outline'
+import { MenuAlt3Icon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
 function Navbar({

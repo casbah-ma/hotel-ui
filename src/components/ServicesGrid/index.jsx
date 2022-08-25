@@ -7,7 +7,7 @@ import { Grid } from './ServicesGrid.styles'
 import { isEmpty } from '@/helpers/utils'
 
 //icons
-import { PlusIcon } from '@heroicons/react/solid'
+import { PlusIcon } from '@heroicons/react/24/solid'
 
 function ServicesGrid({ services, circleBg }) {
   return (

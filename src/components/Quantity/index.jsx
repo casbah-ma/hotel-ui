@@ -1,7 +1,7 @@
 import Label from '@/components/Label'
 import Button from '@/components/Button'
 import { QuantityContainer, QuantityButtonContainer } from './Quantity.styles'
-import { MinusIcon, PlusIcon } from '@heroicons/react/solid'
+import { MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
 
 const Quantity = function ({
   title,
