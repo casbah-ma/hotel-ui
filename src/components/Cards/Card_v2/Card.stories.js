@@ -5,7 +5,7 @@ export default {
   component: Card_v2,
   argTypes: {
     size: {
-      options: ['small', 'medium'],
+      options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
     },
   },
