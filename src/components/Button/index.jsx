@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import { buttonsVariant, StyledButton, StyledIcon } from './Button.styles'
-import 'twin.macro'
 
 const Button = ({
   variant,

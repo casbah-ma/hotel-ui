@@ -1,4 +1,4 @@
-import tw, { styled, theme } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import 'twin.macro'
 
 //Object variants
