@@ -3,6 +3,12 @@ import Card_v2 from '.'
 export default {
   title: 'V2/Components/Card',
   component: Card_v2,
+  argTypes: {
+    size: {
+      options: ['small', 'medium'],
+      control: { type: 'radio' },
+    },
+  },
 }
 
 const Template = (args) => <Card_v2 {...args} />
@@ -16,7 +22,6 @@ Small.args = {
   description:
     'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
   image: 'https://source.unsplash.com/random/?hotel',
-  link: 'https://www.google.com',
 }
 
 // Medium card with image and title
@@ -26,5 +31,4 @@ Medium.args = {
   description:
     'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
   image: 'https://source.unsplash.com/random/?hotel',
-  link: 'https://www.google.com',
 }

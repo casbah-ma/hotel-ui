@@ -9,19 +9,20 @@ import Image from 'next/image'
 import Paragraph from '@/components/Paragraph'
 import Label from '@/components/Label'
 
-function Card_v2({ size, image, date, description, link }) {
+function Card_v2({ size, image, date, description }) {
   return (
     <CardContainer size={size}>
       <CardImageContainer>
         <Image
           className="rounded-xl"
+          role="img"
           src={image}
           width={size === 'small' ? 340 : 593}
           height={380}
           objectFit="cover"
         />
       </CardImageContainer>
-      <CardInfosContainer>
+      <CardInfosContainer data-testid="info">
         <Paragraph description={description} fontSize="rg" />
         <Label labelText={date} />
       </CardInfosContainer>
@@ -29,6 +30,11 @@ function Card_v2({ size, image, date, description, link }) {
   )
 }
 
-Card_v2.propTypes = {}
+Card_v2.propTypes = {
+  size: PropTypes.string,
+  image: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+}
 
 export default Card_v2
