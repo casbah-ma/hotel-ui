@@ -35,7 +35,7 @@ function LinkComponent(props) {
   // Fix double slashes
   href = href.replace(/([^:]\/)\/+/g, '$1').replace('//', '/')
   return (
-    <Link className="bg-gray-900" href={href} passHref>
+    <Link href={href} passHref>
       <a {...rest}>{children}</a>
     </Link>
   )

@@ -50,7 +50,7 @@ const ImageCard = function ({ variant, src }) {
   return (
     <StyledImage variant={variant} src={src}>
       <Image
-        className="rounded-xl"
+        className="radius-xl"
         width={getVariant(variant, bp) ? getVariant(variant, bp).width : 0}
         height={getVariant(variant, bp) ? getVariant(variant, bp).height : 0}
         src={src}

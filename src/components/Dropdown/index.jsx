@@ -18,15 +18,15 @@ function Dropdown({ languages, defaultLanguage }) {
   const [activeLanguage, setActiveLanguage] = useState(language)
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
+    <Menu as="div" className="menu">
       {({ open }) => (
         <>
-          <Menu.Button className="inline-flex justify-center gap-[0.8rem] bg-transparent">
+          <Menu.Button>
             {!isEmpty(languages) && (
               <Label labelText={activeLanguage.toUpperCase()} fontSize="sm" />
             )}
             <ToggleButton open={open}>
-              <ChevronDownIcon className="h-5 w-5 text-black" />
+              <ChevronDownIcon />
             </ToggleButton>
           </Menu.Button>
           <Transition

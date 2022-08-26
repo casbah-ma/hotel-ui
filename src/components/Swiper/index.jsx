@@ -32,7 +32,7 @@ const Swiper = function ({ header, children }) {
         }}
         navigation
         modules={[Navigation, Autoplay]}
-        className="w-full h-full"
+        className="swiper"
       >
         {children}
       </SwiperCore>

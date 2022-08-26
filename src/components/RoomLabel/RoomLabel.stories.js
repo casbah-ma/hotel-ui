@@ -9,14 +9,6 @@ export default {
       options: Object.keys(borderColors),
       control: { type: 'radio' },
     },
-    color: {
-      options: Object.keys(colors),
-      control: { type: 'radio' },
-    },
-    bgColor: {
-      options: Object.keys(bgColors),
-      control: { type: 'radio' },
-    },
   },
 }
 

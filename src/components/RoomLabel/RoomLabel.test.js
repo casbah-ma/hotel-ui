@@ -1,4 +1,4 @@
-const { composeStories } = require('@storybook/react')
+import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@testing-library/react'
 import * as stories from './RoomLabel.stories'
 

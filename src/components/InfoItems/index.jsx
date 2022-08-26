@@ -6,7 +6,6 @@ import InfoItem from './InfoItem'
 import { Container } from './InfoItems.styles'
 
 function InfoItems({ infos }) {
-  console.log(infos)
   return (
     <Container>
       {!isEmpty(infos) &&

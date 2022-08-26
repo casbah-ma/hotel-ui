@@ -1,5 +1,6 @@
 import pkg from './package.json'
 import path from 'path'
+import copy from 'rollup-plugin-copy'
 import { babel } from '@rollup/plugin-babel'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import resolve from '@rollup/plugin-node-resolve'
@@ -47,6 +48,9 @@ export default {
         },
       ],
     }),
+    copy({
+      targets: [{ src: 'withHotelUi.js', dest: 'dist' }],
+    }),
     resolve({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
@@ -60,9 +64,7 @@ export default {
       config: {
         path: './postcss.config.js',
       },
-      extensions: ['.css'],
       minimize: true,
-      extract: ['global.css', 'datepicker.css'],
     }),
     terser(),
   ],

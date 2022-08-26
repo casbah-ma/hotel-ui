@@ -10,7 +10,7 @@ const Taxi = function ({ width, height, color }) {
       x="0px"
       y="0px"
       viewBox="0 0 80 80"
-      styles={{ 'enable-background': 'new 0 0 80 80' }}
+      enableBackground="new 0 0 80 80"
       xmlSpace="preserve"
     >
       <g>
