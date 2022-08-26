@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer(({ color, bgColor, theme }) => [
   color ? `color: ${color};` : tw`text-white`,
   bgColor
     ? `background-color: ${bgColor};`
-    : `background-color: ${theme.colors.primary};`,
+    : `background-color: ${theme.colors.bg.primary};`,
   ,
 ])
 

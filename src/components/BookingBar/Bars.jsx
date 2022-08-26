@@ -1,18 +1,24 @@
+//styles
+import { useRef, useState } from 'react'
+//styles
 import {
   DesktopContainer,
   MobileContainer,
   MobileSection,
   Column,
 } from './BookingBar.styles'
-import { ChevronDownIcon } from '@heroicons/react/solid'
+//components
 import Button from '@/components/Button'
 import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'
-import { useRef, useState } from 'react'
 import { Popover } from '@headlessui/react'
 import Guests from '@/components/Cards/GuestsCard'
+//
 import { bookingUrl } from '@/helpers/utils'
 import { useBreakpoint } from '@/hooks'
+//icons
+import { ChevronDownIcon } from '@heroicons/react/solid'
+import { useTheme } from 'styled-components'
 
 // Handle availability of guests
 const checkAvailability = (dates, guestValues, baseUrl) => {
@@ -47,18 +53,25 @@ export const Desktop = function ({
       guestbtn.current.click()
     }
   }
-
+  const theme = useTheme()
   return (
     <Popover.Group style={{ position: 'relative' }}>
       <DesktopContainer data-testid="booking-bar">
         <Column>
-          <Label role="label" labelText="Check in - Check out" fontSize="sm" />
+          <Label
+            color={theme.colors.text.secondary}
+            role="label"
+            labelText="Check in - Check out"
+            fontSize="sm"
+          />
           <Popover>
             <Popover.Button>
               <Button
                 as="div"
                 {...buttonProps}
-                {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+                variant="rounded"
+                Icon={ChevronDownIcon}
+                label=""
                 handleClick={() => {
                   setIsOpen({
                     ...isOpen,
@@ -80,7 +93,9 @@ export const Desktop = function ({
               <Button
                 as="div"
                 {...buttonProps}
-                {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+                variant="rounded"
+                Icon={ChevronDownIcon}
+                label=""
                 handleClick={() => {
                   setIsOpen({ ...isOpen, dates: false, guests: !isOpen.guests })
                 }}
@@ -99,7 +114,7 @@ export const Desktop = function ({
         <div className="desktop-action">
           <Button
             {...buttonProps}
-            {...{ label: 'Check Availability' }}
+            label="Check Availability"
             handleClick={() => checkAvailability(dates, guestValues, baseUrl)}
           />
         </div>

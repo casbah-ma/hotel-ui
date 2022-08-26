@@ -2,12 +2,16 @@ import { ThemeProvider } from 'styled-components'
 import defaultTheming from '../../../theme'
 
 const HotelUiProvider = ({ theme, children }) => {
-  const combineTheming = {
-    ...defaultTheming,
-    ...theme,
+  const combineTheming = (theme) => {
+    if (theme) {
+      return {
+        ...defaultTheming,
+        ...theme,
+      }
+    } else return defaultTheming
   }
-  console.log('theme', combineTheming)
-  return <ThemeProvider theme={combineTheming}>{children}</ThemeProvider>
+
+  return <ThemeProvider theme={combineTheming(theme)}>{children}</ThemeProvider>
 }
 
 export default HotelUiProvider

@@ -18,6 +18,7 @@ import {
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
 import { CloudinaryContext, Image, Transformation } from 'cloudinary-react'
+import { useTheme } from 'styled-components'
 
 function Footer({
   links,
@@ -53,6 +54,8 @@ function Footer({
     e.preventDefault()
     !isEmpty(inputValue.email) && alert('Thank you for subscribing!')
   }
+
+  const theme = useTheme()
   return (
     <CloudinaryContext cloudName="casbah" width="100%">
       <FooterContainer
@@ -94,7 +97,11 @@ function Footer({
                     languages={languages}
                     defaultLanguage={defaultLanguage}
                   >
-                    <Label fontSize="sm" labelText={t(item.label)} />
+                    <Label
+                      color={theme.colors.text.secondary}
+                      fontSize="sm"
+                      labelText={t(item.label)}
+                    />
                   </Link>
                 </FooterLink>
                 {index < links.length - 1 && <FooterLinkDivider />}
@@ -104,6 +111,7 @@ function Footer({
         <FooterDivider />
         <FooterDividerText data-testid="copyright">
           <Label
+            color={theme.colors.text.secondary}
             fontSize="sm"
             labelText={`${year.getFullYear()} © Copyrighted by ${hotelName}`}
           />
@@ -112,7 +120,11 @@ function Footer({
             languages={languages}
             defaultLanguage={defaultLanguage}
           >
-            <Label fontSize="sm" labelText="Terms & Conditions" />
+            <Label
+              color={theme.colors.text.secondary}
+              fontSize="sm"
+              labelText="Terms & Conditions"
+            />
           </Link>
         </FooterDividerText>
       </FooterContainer>

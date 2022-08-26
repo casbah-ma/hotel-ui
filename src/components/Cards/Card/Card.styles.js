@@ -1,5 +1,4 @@
 import tw, { styled } from 'twin.macro'
-import { getImage } from '@/styles/helpers'
 
 export const StyledCard = styled.section(({ direction }) => [
   tw`
@@ -21,8 +20,9 @@ export const CardAction = styled.section(({ direction }) => [
     tw`flex flex-col justify-start items-start w-full h-full`,
 ])
 
-export const CardLink = styled.section(({ src, direction }) => [
+export const CardLink = styled.section(({ direction, theme }) => [
   tw`
-    text-black self-end mb-2  cursor-pointer `,
+  self-end mb-2  cursor-pointer `,
   direction === 'vertical' && tw`flex self-start mt-4`,
+  `color: ${theme.colors.bg.primary}`,
 ])

@@ -5,7 +5,7 @@ import useState from 'storybook-addon-state'
 const props = {
   dates: { startDate: new Date(), endDate: new Date() },
   guestValues: { adults: 1, kids: 0 },
-  buttonProps: { ...Button.Primary.args, color: 'primary', bgColor: 'primary' },
+  buttonProps: { ...Button.Primary.args },
   onDatesChange: () => {},
   onGuestChange: () => {},
   baseUrl: 'https://dixil-garden-tanger-malabata.hotelrunner.com/',

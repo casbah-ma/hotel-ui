@@ -11,7 +11,7 @@ export const Container = styled.div(
     //dynamic background color
     bgColor
       ? `background-color: ${bgColor};`
-      : `background-color: ${theme.colors.primary};`,
+      : `background-color: ${theme.colors.bg.primary};`,
     //dynamic border color
     ({ borderColor }) => borderColors[borderColor],
   ]

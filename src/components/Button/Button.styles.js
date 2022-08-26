@@ -12,15 +12,15 @@ export const buttonsVariant = {
 export const StyledButton = styled.button(
   ({ disabled, color, bgColor, theme }) => [
     //base style
-    tw`py-3 text-black px-5 border border-gray-700
+    tw`py-3 px-5 border border-gray-700
     font-secondary font-semibold text-sm 
     md:text-base lg:text-xl transform hover:scale-100 `,
     //variants
     ({ variant }) => buttonsVariant[variant],
-    color && `color: ${color};`,
+    color ? `color: ${color};` : `color: ${theme.colors.text.primary};`,
     bgColor
       ? `background-color: ${bgColor};`
-      : `background-color: ${theme.colors.primary};`,
+      : `background-color: ${theme.colors.bg.primary};`,
     disabled && tw`bg-gray-100`,
   ]
 )
