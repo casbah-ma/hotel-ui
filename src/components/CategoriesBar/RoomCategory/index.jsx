@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 //styles
 import { Category, StyledIcon } from './RoomCategory.styles'
 //icons
-import { PlusSmIcon } from '@heroicons/react/solid'
+import { PlusIcon } from '@heroicons/react/24/solid'
 import Paragraph from '@/components/Paragraph'
 
 function RoomCategory({ categoryName, active, handleActive }) {
@@ -12,7 +12,7 @@ function RoomCategory({ categoryName, active, handleActive }) {
       active={!!(active === categoryName)}
     >
       <StyledIcon>
-        <PlusSmIcon />
+        <PlusIcon />
       </StyledIcon>
       <Paragraph description={categoryName} />
     </Category>

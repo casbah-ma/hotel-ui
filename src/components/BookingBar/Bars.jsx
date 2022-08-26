@@ -8,6 +8,7 @@ import {
   Column,
 } from './BookingBar.styles'
 //components
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import Button from '@/components/Button'
 import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'

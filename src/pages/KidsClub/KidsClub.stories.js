@@ -23,7 +23,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'Creating the happiest family holiday memories',
     },
-    text: 'Our little guests are full of excitement when they discover the kids’ club of the Royal Mansour Marrakech in the lush setting near the garden and pool. Just a few steps further and the door to Le Jardin de Lila opens, revealing a world of colour in which imagination reigns and children are royalty: a universe created just for them!',
+    text: 'Our little guests are full of excitement when they discover the kids’ club of the Hotel UI Marrakech in the lush setting near the garden and pool. Just a few steps further and the door to Le Jardin de Lila opens, revealing a world of colour in which imagination reigns and children are royalty: a universe created just for them!',
   },
   blogProps1: {
     ...BlogStories.ImageOnRight.args,
@@ -54,6 +54,6 @@ Default.args = {
     ...AnimatedHero.Example1.args,
     title: 'Kids’ club: once upon a time in Le Jardin de Lila…',
     description:
-      'At the Royal Mansour, we foster family happiness. Le Jardin de Lila is a space dedicated to kids between the age of 4 and 10. Shared activities, exquisite treats, personal attention, story-telling and lots of laughter: we’ve thought of everything to entertain the children and keep the parents happy.',
+      'At the Hotel UI, we foster family happiness. Le Jardin de Lila is a space dedicated to kids between the age of 4 and 10. Shared activities, exquisite treats, personal attention, story-telling and lots of laughter: we’ve thought of everything to entertain the children and keep the parents happy.',
   },
 }

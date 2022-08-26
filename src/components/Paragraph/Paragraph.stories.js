@@ -18,7 +18,7 @@ export const Regular = Template.bind({})
 Regular.args = {
   fontSize: 'rg',
   description:
-    'Located in an idyllic green scenery right at the foot of Cape Malataba, the DIXIL Tangier combines modernism and sustainable values. Uniting traditional Moroccan hospitality with the dynamism of the city of Tangier, the DIXIL Tangier welcomes you in a unique Pop-art inspired décor. Live differently! Immerse yourself in the lively streets of the old medina, have a unique culinary experience worthy of La Boqueria, and most of all unwind at the pool or at the bar.',
+    'Located in an idyllic green scenery right at the foot of Cape Malataba, the Hotel UI Tangier combines modernism and sustainable values. Uniting traditional Moroccan hospitality with the dynamism of the city of Tangier, the Hotel UI Tangier welcomes you in a unique Pop-art inspired décor. Live differently! Immerse yourself in the lively streets of the old medina, have a unique culinary experience worthy of La Boqueria, and most of all unwind at the pool or at the bar.',
 }
 
 export const Medium = Template.bind({})

@@ -22,7 +22,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'What could be more elegant than a beautiful',
     },
-    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Royal Mansour offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
+    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Hotel UI offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
   },
   blogProps1: {
     ...BlogStories.ImageOnRight.args,

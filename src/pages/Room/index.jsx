@@ -7,7 +7,7 @@ import Blog from '@/components/Blog'
 import ServicesSection from '@/components/ServicesSection'
 import Layout from '@/components/Layout'
 import Button from '@/components/Button'
-import { PlayIcon } from '@heroicons/react/solid'
+import { PlayIcon } from '@heroicons/react/24/solid'
 
 const Room = function ({
   layoutProps,

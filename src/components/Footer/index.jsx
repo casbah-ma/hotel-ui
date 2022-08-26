@@ -69,7 +69,7 @@ function Footer({
           </Image>
         </FooterLogo>
         <FooterText>
-          <Paragraph description="A signature bedding imagined and designed exclusively for Dixil. The bed frames and mattresses are filled" />
+          <Paragraph description="A signature bedding imagined and designed exclusively for Hotel UI. The bed frames and mattresses are filled" />
         </FooterText>
         <InputContainer>
           {/* <InputError>{inputValue.errorMessage}</InputError> */}

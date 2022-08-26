@@ -16,7 +16,7 @@ const Template = (args) => <Title {...args} />
 
 export const H1 = Template.bind({})
 H1.args = {
-  title: 'Experience it all... vividly at Dixil Tangier!',
+  title: 'Experience it all... vividly at Hotel UI Tangier!',
   level: '1',
 }
 

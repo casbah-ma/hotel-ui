@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 //styles
 import { ArrowIcon, ItemContent, Item, ItemName } from './AccordionItem.styles'
 //icons
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
 function AccordionItem({ item, isOpened, handleClick, children }) {
   const { name, id } = item

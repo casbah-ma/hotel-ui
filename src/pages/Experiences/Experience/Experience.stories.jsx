@@ -25,7 +25,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'where gentleness and well-being reign',
     },
-    text: 'Designed as a sanctuary completely devoted to your senses, the Royal Mansour Marrakech Spa creates an intimate universe with a separate entrance to the rest of the hotel. Enter via the citrus garden, where the colours and fragrances will already enchant you. For a break from life, 2500 sqm divided over 3 floors offer an infinite range of treatments.',
+    text: 'Designed as a sanctuary completely devoted to your senses, the Hotel UI Marrakech Spa creates an intimate universe with a separate entrance to the rest of the hotel. Enter via the citrus garden, where the colours and fragrances will already enchant you. For a break from life, 2500 sqm divided over 3 floors offer an infinite range of treatments.',
   },
   blogProps1: {
     ...BlogStories.Default.args,
@@ -33,7 +33,7 @@ Default.args = {
       ...BlogStories.Default.args.title,
       title: 'What could be more elegant than a beautiful',
     },
-    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Royal Mansour offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
+    text: 'Regenerated, toned and radiant skin for summer? During this holiday season, the Spa Hotel UI offers a selection of exceptional treatments to help your skin welcome the first rays of the sun!',
   },
   ImagesSwiperProps: { ...SwiperStories.ImagesSlider.args },
   AnimatedHeroProps: { ...AnimatedHero.Example1.args },

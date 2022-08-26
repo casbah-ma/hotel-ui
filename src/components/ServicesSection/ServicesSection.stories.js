@@ -16,7 +16,7 @@ Default.args = {
   blogProps: {
     ...BlogStories.Default.args,
     title: { ...TitleStories.H2, title: 'Included Services' },
-    text: "A signature bedding imagined and designed exclusively for Dixil. The bed frames and mattresses are filled with sustainably sourced materials and guarantee an unrivaled comfort for Dixil's guests.",
+    text: "A signature bedding imagined and designed exclusively for Hotel UI. The bed frames and mattresses are filled with sustainably sourced materials and guarantee an unrivaled comfort for Hotel UI's guests.",
   },
   services: ServicesGridStories.Default.args.services,
 }
