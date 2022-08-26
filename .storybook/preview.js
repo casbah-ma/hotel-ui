@@ -11,7 +11,7 @@ import 'swiper/css/navigation'
 import GlobalStyles from '@/components/GlobalStyles'
 import HotelUiProvider from '@/components/HotelUiProvider'
 //
-import 'mapbox-gl/dist/mapbox-gl.css'
+// import 'mapbox-gl/dist/mapbox-gl.css'
 import 'twin.macro'
 
 const OriginalNextImage = NextImage.default

@@ -7,5 +7,5 @@ export const IconCircle = styled.div(({ circleBg, theme }) => [
   tw`flex justify-center items-center py-[2.5rem] px-[2.5rem] rounded-full`,
   circleBg
     ? `background-color: ${circleBg};`
-    : `background-color: ${theme.colors.tertiary};`,
+    : `background-color: ${theme.colors.bg.tertiary};`,
 ])

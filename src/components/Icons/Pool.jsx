@@ -10,7 +10,7 @@ const Pool = function ({ width, height, color }) {
       x="0px"
       y="0px"
       viewBox="0 0 96 96"
-      styles={{ 'enable-background': 'new 0 0 96 96' }}
+      styles={{ 'enableBackground`': 'new 0 0 96 96' }}
       xmlSpace="preserve"
     >
       <g>
