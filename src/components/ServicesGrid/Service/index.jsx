@@ -28,7 +28,6 @@ function Service({ serviceName, circleBg, Icon }) {
 Service.propTypes = {
   serviceName: PropTypes.string.isRequired,
   iconName: PropTypes.string,
-  Icon: PropTypes.element,
   circleBg: PropTypes.string,
 }
 

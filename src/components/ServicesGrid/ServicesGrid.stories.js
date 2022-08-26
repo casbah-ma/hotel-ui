@@ -27,7 +27,6 @@ export default {
   component: ServicesGrid,
   argTypes: {
     circleBg: {
-      options: Object.keys(bgColors),
       control: { type: 'radio' },
     },
   },

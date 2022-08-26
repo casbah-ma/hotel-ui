@@ -4,18 +4,16 @@ import * as stories from './Navbar.stories'
 
 const { Default } = composeStories(stories)
 
-
 describe('Navbar component', () => {
-  it.todo('navbar test with useRouter')
-  // it('Renders the correct number of links', () => {
-  //   render(<Default />)
-  //   const navbarItems = screen.getAllByTestId('navbar-item')
-  //   expect(navbarItems).toHaveLength(Default.args.links.length)
-  // })
+  it('Renders the correct number of links', () => {
+    render(<Default />)
+    const navbarItems = screen.getAllByTestId('navbar-item')
+    expect(navbarItems).toHaveLength(Default.args.links.length)
+  })
 
-  // it('renders a logo', () => {
-  //   render(<Default />)
-  //   const logo = screen.getByRole('img')
-  //   expect(logo).toBeInTheDocument()
-  // })
+  it('renders a logo', () => {
+    render(<Default />)
+    const logo = screen.getByRole('img')
+    expect(logo).toBeInTheDocument()
+  })
 })

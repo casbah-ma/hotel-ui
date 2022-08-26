@@ -1,18 +1,5 @@
 import tw from 'twin.macro'
 
-export const colors = {
-  primary: tw`text-primary`,
-  secondary: tw`text-secondary`,
-  additional: tw`text-additional`,
-}
-
-export const bgColors = {
-  primary: tw`bg-primary`,
-  secondary: tw`bg-secondary`,
-  additional: tw`bg-additional`,
-  colorgrey: tw`bg-colorgrey`,
-}
-
 export const borderColors = {
   primary: tw`border-black`,
   secondary: tw`border-gray-500`,

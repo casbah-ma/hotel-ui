@@ -9,17 +9,21 @@ export const buttonsVariant = {
       h-16 w-7 px-5 py-8 md:h-24 md:w-14 lg:h-36 lg:w-20`,
 }
 
-export const StyledButton = styled.button(({ disabled, color, bgColor }) => [
-  //base style
-  tw`py-3 px-5 border border-gray-700
+export const StyledButton = styled.button(
+  ({ disabled, color, bgColor, theme }) => [
+    //base style
+    tw`py-3 px-5 border border-gray-700
     font-secondary font-semibold text-sm 
     md:text-base lg:text-xl transform hover:scale-100 `,
-  //variants
-  ({ variant }) => buttonsVariant[variant],
-  color ? `color: ${color};` : tw`text-primary`,
-  bgColor ? `background-color: ${bgColor};` : tw`bg-secondary`,
-  disabled && tw`bg-gray-100`,
-])
+    //variants
+    ({ variant }) => buttonsVariant[variant],
+    color ? `color: ${color};` : `color: ${theme.colors.text.primary};`,
+    bgColor
+      ? `background-color: ${bgColor};`
+      : `background-color: ${theme.colors.bg.primary};`,
+    disabled && tw`bg-gray-100`,
+  ]
+)
 
 export const StyledIcon = styled.span(({ variant, color }) => [
   color && `color: ${color}`,

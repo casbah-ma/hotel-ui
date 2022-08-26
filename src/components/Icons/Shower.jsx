@@ -10,7 +10,7 @@ const Shower = function ({ width, height, color }) {
       x="0px"
       y="0px"
       viewBox="0 0 48 48"
-      style={{ 'enable-background': 'new 0 0 48 48' }}
+      enableBackground="new 0 0 48 48"
       xmlSpace="preserve"
     >
       <g>

@@ -1,13 +1,12 @@
-import { bgColors, colors } from '@/styles/theming'
 import tw, { styled } from 'twin.macro'
 
 export const NavbarContainer = styled.nav(
-  ({ bgColor, color, isHidden, hasBackground }) => [
+  ({ bgColor, color, isHidden, hasBackground, theme }) => [
     isHidden && tw`invisible`,
-    tw`font-semibold fixed z-10 top-0 w-full hidden lg:flex justify-between items-center py-10 px-12`,
+    tw`font-semibold text-black fixed z-10 top-0 w-full hidden lg:flex justify-between items-center py-10 px-12`,
     hasBackground && tw`py-4 bg-white shadow-xl`,
     bgColor && `background-color: ${bgColor};`,
-    color ? `color: ${color};` : tw`text-primary`,
+    color && `color: ${color};`,
     ,
   ]
 )
