@@ -4,7 +4,6 @@ import { SwiperContainer } from './Swiper.styles'
 import { Swiper as SwiperCore } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper'
 import { isEmpty } from '@/helpers/utils'
-import '../Swipers/Swiper_v2/styles.css'
 
 const getSlidesNumber = (bp) => {
   switch (bp) {
@@ -15,7 +14,7 @@ const getSlidesNumber = (bp) => {
     case 'lg':
       return 'auto'
     default:
-      return 3
+      return 'auto'
   }
 }
 
