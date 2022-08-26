@@ -10,7 +10,7 @@ const Desktop = function ({ width, height, color }) {
       x="0px"
       y="0px"
       viewBox="0 0 68 68"
-      styles={{ 'enableBackground`': 'new 0 0 68 68' }}
+      enableBackground="new 0 0 68 68"
       xmlSpace="preserve"
     >
       <g>
