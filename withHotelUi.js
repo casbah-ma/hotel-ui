@@ -4,6 +4,7 @@ const merge = require('deepmerge')
 const fonts = {
   primary: ['DAHILA', 'sans-serif'],
   secondary: ['Raleway', 'sans-serif'],
+  indie: ['Indie Flower', 'cursive'],
 }
 
 const hotelUiTailwindConfig = {
@@ -18,11 +19,14 @@ const hotelUiTailwindConfig = {
   important: true,
   theme: {
     screens: {
-      xs: { max: '568px' },
-      sm: '390px',
+      xs: '320px',
       ...defaultTheme.screens,
+      sm: '414px',
     },
     extend: {
+      boxShadow: {
+        card: '2px 4px 24px 10px rgba(0, 0, 0, 0.04)',
+      },
       fontFamily: fonts,
     },
   },

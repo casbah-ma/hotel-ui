@@ -8,7 +8,6 @@ import {
   Column,
 } from './BookingBar.styles'
 //components
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import Button from '@/components/Button'
 import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'
@@ -18,7 +17,7 @@ import Guests from '@/components/Cards/GuestsCard'
 import { bookingUrl } from '@/helpers/utils'
 import { useBreakpoint } from '@/hooks'
 //icons
-import { ChevronDownIcon } from '@heroicons/react/solid'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'styled-components'
 
 // Handle availability of guests
