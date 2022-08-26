@@ -1,6 +1,6 @@
 import tw, { styled } from 'twin.macro'
 
-export const FooterContainer = styled.footer(({ color, bgColor }) => [
+export const FooterContainer = styled.footer(({ color, bgColor, theme }) => [
   tw`
  w-full h-[39.50rem] md:h-[38.50rem] 
  px-5 lg:px-64 py-5  gap-y-10 flex flex-col items-center

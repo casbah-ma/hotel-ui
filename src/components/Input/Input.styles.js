@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const InputContainer = tw.div`relative w-full`
 
 export const StyledInput = styled.input(
-  ({ color, bgColor, error, isTextaria, withButton }) => [
+  ({ color, bgColor, error, isTextaria, withButton, theme }) => [
     //base styles
     tw`
        w-full h-[4.25rem] p-2 pl-2 md:pl-6 rounded-xl

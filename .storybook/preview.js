@@ -10,7 +10,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import GlobalStyles from '@/components/GlobalStyles'
 import HotelUiProvider from '@/components/HotelUiProvider'
-import theme from '../theme'
 //
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'twin.macro'
@@ -39,7 +38,7 @@ export const parameters = {
 export const decorators = [
   WithNextRouter,
   (Story) => (
-    <HotelUiProvider theme={theme}>
+    <HotelUiProvider>
       <GlobalStyles />
       <Story />
     </HotelUiProvider>
