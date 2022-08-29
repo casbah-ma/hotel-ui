@@ -45,7 +45,30 @@ const CustomStyles = createGlobalStyle`
      }
 
      svg {
-      ${tw`h-5 w-5 text-black`}
+        ${tw`h-5 w-5 text-black`}
+     }
+
+     .enter {
+        ${tw`transition ease-out duration-100`}
+     }
+
+     .enter-from {
+        ${tw`transform opacity-0 scale-95`}
+     }
+
+     .enter-to {
+      ${tw`transform opacity-100 scale-100`}
+     }
+     .leave {
+      ${tw`transition ease-in duration-75`}
+     } 
+     
+     .leave-from {
+      ${tw`transform opacity-100 scale-100`}
+     }
+
+     .leave-to {
+      ${tw`transform opacity-0 scale-95`}
      }
   }
   
