@@ -73,9 +73,23 @@ const CustomStyles = createGlobalStyle`
     ${tw`after:content-["prev"]`}
   }
 
+  .mySwiper_v2 {
+    ${tw`w-full h-[40rem]`}
+  }
   .mySwiper_v2 .swiper-slide {
+    margin-top: 70px;
     width: fit-content;
     height: fit-content;
+  }
+
+  .mySwiper_v2 .swiper-button-next {
+    ${tw`invisible group-hover:invisible lg:visible top-8 right-5 rounded-full w-10 h-10`}
+  }
+  .mySwiper_v2 .swiper-button-prev {
+    ${tw`invisible group-hover:invisible lg:visible top-8 lg:left-[87rem] rounded-full w-10 h-10  `}
+    &:active {
+     background-color: ${({ theme }) => theme.colors.bg.primary};
+    }
   }
 
 `

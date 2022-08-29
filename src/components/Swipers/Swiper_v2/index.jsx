@@ -4,12 +4,14 @@ import PropTypes from 'prop-types'
 import { SwiperContainer } from './Swiper.styles'
 import Card_v2 from '../../Cards/Card_v2'
 import * as CardProps from '../../Cards/Card_v2/Card.stories'
+import { useBreakpoint } from '@/hooks'
 
 function Swiper_v2({ variant, navigation, data }) {
+  const bp = useBreakpoint()
   return (
     <SwiperContainer>
       <Swiper
-        slidesPerView={'auto'}
+        slidesPerView={bp === 'xs' ? 1 : 'auto'}
         spaceBetween={30}
         autoplay={{
           delay: 2500,
