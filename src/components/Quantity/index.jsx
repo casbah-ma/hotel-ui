@@ -2,6 +2,7 @@ import Label from '@/components/Label'
 import Button from '@/components/Button'
 import { QuantityContainer, QuantityButtonContainer } from './Quantity.styles'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
+import { useTheme } from 'styled-components'
 
 const Quantity = function ({
   title,
@@ -10,9 +11,10 @@ const Quantity = function ({
   onPlusClick,
   onMinusClick,
 }) {
+  const theme = useTheme()
   return (
     <QuantityContainer data-testid="quantity">
-      <Label labelText={title} />
+      <Label labelText={title} color={theme.colors.text.secondary} />
       <QuantityButtonContainer>
         <Button
           testID={'minus-button'}
@@ -27,7 +29,11 @@ const Quantity = function ({
           }}
           handleClick={onMinusClick}
         />
-        <Label testID="value" labelText={value?.toString()} />
+        <Label
+          testID="value"
+          labelText={value?.toString()}
+          color={theme.colors.text.secondary}
+        />
         <Button
           testID={'plus-button'}
           aria-label="plus-button"

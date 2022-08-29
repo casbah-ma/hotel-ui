@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const StyledHeader = styled.header(({ isContact, theme }) => [
   tw`w-full flex flex-col md:flex-row items-start justify-start`,
   isContact && tw`pt-[4.75rem] pb-[5.375rem] pl-[7.5rem]`,
-  `background-color: ${theme.colors.bg.tertiary};`,
+  isContact`background-color: ${theme.colors.bg.tertiary};`,
 ])
 //inline block is a must to make the div take no bigger width than the content
 //max-width is to avoid pushing the description to much to the left, if it makes spacing problem we can remove it later

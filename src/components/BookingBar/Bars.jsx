@@ -87,7 +87,12 @@ export const Desktop = function ({
           </Popover>
         </Column>
         <Column>
-          <Label role="label" labelText="Guests" fontSize="sm" />
+          <Label
+            role="label"
+            labelText="Guests"
+            fontSize="sm"
+            color={theme.colors.text.secondary}
+          />
           <Popover style={{ zIndex: '10' }}>
             <Popover.Button ref={guestbtn}>
               <Button
