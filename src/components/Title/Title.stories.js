@@ -25,3 +25,9 @@ H2.args = {
   ...H1.args,
   level: '2',
 }
+
+export const WithLine = Template.bind({})
+WithLine.args = {
+  ...H2.args,
+  withLine: true,
+}
