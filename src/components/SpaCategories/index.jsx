@@ -4,7 +4,7 @@ import Paragraph from '@/components/Paragraph'
 import CategoriesBar from '@/components/CategoriesBar'
 import RoomCard from '@/components/Cards/RoomCard'
 import Header from '@/components/Header'
-import Swiper from '@/components/Swiper'
+import Swiper from '@/components/Swipers/Swiper'
 import { SwiperSlide } from 'swiper/react'
 //styles
 import { Container } from './SpaCategories.styles'

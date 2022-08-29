@@ -1,7 +1,7 @@
 import Meeting from '.'
 //stories
 import * as BlogStories from '@/components/Blog/Blog.stories'
-import * as SwiperStories from '@/components/Swiper/Swiper.stories'
+import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
 import * as MeetingCategoriesStories from '@/components/MeetingCategories/MeetingCategories.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'

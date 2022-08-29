@@ -7,12 +7,11 @@ import { useBreakpoint } from '@/hooks'
 import Header from '@/components/Header'
 import { isEmpty } from '@/helpers/utils'
 import PropTypes from 'prop-types'
-import { ImageCard } from '../../Cards'
 
-function Swiper_v2({ header, navigation, data }) {
+function Swiper_v2({ header, navigation, children }) {
   const bp = useBreakpoint()
   return (
-    <SwiperContainer>
+    <SwiperContainer role="slider">
       <SwiperHeader>{!isEmpty(header) && <Header {...header} />}</SwiperHeader>
       <Swiper
         slidesPerView={bp === 'xs' ? 1 : 'auto'}
@@ -25,42 +24,7 @@ function Swiper_v2({ header, navigation, data }) {
         modules={[Navigation, Autoplay]}
         className="mySwiper_v2"
       >
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape1"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape3"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape4"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape1"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ImageCard
-            src="https://source.unsplash.com/random/?hotel"
-            variant="shape5"
-          />
-        </SwiperSlide>
+        {children}
       </Swiper>
     </SwiperContainer>
   )

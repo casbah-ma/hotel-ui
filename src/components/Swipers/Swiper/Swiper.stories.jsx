@@ -13,7 +13,7 @@ import {
 } from './FakeData'
 
 export default {
-  title: 'Sections/Swiper',
+  title: 'Sections/Swipers/Swiper',
   component: Swiper,
 }
 
