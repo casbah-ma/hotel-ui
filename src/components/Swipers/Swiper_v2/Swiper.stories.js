@@ -2,8 +2,8 @@ import Swiper_v2 from '.'
 import { SwiperSlide } from 'swiper/react'
 import * as HedaerStories from '@/components/Header/Header.stories'
 import { Cards, Images } from './FakeData'
-import Card_v2 from '../../Cards/Card_v2'
-import { ImageCard } from '../../Cards'
+import Card_v2 from '@/components/Cards/Card_v2'
+import { ImageCard } from '@/components/Cards'
 
 export default {
   title: 'Sections/Swipers/Swiper_v2',
