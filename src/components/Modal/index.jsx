@@ -16,12 +16,12 @@ function Modal({ children, isOpen, closeModal }) {
         <Transition.Child
           data-testid="modal-child"
           as={Fragment}
-          enter="transform transition duration-[400ms]"
-          enterFrom="opacity-0 rotate-[-120deg] scale-50"
-          enterTo="opacity-100 rotate-0 scale-100"
-          leave="transform duration-200 transition ease-in-out"
-          leaveFrom="opacity-100 rotate-0 scale-100 "
-          leaveTo="opacity-0 scale-95 "
+          enter="button-enter"
+          enterFrom="button-enter-from"
+          enterTo="button-enter-to"
+          leave="button-leave"
+          leaveFrom="button-leave-from"
+          leaveTo="button-leave-to"
         >
           <CloseButton onClick={closeModal}>
             <XMarkIcon />
@@ -29,12 +29,12 @@ function Modal({ children, isOpen, closeModal }) {
         </Transition.Child>
         <Transition.Child
           as={Fragment}
-          enter="transform transition duration-[700ms]"
-          enterFrom="opacity-0 -translate-x-80"
-          enterTo="opacity-100 translate-x-0"
-          leave="transform duration-200 transition ease-in-out"
-          leaveFrom="opacity-100 translate-x-0"
-          leaveTo="opacity-0 -translate-x-80"
+          enter="enter"
+          enterFrom="enter-from"
+          enterTo="enter-to"
+          leave="leave"
+          leaveFrom="leave-from"
+          leaveTo="leave-to"
         >
           <Dialog.Panel className="dialog-panel">{children}</Dialog.Panel>
         </Transition.Child>

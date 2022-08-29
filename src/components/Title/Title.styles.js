@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 
 export const Heading = styled.h1(({ color, level, theme }) => [
   //base styles
-  tw`font-bold tracking-wider`,
+  tw`font-primary font-bold tracking-wider`,
   //styles based on level
   ({ level }) => titleLeveles[level],
   //dynamic color

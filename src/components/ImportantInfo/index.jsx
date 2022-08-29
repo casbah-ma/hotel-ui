@@ -1,4 +1,3 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import { Conatiner } from './ImportantInfo.styles'
 import Blog from '../Blog'

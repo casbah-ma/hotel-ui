@@ -34,7 +34,7 @@ const Button = ({
 }
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(buttonsVariant)),
   bgColor: PropTypes.string,
   color: PropTypes.string,
