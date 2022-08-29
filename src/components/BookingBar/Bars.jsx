@@ -150,7 +150,7 @@ export const Mobile = function ({
       guestbtn.current.click()
     }
   }
-
+  const theme = useTheme()
   return (
     <MobileContainer data-testid="booking-bar">
       {isOpen.dates && (
@@ -165,7 +165,11 @@ export const Mobile = function ({
 
       <MobileSection>
         <Column>
-          <Label role="label" labelText="Check in - Check out" />
+          <Label
+            role="label"
+            labelText="Check in - Check out"
+            color={theme.colors.text.secondary}
+          />
           <Button
             as="div"
             {...buttonProps}
@@ -192,7 +196,12 @@ export const Mobile = function ({
       )}
       <MobileSection>
         <Column>
-          <Label role="label" labelText="Guests" fontSize="sm" />
+          <Label
+            role="label"
+            labelText="Guests"
+            fontSize="sm"
+            color={theme.colors.text.secondary}
+          />
           <Button
             ref={guestbtn}
             {...buttonProps}
