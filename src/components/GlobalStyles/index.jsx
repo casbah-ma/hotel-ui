@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 
 const CustomStyles = createGlobalStyle`
+.full-width {
+  width: 100%;
+}
 //images
 .radius-lg {
   ${tw`rounded-lg`}
