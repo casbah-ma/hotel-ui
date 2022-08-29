@@ -62,7 +62,8 @@ const CustomStyles = createGlobalStyle`
   .swiper-button-next:after,
   .swiper-button-prev:after {
     content: 'next';
-    font-size: 0.9rem !important;
+    font-size: 0.6rem !important;
+   
   }
   
   .swiper-button-next,
@@ -83,15 +84,18 @@ const CustomStyles = createGlobalStyle`
   }
 
   .mySwiper_v2 .swiper-button-next {
-    ${tw`invisible group-hover:invisible lg:visible top-8 right-5 rounded-full w-10 h-10`}
+    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
   }
   .mySwiper_v2 .swiper-button-prev {
-    ${tw`invisible group-hover:invisible lg:visible top-8 lg:left-[87rem] rounded-full w-10 h-10  `}
-    &:active {
-     background-color: ${({ theme }) => theme.colors.bg.primary};
-    }
+    ${tw`invisible lg:visible top-6 lg:left-[87rem] rounded-full w-10 h-10 bg-white active:text-white border `}
   }
 
+  .mySwiper_v2 .swiper-button-next, .mySwiper_v2 .swiper-button-prev {
+    &:active {
+      background-color: ${({ theme }) => theme.colors.bg.primary};
+      color: white;
+     }
+  }
 `
 const GlobalStyles = () => (
   <>

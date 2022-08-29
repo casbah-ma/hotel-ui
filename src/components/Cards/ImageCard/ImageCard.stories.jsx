@@ -9,6 +9,8 @@ export default {
         'shape1',
         'shape2',
         'shape3',
+        'shape4',
+        'shape5',
         'ImageVerticalTall',
         'ImageFlexible',
       ],
@@ -21,6 +23,8 @@ const Template = (args) => <ImageCard {...args} />
 export const Shape1 = Template.bind({})
 export const Shape2 = Template.bind({})
 export const Shape3 = Template.bind({})
+export const Shape4 = Template.bind({})
+export const Shape5 = Template.bind({})
 export const ImageVerticalTall = Template.bind({})
 export const ImageFlexible = Template.bind({})
 export const Small = Template.bind({})
@@ -31,26 +35,34 @@ Shape1.args = {
 }
 
 Shape2.args = {
+  ...Shape1.args,
   variant: 'shape2',
-  src: 'https://source.unsplash.com/random/?hotel',
 }
 
 Shape3.args = {
+  ...Shape1.args,
   variant: 'shape3',
-  src: 'https://source.unsplash.com/random/?hotel',
+}
+Shape4.args = {
+  ...Shape1.args,
+  variant: 'shape4',
+}
+Shape5.args = {
+  ...Shape1.args,
+  variant: 'shape5',
 }
 
 ImageVerticalTall.args = {
+  ...Shape1.args,
   variant: 'imageVerticalTall',
-  src: 'https://source.unsplash.com/random/?hotel',
 }
 
 ImageFlexible.args = {
+  ...Shape1.args,
   variant: 'imageFlexible',
-  src: 'https://source.unsplash.com/random/?hotel',
 }
 
 Small.args = {
+  ...Shape1.args,
   variant: 'small',
-  src: 'https://source.unsplash.com/random/?hotel',
 }
