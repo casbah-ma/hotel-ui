@@ -1,11 +1,25 @@
 import { titleLeveles } from '@/styles/theming'
 import tw, { styled } from 'twin.macro'
 
-export const Heading = styled.h1(({ color, level, theme }) => [
+export const Heading = styled.h1(({ color, level, theme, withLine }) => [
   //base styles
-  tw`font-primary font-bold tracking-wider`,
+  tw`font-primary font-bold tracking-wider relative`,
   //styles based on level
   ({ level }) => titleLeveles[level],
+  //border bottom for v2
+  withLine &&
+    `
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      height: 0.6rem;
+      width: 8.75rem;
+      background-color: ${theme.colors.text.primary};
+      border-radius: 20px;
+    }
+   `,
   //dynamic color
   color ? `color: ${color};` : `color: ${theme.colors.text.primary}`,
   // adjust font wieght for lower levels
