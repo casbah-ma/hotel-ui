@@ -157,6 +157,21 @@ const CustomStyles = createGlobalStyle`
       color: white;
      }
   }
+  .mySwiper_v3 {
+    ${tw`w-full h-[40rem] mt-[4.25rem] bg-transparent`}
+  }
+  .mySwiper_v3 .swiper-button-next {
+    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
+  }
+  .mySwiper_v3 .swiper-button-prev {
+    ${tw`invisible lg:visible top-6  z-30 rounded-full w-10 h-10 bg-white active:text-white border `}
+  }
+  .mySwiper_v3 .swiper-button-next, .mySwiper_v3 .swiper-button-prev {
+    &:active {
+      background-color: ${({ theme }) => theme.colors.bg.primary};
+      color: white;
+     }
+  }
 `
 const GlobalStyles = () => (
   <>
