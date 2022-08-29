@@ -1,5 +1,3 @@
-import React, { Component } from 'react'
-
 const StyledArrow = function ({ width, height, color }) {
   return (
     <svg

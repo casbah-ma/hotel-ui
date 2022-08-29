@@ -57,7 +57,7 @@ function Footer({
 
   const theme = useTheme()
   return (
-    <CloudinaryContext cloudName="casbah" width="100%">
+    <CloudinaryContext cloudName="casbah" className="full-width">
       <FooterContainer
         data-testid="footer-container"
         color={color}
