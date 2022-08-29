@@ -17,7 +17,7 @@ export const ImagesExample = Template.bind({})
 // Cards swiper
 CardsExample.args = {
   navigation: true,
-  header: { ...HedaerStories.Normal.args },
+  header: { ...HedaerStories.WithoutBorder.args },
   children: Cards.map((card, index) => (
     <SwiperSlide key={index}>
       <Card_v2 {...card} />
@@ -28,7 +28,7 @@ CardsExample.args = {
 // Images swiper
 ImagesExample.args = {
   navigation: true,
-  header: { ...HedaerStories.Normal.args },
+  header: { ...HedaerStories.WithoutBorder.args },
   children: Images.map((image, index) => (
     <SwiperSlide key={index}>
       <ImageCard {...image} />

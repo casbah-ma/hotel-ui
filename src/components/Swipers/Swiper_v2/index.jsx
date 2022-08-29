@@ -1,8 +1,6 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper } from 'swiper/react'
 import { Autoplay, Navigation } from 'swiper'
-import { SwiperContainer, SwiperHeader } from './Swiper.styles'
-import Card_v2 from '@/components/Cards/Card_v2'
-import * as CardProps from '@/components/Cards/Card_v2/Card.stories'
+import { SwiperContainer, SwiperHeader, SwiperContent } from './Swiper.styles'
 import { useBreakpoint } from '@/hooks'
 import Header from '@/components/Header'
 import { isEmpty } from '@/helpers/utils'
@@ -13,23 +11,29 @@ function Swiper_v2({ header, navigation, children }) {
   return (
     <SwiperContainer role="slider">
       <SwiperHeader>{!isEmpty(header) && <Header {...header} />}</SwiperHeader>
-      <Swiper
-        slidesPerView={bp === 'xs' ? 1 : 'auto'}
-        spaceBetween={30}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        navigation={!!navigation}
-        modules={[Navigation, Autoplay]}
-        className="mySwiper_v2"
-      >
-        {children}
-      </Swiper>
+      <SwiperContent>
+        <Swiper
+          slidesPerView={bp === 'xs' ? 1 : 'auto'}
+          spaceBetween={30}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={!!navigation}
+          modules={[Navigation, Autoplay]}
+          className="mySwiper_v2"
+        >
+          {children}
+        </Swiper>
+      </SwiperContent>
     </SwiperContainer>
   )
 }
 
-Swiper_v2.propTypes = {}
+Swiper_v2.propTypes = {
+  header: PropTypes.shape(Header.propTypes),
+  navigation: PropTypes.bool,
+  children: PropTypes.arrayOf(PropTypes.element),
+}
 
 export default Swiper_v2
