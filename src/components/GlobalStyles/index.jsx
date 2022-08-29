@@ -126,7 +126,6 @@ const CustomStyles = createGlobalStyle`
   .swiper-button-prev:after {
     content: 'next';
     font-size: 0.6rem !important;
-   
   }
   
   .swiper-button-next,
@@ -145,14 +144,13 @@ const CustomStyles = createGlobalStyle`
     width: fit-content;
     height: fit-content;
   }
-
   .mySwiper_v2 .swiper-button-next {
     ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
   }
   .mySwiper_v2 .swiper-button-prev {
-    ${tw`invisible lg:visible top-6 lg:left-[87rem] rounded-full w-10 h-10 bg-white active:text-white border `}
+    left: unset;
+    ${tw`invisible lg:visible top-6 right-20 rounded-full w-10 h-10 bg-white active:text-white border `}
   }
-
   .mySwiper_v2 .swiper-button-next, .mySwiper_v2 .swiper-button-prev {
     &:active {
       background-color: ${({ theme }) => theme.colors.bg.primary};

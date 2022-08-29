@@ -26,7 +26,7 @@ export const RoomCards = Template.bind({})
 //cardsSlider-w1-w
 CardsSlider.args = {
   type: 'card',
-  header: { ...HedaerStories.Normal.args },
+  header: { ...HedaerStories.Default.args },
   children:
     !isEmpty(Carddata) &&
     Carddata.map((card, index) => (
@@ -51,7 +51,7 @@ VerticalCardsSlider.args = {
 //imagesSlider-w1-w
 ImagesSlider.args = {
   type: 'card',
-  header: { ...HedaerStories.Normal.args },
+  header: { ...HedaerStories.Default.args },
   children:
     !isEmpty(Imagesdata) &&
     Imagesdata.map((image, index) => (
@@ -68,7 +68,7 @@ ImagesSlider.args = {
 //roomCards-w1-w
 RoomCards.args = {
   type: 'card',
-  header: { ...HedaerStories.Normal.args },
+  header: { ...HedaerStories.Default.args },
   children: categoriesDetails.map((item, index) => {
     return (
       <SwiperSlide key={index}>
