@@ -32,11 +32,51 @@ const CustomStyles = createGlobalStyle`
 //Hamburger menu
 .dialog {
   ${tw`fixed bg-black/25 z-10 inset-0`}
-}
-.dialog-panel {
-  ${tw`w-3/4 h-screen max-w-md transform overflow-hidden bg-white p-6 text-left align-middle transition-all`}
-}
 
+  .dialog-panel {
+    ${tw`w-3/4 h-screen max-w-md transform overflow-hidden bg-white p-6 text-left align-middle transition-all`}
+  }
+  //button animation
+  .button-enter {
+    ${tw`transform transition duration-[400ms]`}
+ }
+  .button-enter-from {
+    ${tw`opacity-0 rotate-[-120deg] scale-50`}
+ }
+  .button-enter-to {
+  ${tw`opacity-100 rotate-0 scale-100`}
+ }
+  .button-leave {
+  ${tw`transform duration-200 transition ease-in-out`}
+ } 
+  .button-leave-from {
+  ${tw`opacity-100 rotate-0 scale-100`}
+ }
+  .button-leave-to {
+  ${tw`opacity-0 scale-95`}
+ }
+
+  //panel animation
+  .enter {
+     ${tw`transform transition duration-[700ms]`}
+  }
+  .enter-from {
+     ${tw`opacity-0 -translate-x-80`}
+  }
+  .enter-to {
+   ${tw`opacity-100 translate-x-0`}
+  }
+  .leave {
+   ${tw`transform duration-200 transition ease-in-out`}
+  } 
+  .leave-from {
+   ${tw`opacity-100 translate-x-0`}
+  }
+  .leave-to {
+   ${tw`opacity-0 -translate-x-80`}
+  }
+}
+  
 //Dropdown
 .menu {
      ${tw`relative inline-block text-left`}
@@ -48,25 +88,22 @@ const CustomStyles = createGlobalStyle`
         ${tw`h-5 w-5 text-black`}
      }
 
+     //animation
      .enter {
         ${tw`transition ease-out duration-100`}
      }
-
      .enter-from {
         ${tw`transform opacity-0 scale-95`}
      }
-
      .enter-to {
       ${tw`transform opacity-100 scale-100`}
      }
      .leave {
       ${tw`transition ease-in duration-75`}
      } 
-     
      .leave-from {
       ${tw`transform opacity-100 scale-100`}
      }
-
      .leave-to {
       ${tw`transform opacity-0 scale-95`}
      }
