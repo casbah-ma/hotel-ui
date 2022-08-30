@@ -14,6 +14,17 @@ const Template = (args) => <Swiper_v3 {...args} />
 export const CardsExample = Template.bind({})
 export const ImagesExample = Template.bind({})
 
+// Images swiper
+ImagesExample.args = {
+  autoplay: true,
+  header: { ...HedaerStories.WithoutBorder.args, title: 'Feel the vibrancy' },
+  children: Images.map((image, index) => (
+    <SwiperSlide key={index}>
+      <ImageCard {...image} variant="shape6" />
+    </SwiperSlide>
+  )),
+}
+
 // Cards swiper
 CardsExample.args = {
   autoplay: true,
@@ -21,17 +32,6 @@ CardsExample.args = {
   children: Cards.map((card, index) => (
     <SwiperSlide key={index}>
       <Card_v2 {...card} />
-    </SwiperSlide>
-  )),
-}
-
-// Images swiper
-ImagesExample.args = {
-  autoplay: true,
-  header: { ...HedaerStories.WithoutBorder.args },
-  children: Images.map((image, index) => (
-    <SwiperSlide key={index}>
-      <ImageCard {...image} />
     </SwiperSlide>
   )),
 }

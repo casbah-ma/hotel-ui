@@ -25,6 +25,7 @@ export const Shape2 = Template.bind({})
 export const Shape3 = Template.bind({})
 export const Shape4 = Template.bind({})
 export const Shape5 = Template.bind({})
+export const Shape6 = Template.bind({})
 export const ImageVerticalTall = Template.bind({})
 export const ImageFlexible = Template.bind({})
 export const Small = Template.bind({})
@@ -50,6 +51,11 @@ Shape4.args = {
 Shape5.args = {
   ...Shape1.args,
   variant: 'shape5',
+}
+
+Shape6.args = {
+  ...Shape1.args,
+  variant: 'shape6',
 }
 
 ImageVerticalTall.args = {
