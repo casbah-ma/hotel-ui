@@ -140,22 +140,8 @@ const CustomStyles = createGlobalStyle`
     ${tw`w-full h-[40rem]`}
   }
   .mySwiper_v2 .swiper-slide {
-    margin-top: 70px;
     width: fit-content;
     height: fit-content;
-  }
-  .mySwiper_v2 .swiper-button-next {
-    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
-  }
-  .mySwiper_v2 .swiper-button-prev {
-    left: unset;
-    ${tw`invisible lg:visible top-6 right-20 rounded-full w-10 h-10 bg-white active:text-white border `}
-  }
-  .mySwiper_v2 .swiper-button-next, .mySwiper_v2 .swiper-button-prev {
-    &:active {
-      background-color: ${({ theme }) => theme.colors.bg.primary};
-      color: white;
-     }
   }
 `
 const GlobalStyles = () => (
