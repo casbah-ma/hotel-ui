@@ -10,24 +10,30 @@ export const Container = styled.div(({ imagePosition }) => [
   ({ imagePosition }) => imagePositions[imagePosition],
 ])
 
-export const Content = tw.div`
-  flex flex-col justify-between gap-12
-`
+export const Content = styled.div(({ contentIsCentred }) => [
+  tw`flex flex-col justify-between gap-10`,
+  contentIsCentred && tw`justify-center`,
+])
+
 export const Text = tw.div`
   flex flex-col gap-y-[3.2rem]
 `
 
-export const Grid = tw.section`
-  grid grid-cols-2 gap-4 md:gap-12 
-`
+export const Grid = styled.section(({ rows }) => [
+  rows === 1
+    ? tw`grid grid-cols-3 gap-[3.75rem] md:gap-12`
+    : tw`grid grid-cols-2 gap-4 md:gap-12`,
+])
 
-export const Article = styled.article(({ columns }) => [
+export const Article = styled.article(({ columns, rows }) => [
   // one columns layout
   columns === 1 && tw`col-span-2`,
   // two columns layout
   columns === 2 && tw`col-span-2 md:col-span-1`,
-  // three columns layout
-  columns === 3 && tw`first:col-span-2 col-span-2 md:col-span-1`,
+  // Three columns
+  columns === 3 && rows === 1
+    ? tw`col-span-1`
+    : tw`first:col-span-2 col-span-2 md:col-span-1`,
 ])
 
 export const Image = styled.div(({ imagePosition }) => [

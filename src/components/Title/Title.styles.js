@@ -13,7 +13,7 @@ export const Heading = styled.h1(({ color, level, theme, withLine }) => [
       content: "";
       position: absolute;
       left: 0;
-      bottom: -20px;
+      bottom: -30px;
       height: 0.6rem;
       width: 8.75rem;
       background-color: ${theme.colors.text.primary};

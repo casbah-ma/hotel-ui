@@ -8,6 +8,7 @@ export const imageVariants = {
   shape3: tw`w-[30rem] lg:w-full  h-96  object-cover rounded-lg`,
   small: tw`w-[22.5rem] h-[15.5rem]`,
   imageVerticalTall: tw`w-full h-[30.5rem] md:min-w-[20rem] lg:min-w-[31.25rem] md:h-[37.5rem] object-cover rounded-lg`,
+  imageHorizontal: tw`w-[22.5rem] h-[22rem] md:w-[19.4rem] md:h-[23.25rem] lg:w-[34.4rem] lg:h-[30rem]`,
   imageFlexible: tw`w-full h-[30rem] object-cover rounded-lg`,
 }
 
