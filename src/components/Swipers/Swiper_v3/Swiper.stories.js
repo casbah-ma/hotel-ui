@@ -1,7 +1,7 @@
 import Swiper_v3 from '.'
 import { SwiperSlide } from 'swiper/react'
 import * as HedaerStories from '@/components/Header/Header.stories'
-import { Cards, Images } from './FakeData'
+import { cards, images } from './FakeData'
 import Card_v2 from '@/components/Cards/Card_v2'
 import { ImageCard } from '@/components/Cards'
 
@@ -18,7 +18,7 @@ export const ImagesExample = Template.bind({})
 ImagesExample.args = {
   autoplay: true,
   header: { ...HedaerStories.WithoutBorder.args, title: 'Feel the vibrancy' },
-  children: Images.map((image, index) => (
+  children: images.map((image, index) => (
     <SwiperSlide key={index}>
       <ImageCard {...image} variant="shape6" />
     </SwiperSlide>
@@ -28,7 +28,7 @@ ImagesExample.args = {
 // Cards swiper
 CardsExample.args = {
   ...ImagesExample.args,
-  children: Cards.map((card, index) => (
+  children: cards.map((card, index) => (
     <SwiperSlide key={index}>
       <Card_v2 {...card} />
     </SwiperSlide>
