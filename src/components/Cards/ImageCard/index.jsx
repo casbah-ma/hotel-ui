@@ -1,7 +1,7 @@
 import { useBreakpoint } from '@/hooks'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+
 //styles
 import { imageVariants, StyledImage } from './ImageCard.styles'
 
