@@ -1,4 +1,4 @@
-import Swiper_v2 from '.'
+import Swiper_v3 from '.'
 import { SwiperSlide } from 'swiper/react'
 import * as HedaerStories from '@/components/Header/Header.stories'
 import { cards, images } from './FakeData'
@@ -6,11 +6,11 @@ import Card_v2 from '@/components/Cards/Card_v2'
 import { ImageCard } from '@/components/Cards'
 
 export default {
-  title: 'Sections/Swipers/Swiper_v2',
+  title: 'Sections/Swipers/Swiper_v3',
   component: Swiper_v2,
 }
 
-const Template = (args) => <Swiper_v2 {...args} />
+const Template = (args) => <Swiper_v3 {...args} />
 export const CardsExample = Template.bind({})
 export const ImagesExample = Template.bind({})
 
