@@ -46,7 +46,7 @@ function Blog_v3({
 Blog_v3.propTypes = {
   title: PropTypes.shape(Title.propTypes).isRequired,
   text: PropTypes.string.isRequired,
-  images: PropTypes.arrayOf(ImageCard.propTypes).isRequired,
+  images: PropTypes.arrayOf(PropTypes.shape(ImageCard.propTypes)).isRequired,
   contentIsCentred: PropTypes.bool,
   imagePosition: PropTypes.oneOf(Object.keys(imagePositions)),
   actionProps: PropTypes.shape(Button.propTypes),
