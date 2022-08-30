@@ -1,7 +1,7 @@
 import Swiper_v2 from '.'
 import { SwiperSlide } from 'swiper/react'
 import * as HedaerStories from '@/components/Header/Header.stories'
-import { Cards, Images } from './FakeData'
+import { cards, images } from './FakeData'
 import Card_v2 from '@/components/Cards/Card_v2'
 import { ImageCard } from '@/components/Cards'
 
@@ -16,9 +16,10 @@ export const ImagesExample = Template.bind({})
 
 // Cards swiper
 CardsExample.args = {
+  autplay: true,
   navigation: true,
   header: { ...HedaerStories.WithoutBorder.args },
-  children: Cards.map((card, index) => (
+  children: cards.map((card, index) => (
     <SwiperSlide key={index}>
       <Card_v2 {...card} />
     </SwiperSlide>
@@ -27,9 +28,8 @@ CardsExample.args = {
 
 // Images swiper
 ImagesExample.args = {
-  navigation: true,
-  header: { ...HedaerStories.WithoutBorder.args },
-  children: Images.map((image, index) => (
+  ...CardsExample.args,
+  children: images.map((image, index) => (
     <SwiperSlide key={index}>
       <ImageCard {...image} />
     </SwiperSlide>

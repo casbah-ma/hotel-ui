@@ -1,4 +1,4 @@
-export const Images = [
+export const images = [
   {
     src: 'https://source.unsplash.com/random/?hotel',
     variant: 'shape4',
@@ -29,7 +29,7 @@ export const Images = [
   },
 ]
 
-export const Cards = [
+export const cards = [
   {
     size: 'small',
     date: 'Posted in 20 March 2022',
