@@ -6,17 +6,12 @@ import Title from '@/components/Title'
 import Button from '@/components/Button'
 //styles
 import {
-  Article,
   Container,
   Content,
-  Grid,
   Image,
   imagePositions,
   SmallImage,
-  Text,
 } from './Blog_v3.styles'
-//helpers
-import { isEmpty } from '@/helpers/utils'
 
 function Blog_v3({
   title,
