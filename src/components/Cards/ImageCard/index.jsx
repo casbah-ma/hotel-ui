@@ -32,6 +32,11 @@ const imageVariantsShapes = {
     md: { width: 425, height: 255 },
     lg: { width: '546', height: 327.6 },
   },
+  shape6: {
+    sm: { width: 296, height: 317 },
+    md: { width: 296, height: 317 },
+    lg: { width: '420', height: 488 },
+  },
   imageVerticalTall: {
     sm: { width: 500, height: 488 },
     md: { width: 320, height: 600 },
