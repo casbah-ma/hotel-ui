@@ -23,8 +23,8 @@ const imageVariantsShapes = {
     lg: { width: 520, height: 384 },
   },
   imageVerticalTall: {
-    sm: { width: 500, height: 488 },
-    md: { width: 320, height: 600 },
+    sm: { width: 400, height: 488 },
+    md: { width: 420, height: 600 },
     lg: { width: 500, height: 600 },
   },
   //for blog_V2
@@ -44,6 +44,17 @@ const imageVariantsShapes = {
     sm: { width: 360, height: 248 },
     md: { width: 360, height: 248 },
     lg: { width: 360, height: 248 },
+  },
+  //for blog V3
+  imageVertical: {
+    sm: { width: 236, height: 262 },
+    md: { width: 280, height: 310 },
+    lg: { width: 540, height: 600 },
+  },
+  extraSmall: {
+    sm: { width: 118, height: 131 },
+    md: { width: 131, height: 151 },
+    lg: { width: 332, height: 258 },
   },
 }
 
