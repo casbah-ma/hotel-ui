@@ -35,7 +35,7 @@ Secondary.args = {
   ...Primary.args,
   variant: 'secondary',
   color: 'white',
-  bgColor: '#21B67C',
+  bgColor: 'black',
 }
 
 export const Dark = Template.bind({})

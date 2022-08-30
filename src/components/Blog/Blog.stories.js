@@ -53,6 +53,12 @@ WithButton.args = {
   actionProps: ButtonProps.Dark.args,
 }
 
+export const WithButtonV2 = Template.bind({})
+WithButtonV2.args = {
+  ...ImageOnLeftV2.args,
+  actionProps: ButtonProps.Secondary.args,
+}
+
 export const TwoColumns = Template.bind({})
 TwoColumns.args = {
   ...Default.args,
