@@ -7,7 +7,7 @@ import { ImageCard } from '@/components/Cards'
 
 export default {
   title: 'Sections/Swipers/Swiper_v3',
-  component: Swiper_v2,
+  component: Swiper_v3,
 }
 
 const Template = (args) => <Swiper_v3 {...args} />
