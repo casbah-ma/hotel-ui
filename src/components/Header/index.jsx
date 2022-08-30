@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 //components
 import Paragraph from '@/components/Paragraph'
 import Title from '@/components/Title'
+import Label from '@/components/Label'
 //styles
 import {
   ContactItem,
@@ -11,7 +12,6 @@ import {
 } from './Header.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
-import Label from '../Label'
 
 function Header({ title, description, contact, direction, withBorder = true }) {
   const isContact = !isEmpty(contact)
