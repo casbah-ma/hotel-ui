@@ -1,7 +1,6 @@
 import Guests from '.'
 import * as Button from '@/components/Button/Button.stories'
 import useState from 'storybook-addon-state'
-import theme from '@/src/theme'
 
 export default {
   title: 'Components/Guests',
@@ -22,7 +21,7 @@ export default {
           onGuestChange={handleGuestChange}
           buttonProps={{
             ...Button.Primary.args,
-            color: theme.colors.DatesCore.text,
+            color: 'primary',
             bgColor: 'primary',
           }}
         />
@@ -39,9 +38,5 @@ GuestsCard.args = {
     adults: 1,
     kids: 0,
   },
-  buttonProps: {
-    ...Button.Primary.args,
-    color: theme.colors.DatesCore.text,
-    bgColor: 'primary',
-  },
+  buttonProps: { ...Button.Primary.args, color: 'primary', bgColor: 'primary' },
 }
