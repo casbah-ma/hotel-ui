@@ -11,10 +11,10 @@ export const StyledInput = styled.input(
     tw`
        w-full h-[4.25rem] p-2 pl-2 md:pl-6 rounded-xl
        border-[0.063rem] border-solid font-secondary
-       outline-none text-xs 
+       outline-none text-base leading-7
     `,
     bgColor
-      ? `background-color: ${bgColor}`
+      ? `background-color: ${bgColor};`
       : `background-color: ${theme.colors.bg.primary};`,
     ,
     color
@@ -23,6 +23,6 @@ export const StyledInput = styled.input(
     ,
     `&:focus{border-color: ${theme.colors.border.primary}}`,
     error && tw`border-red-500`,
-    isTextaria && tw`w-full min-h-[4.375rem] pt-[1.625rem] pl-6`,
+    isTextaria && tw`w-full min-h-[4.375rem] max-h-[15rem] pt-[1.625rem] pl-6`,
   ]
 )
