@@ -11,9 +11,13 @@ export default {
       additional: '#00bcd4',
       colorgrey: 'rgba(250,250,250, 0.08)',
     },
-    border:{
+    border: {
       primary: '#21B67C',
       secondary: '#21B67C',
-    }
+    },
+    DatesCore: {
+      bg: '#fff',
+      text: '#000',
+    },
   },
 }

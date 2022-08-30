@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
-
+import '../../styles/datepicker.css'
 const CustomStyles = createGlobalStyle`
+
 .full-width {
   width: 100%;
 }
@@ -19,7 +20,14 @@ const CustomStyles = createGlobalStyle`
 }
 //BookingBar
 .panel {
-  ${tw`p-10 rounded-xl bg-black h-[34.5rem] w-full absolute left-0 bottom-24 flex justify-center items-center`}
+  ${tw`p-10 rounded-xl h-[34.5rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`},
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
+}
+.datesPanel{
+  ${tw`w-[68.75rem] h-[34.5rem] p-10 rounded-xl  absolute left-0 bottom-32 flex justify-center items-center shadow-card`},
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 
 .panel-mobile { 
@@ -143,6 +151,26 @@ const CustomStyles = createGlobalStyle`
     width: fit-content;
     height: fit-content;
   }
+  .CalendarDay__default {
+    border-radius: 50%;
+  }
+
+.CalendarMonthGrid, .CalendarMonth, .CalendarMonth_caption,
+.CalendarDay__default, .DayPickerNavigation_button__default,
+.DayPickerNavigation_svg__horizontal,
+.DayPickerKeyboardShortcuts_panel, .DayPickerNavigation_button__verticalDefault,
+.DayPicker_weekHeader__verticalScrollable, .DayPicker__horizontal {
+  ${tw`outline-none rounded-2xl`}
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
+  fill: ${({ theme }) => theme.colors.DatesCore.text};
+ }
+ .CalendarDay__blocked_out_of_range{
+  &:active {
+    background: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+ }
+ 
 `
 const GlobalStyles = () => (
   <>
