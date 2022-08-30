@@ -20,13 +20,13 @@ const CustomStyles = createGlobalStyle`
 }
 //BookingBar
 .panel {
-  ${tw`p-10 rounded-xl h-[34.5rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`},
+  ${tw`p-10 rounded-xl h-[34.5rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 .datesPanel{
-  ${tw`w-[68.75rem] h-[34.5rem] p-10 rounded-xl  absolute left-0 bottom-32 flex justify-center items-center shadow-card`},
-  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  ${tw`w-[68.75rem] h-[34.5rem] p-10 rounded-xl absolute left-0 bottom-32 flex justify-center items-center shadow-card`}
+  background-color:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 
@@ -155,21 +155,55 @@ const CustomStyles = createGlobalStyle`
     border-radius: 50%;
   }
 
-.CalendarMonthGrid, .CalendarMonth, .CalendarMonth_caption,
-.CalendarDay__default, .DayPickerNavigation_button__default,
+.CalendarMonthGrid,
+.CalendarMonth,
+.CalendarMonth_caption,
+.CalendarDay__default,
+.DayPickerNavigation_button__default,
 .DayPickerNavigation_svg__horizontal,
-.DayPickerKeyboardShortcuts_panel, .DayPickerNavigation_button__verticalDefault,
-.DayPicker_weekHeader__verticalScrollable, .DayPicker__horizontal {
+.DayPickerKeyboardShortcuts_panel,
+.DayPickerNavigation_button__verticalDefault,
+.DayPicker_weekHeader__verticalScrollable,
+.DayPicker__horizontal {
   ${tw`outline-none rounded-2xl`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
   fill: ${({ theme }) => theme.colors.DatesCore.text};
  }
- .CalendarDay__blocked_out_of_range{
-  &:active {
-    background: ${({ theme }) => theme.colors.DatesCore.bg};
+
+.CalendarDay__selected_span {
+  background: ${({ theme }) => theme.colors.bg.primary};
+  color: ${({ theme }) => theme.colors.DatesCore.bg};
+  &:hover, &:active {
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
   }
- }
+}
+.CalendarDay__highlighted_calendar {
+  background: #ffe8bc;
+  color: #484848;
+  &:hover, &:active {
+    background: #ffce71;
+    color: #484848;
+  }
+}
+
+.CalendarDay__selected {
+  background: ${({ theme }) => theme.colors.bg.primary};
+  color: ${({ theme }) => theme.colors.DatesCore.bg};
+  &:hover, &:active {
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+}
+.CalendarDay__hovered_span {
+  background: #ffe8bc;
+  color: #000;
+  &:hover{
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+}
  
 `
 const GlobalStyles = () => (

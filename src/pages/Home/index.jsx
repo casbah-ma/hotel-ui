@@ -2,7 +2,7 @@ import { Hero, AnimatedHero } from '@/components/Heros'
 import Blog from '@/components/Blog'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
-import BookingBar from '@/components/BookingBar'
+import BookingBar from '@/src/components/Bookings/BookingBar'
 import { useState } from 'react'
 import Layout from '@/components/Layout'
 

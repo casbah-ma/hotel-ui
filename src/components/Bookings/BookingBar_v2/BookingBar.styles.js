@@ -8,5 +8,3 @@ export const BookingButton = styled.button(({ theme }) => [
   tw`w-[15.438rem] h-[6.813rem] rounded-r-3xl text-white font-bold text-center flex items-center justify-center self-end`,
   `background-color: ${theme.colors.bg.primary};`,
 ])
-
-export const panel = tw.div`w-[68.75rem] h-full flex flex-col justify-start items-start`

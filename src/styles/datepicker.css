@@ -110,7 +110,7 @@
 }
 .SingleDatePicker_picker {
   z-index: 1;
-  background: #000;
+  background-color: #000;
   position: absolute;
 }
 .SingleDatePicker_picker__rtl {
@@ -131,7 +131,7 @@
   width: 100%;
 }
 .SingleDatePicker_picker__fullScreenPortal {
-  background: #000;
+  background-color: #000;
 }
 .SingleDatePicker_closeButton {
   background: 0 0;
@@ -176,6 +176,7 @@
 
 .DayPickerKeyboardShortcuts_panel {
   overflow: auto;
+  background: #000;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -221,6 +222,11 @@
 }
 .CalendarDay__defaultCursor {
   cursor: default;
+}
+.CalendarDay__default {
+  border-radius: 50%;
+  color: #fff;
+  background: #000;
 }
 .CalendarDay__default:hover {
   background: #e4e7e7;
@@ -291,6 +297,7 @@
 .CalendarDay__blocked_out_of_range,
 .CalendarDay__blocked_out_of_range:active,
 .CalendarDay__blocked_out_of_range:hover {
+  background: #000;
 
   color: #cacccd;
 }
@@ -303,6 +310,7 @@
   border: 1px double #e4e7e7;
 }
 .CalendarMonth {
+  background: #000;
   text-align: center;
   vertical-align: top;
   -webkit-user-select: none;
@@ -330,7 +338,7 @@
   padding-bottom: 7px;
 }
 .CalendarMonthGrid {
-  
+  background: #000;
   text-align: left;
   z-index: 0;
 }
@@ -404,10 +412,13 @@
   margin: 0;
 }
 .DayPickerNavigation_button__default {
+  background-color: #000;
   color: #fff;
 }
 
-
+.DayPickerNavigation_button__default:active {
+  background: #000;
+}
 .DayPickerNavigation_button__disabled {
   cursor: default;
   /* border: 1px solid #f2f2f2 */
@@ -431,6 +442,7 @@
 }
 .DayPickerNavigation_button__verticalDefault {
   padding: 5px;
+  background: #000;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   display: inline-block;
@@ -514,6 +526,7 @@
   top: 0;
   display: table-row;
   border-bottom: 1px solid #dbdbdb;
+  background: #000;
   margin-left: 0;
   left: 0;
   width: 100%;
