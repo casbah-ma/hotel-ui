@@ -27,8 +27,7 @@ ImagesExample.args = {
 
 // Cards swiper
 CardsExample.args = {
-  autoplay: true,
-  header: { ...HedaerStories.WithoutBorder.args, title: 'Feel the vibrancy' },
+  ...ImagesExample.args,
   children: Cards.map((card, index) => (
     <SwiperSlide key={index}>
       <Card_v2 {...card} />
