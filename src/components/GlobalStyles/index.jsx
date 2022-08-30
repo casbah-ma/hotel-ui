@@ -112,11 +112,66 @@ const CustomStyles = createGlobalStyle`
      }
   }
   
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } 
+  .swiper-slide {
+    width: fit-content;
+    height: fit-content;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    content: 'next';
+    font-size: 0.6rem !important;
+  }
   
   .swiper-button-next,
   .swiper-button-prev {
-    ${tw`invisible group-hover:visible rounded-full w-20 h-14 p-2 after:font-secondary after:text-black cursor-pointer`}
-  } 
+    ${tw`invisible bg-white group-hover:visible rounded-full text-3xl after:text-black after:content-["next"] cursor-pointer`}
+  }
+  .swiper-button-prev{
+    ${tw`after:content-["prev"]`}
+  }
+
+  .mySwiper_v2 {
+    ${tw`w-full h-[40rem]`}
+  }
+  .mySwiper_v2 .swiper-slide {
+    margin-top: 70px;
+    width: fit-content;
+    height: fit-content;
+  }
+  .mySwiper_v2 .swiper-button-next {
+    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
+  }
+  .mySwiper_v2 .swiper-button-prev {
+    left: unset;
+    ${tw`invisible lg:visible top-6 right-20 rounded-full w-10 h-10 bg-white active:text-white border `}
+  }
+  .mySwiper_v2 .swiper-button-next, .mySwiper_v2 .swiper-button-prev {
+    &:active {
+      background-color: ${({ theme }) => theme.colors.bg.primary};
+      color: white;
+     }
+  }
+  .mySwiper_v3 {
+    ${tw`w-full h-[40rem] mt-[4.25rem] bg-transparent`}
+  }
+  .mySwiper_v3 .swiper-button-next {
+    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
+  }
+  .mySwiper_v3 .swiper-button-prev {
+    ${tw`invisible lg:visible top-6  z-30 rounded-full w-10 h-10 bg-white active:text-white border `}
+  }
+  .mySwiper_v3 .swiper-button-next, .mySwiper_v3 .swiper-button-prev {
+    &:active {
+      background-color: ${({ theme }) => theme.colors.bg.primary};
+      color: white;
+     }
+  }
 `
 const GlobalStyles = () => (
   <>

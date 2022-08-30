@@ -2,7 +2,7 @@ import Dine from '.'
 //stories
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
 import * as BlogStories from '@/components/Blog/Blog.stories'
-import * as SwiperStories from '@/components/Swiper/Swiper.stories'
+import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 import * as AnimatedHero from '@/components/Heros/AnimatedHero/AnimatedHero.stories'
 

@@ -5,7 +5,7 @@ export default {
       secondary: '#fffff',
     },
     bg: {
-      primary: '#ffffff',
+      primary: '#21B67C',
       secondary: '#000000',
       tertiary: '#fafafa',
       additional: '#00bcd4',

@@ -13,7 +13,7 @@ import {
 } from './FakeData'
 
 export default {
-  title: 'Sections/Swiper',
+  title: 'Sections/Swipers/Swiper',
   component: Swiper,
 }
 
@@ -42,7 +42,7 @@ VerticalCardsSlider.args = {
   children:
     !isEmpty(VerticalCardesdata) &&
     VerticalCardesdata.map((card, index) => (
-      <SwiperSlide key={index} className="flex justify-center items-center">
+      <SwiperSlide key={index}>
         <Card {...card} />
       </SwiperSlide>
     )),
@@ -55,12 +55,7 @@ ImagesSlider.args = {
   children:
     !isEmpty(Imagesdata) &&
     Imagesdata.map((image, index) => (
-      <SwiperSlide
-        key={index}
-        className={`${
-          index % 3 === 0 && 'lg:w-[25rem]'
-        } flex justify-center items-center`}
-      >
+      <SwiperSlide key={index}>
         <ImageCard
           variant={`shape${(index % 3) + 1}`}
           src={image.src}
@@ -76,7 +71,7 @@ RoomCards.args = {
   header: { ...HedaerStories.Default.args },
   children: categoriesDetails.map((item, index) => {
     return (
-      <SwiperSlide key={index} className="md:w-[25rem]">
+      <SwiperSlide key={index}>
         <RoomCard {...item.roomCard}>
           <Paragraph {...item.paragraph} />
         </RoomCard>

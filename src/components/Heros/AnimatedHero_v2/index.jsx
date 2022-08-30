@@ -9,7 +9,7 @@ import {
   AnimatedHeroChildrens,
   AnimatedHeroButton,
   AnimatedHeroButtonText,
-} from './AnimatedHero.styles'
+} from './AnimatedHero_v2.styles'
 import { StyledArrow } from '@/components/Icons'
 
 function AnimatedHero_v2({ image, title, subtitle, clickTitle, children }) {

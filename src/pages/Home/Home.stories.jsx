@@ -2,7 +2,7 @@ import Home from '.'
 //stories
 import * as GalleryStories from '@/components/Gallery/Gallery.stories'
 import * as BlogStories from '@/components/Blog/Blog.stories'
-import * as SwiperStories from '@/components/Swiper/Swiper.stories'
+import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 import * as AnimatedHero from '@/components/Heros//AnimatedHero/AnimatedHero.stories'
 

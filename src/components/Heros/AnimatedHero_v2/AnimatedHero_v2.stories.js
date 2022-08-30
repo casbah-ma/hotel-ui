@@ -18,6 +18,7 @@ Example1.args = {
   clickTitle: true,
   children: (
     <Button
+      label=""
       bgColor="#21B67C"
       Icon={PlayIcon}
       onClick={function noRefCheck() {}}
@@ -37,7 +38,7 @@ Example2.args = {
       bgColor="#21B67C"
       label="Check Availability"
       onClick={function noRefCheck() {}}
-      variant=""
+      variant="primary"
     />
   ),
 }
