@@ -27,6 +27,12 @@ const imageVariantsShapes = {
     md: { width: 320, height: 600 },
     lg: { width: '500', height: 600 },
   },
+  //for blog_V2
+  imageHorizontal: {
+    sm: { width: 360, height: 352 },
+    md: { width: 310, height: 372 },
+    lg: { width: '550', height: 480 },
+  },
   imageFlexible: {
     sm: { width: '360', height: 500 },
     md: { width: '1000', height: 1000 },

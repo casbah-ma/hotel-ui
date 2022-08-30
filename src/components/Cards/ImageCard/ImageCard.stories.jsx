@@ -11,6 +11,7 @@ export default {
         'shape3',
         'ImageVerticalTall',
         'ImageFlexible',
+        'ImageHorizontal',
       ],
       control: { type: 'radio' },
     },
@@ -24,6 +25,7 @@ export const Shape3 = Template.bind({})
 export const ImageVerticalTall = Template.bind({})
 export const ImageFlexible = Template.bind({})
 export const Small = Template.bind({})
+export const ImageHorizontal = Template.bind({})
 
 Shape1.args = {
   variant: 'shape1',
@@ -52,5 +54,10 @@ ImageFlexible.args = {
 
 Small.args = {
   variant: 'small',
+  src: 'https://source.unsplash.com/random/?hotel',
+}
+
+ImageHorizontal.args = {
+  variant: 'imageHorizontal',
   src: 'https://source.unsplash.com/random/?hotel',
 }
