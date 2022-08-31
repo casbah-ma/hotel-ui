@@ -1,8 +1,8 @@
 export default {
   colors: {
     text: {
-      primary: '#fff',
-      secondary: '#000',
+      primary: '#000',
+      secondary: '#fff',
     },
     bg: {
       primary: '#21B67C',

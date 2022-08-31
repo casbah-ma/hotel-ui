@@ -14,7 +14,7 @@ const Quantity = function ({
   const theme = useTheme()
   return (
     <QuantityContainer data-testid="quantity">
-      <Label labelText={title} color={theme.colors.text.secondary} />
+      <Label labelText={title} color={theme.colors.DatesCore.text} />
       <QuantityButtonContainer>
         <Button
           testID={'minus-button'}
@@ -32,7 +32,7 @@ const Quantity = function ({
         <Label
           testID="value"
           labelText={value?.toString()}
-          color={theme.colors.text.secondary}
+          color={theme.colors.DatesCore.text}
         />
         <Button
           testID={'plus-button'}
