@@ -18,7 +18,7 @@ const props = {
 }
 
 export default {
-  title: 'Components/Card',
+  title: 'Components/Cards/Card',
   component: Card,
   decorators: [(story) => <Centre>{story()}</Centre>],
 }

@@ -4,9 +4,9 @@ import Button from '@/components/Button'
 import InfoHeader from '@/components/InfoHeader'
 import { Container, StyledChildren } from './RoomCard.styles'
 
-function RoomCard({ children, headerProps, actionProps, bgColor }) {
+function RoomCard({ children, headerProps, actionProps, bgColor, variant }) {
   return (
-    <Container bgColor={bgColor}>
+    <Container bgColor={bgColor} variant={variant}>
       <InfoHeader {...headerProps} />
       <StyledChildren>{children}</StyledChildren>
       {actionProps && <Button {...actionProps} />}

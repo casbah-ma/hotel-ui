@@ -60,6 +60,11 @@ const imageVariantsShapes = {
     md: { width: 360, height: 248 },
     lg: { width: 360, height: 248 },
   },
+  smallHorizontal: {
+    sm: { width: 228, height: 161 },
+    md: { width: 228, height: 161 },
+    lg: { width: 407, height: 234 },
+  },
   //for blog V3
   imageVertical: {
     sm: { width: 236, height: 262 },
@@ -94,7 +99,7 @@ const ImageCard = function ({ variant, src }) {
 }
 
 ImageCard.propTypes = {
-  variant: PropTypes.oneOf(Object.keys(imageVariants)),
+  variant: PropTypes.oneOf(Object.keys(imageVariantsShapes)),
   src: PropTypes.string.isRequired,
 }
 

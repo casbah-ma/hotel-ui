@@ -1,7 +1,7 @@
 import Card_v2 from '.'
 
 export default {
-  title: 'V2/Components/Card',
+  title: 'Components/Cards/Card_V2',
   component: Card_v2,
   argTypes: {
     size: {

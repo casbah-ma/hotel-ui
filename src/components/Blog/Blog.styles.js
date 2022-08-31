@@ -26,7 +26,6 @@ export const Grid = styled.section(({ rows }) => [
 ])
 
 export const Article = styled.article(({ columns, rows }) => [
-  console.log(columns),
   // one columns layout
   columns === 1 && tw`col-span-2`,
   // two columns layout
