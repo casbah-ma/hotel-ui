@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 //componenst
-import { Hero } from '@/src/components/Heroseros'
+import { Hero } from '@/components/Heros'
 import Spacing from '@/components/Spacing'
 import Blog from '@/components/Blog'
 import CategoriesCardsSection from '@/components/CategoriesCardsSection'

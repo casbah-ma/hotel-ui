@@ -1,5 +1,5 @@
 // components
-import { Hero, AnimatedHero } from '@/src/components/Heroseros'
+import { Hero, AnimatedHero } from '@/components/Heros'
 import Blog from '@/components/Blog'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'

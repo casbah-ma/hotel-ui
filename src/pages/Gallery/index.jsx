@@ -1,4 +1,4 @@
-import { HeroII } from '@/src/components/Heroseros'
+import { HeroII } from '@/components/Heros'
 import Layout from '@/components/Layout'
 import Masonry from '@/components/Masonry'
 import Spacing from '@/components/Spacing'

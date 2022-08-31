@@ -59,7 +59,7 @@ export const Desktop = function ({
       <DesktopContainer data-testid="booking-bar">
         <Column>
           <Label
-            color={theme.colors.text.secondary}
+            color={theme.colors.DatesCore.text}
             role="label"
             labelText="Check in - Check out"
             fontSize="sm"
@@ -91,7 +91,7 @@ export const Desktop = function ({
             role="label"
             labelText="Guests"
             fontSize="sm"
-            color={theme.colors.text.secondary}
+            color={theme.colors.DatesCore.text}
           />
           <Popover style={{ zIndex: '10' }}>
             <Popover.Button ref={guestbtn}>
@@ -168,7 +168,7 @@ export const Mobile = function ({
           <Label
             role="label"
             labelText="Check in - Check out"
-            color={theme.colors.text.secondary}
+            color={theme.colors.DatesCore.text}
           />
           <Button
             as="div"
@@ -200,7 +200,7 @@ export const Mobile = function ({
             role="label"
             labelText="Guests"
             fontSize="sm"
-            color={theme.colors.text.secondary}
+            color={theme.colors.DatesCore.text}
           />
           <Button
             ref={guestbtn}

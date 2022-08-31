@@ -3,7 +3,7 @@ import Button from '@/components/Button'
 import { PlayIcon } from '@heroicons/react/24/solid'
 
 export default {
-  title: 'V2/Components/Heros/AnimatedHero_v2',
+  title: 'Sections/Heros/AnimatedHero_v2',
   component: AnimatedHero_v2,
 }
 

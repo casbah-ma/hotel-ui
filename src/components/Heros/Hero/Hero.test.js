@@ -25,4 +25,4 @@ describe('Hero component', () => {
     const subtitle = screen.getByText(Default.args.subtitle)
     expect(subtitle).toHaveTextContent('Watch anywhere. Cancel anytime.')
   })
-})a
+})
