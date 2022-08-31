@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Heros'
+import { Hero } from '@/src/components/Heroseros'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import Layout from '@/components/Layout'

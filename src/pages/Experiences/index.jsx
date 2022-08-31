@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout'
-import { Hero } from '@/components/Heros'
+import { Hero } from '@/src/components/Heroseros'
 import Spacing from '@/components/Spacing'
 import Blog from '@/components/Blog'
 
