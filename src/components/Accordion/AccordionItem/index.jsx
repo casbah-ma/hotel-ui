@@ -23,7 +23,7 @@ function AccordionItem({ item, variant, isOpened, handleClick, children }) {
         onClick={() => handleClick(id)}
       >
         <p>{name}</p>
-        <ArrowIcon>
+        <ArrowIcon isOpened={expanded}>
           <ChevronDownIcon />
         </ArrowIcon>
       </ItemName>
