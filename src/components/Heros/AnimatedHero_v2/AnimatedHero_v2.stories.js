@@ -38,7 +38,7 @@ Example2.args = {
       bgColor="#21B67C"
       label="Check Availability"
       onClick={function noRefCheck() {}}
-      variant="primary"
+      variant="secondary"
     />
   ),
 }

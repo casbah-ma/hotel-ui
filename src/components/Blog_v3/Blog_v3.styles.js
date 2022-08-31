@@ -15,27 +15,12 @@ export const Content = styled.div(({ contentIsCentred }) => [
   contentIsCentred && tw`justify-center`,
 ])
 
-export const Text = tw.div`
-  flex flex-col gap-y-[3.2rem]
-`
-
-export const Grid = styled.section(({ rows }) => [
-  rows === 1
-    ? tw`grid grid-cols-3 gap-[3.75rem] md:gap-12`
-    : tw`grid grid-cols-2 gap-4 md:gap-12`,
-])
-
-export const Article = styled.article(({ columns, rows }) => [
-  console.log(columns),
-  // one columns layout
-  columns === 1 && tw`col-span-2`,
-  // two columns layout
-  columns === 2 && tw`col-span-2 md:col-span-1`,
-  // Three columns
-  columns === 3 && rows !== 1 && tw`first:col-span-2 col-span-2 md:col-span-1`,
-  columns === 3 && rows === 1 && tw`col-span-3 lg:col-span-1`,
-])
-
 export const Image = styled.div(({ imagePosition }) => [
+  tw`relative self-start`,
   imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
+])
+
+export const SmallImage = styled.div(({ imagePosition }) => [
+  tw`absolute bottom-12`,
+  imagePosition === 'left' ? tw`-right-20` : tw`-left-20`,
 ])

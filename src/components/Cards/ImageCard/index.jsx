@@ -1,7 +1,7 @@
 import { useBreakpoint } from '@/hooks'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import { useEffect } from 'react'
+
 //styles
 import { imageVariants, StyledImage } from './ImageCard.styles'
 
@@ -15,12 +15,12 @@ const imageVariantsShapes = {
   shape2: {
     sm: { width: 368, height: 342 },
     md: { width: 368, height: 342 },
-    lg: { width: '520', height: 342 },
+    lg: { width: 520, height: 342 },
   },
   shape3: {
     sm: { width: 480, height: 384 },
     md: { width: 480, height: 384 },
-    lg: { width: '520', height: 384 },
+    lg: { width: 520, height: 384 },
   },
   shape4: {
     sm: { width: 152, height: 158 },
@@ -38,19 +38,38 @@ const imageVariantsShapes = {
     lg: { width: '420', height: 488 },
   },
   imageVerticalTall: {
-    sm: { width: 500, height: 488 },
-    md: { width: 320, height: 600 },
-    lg: { width: '500', height: 600 },
+    sm: { width: 400, height: 488 },
+    md: { width: 420, height: 600 },
+    lg: { width: 500, height: 600 },
   },
+  //for blog_V2
+  imageHorizontal: {
+    sm: { width: 360, height: 352 },
+    md: { width: 310, height: 372 },
+    lg: { width: 550, height: 480 },
+  },
+  //Bottom Image for blog_V1
   imageFlexible: {
-    sm: { width: '360', height: 500 },
-    md: { width: '1000', height: 1000 },
-    lg: { width: '1500', height: 600 },
+    sm: { width: 360, height: 500 },
+    md: { width: 1000, height: 1000 },
+    lg: { width: 1500, height: 600 },
   },
+  //For Cards
   small: {
-    sm: { width: '360', height: '248' },
-    md: { width: '360', height: '248' },
-    lg: { width: '360', height: '248' },
+    sm: { width: 360, height: 248 },
+    md: { width: 360, height: 248 },
+    lg: { width: 360, height: 248 },
+  },
+  //for blog V3
+  imageVertical: {
+    sm: { width: 236, height: 262 },
+    md: { width: 280, height: 310 },
+    lg: { width: 540, height: 600 },
+  },
+  extraSmall: {
+    sm: { width: 118, height: 131 },
+    md: { width: 131, height: 151 },
+    lg: { width: 332, height: 258 },
   },
 }
 

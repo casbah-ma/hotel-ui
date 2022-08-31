@@ -17,24 +17,29 @@ import {
 //helpers
 import { isEmpty } from '@/helpers/utils'
 
-function Blog({ title, articles, image, imagePosition, actionProps }) {
-  //split text
-  // const paragraphSize = Math.ceil(text.length / columns)
-  // const regex = new RegExp('.{1,' + paragraphSize + '}', 'g')
-  // const articles = text.match(regex)
+function Blog({
+  title,
+  articles,
+  contentIsCentred = false,
+  image = null,
+  imagePosition,
+  actionProps = null,
+  rows,
+}) {
   const columns = articles.length
-
   return (
     <Container imagePosition={imagePosition} data-testid="blog-container">
-      <Content>
+      <Content contentIsCentred={contentIsCentred}>
         <Title {...title} />
         <Text>
-          <Grid>
+          <Grid rows={rows}>
             {!isEmpty(articles) &&
               articles.map((article, index) => (
-                <Article key={index} columns={columns}>
+                <Article key={index} columns={columns} rows={rows}>
                   <Paragraph
-                    fontSize={columns > 2 && index === 0 ? 'md' : 'rg'}
+                    fontSize={
+                      columns > 2 && rows !== 1 && index === 0 ? 'md' : 'rg'
+                    }
                     description={article}
                   />
                 </Article>
@@ -53,6 +58,7 @@ function Blog({ title, articles, image, imagePosition, actionProps }) {
 Blog.propTypes = {
   title: PropTypes.shape(Title.propTypes).isRequired,
   articles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  contentIsCentred: PropTypes.bool,
   imagePosition: PropTypes.oneOf(Object.keys(imagePositions)),
   image: PropTypes.shape(ImageCard.propTypes),
   actionProps: PropTypes.shape(Button.propTypes),

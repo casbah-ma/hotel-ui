@@ -30,6 +30,14 @@ Primary.args = {
   handleClick: () => console.log('you clicked me'),
 }
 
+export const Secondary = Template.bind({})
+Secondary.args = {
+  ...Primary.args,
+  variant: 'secondary',
+  color: 'white',
+  bgColor: 'black',
+}
+
 export const Dark = Template.bind({})
 Dark.args = {
   ...Primary.args,
