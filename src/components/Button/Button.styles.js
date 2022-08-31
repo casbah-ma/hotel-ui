@@ -1,5 +1,4 @@
 import tw, { styled } from 'twin.macro'
-import 'twin.macro'
 
 //Object variants
 export const buttonsVariant = {

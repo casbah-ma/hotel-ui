@@ -112,11 +112,37 @@ const CustomStyles = createGlobalStyle`
      }
   }
   
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } 
+  .swiper-slide {
+    width: fit-content;
+    height: fit-content;
+  }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    content: 'next';
+    font-size: 0.6rem !important;
+  }
   
   .swiper-button-next,
   .swiper-button-prev {
-    ${tw`invisible group-hover:visible rounded-full w-20 h-14 p-2 after:font-secondary after:text-black cursor-pointer`}
-  } 
+    ${tw`invisible bg-white group-hover:visible rounded-full text-3xl after:text-black after:content-["next"] cursor-pointer`}
+  }
+  .swiper-button-prev{
+    ${tw`after:content-["prev"]`}
+  }
+
+  .mySwiper_v2 {
+    ${tw`w-full h-[40rem]`}
+  }
+  .mySwiper_v2 .swiper-slide {
+    width: fit-content;
+    height: fit-content;
+  }
 `
 const GlobalStyles = () => (
   <>

@@ -37,7 +37,9 @@ function Blog({
               articles.map((article, index) => (
                 <Article key={index} columns={columns} rows={rows}>
                   <Paragraph
-                    fontSize={columns > 2 && index === 0 ? 'md' : 'rg'}
+                    fontSize={
+                      columns > 2 && rows !== 1 && index === 0 ? 'md' : 'rg'
+                    }
                     description={article}
                   />
                 </Article>

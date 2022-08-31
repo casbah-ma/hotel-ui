@@ -1,7 +1,7 @@
 import Offers from '.'
 //stories
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories'
-import * as CardsSwiperProps from '@/components/Swiper/Swiper.stories'
+import * as CardsSwiperProps from '@/components/Swipers/Swiper/Swiper.stories'
 import * as BlogProps from '@/components/Blog/Blog.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 

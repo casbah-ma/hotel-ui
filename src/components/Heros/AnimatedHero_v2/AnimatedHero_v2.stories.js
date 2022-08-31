@@ -18,6 +18,7 @@ Example1.args = {
   clickTitle: true,
   children: (
     <Button
+      label=""
       bgColor="#21B67C"
       Icon={PlayIcon}
       onClick={function noRefCheck() {}}

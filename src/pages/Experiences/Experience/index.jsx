@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout'
 import Blog from '@/components/Blog'
 import { AnimatedHero, Hero } from '@/components/Heros'
-import Swiper from '@/components/Swiper'
+import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 
 const Experience = ({

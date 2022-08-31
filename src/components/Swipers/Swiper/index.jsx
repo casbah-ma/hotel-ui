@@ -12,9 +12,9 @@ const getSlidesNumber = (bp) => {
     case 'md':
       return 2
     case 'lg':
-      return 3
+      return 'auto'
     default:
-      return 3
+      return 'auto'
   }
 }
 
@@ -32,7 +32,7 @@ const Swiper = function ({ header, children }) {
         }}
         navigation
         modules={[Navigation, Autoplay]}
-        className="swiper"
+        className="mySwiper"
       >
         {children}
       </SwiperCore>
