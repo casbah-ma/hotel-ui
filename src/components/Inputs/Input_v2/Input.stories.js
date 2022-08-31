@@ -27,6 +27,7 @@ Default.args = {
   placeHolder: `Full Name`,
   error: false,
   color: '#CBCBCB',
+  bgColor:'#FCFCFC',
   onChange: () => {},
 }
 
