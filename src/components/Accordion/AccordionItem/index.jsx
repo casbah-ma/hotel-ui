@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types'
 //styles
-import { ArrowIcon, ItemContent, Item, ItemName } from './AccordionItem.styles'
+import {
+  ArrowIcon,
+  ItemContent,
+  Item,
+  ItemName,
+  variants,
+} from './AccordionItem.styles'
 //icons
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 
-function AccordionItem({ item, isOpened, handleClick, children }) {
+function AccordionItem({ item, variant, isOpened, handleClick, children }) {
   const { name, id } = item
   const expanded = !!(isOpened === id)
   return (
-    <Item data-testid="accordion-item">
+    <Item data-testid="accordion-item" variant={variant}>
       <ItemName
         isOpened={expanded}
         aria-label="toggle-button"
@@ -25,6 +31,7 @@ function AccordionItem({ item, isOpened, handleClick, children }) {
         id={`content-${id}`}
         data-testid="accordion-item-content"
         isOpened={expanded}
+        variant={variant}
       >
         {children}
       </ItemContent>
@@ -37,6 +44,7 @@ AccordionItem.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
+    variant: PropTypes.oneOf(Object.keys(variants)),
   }),
   handleClick: PropTypes.func,
   isOpened: PropTypes.string.isRequired,
