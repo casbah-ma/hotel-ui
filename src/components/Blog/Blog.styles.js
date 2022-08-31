@@ -36,6 +36,7 @@ export const Article = styled.article(({ columns, rows }) => [
   columns === 3 && rows === 1 && tw`col-span-3 lg:col-span-1`,
 ])
 
-export const Image = styled.div(({ imagePosition }) => [
+export const Image = styled.div(({ imagePosition, varaint }) => [
+  tw`flex-shrink-0`,
   imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
 ])

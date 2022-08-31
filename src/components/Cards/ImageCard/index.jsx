@@ -82,16 +82,14 @@ const getVariant = (variant, bp) => {
 const ImageCard = function ({ variant, src }) {
   const bp = useBreakpoint()
   return (
-    <StyledImage variant={variant} src={src}>
-      <Image
-        className="radius-xl"
-        width={getVariant(variant, bp) ? getVariant(variant, bp).width : 0}
-        height={getVariant(variant, bp) ? getVariant(variant, bp).height : 0}
-        src={src}
-        objectFit="cover"
-        alt="image"
-      />
-    </StyledImage>
+    <Image
+      className="radius-xl"
+      width={getVariant(variant, bp) ? getVariant(variant, bp).width : 0}
+      height={getVariant(variant, bp) ? getVariant(variant, bp).height : 0}
+      src={src}
+      objectFit="cover"
+      alt="image"
+    />
   )
 }
 
