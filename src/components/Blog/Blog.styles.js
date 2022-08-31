@@ -26,14 +26,14 @@ export const Grid = styled.section(({ rows }) => [
 ])
 
 export const Article = styled.article(({ columns, rows }) => [
+  console.log(columns),
   // one columns layout
   columns === 1 && tw`col-span-2`,
   // two columns layout
   columns === 2 && tw`col-span-2 md:col-span-1`,
   // Three columns
-  columns === 3 && rows === 1
-    ? tw`col-span-1`
-    : tw`first:col-span-2 col-span-2 md:col-span-1`,
+  columns === 3 && rows !== 1 && tw`first:col-span-2 col-span-2 md:col-span-1`,
+  columns === 3 && rows === 1 && tw`col-span-3 lg:col-span-1`,
 ])
 
 export const Image = styled.div(({ imagePosition }) => [
