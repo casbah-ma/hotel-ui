@@ -54,7 +54,12 @@ const imageVariantsShapes = {
     md: { width: 1000, height: 1000 },
     lg: { width: 1500, height: 600 },
   },
-  //For Cards
+  //For Room Cards
+  medium: {
+    sm: { width: 285, height: 282 },
+    md: { width: 285, height: 282 },
+    lg: { width: 576, height: 480 },
+  },
   small: {
     sm: { width: 360, height: 248 },
     md: { width: 360, height: 248 },
