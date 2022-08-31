@@ -23,6 +23,6 @@ export const StyledInput = styled.input(
     ,
     `&:focus{border-color: ${theme.colors.border.primary}}`,
     error && tw`border-red-500`,
-    isTextaria && tw`w-full min-h-[4.375rem] max-h-[15rem] pt-[1.625rem] pl-6`,
+    isTextaria && tw`w-full min-h-[4.375rem] max-h-[15rem] pt-[1.2rem] pl-6 `,
   ]
 )
