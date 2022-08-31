@@ -41,7 +41,7 @@ export default {
               title_2: 'Guests',
             }}
             buttonProps={{
-              text: 'Book Now',
+              text: 'Check Availability',
               onClick: () => {
                 console.log('dates', dates)
                 console.log('guestValues', guestValues)

@@ -25,7 +25,8 @@ const CustomStyles = createGlobalStyle`
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 .datesPanel{
-  ${tw`w-[68.75rem] h-[34.5rem] p-10 rounded-xl absolute left-0 bottom-32 flex justify-center items-center shadow-card`}
+  ${tw`xs:w-full sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] xs:h-[20rem] sm:h-[24.375rem] md:h-[34.5rem]
+  p-10 rounded-xl absolute left-0 bottom-36  lg:bottom-32 flex justify-center items-center shadow-card`}
   background-color:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
@@ -164,6 +165,7 @@ const CustomStyles = createGlobalStyle`
 .DayPickerKeyboardShortcuts_panel,
 .DayPickerNavigation_button__verticalDefault,
 .DayPicker_weekHeader__verticalScrollable,
+.DayPicker_weekHeader_li,
 .DayPicker__horizontal {
   ${tw`outline-none rounded-2xl`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
