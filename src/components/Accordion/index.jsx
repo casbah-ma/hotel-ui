@@ -6,7 +6,7 @@ import Paragraph from '@/components/Paragraph'
 //styles
 import { AccordionSection } from './Accordion.styles'
 
-function Accordion({ items }) {
+function Accordion({ items, variant }) {
   const [isOpened, setIsOpened] = useState('')
 
   const toggle = (id) => {
@@ -22,6 +22,7 @@ function Accordion({ items }) {
             item={item}
             handleClick={toggle}
             isOpened={isOpened}
+            variant={variant}
           >
             <Paragraph description={item.content} />
           </AccordionItem>
