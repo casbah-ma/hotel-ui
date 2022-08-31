@@ -5,7 +5,7 @@ import InfoItem from './InfoItem'
 //styles
 import { Container } from './InfoItems.styles'
 
-function InfoItems({ infos }) {
+function InfoItems({ infos, space }) {
   return (
     <Container>
       {!isEmpty(infos) &&
@@ -14,6 +14,7 @@ function InfoItems({ infos }) {
             key={info.id}
             infoName={info.infoName}
             infoValue={info.infoValue}
+            space={space}
           />
         ))}
     </Container>
@@ -24,6 +25,7 @@ InfoItems.propTypes = {
   infos: PropTypes.arrayOf(
     PropTypes.shape({ ...InfoItem.propTypes, id: PropTypes.string })
   ),
+  space: PropTypes.bool,
 }
 
 export default InfoItems

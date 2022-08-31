@@ -1,5 +1,6 @@
-import tw from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
-export const Container = tw.li`
-    w-full flex justify-between mb-5
-`
+export const Container = styled.li(({ space }) => [
+  tw`w-full flex justify-start mb-5`,
+  space && tw`justify-between`,
+])
