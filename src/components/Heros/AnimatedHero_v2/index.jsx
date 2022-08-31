@@ -12,20 +12,30 @@ import {
 } from './AnimatedHero_v2.styles'
 import { StyledArrow } from '@/components/Icons'
 
-function AnimatedHero_v2({ image, title, subtitle, clickTitle, children }) {
+function AnimatedHero_v2({
+  image,
+  title,
+  subtitle,
+  clickTitle,
+  children,
+  position,
+  gradient,
+}) {
   return (
-    <AnimatedHeroContainer>
+    <AnimatedHeroContainer position={position} gradient={gradient}>
       <AnimatedHeroImage>
         <Image
-          style={{ borderRadius: '8px' }}
+          style={{
+            borderRadius: '8px',
+          }}
           alt="hero"
           src={image}
           layout="fill"
           objectFit="cover"
         />
       </AnimatedHeroImage>
-      <AnimatedHeroChildrens>
-        <AnimatedHeroContent>
+      <AnimatedHeroChildrens position={position}>
+        <AnimatedHeroContent position={position}>
           <Title title={title} color="white" level="2" />
           <Paragraph description={subtitle} color="white" />
         </AnimatedHeroContent>
@@ -48,7 +58,9 @@ AnimatedHero_v2.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   clickTitle: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  position: PropTypes.string,
+  gradient: PropTypes.bool,
 }
 
 export default AnimatedHero_v2

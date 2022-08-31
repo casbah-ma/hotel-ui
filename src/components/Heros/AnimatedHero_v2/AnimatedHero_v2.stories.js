@@ -10,6 +10,8 @@ export default {
 const Template = (args) => <AnimatedHero_v2 {...args} />
 export const Example1 = Template.bind({})
 export const Example2 = Template.bind({})
+export const Example3 = Template.bind({})
+export const Example4 = Template.bind({})
 Example1.args = {
   image: 'https://source.unsplash.com/random/?hotel',
   title: 'Feel the vibrancy',
@@ -28,10 +30,8 @@ Example1.args = {
 }
 
 Example2.args = {
-  image: 'https://source.unsplash.com/random/?hotel',
-  title: 'Feel the vibrancy',
-  subtitle:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+  ...Example1.args,
+  clickTitle: false,
   children: (
     <Button
       color="white"
@@ -39,6 +39,28 @@ Example2.args = {
       label="Check Availability"
       onClick={function noRefCheck() {}}
       variant="secondary"
+    />
+  ),
+}
+
+Example3.args = {
+  ...Example2.args,
+  gradient: true,
+}
+
+Example4.args = {
+  ...Example3.args,
+  title: 'Kids’ club: once upon a time in Le Jardin de Lila...',
+  subtitle:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas leo, dui dignissim pharetra, neque id nullam egestas senectus. Nisi convallis ridiculus amet amet. Nunc maecenas enim scelerisque viverra sit eget vestibulum. Eros elementum mattis tristique nunc lacus, facilisi viverra donec. Tristique etiam mattis lectus nisi faucibus id urna.',
+  position: 'start',
+  children: (
+    <Button
+      color="white"
+      bgColor="#21B67C"
+      label="Check Availability"
+      onClick={function noRefCheck() {}}
+      variant="primary"
     />
   ),
 }
