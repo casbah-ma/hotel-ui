@@ -28,6 +28,7 @@ Default.args = {
   error: false,
   color: '#CBCBCB',
   bgColor:'#FCFCFC',
+  currency:'',
   onChange: () => {},
 }
 
