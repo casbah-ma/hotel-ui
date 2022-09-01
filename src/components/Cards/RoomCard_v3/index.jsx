@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 //components
 import Button from '@/components/Button'
 import Title from '@/components/Title'
-import Label from '@/components/Label'
 import { ImageCard } from '@/components/Cards'
 //styles
 import {
@@ -13,14 +12,23 @@ import {
   Subtitle,
 } from './RoomCard_v3.styles'
 
-function RoomCard_v3({ children, src, name, subtitle, actionProps, bgColor }) {
+function RoomCard_v3({
+  children,
+  imageSrc,
+  name,
+  subtitle,
+  actionProps,
+  bgColor,
+}) {
   return (
-    <Container bgColor={bgColor}>
-      <ImageContainer>
-        <ImageCard src={src} variant="medium" />
-      </ImageContainer>
+    <Container bgColor={bgColor} imageSrc={imageSrc}>
+      {imageSrc && (
+        <ImageContainer>
+          <ImageCard src={imageSrc} variant="medium" />
+        </ImageContainer>
+      )}
       <InfoHeader>
-        <Title color="white" level="3" title={name} />
+        <Title color={imageSrc ? 'white' : 'black'} level="3" title={name} />
         <Subtitle>{subtitle}</Subtitle>
       </InfoHeader>
       <StyledChildren>{children}</StyledChildren>
