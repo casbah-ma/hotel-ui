@@ -13,7 +13,7 @@ export default {
     },
     border: {
       primary: '#21B67C',
-      secondary: '#21B67C',
+      secondary: '#000',
     },
     DatesCore: {
       bg: '#fff',

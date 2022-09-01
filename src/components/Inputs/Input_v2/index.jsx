@@ -12,6 +12,7 @@ const Input_v2 = ({
   onChange,
   size,
   testID,
+  focus,
 }) => {
   return (
     <InputContainer>
@@ -28,6 +29,7 @@ const Input_v2 = ({
         placeholder={placeHolder}
         size={size}
         onChange={onChange}
+        focus={focus}
       />
     </InputContainer>
   )
