@@ -22,6 +22,7 @@ import {
 } from './Navbar_v2.styles'
 
 function Navbar_v2({
+  transparent = false,
   links,
   languages,
   defaultLanguage,
@@ -33,6 +34,7 @@ function Navbar_v2({
   t,
 }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [hasBackground, setHasBackground] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
   let bp = useBreakpoint()
 
@@ -48,10 +50,16 @@ function Navbar_v2({
     if ((bp = 'lg')) setIsOpen(false)
   }, [bp])
 
-  //Hide the navbar on scroll
+  //change the navbar on scroll
   const scrollPosition = useScrollPosition()
   const scrollDirection = useScrollDirection()
   useEffect(() => {
+    if (scrollPosition > 100) {
+      setHasBackground(true)
+    } else {
+      setHasBackground(false)
+    }
+
     if (scrollDirection === 'down') {
       setIsHidden(true)
     } else if (scrollDirection === 'up') {
@@ -60,12 +68,18 @@ function Navbar_v2({
   }, [scrollPosition, scrollDirection])
 
   return (
-    <NavbarContainer bgColor={bgColor} color={color} isHidden={isHidden}>
+    <NavbarContainer
+      bgColor={bgColor}
+      color={color}
+      isHidden={isHidden}
+      hasBackground={hasBackground}
+      transparent={transparent}
+    >
       <Image
         src={logo}
         alt="logo"
-        width={bp === 'lg' ? 248 : 138}
-        height={bp === 'lg' ? 86 : 48}
+        width={bp === 'lg' ? 224 : 138}
+        height={bp === 'lg' ? 76 : 48}
       />
       <Nav>
         <LinksList>
@@ -117,6 +131,7 @@ function Navbar_v2({
 }
 
 Navbar_v2.propTypes = {
+  transparent: PropTypes.bool,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,

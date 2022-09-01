@@ -20,3 +20,9 @@ Default.args = {
   t: (string) => string,
   defaultLanguage: 'en',
 }
+
+export const Transparent = Template.bind({})
+Transparent.args = {
+  ...Default.args,
+  transparent: true,
+}
