@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { StyledInput, InputContainer} from './Input.styles'
+import { StyledInput, InputContainer, StyledSpan } from './Input.styles'
 
 const Input_v2 = ({
   name,
@@ -12,6 +12,7 @@ const Input_v2 = ({
   onChange,
   size,
   testID,
+  currency
 }) => {
   return (
     <InputContainer>
@@ -29,6 +30,7 @@ const Input_v2 = ({
         size={size}
         onChange={onChange}
       />
+      <StyledSpan>{currency}</StyledSpan>
     </InputContainer>
   )
 }
