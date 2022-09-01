@@ -1,6 +1,6 @@
 import Gallery from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as MasonryProps from '@/components/Masonry/Masonry.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 
@@ -13,6 +13,6 @@ const Template = (args) => <Gallery {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Gallery' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Gallery' },
   masonryProps: { ...MasonryProps.Default.args },
 }
