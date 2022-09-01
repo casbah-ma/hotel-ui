@@ -1,6 +1,6 @@
 import Activities from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as BlogStories from '@/components/Blog/Blog.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
@@ -14,7 +14,7 @@ const Template = (args) => <Activities {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Activities' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Activities' },
   blogProps: {
     ...BlogStories.Default.args,
     title: {

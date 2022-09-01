@@ -1,6 +1,6 @@
 import Offer from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as BlogStories from '@/components/Blog/Blog.stories'
 import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
@@ -15,7 +15,7 @@ const Template = (args) => <Offer {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Glowing skin' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Glowing skin' },
   blogProps: {
     ...BlogStories.Default.args,
     title: {

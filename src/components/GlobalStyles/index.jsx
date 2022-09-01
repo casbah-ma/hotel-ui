@@ -32,13 +32,17 @@ const CustomStyles = createGlobalStyle`
 }
 
 .panel-mobile { 
-  ${tw`rounded-xl bg-black h-[20.375rem] w-full mb-3 flex justify-center items-center`}
+  ${tw`rounded-xl h-[20.375rem] w-full mb-3 flex justify-center items-center shadow-card `}
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
 }
  .desktop-action {
   ${tw`w-1/3 h-full flex justify-center items-center p-6`}
  }
 .guest-panel {
-  ${tw`p-3 rounded-xl bg-black h-[12.75rem] w-full mb-3 flex justify-center items-center`}
+  ${tw`p-3 rounded-xl h-[12.75rem] w-full mb-3 flex justify-center items-center shadow-card `}
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 
 //Hamburger menu

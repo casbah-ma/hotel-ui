@@ -1,6 +1,6 @@
 import ContactUs from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 
 export default {
@@ -12,7 +12,7 @@ const Template = (args) => <ContactUs {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Contact Us' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Contact Us' },
   ContactsProps: {
     email: 'reservations@palazzoversace.com',
     phone: '+61 7 5509 8000',

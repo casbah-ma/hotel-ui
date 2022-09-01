@@ -14,7 +14,7 @@ const Template = (args) => <Offers {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Offers' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Offers' },
   blogProps: {
     ...BlogProps.Default.args,
     title: {

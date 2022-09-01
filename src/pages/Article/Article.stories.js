@@ -1,6 +1,6 @@
 import Article from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as BlogStories from '@/components/Blog/Blog.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 
@@ -13,7 +13,7 @@ const Template = (args) => <Article {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Can you hear us?' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Can you hear us?' },
   blogProps: {
     ...BlogStories.ThreeColumns.args,
     title: { ...BlogStories.ThreeColumns.args.title, title: 'Our Story' },

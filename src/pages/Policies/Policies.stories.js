@@ -1,6 +1,6 @@
 import Policies from '.'
 //stories
-import * as HeroProps from '@/components/Heros/Hero/Hero.stories.jsx'
+import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
 import * as BlogStories from '@/components/Blog/Blog.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 
@@ -18,7 +18,7 @@ const Template = (args) => <Policies {...args} />
 export const Default = Template.bind({})
 Default.args = {
   layoutProps: { ...LayoutStories.Default.args },
-  heroProps: { ...HeroProps.Default.args, title: 'Policies' },
+  heroProps: { ...HeroProps.Example1.args, title: 'Policies' },
   blogProps: {
     ...BlogStories.Default.args,
     title: { ...BlogStories.Default.args.title, title: '1.  Introduction' },
