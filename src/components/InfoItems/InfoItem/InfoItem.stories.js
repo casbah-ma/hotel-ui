@@ -14,3 +14,9 @@ Default.args = {
   infoName: 'Name:',
   infoValue: 'Evolution',
 }
+
+export const WithoutSpace = Template.bind({})
+WithoutSpace.args = {
+  ...Default.args,
+  space: false,
+}

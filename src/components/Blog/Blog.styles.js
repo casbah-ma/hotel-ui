@@ -26,7 +26,6 @@ export const Grid = styled.section(({ rows }) => [
 ])
 
 export const Article = styled.article(({ columns, rows }) => [
-  console.log(columns),
   // one columns layout
   columns === 1 && tw`col-span-2`,
   // two columns layout
@@ -36,6 +35,7 @@ export const Article = styled.article(({ columns, rows }) => [
   columns === 3 && rows === 1 && tw`col-span-3 lg:col-span-1`,
 ])
 
-export const Image = styled.div(({ imagePosition }) => [
+export const Image = styled.div(({ imagePosition, varaint }) => [
+  tw`flex-shrink-0`,
   imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
 ])

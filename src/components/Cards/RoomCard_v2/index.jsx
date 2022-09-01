@@ -2,22 +2,26 @@ import PropTypes from 'prop-types'
 //components
 import Button from '@/components/Button'
 import InfoHeader from '@/components/InfoHeader'
-import { Container, StyledChildren } from './RoomCard.styles'
+import { Container, StyledChildren } from './RoomCard_v2.styles'
+import Paragraph from '../../Paragraph'
 
-function RoomCard({ children, headerProps, actionProps, bgColor, variant }) {
+function RoomCard_v2({ headerProps, actionProps, bgColor, text }) {
   return (
-    <Container bgColor={bgColor} variant={variant}>
+    <Container bgColor={bgColor}>
       <InfoHeader {...headerProps} />
-      <StyledChildren>{children}</StyledChildren>
+      <StyledChildren>
+        <Paragraph fontSize="rg" description={text} />
+      </StyledChildren>
       {actionProps && <Button {...actionProps} />}
     </Container>
   )
 }
 
-RoomCard.propTypes = {
+RoomCard_v2.propTypes = {
   headerProps: PropTypes.shape({ ...InfoHeader.propTypes }),
   actionProps: PropTypes.shape({ ...Button.propTypes }),
+  text: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
 }
 
-export default RoomCard
+export default RoomCard_v2

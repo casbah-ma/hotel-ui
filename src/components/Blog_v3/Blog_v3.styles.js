@@ -16,7 +16,7 @@ export const Content = styled.div(({ contentIsCentred }) => [
 ])
 
 export const Image = styled.div(({ imagePosition }) => [
-  tw`relative self-start`,
+  tw`relative self-start flex-shrink-0`,
   imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
 ])
 

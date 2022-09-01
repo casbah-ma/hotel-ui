@@ -1,7 +1,7 @@
 import ImageCard from '.'
 
 export default {
-  title: 'Components/ImageCard',
+  title: 'Components/Cards/ImageCard',
   component: ImageCard,
   argTypes: {
     variant: {

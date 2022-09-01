@@ -1,9 +1,14 @@
 import tw, { styled } from 'twin.macro'
-
+export const containerVariants = {
+  v1: tw`py-10 px-6 max-w-max rounded-xl gap-10 bg-[#fafafa]`,
+  v2: tw`p-4 pb-16 max-w-max gap-6 shadow-card bg-white rounded-3xl`,
+}
 export const Container = styled.div(({ bgColor, theme }) => [
-  tw`flex flex-col py-10 px-6 rounded-xl items-center justify-center gap-10 
-     w-[18rem] md:w-[22.5rem]`,
-  bgColor ? `background-color: ${bgColor};` : `${theme.colors.bg.tertiary};`,
+  tw`flex flex-col items-center justify-center`,
+  ({ variant }) => containerVariants[variant],
+  // bgColor
+  //   ? `background-color: ${bgColor};`
+  //   : `background-color: ${theme.colors.bg.tertiary};`,
 ])
 
 export const StyledChildren = tw.div`

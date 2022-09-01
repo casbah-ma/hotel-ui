@@ -19,3 +19,13 @@ WithImage.args = {
   ...Default.args,
   roomImage: { ...ImagesStories.Small.args },
 }
+
+export const WithImage_V2 = Template.bind({})
+WithImage_V2.args = {
+  ...Default.args,
+  roomImage: {
+    variant: 'smallHorizontal',
+    src: 'https://source.unsplash.com/random/?hotel',
+  },
+  variant: 'v2',
+}
