@@ -7,14 +7,12 @@ import Label from '../../Label'
 
 function TextCard({ src, variant, text }) {
   return (
-    <Container variant={variant}>
-      <ImageWrapper>
-        <ImageCard src={src} variant={variant} />
-      </ImageWrapper>
+    <ImageWrapper>
+      <ImageCard src={src} variant={variant} />
       <Text>
         <Label color="white" labelText={text} fontSize="sm" />
       </Text>
-    </Container>
+    </ImageWrapper>
   )
 }
 
