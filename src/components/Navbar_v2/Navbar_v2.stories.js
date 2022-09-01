@@ -14,7 +14,7 @@ const Template = (args) => <Navbar_v2 {...args} />
 export const Default = Template.bind({})
 Default.args = {
   links,
-  actionProps: { ...ButtonStories.Primary.args, label: 'Book Now' },
+  actionProps: { ...ButtonStories.Secondary.args, label: 'Book Now' },
   languages: [...DropdownStories.Default.args.languages],
   logo: 'https://d3lq8p6p6r1qxf.cloudfront.net/1660584751398.png',
   t: (string) => string,
