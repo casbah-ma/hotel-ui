@@ -18,9 +18,8 @@ const DatePicker = function ({ dates, onDatesChange }) {
       onDatesChange={onDatesChange}
       focusedInput={focusedInput || defaultFocusedInput}
       onFocusChange={onFocusChange}
-      numberOfMonths={2}
-      orientation={bp === 'sm' ? 'vertical' : 'horizontal'}
-      verticalHeight={280}
+      numberOfMonths={bp === 'sm' || bp === 'xs' ? 1 : 2}
+      verticalHeight={bp === 'sm' || bp === 'xs' ? 190 : 300}
     />
   )
 }

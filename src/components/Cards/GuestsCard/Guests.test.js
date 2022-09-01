@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { composeStories } from '@storybook/testing-react'
 import * as stories from './Guests.stories'
-import userEvent from '@testing-library/user-event'
 
 const { GuestsCard } = composeStories(stories)
 

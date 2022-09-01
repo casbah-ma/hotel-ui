@@ -17,6 +17,7 @@ const items = [
   },
   { ...AccordionItemStories.Closed.args.item, id: '6', name: 'Pet Friendly' },
 ]
+
 export default {
   title: 'sections/Accordion',
   component: Accordion,
@@ -27,4 +28,11 @@ const Template = (args) => <Accordion {...args} />
 export const Default = Template.bind({})
 Default.args = {
   items,
+  variant: 'version1',
+}
+
+export const V2 = Template.bind({})
+V2.args = {
+  items,
+  variant: 'version2',
 }
