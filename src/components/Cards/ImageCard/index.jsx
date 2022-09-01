@@ -25,22 +25,33 @@ const imageVariantsShapes = {
   shape4: {
     sm: { width: 152, height: 158 },
     md: { width: 246, height: 255 },
-    lg: { width: '316.19', height: 327.6 },
+    lg: { width: 316.19, height: 327.6 },
   },
   shape5: {
     sm: { width: 264, height: 158 },
     md: { width: 425, height: 255 },
-    lg: { width: '546', height: 327.6 },
+    lg: { width: 546, height: 327.6 },
   },
   shape6: {
     sm: { width: 296, height: 317 },
     md: { width: 296, height: 317 },
-    lg: { width: '420', height: 488 },
+    lg: { width: 420, height: 488 },
   },
   imageVerticalTall: {
     sm: { width: 400, height: 488 },
     md: { width: 420, height: 600 },
     lg: { width: 500, height: 600 },
+  },
+  // for TextCard
+  smallWithText: {
+    sm: { width: 296, height: 317 },
+    md: { width: 296, height: 317 },
+    lg: { width: 448, height: 480 },
+  },
+  largeWithText: {
+    sm: { width: 325, height: 317 },
+    md: { width: 325, height: 317 },
+    lg: { width: 500, height: 480 },
   },
   //for blog_V2
   imageHorizontal: {
