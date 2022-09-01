@@ -54,13 +54,13 @@ function AnimatedHero_v2({
 }
 
 AnimatedHero_v2.propTypes = {
+  position: PropTypes.string,
+  gradient: PropTypes.bool,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   clickTitle: PropTypes.bool,
   children: PropTypes.node,
-  position: PropTypes.string,
-  gradient: PropTypes.bool,
 }
 
 export default AnimatedHero_v2

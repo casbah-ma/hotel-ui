@@ -5,6 +5,12 @@ import { PlayIcon } from '@heroicons/react/24/solid'
 export default {
   title: 'Sections/Heros/AnimatedHero_v2',
   component: AnimatedHero_v2,
+  argTypes: {
+    position: {
+      options: ['start', 'center'],
+      control: { type: 'radio' },
+    },
+  },
 }
 
 const Template = (args) => <AnimatedHero_v2 {...args} />
