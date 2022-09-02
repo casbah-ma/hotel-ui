@@ -1,6 +1,6 @@
 import Masonry from '.'
 import { images } from './data'
-import * as BarStories from '@/components/CategoriesBar/CategoriesBar.stories'
+import * as BarStories from '@/src/components/FilterBar/FilterBar.stories'
 
 export default {
   title: 'Sections/Masonry',

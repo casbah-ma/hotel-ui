@@ -1,7 +1,7 @@
 import MeetingCategories from '.'
 // Stories
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
-import * as BarStories from '@/components/CategoriesBar/CategoriesBar.stories'
+import * as BarStories from '@/src/components/FilterBar/FilterBar.stories'
 import * as InfoItemsStories from '@/components/InfoItems/InfoItems.stories'
 
 export default {

@@ -1,6 +1,6 @@
 import CategoriesSwiper from '.'
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
-import * as BarStories from '@/components/CategoriesBar/CategoriesBar.stories'
+import * as BarStories from '@/src/components/FilterBar/FilterBar.stories'
 
 export default {
   title: 'Sections/SpaCategories',

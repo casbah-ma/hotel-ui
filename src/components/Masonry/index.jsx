@@ -8,13 +8,13 @@ import {
   imgSizes,
   imgSizesNext,
 } from './Masonry.styles'
-import CategoriesBar from '@/components/CategoriesBar'
+import FilterBar from '@/src/components/FilterBar'
 import Image from 'next/image'
 
 function Masonry({ images, barProps }) {
   return (
     <Wrapper>
-      <CategoriesBar {...barProps} />
+      <FilterBar {...barProps} />
       <MasonryContainer>
         {!isEmpty(images) &&
           images.map((image, index) => (
@@ -46,7 +46,7 @@ Masonry.propTypes = {
       link: PropTypes.string,
     })
   ),
-  barProps: CategoriesBar.propTypes,
+  barProps: FilterBar.propTypes,
 }
 
 export default Masonry

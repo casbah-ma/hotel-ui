@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 //components
-import CategoriesBar from '@/components/CategoriesBar'
+import FilterBar from '@/src/components/FilterBar'
 import RoomCard from '@/components/Cards/RoomCard'
 import Header from '@/components/Header'
 import InfoItems from '../InfoItems'
@@ -16,7 +16,7 @@ function MeetingCategories({ categories, headerProps, categoriesDetails }) {
   return (
     <Container>
       <Header {...headerProps} />
-      <CategoriesBar categories={categories} />
+      <FilterBar categories={categories} />
       <Swiper type="card">
         {!isEmpty(categoriesDetails) &&
           categoriesDetails.map((category, index) => (
@@ -32,7 +32,7 @@ function MeetingCategories({ categories, headerProps, categoriesDetails }) {
 }
 
 MeetingCategories.propTypes = {
-  categories: PropTypes.shape(CategoriesBar.propTypes),
+  categories: PropTypes.shape(FilterBar.propTypes),
   headerProps: PropTypes.shape(Header.propTypes),
   categoriesDetails: PropTypes.arrayOf(
     PropTypes.shape({
