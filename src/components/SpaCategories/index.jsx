@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 //components
 import Paragraph from '@/components/Paragraph'
-import FilterBar from '@/src/components/FilterBar'
+import FilterBar from '@/components/FilterBar'
 import RoomCard from '@/components/Cards/RoomCard'
 import Header from '@/components/Header'
 import Swiper from '@/components/Swipers/Swiper'

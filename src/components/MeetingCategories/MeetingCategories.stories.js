@@ -1,7 +1,7 @@
 import MeetingCategories from '.'
 // Stories
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
-import * as BarStories from '@/src/components/FilterBar/FilterBar.stories'
+import * as BarStories from '@/components/FilterBar/FilterBar.stories'
 import * as InfoItemsStories from '@/components/InfoItems/InfoItems.stories'
 
 export default {
@@ -50,5 +50,5 @@ export const Default = Template.bind({})
 Default.args = {
   categoriesDetails,
   headerProps,
-  categories: BarStories.Default.args.categories,
+  categories: BarStories.V1.args.categories,
 }

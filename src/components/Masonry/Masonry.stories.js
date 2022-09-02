@@ -1,6 +1,6 @@
 import Masonry from '.'
 import { images } from './data'
-import * as BarStories from '@/src/components/FilterBar/FilterBar.stories'
+import * as BarStories from '@/components/FilterBar/FilterBar.stories'
 
 export default {
   title: 'Sections/Masonry',
@@ -13,5 +13,5 @@ export const Default = Template.bind({})
 
 Default.args = {
   images,
-  barProps: { ...BarStories.Default.args },
+  barProps: { ...BarStories.V1.args },
 }

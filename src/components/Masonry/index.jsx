@@ -8,7 +8,7 @@ import {
   imgSizes,
   imgSizesNext,
 } from './Masonry.styles'
-import FilterBar from '@/src/components/FilterBar'
+import FilterBar from '@/components/FilterBar'
 import Image from 'next/image'
 
 function Masonry({ images, barProps }) {
