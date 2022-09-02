@@ -3,42 +3,36 @@ import MeetingCategories from '.'
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
 import * as BarStories from '@/components/FilterBar/FilterBar.stories'
 import * as InfoItemsStories from '@/components/InfoItems/InfoItems.stories'
+import * as HeaderStories from '@/components/Header/Header.stories'
 
 export default {
   title: 'Sections/MeetingCategories',
   component: MeetingCategories,
 }
 
-//Props
-const headerProps = {
-  title: 'Choose your type',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-}
-
 const categoriesDetails = [
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
   {
-    roomCard: { ...RoomCardStories.WithInfoItems.args.headerProps },
+    roomCard: { ...RoomCardStories.WithInfoItems.args },
     infoDeatails: InfoItemsStories.Default.args.infos,
   },
 ]
@@ -49,6 +43,6 @@ const Template = (args) => <MeetingCategories {...args} />
 export const Default = Template.bind({})
 Default.args = {
   categoriesDetails,
-  headerProps,
+  headerProps: HeaderStories.Default.args,
   categories: BarStories.V1.args.categories,
 }
