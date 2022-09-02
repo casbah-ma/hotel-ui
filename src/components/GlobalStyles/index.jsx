@@ -97,7 +97,7 @@ const CustomStyles = createGlobalStyle`
 .menu {
      ${tw`relative inline-block text-left`}
      button {
-      ${tw`inline-flex justify-center gap-[0.8rem] bg-transparent`}
+      ${tw`inline-flex justify-center gap-1 bg-transparent`}
      }
 
      svg {
