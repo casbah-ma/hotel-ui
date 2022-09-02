@@ -39,4 +39,5 @@ export const WithFreeText = Template2.bind({})
 WithFreeText.args = {
   headerProps: { ...InfoHeaderStories.Default.args },
   actionProps: { ...ButtonStories.Dark.args },
+  variant: 'v1',
 }
