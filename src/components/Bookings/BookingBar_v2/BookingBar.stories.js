@@ -12,7 +12,6 @@ const props = {
 export default {
   title: 'Components/Bookings/BookingBar_v2',
   component: BookingBa_v2,
-  buttonProps,
 }
 
 const Template = (args) => <BookingBa_v2 {...args} />

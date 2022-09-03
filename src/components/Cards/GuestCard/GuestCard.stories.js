@@ -9,5 +9,5 @@ const Template = (args) => <GuestCard {...args} />
 export const Default = Template.bind({})
 Default.args = {
   title: 'Adults',
-  value: '01',
+  value: 1,
 }

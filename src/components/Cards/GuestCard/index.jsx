@@ -11,7 +11,7 @@ import theme from '../../../../theme'
 
 function GuestCard({ title, onMinusClick, onPlusClick, value }) {
   return (
-    <GuestContainer>
+    <GuestContainer data-testid="guest-card-container">
       <Label labelText={title} color={theme.colors.DatesCore.text} />
       <GuestActionsContainer>
         <Label
