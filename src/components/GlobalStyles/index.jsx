@@ -158,7 +158,7 @@ const CustomStyles = createGlobalStyle`
      }
   }
   .mySwiper_v3 {
-    ${tw`w-full h-[40rem] mt-[4.25rem] bg-transparent`}
+    ${tw`w-full h-[40rem] bg-transparent`}
   }
   .mySwiper_v3 .swiper-button-next {
     ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
