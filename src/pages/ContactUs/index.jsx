@@ -1,4 +1,4 @@
-import { HeroII } from '@/components/Heros'
+import { HeroII } from '@/components/Heros/Hero'
 import Layout from '@/components/Layout'
 import { ContactUs } from '@/components/Forms'
 import Map from '@/components/Map'

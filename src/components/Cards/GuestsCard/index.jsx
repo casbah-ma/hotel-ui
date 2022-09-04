@@ -2,8 +2,16 @@ import Title from '@/components/Title'
 import Quantity from '@/components/Quantity'
 import { GuestBooking, GuestValues } from './Guests.styles'
 import PropTypes from 'prop-types'
+import { useTheme } from 'styled-components'
 
-const Guests = ({ guestValues, buttonProps, onGuestChange, title }) => {
+const Guests = ({
+  guestValues,
+  buttonProps,
+  onGuestChange,
+  title,
+  centred,
+}) => {
+  const theme = useTheme()
   const handlePlusClick = (type) => {
     onGuestChange(type, guestValues[type] + 1)
   }
@@ -11,8 +19,10 @@ const Guests = ({ guestValues, buttonProps, onGuestChange, title }) => {
     onGuestChange(type, guestValues[type] - 1)
   }
   return (
-    <GuestBooking data-testid="guests-card-container">
-      {title && <Title title={title} level="3" color="white" />}
+    <GuestBooking data-testid="guests-card-container" centred={centred}>
+      {title && (
+        <Title title={title} level="3" color={theme.colors.DatesCore.text} />
+      )}
       <GuestValues>
         <Quantity
           title="Adults :"

@@ -12,7 +12,7 @@ const props = {
 }
 
 export default {
-  title: 'Components/BookingBar',
+  title: 'Components/Bookings/BookingBar',
   component: BookingBar,
   decorators: [
     (story) => {

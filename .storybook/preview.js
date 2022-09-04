@@ -5,7 +5,7 @@ import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { WithNextRouter } from 'storybook-addon-next-router/dist/decorators'
 //styles
 import '@/styles/global.css'
-import '@/styles/datepicker.css'
+// import '@/styles/datepicker.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import GlobalStyles from '@/components/GlobalStyles'

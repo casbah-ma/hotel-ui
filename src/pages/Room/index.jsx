@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 //componenst
-import { Hero, AnimatedHero } from '@/components/Heros'
+import { Hero, AnimatedHero } from '@/components/Heros/Hero'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import Blog from '@/components/Blog'

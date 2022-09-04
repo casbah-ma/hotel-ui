@@ -5,11 +5,15 @@ import { Container } from './InfoItem.styles'
 import Paragraph from '@/components//Paragraph'
 import Label from '@/components//Label'
 
-function InfoItem({ infoName, infoValue }) {
+function InfoItem({ infoName, infoValue, space = true }) {
   return (
-    <Container data-testid="information-room-items">
+    <Container data-testid="information-room-items" space={space}>
       <Paragraph description={infoName} />
-      <Label labelText={infoValue} fontSize="sm" />
+      <Label
+        color={space ? 'black' : 'white'}
+        labelText={infoValue}
+        fontSize="sm"
+      />
     </Container>
   )
 }

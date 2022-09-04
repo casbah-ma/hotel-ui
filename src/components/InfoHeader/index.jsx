@@ -6,12 +6,16 @@ import ImageCard from '@/components/Cards/ImageCard'
 //styles
 import { HeaderContainer, TextWrapper } from './InfoHeader.styles'
 
-const InfoHeader = function ({ title, subtitle, roomImage }) {
+function InfoHeader({ title, subtitle, roomImage, variant = 'v1' }) {
   return (
-    <HeaderContainer>
-      <TextWrapper>
+    <HeaderContainer variant={variant}>
+      <TextWrapper variant={variant}>
         <Title title={title} level="3" />
-        <Label labelText={subtitle} fontSize="md" />
+        <Label
+          labelText={variant === 'v1' ? subtitle : `(${subtitle})`}
+          fontSize="md"
+          color="#787777"
+        />
       </TextWrapper>
       {roomImage && <ImageCard {...roomImage} />}
     </HeaderContainer>
@@ -22,6 +26,7 @@ InfoHeader.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   roomImage: PropTypes.shape(ImageCard.propTypes),
+  variant: PropTypes.string,
 }
 
 export default InfoHeader

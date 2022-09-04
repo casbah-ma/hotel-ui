@@ -1,7 +1,7 @@
 import Swiper_v3 from '.'
 import { SwiperSlide } from 'swiper/react'
 import * as HedaerStories from '@/components/Header/Header.stories'
-import { Cards, Images } from './FakeData'
+import { cards, images } from './FakeData'
 import Card_v2 from '@/components/Cards/Card_v2'
 import { ImageCard } from '@/components/Cards'
 
@@ -14,24 +14,24 @@ const Template = (args) => <Swiper_v3 {...args} />
 export const CardsExample = Template.bind({})
 export const ImagesExample = Template.bind({})
 
-// Images swiper
-ImagesExample.args = {
-  autoplay: true,
-  header: { ...HedaerStories.WithoutBorder.args, title: 'Feel the vibrancy' },
-  children: Images.map((image, index) => (
+// Cards swiper
+CardsExample.args = {
+  autplay: true,
+  navigation: true,
+  header: { ...HedaerStories.WithoutBorder.args },
+  children: cards.map((card, index) => (
     <SwiperSlide key={index}>
-      <ImageCard {...image} variant="shape6" />
+      <Card_v2 {...card} />
     </SwiperSlide>
   )),
 }
 
-// Cards swiper
-CardsExample.args = {
-  autoplay: true,
-  header: { ...HedaerStories.WithoutBorder.args, title: 'Feel the vibrancy' },
-  children: Cards.map((card, index) => (
+// Images swiper
+ImagesExample.args = {
+  ...CardsExample.args,
+  children: images.map((image, index) => (
     <SwiperSlide key={index}>
-      <Card_v2 {...card} />
+      <ImageCard {...image} />
     </SwiperSlide>
   )),
 }

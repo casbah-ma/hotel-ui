@@ -140,7 +140,6 @@ const CustomStyles = createGlobalStyle`
     ${tw`w-full h-[40rem]`}
   }
   .mySwiper_v2 .swiper-slide {
-    margin-top: 70px;
     width: fit-content;
     height: fit-content;
   }
@@ -172,6 +171,60 @@ const CustomStyles = createGlobalStyle`
       color: white;
      }
   }
+  .CalendarDay__default {
+    border-radius: 50%;
+  }
+
+.CalendarMonthGrid,
+.CalendarMonth,
+.CalendarMonth_caption,
+.CalendarDay__default,
+.DayPickerNavigation_button__default,
+.DayPickerNavigation_svg__horizontal,
+.DayPickerKeyboardShortcuts_panel,
+.DayPickerNavigation_button__verticalDefault,
+.DayPicker_weekHeader__verticalScrollable,
+.DayPicker_weekHeader_li,
+.DayPicker__horizontal {
+  ${tw`outline-none rounded-2xl`}
+  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  color: ${({ theme }) => theme.colors.DatesCore.text};
+  fill: ${({ theme }) => theme.colors.DatesCore.text};
+ }
+
+.CalendarDay__selected_span {
+  background: ${({ theme }) => theme.colors.bg.primary};
+  color: ${({ theme }) => theme.colors.DatesCore.bg};
+  &:hover, &:active {
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+}
+.CalendarDay__highlighted_calendar {
+  background: #ffe8bc;
+  color: #484848;
+  &:hover, &:active {
+    background: #ffce71;
+    color: #484848;
+  }
+}
+
+.CalendarDay__selected {
+  background: ${({ theme }) => theme.colors.bg.primary};
+  color: ${({ theme }) => theme.colors.DatesCore.bg};
+  &:hover, &:active {
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+}
+.CalendarDay__hovered_span {
+  background: #ffe8bc;
+  color: #000;
+  &:hover{
+    background: ${({ theme }) => theme.colors.bg.primary};
+    color: ${({ theme }) => theme.colors.DatesCore.bg};
+  }
+}
 `
 const GlobalStyles = () => (
   <>

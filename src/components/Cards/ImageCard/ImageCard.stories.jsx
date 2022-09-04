@@ -1,7 +1,7 @@
 import ImageCard from '.'
 
 export default {
-  title: 'Components/ImageCard',
+  title: 'Components/Cards/ImageCard',
   component: ImageCard,
   argTypes: {
     variant: {
@@ -13,6 +13,7 @@ export default {
         'shape5',
         'ImageVerticalTall',
         'ImageFlexible',
+        'ImageHorizontal',
       ],
       control: { type: 'radio' },
     },
@@ -29,6 +30,7 @@ export const Shape6 = Template.bind({})
 export const ImageVerticalTall = Template.bind({})
 export const ImageFlexible = Template.bind({})
 export const Small = Template.bind({})
+export const ImageHorizontal = Template.bind({})
 
 Shape1.args = {
   variant: 'shape1',
@@ -71,4 +73,9 @@ ImageFlexible.args = {
 Small.args = {
   ...Shape1.args,
   variant: 'small',
+}
+
+ImageHorizontal.args = {
+  variant: 'imageHorizontal',
+  src: 'https://source.unsplash.com/random/?hotel',
 }

@@ -2,14 +2,14 @@ import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@testing-library/react'
 import * as stories from './Header.stories'
 
-const { Normal, LargeTitle } = composeStories(stories)
+const { Default, LargeTitle } = composeStories(stories)
 
 describe('Header component', () => {
   it('Renders a header', () => {
-    render(<Normal />)
+    render(<Default />)
     const title = screen.getByRole('heading')
-    expect(title).toHaveTextContent(Normal.args.title)
-    const description = screen.getByText(Normal.args.description)
+    expect(title).toHaveTextContent(Default.args.title)
+    const description = screen.getByText(Default.args.description)
     expect(description).toBeInTheDocument()
   })
 

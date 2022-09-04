@@ -9,7 +9,7 @@ import * as InfoHeaderStories from '@/components/InfoHeader/InfoHeader.stories'
 import * as ParagraphStories from '@/components/Paragraph/Paragraph.stories'
 
 export default {
-  title: 'Components/RoomCard',
+  title: 'Components/Cards/RoomCard',
   component: RoomCard,
 }
 
@@ -27,6 +27,12 @@ const Template2 = (args) => (
 export const WithInfoItems = Template.bind({})
 WithInfoItems.args = {
   headerProps: { ...InfoHeaderStories.WithImage.args },
+  variant: 'v1',
+}
+export const WithInfoItems_V2 = Template.bind({})
+WithInfoItems_V2.args = {
+  headerProps: { ...InfoHeaderStories.WithImage_V2.args },
+  variant: 'v2',
 }
 
 export const WithFreeText = Template2.bind({})

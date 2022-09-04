@@ -12,6 +12,6 @@ const Template = (args) => <CategoriesCardsSection {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  headerProps: HeaderStories.Normal.args,
+  headerProps: HeaderStories.Default.args,
   cards: CategoriesGridStories.Default.args.cards,
 }
