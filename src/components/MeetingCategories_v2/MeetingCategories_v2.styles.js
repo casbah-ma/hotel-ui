@@ -4,5 +4,5 @@ export const Container = tw.div`
 flex flex-col gap-12 bg-[#FAFAFA]
 `
 export const Wrapper = tw.div`
- flex flex-col gap-5 justify-start items-start 
+ flex flex-col gap-5  justify-start items-start [&>header]:min-w-[45%]
 `
