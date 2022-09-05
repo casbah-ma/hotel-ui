@@ -15,7 +15,12 @@ function RoomCard({
 }) {
   return (
     <Container bgColor={bgColor} variant={variant}>
-      <InfoHeader roomImage={image} title={title} subtitle={subtitle} />
+      <InfoHeader
+        variant={variant}
+        roomImage={image}
+        title={title}
+        subtitle={subtitle}
+      />
       <StyledChildren>{children}</StyledChildren>
       {actionProps && <Button {...actionProps} />}
     </Container>
