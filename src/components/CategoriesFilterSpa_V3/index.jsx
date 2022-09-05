@@ -8,7 +8,7 @@ import { SwiperSlide } from 'swiper/react'
 import Paragraph from '@/components/Paragraph'
 import Button from '@/components/Button'
 //styles
-import { Container, Wrapper } from './CategoriesFilterSpa_v3.styles'
+import { Container, Wrapper } from './CategoriesFilterSpa_V3.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
 
