@@ -8,6 +8,6 @@ describe('RoomCard component', () => {
   it('Renders a header info', () => {
     render(<WithInfoItems />)
     const title = screen.getByRole('heading')
-    expect(title).toHaveTextContent(WithInfoItems.args.headerProps.title)
+    expect(title).toHaveTextContent(WithInfoItems.args.title)
   })
 })
