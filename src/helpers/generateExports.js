@@ -1,9 +1,9 @@
 // const {getEntries} = require('./utils')
 const { log } = require('console')
 const fs = require('fs')
-const { getEntries } = require('./scriptsHelper')
+const { getExportsEntries } = require('./scriptsHelper')
 
-const components = Object.keys(getEntries('src/components'))
+const components = Object.keys(getExportsEntries('src/components'))
 let nestedComponents = []
 let outputs = []
 const multiexports = [
@@ -21,9 +21,13 @@ const multiexports = [
   'CategoriesFilters',
 ]
 
-console.log('components', components)
 components.forEach((component) => {
-  if (multiexports.includes(component)) {
+  if (component.includes('/')) {
+    component.split('/')[1] !== 'index.js' &&
+      outputs.push(
+        `export {default as ${component.split('/')[1]}} from './${component}'`
+      )
+  } else if (multiexports.includes(component)) {
     outputs.push(`export * from './${component}'`)
   } else outputs.push(`export {default as ${component}} from './${component}'`)
 })
