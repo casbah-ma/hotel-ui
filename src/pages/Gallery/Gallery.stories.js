@@ -1,7 +1,7 @@
 import Gallery from '.'
 //stories
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
-import * as MasonryProps from '@/components/Masonry/Masonry.stories'
+import * as MasonryProps from '@/components/Masonries/Masonry/Masonry.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 
 export default {

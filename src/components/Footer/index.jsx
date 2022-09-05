@@ -1,5 +1,5 @@
 import Paragraph from '@/components/Paragraph'
-import Input from '@/components/Input'
+import Input from '@/components/Inputs/Input'
 import Label from '@/components/Label'
 import Link from '@/components/Link'
 import { useState } from 'react'

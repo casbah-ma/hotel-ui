@@ -1,5 +1,5 @@
 import Footer from '.'
-import { links } from '@/components/Navbar/data'
+import { links } from '@/components/Navbars/Navbar/data'
 //stories
 import * as DropdownStories from '@/components/Dropdown/Dropdown.stories'
 export default {

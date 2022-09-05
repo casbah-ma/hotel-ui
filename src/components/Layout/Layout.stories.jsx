@@ -1,5 +1,5 @@
 import Layout from '.'
-import * as NavbarStories from '@/components/Navbar/Navbar.stories'
+import * as NavbarStories from '@/components/Navbars/Navbar/Navbar.stories'
 import * as FooterStories from '@/components/Footer/Footer.stories'
 export default {
   title: 'Sections/Layout',

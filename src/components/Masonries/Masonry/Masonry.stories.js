@@ -3,7 +3,7 @@ import { images } from './data'
 import * as BarStories from '@/components/FilterBar/FilterBar.stories'
 
 export default {
-  title: 'Sections/Masonry',
+  title: 'Sections/Masonries/Masonry',
   component: Masonry,
 }
 

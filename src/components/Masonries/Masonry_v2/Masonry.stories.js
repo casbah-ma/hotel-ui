@@ -4,7 +4,7 @@ import * as HeaderProps from '@/components/Header/Header.stories'
 import * as barProps from '@/components/FilterBar/FilterBar.stories'
 
 export default {
-  title: 'Sections/Masonry_v2',
+  title: 'Sections/Masonries/Masonry_v2',
   component: Masonry_v2,
 }
 
