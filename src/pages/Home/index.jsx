@@ -42,6 +42,8 @@ const Home = function ({
         image={image}
       >
         <BookingBar
+          title_1="Check in - Check out"
+          title_2="Guests"
           dates={dates}
           guestValues={guestValues}
           onDatesChange={onDatesChange}

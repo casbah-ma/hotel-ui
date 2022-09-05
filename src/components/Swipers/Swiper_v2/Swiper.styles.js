@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const SwiperContainer = tw.section`w-full h-full p-2 flex flex-col justify-start items-start`
-export const SwiperInfo = tw.div`w-full h-full flex items-start justify-start relative`
+export const SwiperInfo = tw.div`w-full h-full flex items-start justify-start relative mb-10`
 export const SwiperContent = tw.div`w-full h-full flex items-center justify-around`
 export const SwiperNavigation = styled.div((header) => [
   tw`w-[8rem] flex justify-between items-center self-end`,

@@ -20,21 +20,11 @@ const multiexports = [
   'Footers',
   'CategoriesFilters',
 ]
+
+console.log('components', components)
 components.forEach((component) => {
   if (multiexports.includes(component)) {
     outputs.push(`export * from './${component}'`)
-    multiexports.forEach((multiexport) => {
-      if (component === multiexport) {
-        nestedComponents = Object.keys(
-          getEntries(`src/components/${multiexport}`)
-        )
-        nestedComponents.forEach((nestedComponent) => {
-          outputs.push(
-            `export { default as ${nestedComponent} } from './${multiexport}/${nestedComponent}'`
-          )
-        })
-      }
-    })
   } else outputs.push(`export {default as ${component}} from './${component}'`)
 })
 

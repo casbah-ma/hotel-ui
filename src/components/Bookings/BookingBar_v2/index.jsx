@@ -21,7 +21,8 @@ function BookingBa_v2({
   dates,
   guestValues,
   onGuestChange,
-  bookingTitle,
+  title_1,
+  title_2,
   buttonProps,
   onDatesChange,
   baseUrl,
@@ -62,7 +63,7 @@ function BookingBa_v2({
             <BookingContentLeft>
               <Label
                 role="label"
-                labelText={bookingTitle.title_1}
+                labelText={title_1}
                 fontSize={bp}
                 color="black"
               />
@@ -87,7 +88,7 @@ function BookingBa_v2({
             <BookingContentRight>
               <Label
                 role="label"
-                labelText={bookingTitle.title_2}
+                labelText={title_2}
                 fontSize={bp}
                 color="black"
               />
@@ -104,7 +105,7 @@ function BookingBa_v2({
                 <Popover.Panel className="datesPanel">
                   <Guests
                     centred
-                    title="Guests :"
+                    title={title_2}
                     guestValues={guestValues}
                     buttonProps={buttonProps}
                     onGuestChange={onGuestChange}
@@ -145,10 +146,8 @@ BookingBa_v2.propTypes = {
     kids: PropTypes.number,
   }),
   onGuestChange: PropTypes.func,
-  bookingTitle: PropTypes.shape({
-    title_1: PropTypes.string,
-    title_2: PropTypes.string,
-  }),
+  title_1: PropTypes.string,
+  title_2: PropTypes.string,
   buttonProps: PropTypes.shape({
     text: PropTypes.string,
     onClick: PropTypes.func,

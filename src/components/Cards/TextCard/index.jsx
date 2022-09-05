@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import { ImageCard } from '@/components/Cards'
-import Paragraph from '@/components/Paragraph'
 //components
-import { Container, Text, ImageWrapper } from './TextCard.styles'
+import { Text, ImageWrapper } from './TextCard.styles'
 import Label from '../../Label'
 
 function TextCard({ src, variant, text }) {
