@@ -31,7 +31,7 @@ ImagesExample.args = {
   ...CardsExample.args,
   children: images.map((image, index) => (
     <SwiperSlide key={index}>
-      <ImageCard {...image} />
+      <ImageCard {...image} variant="shape6" />
     </SwiperSlide>
   )),
 }
