@@ -2,8 +2,12 @@ import tw, { styled } from 'twin.macro'
 
 export const InputContainer = tw.div`relative w-full`
 
-export const Fieldset = tw.fieldset`absolute w-full`
-export const Legend = tw.legend`absolute w-full`
+export const Placeholder = styled.label(
+  tw`absolute left-0 p-[1.4rem]`,
+  `pointer-events: none ;
+  font-size:1em;
+  transition: 0.5s`
+)
 
 export const StyledInput = styled.input(
   ({ color, bgColor, error, isTextaria, theme, size, focus }) => [
@@ -22,8 +26,27 @@ export const StyledInput = styled.input(
       : `border-color: ${theme.colors.bg.primary};`,
     ,
     focus
-      ? `&:focus{border-color: ${focus}};`
-      : `&:focus{border-color: ${theme.colors.border.primary}};`,
+      ? `&:valid, &:focus{border-color: ${focus}};`
+      : `&:valid, &:focus{border-color: ${theme.colors.border.primary}};`,
+
+    focus
+      ? `&:focus ~ label, &:valid ~ label{ color: ${focus}; 
+      font-size:1.2em;
+        transform: translateX(22px) translateY(-12px);
+        padding: 0 10px;
+        background-color:white;
+     }`
+      : `&:focus ~ label, &:valid ~ label{
+        color: ${theme.colors.border.primary};
+        font-size:1.2em;
+        transform: translateX(22px) translateY(-12px);
+        padding: 0 10px;
+        background-color:white
+      }`,
+
+    // bgColor && focus
+    // ? `&:focus ~ label{background-color: ${bgColor}};`
+    // : `&:focus ~ label{background-color: ${theme.colors.bg.primary}};`,
 
     error && tw`border-red-500`,
 
@@ -32,8 +55,6 @@ export const StyledInput = styled.input(
   ]
 )
 
-export const StyledSpan = styled.span(
-  tw`
+export const StyledSpan = tw.span`
   absolute top-[1.538rem] right-[0.8rem] font-medium text-sm text-[#AEAEB1]
   `
-)

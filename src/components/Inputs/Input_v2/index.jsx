@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { StyledInput, InputContainer, StyledSpan } from './Input.styles'
+import { StyledInput, InputContainer, StyledSpan, Placeholder } from './Input.styles'
 
 const Input_v2 = ({
   name,
@@ -27,11 +27,12 @@ const Input_v2 = ({
         aria-label={placeHolder}
         error={error}
         value={value}
-        placeholder={placeHolder}
         size={size}
         onChange={onChange}
         focus={focus}
+        required
       />
+      <Placeholder>{placeHolder}</Placeholder>
       <StyledSpan>{currency}</StyledSpan>
     </InputContainer>
   )
