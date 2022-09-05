@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Heros/Hero'
+import Hero from '@/components/Heros/Hero'
 import Blog from '@/components/Blog'
 import Spacing from '@/components/Spacing'
 import Layout from '@/components/Layout'

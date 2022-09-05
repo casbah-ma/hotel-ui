@@ -3,7 +3,7 @@ import { links } from '@/components/Navbars/Navbar/data'
 //stories
 import * as DropdownStories from '@/components/Dropdown/Dropdown.stories'
 export default {
-  title: 'Sections/Footer',
+  title: 'Sections/Footers/Footer',
   component: Footer,
 }
 

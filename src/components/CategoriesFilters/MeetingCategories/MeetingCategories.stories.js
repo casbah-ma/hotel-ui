@@ -6,7 +6,7 @@ import * as InfoItemsStories from '@/components/InfoItems/InfoItems.stories'
 import * as HeaderStories from '@/components/Header/Header.stories'
 
 export default {
-  title: 'Sections/MeetingCategories',
+  title: 'Sections/CategoriesFilters/MeetingCategories',
   component: MeetingCategories,
 }
 

@@ -1,9 +1,9 @@
 import Footer from '.'
-import { links, media } from '@/components/Navbar/data'
+import { links, media } from '@/components/Navbars/Navbar/data'
 //stories
 import * as DropdownStories from '@/components/Dropdown/Dropdown.stories'
 export default {
-  title: 'Sections/Footer_v2',
+  title: 'Sections/Footers/Footer_v2',
   component: Footer,
 }
 

@@ -1,16 +1,16 @@
-import MeetingCategories_v2 from '.'
+import CategoriesFilter_v3 from '.'
 // Stories
 import * as HeaderStories from '@/components/Header/Header.stories'
 //data
 import data from './data'
 
 export default {
-  title: 'Sections/MeetingCategories_v2',
-  component: MeetingCategories_v2,
+  title: 'Sections/CategoriesFilters/CategoriesFilter_v3',
+  component: CategoriesFilter_v3,
 }
 
 //stories
-const Template = (args) => <MeetingCategories_v2 {...args} />
+const Template = (args) => <CategoriesFilter_v3 {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

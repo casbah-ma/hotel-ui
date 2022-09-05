@@ -2,7 +2,7 @@ import Input from '.'
 import Centre from '@/components/Centre'
 
 export default {
-  title: 'Common/input',
+  title: 'Common/Inputs/Input',
   component: Input,
   decorators: [(story) => <Centre>{story()}</Centre>],
   argTypes: {

@@ -15,6 +15,8 @@ const multiexports = [
   'Masonries',
   'Navbars',
   'Inputs',
+  'Footers',
+  'CategoriesFilters',
 ]
 components.forEach((component) => {
   if (multiexports.includes(component)) {

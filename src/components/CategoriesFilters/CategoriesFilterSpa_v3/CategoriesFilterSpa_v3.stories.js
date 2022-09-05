@@ -6,7 +6,7 @@ import * as HeaderStories from '@/components/Header/Header.stories'
 import data from './data'
 
 export default {
-  title: 'Sections/CategoriesFilterSpa_V3',
+  title: 'Sections/CategoriesFilters/CategoriesFilterSpa_V3',
   component: CategoriesFilterSpa_V3,
 }
 
