@@ -19,12 +19,14 @@ export const titleLeveles = {
   3: tw`text-[2rem] leading-[2.4rem] lg:text-5xl lg:leading-[3.6rem]`,
 }
 export const fontSizes = {
+  xs: tw`text-xs leading-[1rem] md:text-base md:leading-[1.2rem]`,
   sm: tw`text-sm leading-[1rem] md:text-base md:leading-[1.2rem]`,
   rg: tw`text-base leading-[1.2rem] md:text-xl md:leading-6`,
   md: tw`text-xl leading-6 md:text-[1.75rem] md:leading-[2.1rem]`,
 }
 
 export const labelFontSizes = {
+  xs: tw`text-xs leading-[1rem] md:text-lg md:leading-6`,
   sm: tw`text-base leading-[1.2rem] md:text-xl md:leading-6`,
   md: tw`text-lg leading-[1.35rem] md:text-2xl md:leading-[1.8rem]`,
   lg: tw`text-xl leading-5 md:text-2xl md:leading-[1.8rem]`,
