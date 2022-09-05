@@ -10,7 +10,7 @@ import {
   BookingBarContainer,
   BookingButton,
   BookingContent,
-  BookingCulmns,
+  Bookingcolumns,
   BookingDate,
   ShowContentButton,
 } from './BookingBar.styles'
@@ -97,10 +97,10 @@ BookingBar_v3.propTypes = {
   }),
   onGuestChange: PropTypes.func,
   bookingTitle: PropTypes.shape({
-    culmn_1: PropTypes.string,
-    culmn_2: PropTypes.string,
-    culmn_3: PropTypes.string,
-    culmn_4: PropTypes.string,
+    column_1: PropTypes.string,
+    column_2: PropTypes.string,
+    column_3: PropTypes.string,
+    column_4: PropTypes.string,
   }),
   buttonProps: PropTypes.shape({
     text: PropTypes.string,
@@ -121,27 +121,27 @@ function Desktop({
 }) {
   return (
     <BookingContent>
-      <BookingCulmns>
-        <Label labelText={bookingTitles.culmn_1} />
+      <Bookingcolumns>
+        <Label labelText={bookingTitles.column_1} />
         <BookingDate
           type="date"
           value={dates?.startDate}
           name="startDate"
           onChange={handleDatesChanges}
         />
-      </BookingCulmns>
-      <BookingCulmns>
-        <Label labelText={bookingTitles.culmn_2} />
+      </Bookingcolumns>
+      <Bookingcolumns>
+        <Label labelText={bookingTitles.column_2} />
         <BookingDate
           type="date"
           value={dates.endDate}
           name="endDate"
           onChange={handleDatesChanges}
         />
-      </BookingCulmns>
-      <BookingCulmns>
+      </Bookingcolumns>
+      <Bookingcolumns>
         <GuestCard
-          title={bookingTitles.culmn_3}
+          title={bookingTitles.column_3}
           value={guestValues.adults}
           onMinusClick={() => {
             handleMinusClick('adults')
@@ -150,10 +150,10 @@ function Desktop({
             handlePlusClick('adults')
           }}
         />
-      </BookingCulmns>
-      <BookingCulmns>
+      </Bookingcolumns>
+      <Bookingcolumns>
         <GuestCard
-          title={bookingTitles.culmn_4}
+          title={bookingTitles.column_4}
           value={guestValues.kids}
           onMinusClick={() => {
             handleMinusClick('kids')
@@ -162,7 +162,7 @@ function Desktop({
             handlePlusClick('kids')
           }}
         />
-      </BookingCulmns>
+      </Bookingcolumns>
     </BookingContent>
   )
 }
@@ -178,29 +178,29 @@ function Mobile({
 }) {
   return (
     <BookingContent>
-      <BookingCulmns>
-        <Label labelText={bookingTitles.culmn_1} />
+      <Bookingcolumns>
+        <Label labelText={bookingTitles.column_1} />
         <BookingDate
           type="date"
           value={dates.startDate}
           name="startDate"
           onChange={handleDatesChanges}
         />
-      </BookingCulmns>
+      </Bookingcolumns>
       {showContent && (
         <>
-          <BookingCulmns>
-            <Label labelText={bookingTitles.culmn_2} />
+          <Bookingcolumns>
+            <Label labelText={bookingTitles.column_2} />
             <BookingDate
               type="date"
               value={dates.endDate}
               name="endDate"
               onChange={handleDatesChanges}
             />
-          </BookingCulmns>
-          <BookingCulmns>
+          </Bookingcolumns>
+          <Bookingcolumns>
             <GuestCard
-              title={bookingTitles.culmn_3}
+              title={bookingTitles.column_3}
               value={guestValues.adults}
               onMinusClick={() => {
                 handleMinusClick('adults')
@@ -209,10 +209,10 @@ function Mobile({
                 handlePlusClick('adults')
               }}
             />
-          </BookingCulmns>
-          <BookingCulmns>
+          </Bookingcolumns>
+          <Bookingcolumns>
             <GuestCard
-              title={bookingTitles.culmn_4}
+              title={bookingTitles.column_4}
               value={guestValues.kids}
               onMinusClick={() => {
                 handleMinusClick('kids')
@@ -221,7 +221,7 @@ function Mobile({
                 handlePlusClick('kids')
               }}
             />
-          </BookingCulmns>
+          </Bookingcolumns>
         </>
       )}
     </BookingContent>

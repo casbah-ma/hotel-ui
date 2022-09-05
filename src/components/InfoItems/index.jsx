@@ -6,12 +6,13 @@ import InfoItem from './InfoItem'
 import { Container } from './InfoItems.styles'
 
 function InfoItems({ infos, space }) {
+  console.log(infos)
   return (
     <Container>
       {!isEmpty(infos) &&
         infos.map((info) => (
           <InfoItem
-            key={info.id}
+            key={info.infoName}
             infoName={info.infoName}
             infoValue={info.infoValue}
             space={space}

@@ -12,16 +12,9 @@ import {
   Subtitle,
 } from './RoomCard_v3.styles'
 
-function RoomCard_v3({
-  children,
-  imageSrc,
-  name,
-  subtitle,
-  actionProps,
-  bgColor,
-}) {
+function RoomCard_v3({ children, imageSrc, name, subtitle, actionProps }) {
   return (
-    <Container bgColor={bgColor} imageSrc={imageSrc}>
+    <Container imageSrc={imageSrc}>
       {imageSrc && (
         <ImageContainer>
           <ImageCard src={imageSrc} variant="medium" />
@@ -38,9 +31,10 @@ function RoomCard_v3({
 }
 
 RoomCard_v3.propTypes = {
-  headerProps: PropTypes.shape({ ...InfoHeader.propTypes }),
+  imageSrc: PropTypes.string,
+  name: PropTypes.string,
+  subtitle: PropTypes.string,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
-  bgColor: PropTypes.string,
 }
 
 export default RoomCard_v3

@@ -23,7 +23,7 @@ function Swiper_v2({ header, navigation, children, autoplay }) {
       <SwiperInfo>
         {!isEmpty(header) && <Header {...header} />}
         {navigation && bp === 'lg' && (
-          <SwiperNavigation>
+          <SwiperNavigation header={isEmpty(header)}>
             <SwiperButton onClick={() => swiperRef.slidePrev()}>
               <ChevronLeft width="18" height="18" />
             </SwiperButton>
