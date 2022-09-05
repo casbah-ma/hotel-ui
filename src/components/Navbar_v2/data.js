@@ -1,6 +1,3 @@
-import {Instagram,LinkedIn} from '@/components/Icons'
-
-
 export const links = [
   {
     label: 'Rooms & Suits',
@@ -25,18 +22,5 @@ export const links = [
   {
     label: 'Gallery',
     link: '/gallery',
-  },
-]
-
-export const media = [
-  {
-    label: 'Instagram',
-    link: '/Instagram',
-    icon: Instagram
-  },
-  {
-    label: 'LinkedIn',
-    link: '/Instagram',
-    icon: LinkedIn
   },
 ]

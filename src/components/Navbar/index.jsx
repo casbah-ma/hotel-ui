@@ -104,8 +104,8 @@ function Navbar({
             languages={languages}
             defaultLanguage={defaultLanguage}
           >
-            <Logo hasBackground={hasBackground}>
-              <Image role="img" alt="hero" src={logo} width={170} height={48} />
+            <Logo>
+              <Image role="img" alt="logo" src={logo} width={170} height={48} />
             </Logo>
           </Link>
           <List position="right">
