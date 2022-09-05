@@ -15,12 +15,12 @@ export const imgSizesNext = {
 
 export const MasonryWrapper = tw.section`w-auto h-full p-2 flex flex-col`
 
-export const MasonryHeader = tw.div`mb-[8rem]`
+export const MasonryHeader = tw.div`mb-[3rem]`
 
 export const MasonryContainer = styled.div(() => [
   tw`
-  column-count[1] md:column-count[2] lg:column-count[3] column-width[10rem] gap-x-10`,
-  `columns: 10px;`,
+  column-count[1] md:column-count[2] lg:column-count[3] gap-x-10`,
+  `columns-width: 10px;`,
 ])
 
 export const MasonryItem = tw.div`

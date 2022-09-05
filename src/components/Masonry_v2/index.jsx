@@ -1,17 +1,21 @@
 import { isEmpty } from '@/helpers/utils'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
+import Header from '@/components/Header'
 import {
   imgSizesNext,
   MasonryWrapper,
   MasonryContainer,
   MasonryItem,
-  StyledImage,
+  MasonryHeader,
 } from './Masonry.styles'
 
-function Masonry_v2({ images, barProps }) {
+function Masonry_v2({ images, headerProps, barProps }) {
   return (
     <MasonryWrapper>
+      <MasonryHeader>
+        {!isEmpty(headerProps) && <Header {...headerProps} />}
+      </MasonryHeader>
       <MasonryContainer>
         {!isEmpty(images) &&
           images.map((image, index) => (
