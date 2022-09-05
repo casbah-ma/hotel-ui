@@ -14,6 +14,7 @@ export default {
     border: {
       primary: '#21B67C',
       secondary: '#000',
+      transparent: '#FFFFFF32',
       white: '#fff',
     },
     DatesCore: {
