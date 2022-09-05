@@ -13,7 +13,8 @@ const Template = (args) => <RoomCard_v2 {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  headerProps: { ...InfoHeaderStories.Default.args },
+  title: 'Room 1',
+  subtitle: '13M X 7M',
   actionProps: { ...ButtonStories.Secondary.args },
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi fermentum quis dictumst morbi aliquet pellentesque sit lectus. Imperdiet nec risus est lorem feugiat. Mauris aliquam tempor adipiscing tellus urna, eleifend tellus commodo morbi.',
 }

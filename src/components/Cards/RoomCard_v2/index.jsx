@@ -5,10 +5,10 @@ import InfoHeader from '@/components/InfoHeader'
 import { Container, StyledChildren } from './RoomCard_v2.styles'
 import Paragraph from '../../Paragraph'
 
-function RoomCard_v2({ headerProps, actionProps, bgColor, text }) {
+function RoomCard_v2({ title, subtitle, actionProps, bgColor, text }) {
   return (
     <Container bgColor={bgColor}>
-      <InfoHeader {...headerProps} />
+      <InfoHeader title={title} subtitle={subtitle} />
       <StyledChildren>
         <Paragraph fontSize="rg" description={text} />
       </StyledChildren>
@@ -18,7 +18,8 @@ function RoomCard_v2({ headerProps, actionProps, bgColor, text }) {
 }
 
 RoomCard_v2.propTypes = {
-  headerProps: PropTypes.shape({ ...InfoHeader.propTypes }),
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
   text: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
