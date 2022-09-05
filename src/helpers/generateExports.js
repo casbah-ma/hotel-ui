@@ -7,6 +7,8 @@ const components = Object.keys(getEntries('src/components'))
 let nestedComponents = []
 let outputs = []
 const multiexports = [
+  'Blogs',
+  'Bookings',
   'Cards',
   'Forms',
   'Heros',

@@ -2,7 +2,7 @@
 import OurRooms from '.'
 //stories
 import * as CategoriesSectionStories from '@/components/CategoriesCardsSection/CategoriesCardsSection.stories'
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as ServicesSectionStories from '@/components/ServicesSection/ServicesSection.stories'
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'

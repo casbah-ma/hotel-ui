@@ -1,6 +1,6 @@
 import ServicesSection from '.'
 //stories
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as ServicesGridStories from '@/components/ServicesGrid/ServicesGrid.stories'
 import * as TitleStories from '@/components/Title/Title.stories'
 

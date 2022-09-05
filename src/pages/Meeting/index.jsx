@@ -1,6 +1,6 @@
 // components
 import Hero from '@/components/Heros/Hero'
-import Blog from '@/components/Blog'
+import Blog from '@/components/Blogs/Blog'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import Button from '@/components/Button'

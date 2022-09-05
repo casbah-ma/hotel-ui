@@ -4,7 +4,7 @@ import * as ImageCardStories from '@/components/Cards/ImageCard/ImageCard.storie
 import * as ButtonProps from '@/components/Button/Button.stories'
 
 export default {
-  title: 'Sections/Blog',
+  title: 'Sections/Blogs/Blog',
   component: Blog,
 }
 

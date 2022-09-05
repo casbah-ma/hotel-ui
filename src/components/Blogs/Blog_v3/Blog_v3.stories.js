@@ -3,7 +3,7 @@ import * as TitleStories from '@/components/Title/Title.stories'
 import * as ButtonProps from '@/components/Button/Button.stories'
 
 export default {
-  title: 'Sections/Blog_v3',
+  title: 'Sections/Blogs/Blog_v3',
   component: Blog_v3,
 }
 
