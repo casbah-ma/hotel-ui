@@ -8,7 +8,7 @@ describe('RoomCard_v2 component', () => {
   it('Renders a header info', () => {
     render(<Default />)
     const title = screen.getByRole('heading')
-    expect(title).toHaveTextContent(Default.args.headerProps.title)
+    expect(title).toHaveTextContent(Default.args.title)
   })
 
   it('Renders a paragraph', () => {

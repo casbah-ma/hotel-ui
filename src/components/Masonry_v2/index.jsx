@@ -2,6 +2,7 @@ import { isEmpty } from '@/helpers/utils'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 import Header from '@/components/Header'
+import FilterBar from '@/components/FilterBar'
 import {
   imgSizesNext,
   MasonryWrapper,
@@ -12,9 +13,10 @@ import {
 
 function Masonry_v2({ images, headerProps, barProps }) {
   return (
-    <MasonryWrapper>
+    <MasonryWrapper data-testid="masonry_v2">
       <MasonryHeader>
         {!isEmpty(headerProps) && <Header {...headerProps} />}
+        <FilterBar {...barProps} />
       </MasonryHeader>
       <MasonryContainer>
         {!isEmpty(images) &&

@@ -15,7 +15,7 @@ export const imgSizesNext = {
 
 export const MasonryWrapper = tw.section`w-auto h-full p-2 flex flex-col`
 
-export const MasonryHeader = tw.div`mb-[3rem]`
+export const MasonryHeader = tw.div`mb-[3rem] flex flex-col gap-8`
 
 export const MasonryContainer = styled.div(() => [
   tw`
