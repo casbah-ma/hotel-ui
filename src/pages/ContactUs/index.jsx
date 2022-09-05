@@ -1,10 +1,9 @@
-import { HeroII } from '@/components/Heros/Hero'
+import { HeroII } from '@/components/Heros'
 import Layout from '@/components/Layout'
 import { ContactUs } from '@/components/Forms'
 import Map from '@/components/Map'
 import Contacts from '@/components/Contacts'
 import { useState } from 'react'
-import { isEmail } from '@/helpers/utils'
 const ContactUsPage = function ({
   layoutProps,
   heroProps,

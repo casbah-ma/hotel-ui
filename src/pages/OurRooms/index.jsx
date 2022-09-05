@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 //componenst
-import { Hero } from '@/components/Heros/Hero'
+import Hero from '@/components/Heros/Hero'
 import Spacing from '@/components/Spacing'
-import Blog from '@/components/Blog'
+import Blog from '@/components/Blogs/Blog'
 import CategoriesCardsSection from '@/components/CategoriesCardsSection'
 import ServicesSection from '@/components/ServicesSection'
 import Layout from '@/components/Layout'

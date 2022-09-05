@@ -1,4 +1,4 @@
-import Input from '@/components/Input'
+import Input from '@/components/Inputs/Input'
 import Button from '@/components/Button'
 import { ContactusContainer } from './Contactus.styles'
 import PropTypes from 'prop-types'

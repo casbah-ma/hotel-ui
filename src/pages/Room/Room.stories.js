@@ -1,7 +1,7 @@
 //components
 import Room from '.'
 //stories
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as ServicesSectionStories from '@/components/ServicesSection/ServicesSection.stories'
 import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as HeroStories from '@/components/Heros/Hero/Hero.stories'

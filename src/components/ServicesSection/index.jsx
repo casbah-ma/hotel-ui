@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 //components
-import Blog from '@/components/Blog'
+import Blog from '@/components/Blogs/Blog'
 import ServicesGrid from '@/components/ServicesGrid'
 //stories
 import { FlexWrapper } from './ServicesSection.styles'

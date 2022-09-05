@@ -1,6 +1,6 @@
 import ImportantInfo from '.'
 //stories
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as AccordionStories from '@/components/Accordion/Accordion.stories'
 
 export default {

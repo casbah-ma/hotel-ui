@@ -2,7 +2,7 @@ import Centre from '@/components/Centre'
 import Input_v2 from '.'
 
 export default {
-  title: 'Common/input_v2',
+  title: 'Common/Inputs/Input_v2',
   component: Input_v2,
   decorators: [(story) => <Centre>{story()}</Centre>],
   argTypes: {
@@ -27,8 +27,8 @@ Default.args = {
   placeHolder: `Full Name`,
   error: false,
   color: '#CBCBCB',
-  bgColor:'#FCFCFC',
-  currency:'',
+  bgColor: '#FCFCFC',
+  currency: '',
   onChange: () => {},
 }
 
@@ -47,4 +47,3 @@ WithError.args = {
   ...Default.args,
   error: true,
 }
-

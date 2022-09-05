@@ -1,8 +1,8 @@
-import { Hero } from '@/components/Heros/Hero'
+import Hero from '@/components/Heros/Hero'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import Layout from '@/components/Layout'
-import Blog from '@/components/Blog'
+import Blog from '@/components/Blogs/Blog'
 import Contacts from '@/components/Contacts'
 
 const Offers = function ({
