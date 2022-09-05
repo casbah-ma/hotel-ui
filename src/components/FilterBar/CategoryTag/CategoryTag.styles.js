@@ -1,13 +1,13 @@
 import tw, { styled } from 'twin.macro'
 
 export const variants = {
-  v1: tw`pb-3 mr-11`,
+  v1: tw`pb-3 mr-11 `,
   v2: tw`px-8 py-3 border border-[#D4D4D4] rounded-full`,
-  v3: tw`pb-0 mr-10`,
+  v3: tw`pb-0 mr-10 `,
 }
 
 export const Tag = styled.li(({ active, variant, theme }) => [
-  tw`flex justify-center items-center whitespace-nowrap max-w-max cursor-pointer`,
+  tw`flex justify-center items-center flex-nowrap whitespace-nowrap max-w-max cursor-pointer last:mr-0`,
   ({ variant }) => variants[variant],
   //Active styles
   variant === 'v1' && active && tw`border-b border-black font-semibold`,

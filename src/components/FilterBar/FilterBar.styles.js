@@ -5,7 +5,7 @@ export const variants = {
   v2: tw`gap-3`,
   v3: tw`pb-0 mr-10`,
 }
-export const CategoriesList = styled.ul(({ withIcon }) => [
+export const CategoriesList = styled.ul(() => [
   tw`flex min-w-min flex-nowrap overflow-x-auto`,
   ({ variant }) => variants[variant],
 ])

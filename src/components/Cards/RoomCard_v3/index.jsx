@@ -21,7 +21,7 @@ function RoomCard_v3({
   bgColor,
 }) {
   return (
-    <Container bgColor={bgColor} imageSrc={imageSrc}>
+    <Container imageSrc={imageSrc}>
       {imageSrc && (
         <ImageContainer>
           <ImageCard src={imageSrc} variant="medium" />
@@ -38,9 +38,10 @@ function RoomCard_v3({
 }
 
 RoomCard_v3.propTypes = {
-  headerProps: PropTypes.shape({ ...InfoHeader.propTypes }),
+  imageSrc: PropTypes.string,
+  name: PropTypes.string,
+  subtitle: PropTypes.string,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
-  bgColor: PropTypes.string,
 }
 
 export default RoomCard_v3

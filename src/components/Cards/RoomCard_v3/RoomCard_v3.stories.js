@@ -5,7 +5,6 @@ import Paragraph from '@/components/Paragraph'
 //stories
 import * as InfoItemStories from '@/components/InfoItems/InfoItems.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
-import * as ParagraphStories from '@/components/Paragraph/Paragraph.stories'
 
 export default {
   title: 'Components/Cards/RoomCard_v3',
