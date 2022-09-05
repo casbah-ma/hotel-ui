@@ -12,14 +12,7 @@ import {
   Subtitle,
 } from './RoomCard_v3.styles'
 
-function RoomCard_v3({
-  children,
-  imageSrc,
-  name,
-  subtitle,
-  actionProps,
-  bgColor,
-}) {
+function RoomCard_v3({ children, imageSrc, name, subtitle, actionProps }) {
   return (
     <Container imageSrc={imageSrc}>
       {imageSrc && (

@@ -1,7 +1,5 @@
 import CategoriesFilter_v3 from '.'
 // Stories
-import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
-import * as InfoItemsStories from '@/components/InfoItems/InfoItems.stories'
 import * as HeaderStories from '@/components/Header/Header.stories'
 //data
 import data from './data'
