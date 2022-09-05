@@ -2,7 +2,6 @@
 import RoomCard_v2 from '.'
 //stories
 import * as ButtonStories from '@/components/Button/Button.stories'
-import * as InfoHeaderStories from '@/components/InfoHeader/InfoHeader.stories'
 
 export default {
   title: 'Components/Cards/RoomCard_v2',
