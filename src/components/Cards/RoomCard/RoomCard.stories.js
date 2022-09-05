@@ -31,7 +31,12 @@ WithInfoItems.args = {
 }
 export const WithInfoItems_V2 = Template.bind({})
 WithInfoItems_V2.args = {
-  headerProps: { ...InfoHeaderStories.WithImage_V2.args },
+  title: 'Room 1',
+  subtitle: '13M X 7M',
+  image: {
+    variant: 'smallHorizontal',
+    src: 'https://source.unsplash.com/random/?hotel',
+  },
   variant: 'v2',
 }
 
