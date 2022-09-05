@@ -3,6 +3,8 @@ import * as Button from '@/components/Button/Button.stories'
 import useState from 'storybook-addon-state'
 
 const props = {
+  title_1: 'Check-in - Check-out',
+  title_2: 'Guests',
   dates: { startDate: new Date(), endDate: new Date() },
   guestValues: { adults: 1, kids: 0 },
   buttonProps: { ...Button.Primary.args },
@@ -38,6 +40,8 @@ export default {
       return (
         <div className="h-screen pb-24 flex justify-center items-end">
           <BookingBar
+            title_1="Check in - Check out"
+            title_2="Guests"
             buttonProps={{
               ...Button.Primary.args,
             }}

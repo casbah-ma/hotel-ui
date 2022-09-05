@@ -6,6 +6,5 @@
 @font-face {
   font-family: 'DAHILA';
   src: url('/fonts/Dahila/dahlia-regular.otf');
+  font-display: fallback;
 }
-
-

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 //styles
-import { imageVariants, StyledImage } from './ImageCard.styles'
 
 // Shapes sizes for each image variant
 const imageVariantsShapes = {
