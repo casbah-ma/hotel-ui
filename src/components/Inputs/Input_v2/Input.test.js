@@ -9,12 +9,12 @@ const { Default, TextArea } = composeStories(stories)
 describe('Input component', () => {
   it('should render input', () => {
     render(<Default />)
-    const input = screen.getByPlaceholderText(Default.args.placeHolder)
+    const input = screen.getByLabelText(Default.args.placeHolder)
     expect(input).toBeInTheDocument()
   })
   it('Renders a textarea', () => {
     render(<TextArea />)
-    const textarea = screen.getByPlaceholderText(TextArea.args.placeHolder)
+    const textarea = screen.getByLabelText(TextArea.args.placeHolder)
     expect(textarea).toBeInTheDocument()
   })
 })

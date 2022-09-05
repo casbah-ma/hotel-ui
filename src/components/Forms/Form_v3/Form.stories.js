@@ -9,11 +9,11 @@ const Template = (args) => <Form_v3 {...args} />
 export const Default = Template.bind({})
 Default.args = {
   formInputs: {
-    fullName: '',
+    fullName: 'Test test',
     fullNameError: '',
-    email: '',
+    email: 'test@test.com',
     emailError: '',
-    message: '',
+    message: 'Test message',
     messageError: '',
     buttonLabel:'Submit your message',
   },
