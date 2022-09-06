@@ -5,11 +5,11 @@ import { Tag, StyledIcon, variants } from './CategoryTag.styles'
 import { PlusIcon } from '@heroicons/react/24/solid'
 import Paragraph from '@/components/Paragraph'
 
-function CategoryTag({ categoryName, active, handleActive, variant }) {
+function CategoryTag({ category, active, handleActive, variant }) {
   return (
     <Tag
-      onClick={() => handleActive(categoryName)}
-      active={!!(active === categoryName)}
+      onClick={() => handleActive(category.type)}
+      active={!!(active === category.type)}
       variant={variant}
     >
       {variant !== 'v2' && (
@@ -17,7 +17,7 @@ function CategoryTag({ categoryName, active, handleActive, variant }) {
           <PlusIcon />
         </StyledIcon>
       )}
-      <Paragraph description={categoryName} />
+      <Paragraph description={`${category.type} (${category.quantity})`} />
     </Tag>
   )
 }
