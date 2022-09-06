@@ -28,7 +28,7 @@ function BookingBa_v2({
   baseUrl,
 }) {
   const guestbtn = useRef(null) // ref for guests button
-  const { text } = buttonProps // button props
+  const { text, onClick } = buttonProps // button props
   const bp = useBreakpoint() // breakpoint
   const [isOpen, setIsOpen] = useState({
     dates: false,

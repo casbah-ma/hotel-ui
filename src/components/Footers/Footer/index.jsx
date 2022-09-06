@@ -17,12 +17,14 @@ import {
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
-import { CloudinaryContext, Image, Transformation } from 'cloudinary-react'
 import { useTheme } from 'styled-components'
+import Image from 'next/image'
+import { useBreakpoint } from '@/hooks'
 
 function Footer({
   links,
   languages,
+  description,
   defaultLanguage,
   color = 'white',
   bgColor = 'black',
@@ -30,6 +32,7 @@ function Footer({
   logo,
   t,
 }) {
+  const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
   const [inputValue, setInputValue] = useState({
     email: '',
@@ -57,64 +60,68 @@ function Footer({
 
   const theme = useTheme()
   return (
-    <CloudinaryContext cloudName="casbah" className="full-width">
-      <FooterContainer
-        data-testid="footer-container"
-        color={color}
-        bgColor={bgColor}
-      >
-        <FooterLogo>
-          <Image publicId={logo}>
-            <Transformation width="384" crop="scale" />
-          </Image>
-        </FooterLogo>
-        <FooterText>
-          <Paragraph description="A signature bedding imagined and designed exclusively for Hotel UI. The bed frames and mattresses are filled" />
-        </FooterText>
-        <InputContainer>
-          {/* <InputError>{inputValue.errorMessage}</InputError> */}
-          <Input
-            testID="footer-input"
-            onChange={handleInputChange}
-            placeHolder="Enter an email address"
-            color="white"
-            error={inputValue.error}
-            withButton
-            buttonProps={{
-              buttonTestID: 'footer-button',
-              buttonLabel: 'submit',
-              onClick: handleSubmit,
-            }}
-          />
-        </InputContainer>
-        <FooterLinks data-testid="links">
-          {!isEmpty(links) &&
-            links.map((item, index) => (
-              <div key={index} className="flex justify-center items-center">
-                <FooterLink>
-                  <Link
-                    href={item.link}
-                    languages={languages}
-                    defaultLanguage={defaultLanguage}
-                  >
-                    <Label
-                      color={theme.colors.text.secondary}
-                      fontSize="sm"
-                      labelText={t(item.label)}
-                    />
-                  </Link>
-                </FooterLink>
-                {index < links.length - 1 && <FooterLinkDivider />}
-              </div>
-            ))}
-        </FooterLinks>
-        <FooterDivider />
-        <FooterDividerText data-testid="copyright">
-          <Label
-            color={theme.colors.text.secondary}
-            fontSize="sm"
-            labelText={`${year.getFullYear()} © Copyrighted by ${hotelName}`}
-          />
+    <FooterContainer
+      data-testid="footer-container"
+      color={color}
+      bgColor={bgColor}
+    >
+      <FooterLogo>
+        <Image
+          src={logo}
+          width={200}
+          height={bp === 'md' || bp === 'lg' ? 200 : 100}
+          objectFit="contain"
+          alt="logo"
+        />
+      </FooterLogo>
+      <FooterText>
+        <Paragraph description={description} />
+      </FooterText>
+      <InputContainer>
+        {/* <InputError>{inputValue.errorMessage}</InputError> */}
+        <Input
+          testID="footer-input"
+          onChange={handleInputChange}
+          placeHolder="Enter an email address"
+          color="white"
+          error={inputValue.error}
+          withButton
+          buttonProps={{
+            buttonTestID: 'footer-button',
+            buttonLabel: 'submit',
+            onClick: handleSubmit,
+          }}
+        />
+      </InputContainer>
+      <FooterLinks data-testid="links">
+        {!isEmpty(links) &&
+          links.map((item, index) => (
+            <div key={index} className="flex justify-center items-center">
+              <FooterLink>
+                <Link
+                  href={item.link}
+                  languages={languages}
+                  defaultLanguage={defaultLanguage}
+                >
+                  <Label
+                    color={theme.colors.text.secondary}
+                    fontSize="sm"
+                    labelText={t(item.label)}
+                  />
+                </Link>
+              </FooterLink>
+              {index < links.length - 1 && <FooterLinkDivider />}
+            </div>
+          ))}
+      </FooterLinks>
+      <FooterDivider />
+      <FooterDividerText data-testid="copyright">
+        <Label
+          color={theme.colors.text.secondary}
+          fontSize="sm"
+          labelText={`${year.getFullYear()} © Copyrighted by ${hotelName}`}
+        />
+        {(bp !== 'xs' || bp !== 'sm') && (
           <Link
             href="/policies"
             languages={languages}
@@ -126,9 +133,9 @@ function Footer({
               labelText="Terms & Conditions"
             />
           </Link>
-        </FooterDividerText>
-      </FooterContainer>
-    </CloudinaryContext>
+        )}
+      </FooterDividerText>
+    </FooterContainer>
   )
 }
 

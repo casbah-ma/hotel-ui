@@ -21,9 +21,9 @@ import {
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
-import { CloudinaryContext, Image } from 'cloudinary-react'
 import { useTheme } from 'styled-components'
 import Button from '@/components/Button'
+import Image from 'next/image'
 
 function Footer({
   links,
@@ -63,154 +63,154 @@ function Footer({
 
   const theme = useTheme()
   return (
-    <CloudinaryContext cloudName="casbah" className="full-width">
-      <FooterContainer
-        data-testid="footer-container"
-        color={color}
-        bgColor={bgColor}
-      >
-        <TopContent>
-          <div>
-            <FooterLogo>
-              <Image publicId={logo}></Image>
-            </FooterLogo>
-            <FooterText>
-              <Paragraph
-                fontSize="sm"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor id placerat ornare sit dignissim senectus. Tortor ut eget est risus nisi venenatis."
-              />
-            </FooterText>
-          </div>
-          <Rows>
-            <Section>
-              <Label
-                color={theme.colors.text.secondary}
-                fontSize="sm"
-                labelText="get in touch"
-                textTransform="uppercase"
-                weight="700"
-              />
-              <Element>
-                <Label
-                  color={theme.colors.text.secondary}
-                  fontSize="xs"
-                  labelText="MON-FRIDAY"
-                />
-                <Label
-                  color={theme.colors.text.secondary}
-                  fontSize="xs"
-                  labelText="10AM-11PM"
-                />
-              </Element>
-            </Section>
-            <Section>
-              <Label
-                color={theme.colors.text.secondary}
-                fontSize="sm"
-                labelText="contact"
-                textTransform="uppercase"
-                weight="700"
-              />
-              <div>
-                {!isEmpty(links) &&
-                  media.map((item, index) => (
-                    <FooterLink key={index}>
-                      <Link
-                        href={item.link}
-                        languages={languages}
-                        defaultLanguage={defaultLanguage}
-                      >
-                        <IconLabel>
-                          <Icon>
-                            <item.icon
-                              width="24px"
-                              height="24px"
-                              color="white"
-                            />
-                          </Icon>
-                          <Label
-                            color={theme.colors.text.secondary}
-                            fontSize="sm"
-                            labelText={t(item.label)}
-                          />
-                        </IconLabel>
-                      </Link>
-                    </FooterLink>
-                  ))}
-              </div>
-            </Section>
-          </Rows>
-          <Rows>
-            <FooterLinks data-testid="links">
-              <Label
-                color={theme.colors.text.secondary}
-                fontSize="sm"
-                labelText="quck links"
-                textTransform="uppercase"
-                weight="700"
-              />
-              <div>
-                {!isEmpty(links) &&
-                  links.map((item, index) => (
-                    <FooterLink key={index}>
-                      <Link
-                        href={item.link}
-                        languages={languages}
-                        defaultLanguage={defaultLanguage}
-                      >
-                        <Label
-                          color={theme.colors.text.secondary}
-                          fontSize="xs"
-                          labelText={t(item.label)}
-                        />
-                      </Link>
-                    </FooterLink>
-                  ))}
-              </div>
-            </FooterLinks>
-          </Rows>
-          <Rows>
+    <FooterContainer
+      data-testid="footer-container"
+      color={color}
+      bgColor={bgColor}
+    >
+      <TopContent>
+        <div>
+          <FooterLogo>
+            <Image
+              src={logo}
+              alt="logo"
+              width={200}
+              height={bp === 'md' || bp === 'lg' ? 200 : 100}
+              objectFit="contain"
+            />
+          </FooterLogo>
+          <FooterText>
+            <Paragraph
+              fontSize="sm"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor id placerat ornare sit dignissim senectus. Tortor ut eget est risus nisi venenatis."
+            />
+          </FooterText>
+        </div>
+        <Rows>
+          <Section>
             <Label
               color={theme.colors.text.secondary}
               fontSize="sm"
-              labelText="hAVE A BLAST?"
+              labelText="get in touch"
               textTransform="uppercase"
               weight="700"
             />
-            <Input
-              onChange={handleInputChange}
-              placeholder="ENTER EMAIL"
-              error={inputValue.error}
-              bgColor={bgColor}
-            />
-            <Button
-              color="#000000"
-              bgColor="#fff"
-              label="Submit"
-              variant="secondary"
-              handleClick={() => handleSubmit()}
-            />
-          </Rows>
-        </TopContent>
-        <BottomContent>
-          <FooterDivider />
-          <FooterDividerText data-testid="copyright">
+            <Element>
+              <Label
+                color={theme.colors.text.secondary}
+                fontSize="xs"
+                labelText="MON-FRIDAY"
+              />
+              <Label
+                color={theme.colors.text.secondary}
+                fontSize="xs"
+                labelText="10AM-11PM"
+              />
+            </Element>
+          </Section>
+          <Section>
             <Label
               color={theme.colors.text.secondary}
-              fontSize="xs"
-              labelText="Terms of service"
+              fontSize="sm"
+              labelText="contact"
               textTransform="uppercase"
+              weight="700"
             />
+            <div>
+              {!isEmpty(links) &&
+                media.map((item, index) => (
+                  <FooterLink key={index}>
+                    <Link
+                      href={item.link}
+                      languages={languages}
+                      defaultLanguage={defaultLanguage}
+                    >
+                      <IconLabel>
+                        <Icon>
+                          <item.icon width="24px" height="24px" color="white" />
+                        </Icon>
+                        <Label
+                          color={theme.colors.text.secondary}
+                          fontSize="sm"
+                          labelText={t(item.label)}
+                        />
+                      </IconLabel>
+                    </Link>
+                  </FooterLink>
+                ))}
+            </div>
+          </Section>
+        </Rows>
+        <Rows>
+          <FooterLinks data-testid="links">
             <Label
               color={theme.colors.text.secondary}
-              fontSize="xs"
-              labelText={`Copyrights © ${year.getFullYear()}`}
+              fontSize="sm"
+              labelText="quck links"
               textTransform="uppercase"
+              weight="700"
             />
-          </FooterDividerText>
-        </BottomContent>
-      </FooterContainer>
-    </CloudinaryContext>
+            <div>
+              {!isEmpty(links) &&
+                links.map((item, index) => (
+                  <FooterLink key={index}>
+                    <Link
+                      href={item.link}
+                      languages={languages}
+                      defaultLanguage={defaultLanguage}
+                    >
+                      <Label
+                        color={theme.colors.text.secondary}
+                        fontSize="xs"
+                        labelText={t(item.label)}
+                      />
+                    </Link>
+                  </FooterLink>
+                ))}
+            </div>
+          </FooterLinks>
+        </Rows>
+        <Rows>
+          <Label
+            color={theme.colors.text.secondary}
+            fontSize="sm"
+            labelText="hAVE A BLAST?"
+            textTransform="uppercase"
+            weight="700"
+          />
+          <Input
+            onChange={handleInputChange}
+            placeholder="ENTER EMAIL"
+            error={inputValue.error}
+            bgColor={bgColor}
+          />
+          <Button
+            color="#000000"
+            bgColor="#fff"
+            label="Submit"
+            variant="secondary"
+            handleClick={() => handleSubmit()}
+          />
+        </Rows>
+      </TopContent>
+      <BottomContent>
+        <FooterDivider />
+        <FooterDividerText data-testid="copyright">
+          <Label
+            color={theme.colors.text.secondary}
+            fontSize="xs"
+            labelText="Terms of service"
+            textTransform="uppercase"
+          />
+          <Label
+            color={theme.colors.text.secondary}
+            fontSize="xs"
+            labelText={`Copyrights © ${year.getFullYear()}`}
+            textTransform="uppercase"
+          />
+        </FooterDividerText>
+      </BottomContent>
+    </FooterContainer>
   )
 }
 
