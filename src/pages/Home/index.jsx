@@ -1,5 +1,5 @@
-import { Hero, AnimatedHero } from '@/components/Heros/Hero'
-import Blog from '@/components/Blog'
+import { Hero, AnimatedHero } from '@/components/Heros'
+import Blog from '@/components/Blogs/Blog'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import BookingBar from '@/components/Bookings/BookingBar'
@@ -42,6 +42,8 @@ const Home = function ({
         image={image}
       >
         <BookingBar
+          title_1="Check in - Check out"
+          title_2="Guests"
           dates={dates}
           guestValues={guestValues}
           onDatesChange={onDatesChange}

@@ -1,7 +1,7 @@
 import Activity from '.'
 //stories
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 import * as AnimatedHero from '@/components/Heros/AnimatedHero/AnimatedHero.stories'

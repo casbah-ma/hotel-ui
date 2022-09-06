@@ -1,6 +1,6 @@
 import CategoriesSwiper from '.'
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
-import * as BarStories from '@/components/CategoriesBar/CategoriesBar.stories'
+import * as BarStories from '@/components/FilterBar/FilterBar.stories'
 
 export default {
   title: 'Sections/SpaCategories',
@@ -54,5 +54,5 @@ export const Default = Template.bind({})
 Default.args = {
   categoriesDetails,
   headerProps,
-  barProps: BarStories.Default.args,
+  barProps: BarStories.V1.args,
 }

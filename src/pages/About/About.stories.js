@@ -1,7 +1,7 @@
 import About from '.'
 //stories
 import * as HeroProps from '@/components/Heros/Hero/Hero.stories.js'
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 

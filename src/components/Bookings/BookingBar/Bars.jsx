@@ -38,6 +38,8 @@ export const Desktop = function ({
   onDatesChange,
   onGuestChange,
   baseUrl,
+  title_1,
+  title_2,
 }) {
   const guestbtn = useRef(null) // ref for guests button
   const [isOpen, setIsOpen] = useState({
@@ -61,7 +63,7 @@ export const Desktop = function ({
           <Label
             color={theme.colors.DatesCore.text}
             role="label"
-            labelText="Check in - Check out"
+            labelText={title_1}
             fontSize="sm"
           />
           <Popover>
@@ -89,7 +91,7 @@ export const Desktop = function ({
         <Column>
           <Label
             role="label"
-            labelText="Guests"
+            labelText={title_2}
             fontSize="sm"
             color={theme.colors.DatesCore.text}
           />
@@ -108,7 +110,7 @@ export const Desktop = function ({
             </Popover.Button>
             <Popover.Panel className="panel">
               <Guests
-                title="Guests :"
+                title={title_2}
                 guestValues={guestValues}
                 buttonProps={buttonProps}
                 onGuestChange={onGuestChange}
@@ -136,6 +138,8 @@ export const Mobile = function ({
   onDatesChange,
   onGuestChange,
   baseUrl,
+  title_1,
+  title_2,
 }) {
   const bp = useBreakpoint()
   const guestbtn = useRef(null) // ref for guests button
@@ -167,7 +171,7 @@ export const Mobile = function ({
         <Column>
           <Label
             role="label"
-            labelText="Check in - Check out"
+            labelText={title_1}
             color={theme.colors.DatesCore.text}
           />
           <Button
@@ -198,7 +202,7 @@ export const Mobile = function ({
         <Column>
           <Label
             role="label"
-            labelText="Guests"
+            labelText={title_2}
             fontSize="sm"
             color={theme.colors.DatesCore.text}
           />
@@ -237,6 +241,8 @@ export const Mobile = function ({
 // get the breakpoint
 export const getBreakpoint = (bp, props) => {
   switch (bp) {
+    case 'xs':
+      return <Mobile {...props} />
     case 'sm':
       return <Mobile {...props} />
     default:

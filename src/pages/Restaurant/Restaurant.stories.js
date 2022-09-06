@@ -1,6 +1,6 @@
 import Restaurant from '.'
 //stories
-import * as BlogStories from '@/components/Blog/Blog.stories'
+import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
 import * as ImportantInfoStories from '@/components/ImportantInfo/ImportantInfo.stories'

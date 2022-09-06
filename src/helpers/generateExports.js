@@ -1,15 +1,37 @@
 // const {getEntries} = require('./utils')
+const { log } = require('console')
 const fs = require('fs')
-const { getEntries } = require('./scriptsHelper')
+const { getExportsEntries } = require('./scriptsHelper')
 
-const components = Object.keys(getEntries('src/components'))
+const components = Object.keys(getExportsEntries('src/components'))
+let nestedComponents = []
 let outputs = []
-const multiexports = ['Cards', 'Forms', 'Heros', 'Icons']
+const multiexports = [
+  'Blogs',
+  'Bookings',
+  'Cards',
+  'Forms',
+  'Heros',
+  'Icons',
+  'Swipers',
+  'Masonries',
+  'Navbars',
+  'Inputs',
+  'Footers',
+  'CategoriesFilters',
+]
+
 components.forEach((component) => {
-  if (multiexports.includes(component))
+  if (component.includes('/')) {
+    component.split('/')[1] !== 'index.js' &&
+      outputs.push(
+        `export {default as ${component.split('/')[1]}} from './${component}'`
+      )
+  } else if (multiexports.includes(component)) {
     outputs.push(`export * from './${component}'`)
-  else outputs.push(`export {default as ${component}} from './${component}'`)
+  } else outputs.push(`export {default as ${component}} from './${component}'`)
 })
+
 fs.writeFile(
   'src/components/index.js',
   outputs.join('\n'),

@@ -24,6 +24,9 @@ const hotelUiTailwindConfig = {
       sm: '414px',
     },
     extend: {
+      columns: {
+        '4xs': '5rem',
+      },
       boxShadow: {
         card: '2px 4px 24px 10px rgba(0, 0, 0, 0.04)',
       },

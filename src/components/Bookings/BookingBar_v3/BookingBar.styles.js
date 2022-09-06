@@ -16,7 +16,7 @@ export const BookingContent = styled.div(({ showContent }) => [
       divide-y md:divide-y-0 md:divide-x divide-black`,
 ])
 
-export const BookingCulmns = styled.div(({ theme }) => [
+export const Bookingcolumns = styled.div(({ theme }) => [
   tw`flex flex-col items-start justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5 `,
 ])
 

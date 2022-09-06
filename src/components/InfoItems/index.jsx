@@ -11,7 +11,7 @@ function InfoItems({ infos, space }) {
       {!isEmpty(infos) &&
         infos.map((info) => (
           <InfoItem
-            key={info.id}
+            key={info.infoName}
             infoName={info.infoName}
             infoValue={info.infoValue}
             space={space}

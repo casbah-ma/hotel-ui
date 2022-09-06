@@ -27,10 +27,10 @@ export default {
       return (
         <BookingBar_v3
           bookingTitles={{
-            culmn_1: 'Check in',
-            culmn_2: 'Check out',
-            culmn_3: 'Adults',
-            culmn_4: 'Kids',
+            column_1: 'Check in',
+            column_2: 'Check out',
+            column_3: 'Adults',
+            column_4: 'Kids',
           }}
           buttonProps={{
             text: 'Check Availability',
@@ -57,10 +57,10 @@ Default.args = {
     endDate: null,
   },
   bookingTitles: {
-    culmn_1: 'Check in',
-    culmn_2: 'Check out',
-    culmn_3: 'Adults',
-    culmn_4: 'Kids',
+    column_1: 'Check in',
+    column_2: 'Check out',
+    column_3: 'Adults',
+    column_4: 'Kids',
   },
   guestValues: {
     adults: 1,
