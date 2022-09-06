@@ -3,8 +3,8 @@ import tw, { styled } from 'twin.macro'
 export const NavbarContainer = styled.nav(
   ({ bgColor, color, isHidden, transparent, hasBackground }) => [
     isHidden && tw`invisible`,
-    tw`bg-white fixed z-10 top-0 w-[90%] lg:w-[96%] mx-auto flex flex-row items-center justify-between 
-       mt-8 px-7 py-6 lg:pl-[3.4rem] lg:pr-3 shadow-card rounded-3xl`,
+    tw`bg-white fixed z-10 top-8 w-[90%] lg:w-[96%] mx-auto flex flex-row items-center justify-between 
+       px-7 py-6 lg:pl-[3.4rem] lg:pr-3 shadow-card rounded-3xl`,
     transparent &&
       tw`bg-transparent shadow-none w-full lg:justify-start items-center  lg:px-12
       [&>nav]:mr-auto [&>nav]:border-l [&>nav]:border-black [&>nav]:pl-5 [&>nav]:ml-5`,

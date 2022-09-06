@@ -6,19 +6,14 @@ import CategoryTag from './CategoryTag'
 import { CategoriesList, variants } from './FilterBar.styles'
 import { isEmpty } from '@/helpers/utils'
 
-function FilterBar({ categories, variant = 'v1' }) {
-  const [active, setActive] = useState(categories[0])
-  const handleActive = (category) => {
-    setActive(category)
-  }
-
+function FilterBar({ categories, variant = 'v1', active, handleActive }) {
   return (
     <CategoriesList variant={variant}>
       {!isEmpty(categories) &&
         categories.map((category) => (
           <CategoryTag
-            key={category}
-            categoryName={category}
+            key={category.type}
+            categoryName={category.type}
             handleActive={handleActive}
             active={active}
             variant={variant}
@@ -29,7 +24,12 @@ function FilterBar({ categories, variant = 'v1' }) {
 }
 
 FilterBar.propTypes = {
-  categories: PropTypes.array.isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string,
+      qunatity: PropTypes.number,
+    })
+  ),
   variant: PropTypes.oneOf(Object.keys(variants)),
 }
 
