@@ -7,7 +7,7 @@ export const variants = {
 }
 
 export const Tag = styled.li(({ active, variant, theme }) => [
-  tw`flex justify-center items-center flex-nowrap whitespace-nowrap max-w-max cursor-pointer last:mr-0`,
+  tw`inline-flex items-center max-w-max cursor-pointer last:mr-0`,
   ({ variant }) => variants[variant],
   //Active styles
   variant === 'v1' && active && tw`border-b border-black font-semibold`,

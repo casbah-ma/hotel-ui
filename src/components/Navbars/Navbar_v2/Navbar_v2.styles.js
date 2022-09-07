@@ -3,8 +3,8 @@ import tw, { styled } from 'twin.macro'
 export const NavbarContainer = styled.nav(
   ({ bgColor, color, isHidden, transparent, hasBackground }) => [
     isHidden && tw`invisible`,
-    tw`w-[96%] mx-auto flex flex-row items-center justify-between 
-       pl-6 pr-7 py-6 lg:pl-[3.4rem] lg:pr-3 shadow-card rounded-3xl`,
+    tw`bg-white fixed z-10 top-8 w-[90%] lg:w-[96%] mx-auto flex flex-row items-center justify-between 
+       px-7 py-6 lg:pl-[3.4rem] lg:pr-3 shadow-card rounded-3xl`,
     transparent &&
       tw`bg-transparent shadow-none w-full lg:justify-start items-center  lg:px-12
       [&>nav]:mr-auto [&>nav]:border-l [&>nav]:border-black [&>nav]:pl-5 [&>nav]:ml-5`,
@@ -22,7 +22,7 @@ export const LinksList = tw.ul`
 `
 
 export const ListItem = tw.li`
-border-b border-black pb-2 lg:border-0 cursor-pointer hover:opacity-50
+border-b border-black pb-2 lg:pb-0 lg:border-0 cursor-pointer hover:opacity-50
 `
 
 export const LanguageMenu = tw.div`

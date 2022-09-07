@@ -16,17 +16,23 @@ const Template = (args) => <FilterBar {...args} />
 
 export const V1 = Template.bind({})
 V1.args = {
-  categories: ['Theatre', 'School Room', 'Reception', 'Banquet', 'U-Shape'],
+  categories: [
+    { type: 'Theatre', quantity: '3' },
+    { type: 'School Room', quantity: '3' },
+    { type: 'Reception', quantity: '2' },
+    { type: 'U-Shape', quantity: '2' },
+    { type: 'Banquet', quantity: '3' },
+  ],
 }
 
 export const V2 = Template.bind({})
 V2.args = {
-  categories: ['Theatre', 'School Room', 'Reception', 'Banquet', 'U-Shape'],
+  ...V1.args,
   variant: 'v2',
 }
 
 export const V3 = Template.bind({})
 V3.args = {
-  categories: ['Theatre', 'School Room', 'Reception', 'Banquet', 'U-Shape'],
+  ...V1.args,
   variant: 'v3',
 }
