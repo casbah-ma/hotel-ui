@@ -152,7 +152,7 @@ const CustomStyles = createGlobalStyle`
   }
 
   .mySwiper_v2 {
-    ${tw`w-full h-[40rem]`}
+    ${tw`w-full h-full`}
   }
   .mySwiper_v2 .swiper-slide {
     width: fit-content;

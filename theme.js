@@ -5,7 +5,7 @@ export default {
       secondary: '#fff',
     },
     bg: {
-      primary: '#21B67C',
+      primary: '#fff',
       secondary: '#000000',
       tertiary: '#fafafa',
       additional: '#00bcd4',
@@ -18,8 +18,8 @@ export default {
       white: '#fff',
     },
     DatesCore: {
-      bg: '#fff',
-      text: '#000',
+      bg: '#000',
+      text: '#fff',
     },
   },
 }

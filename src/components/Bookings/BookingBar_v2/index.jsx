@@ -7,6 +7,7 @@ import Button from '../../Button'
 import Guests from '../../Cards/GuestsCard'
 import DatePicker from '../../DatePicker'
 import Label from '../../Label'
+import theme from '../../../../theme'
 import {
   BookingWrapper,
   BookingButton,
@@ -65,16 +66,16 @@ function BookingBa_v2({
                 role="label"
                 labelText={title_1}
                 fontSize={bp}
-                color="black"
+                color={theme.colors.DatesCore.text}
               />
               <Popover>
                 <Popover.Button>
                   <Button
                     as="div"
                     variant="rounded"
-                    bgColor="white"
+                    bgColor={theme.colors.DatesCore.text}
                     Icon={ChevronUpIcon}
-                    color="black"
+                    color={theme.colors.DatesCore.bg}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">
@@ -90,7 +91,7 @@ function BookingBa_v2({
                 role="label"
                 labelText={title_2}
                 fontSize={bp}
-                color="black"
+                color={theme.colors.DatesCore.text}
               />
               <Popover>
                 <Popover.Button ref={guestbtn}>
@@ -98,7 +99,7 @@ function BookingBa_v2({
                     as="div"
                     variant="rounded"
                     bgColor="white"
-                    color="black"
+                    color={theme.colors.DatesCore.bg}
                     Icon={ChevronUpIcon}
                   />
                 </Popover.Button>

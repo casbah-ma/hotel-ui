@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const merge = require('deepmerge')
 
 const fonts = {
-  primary: ['DAHILA', 'sans-serif'],
+  primary: ['Gilroy', 'sans-serif'],
   secondary: ['Raleway', 'sans-serif'],
   indie: ['Indie Flower', 'cursive'],
 }

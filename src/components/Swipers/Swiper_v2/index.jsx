@@ -42,7 +42,7 @@ function Swiper_v2({ header, navigation, children, autoplay }) {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          modules={!!autoplay && [Autoplay]}
+          modules={[Autoplay]}
           className="mySwiper_v2"
         >
           {children}
