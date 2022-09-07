@@ -22,7 +22,7 @@ export const LinksList = tw.ul`
 `
 
 export const ListItem = tw.li`
-border-b border-black pb-2 lg:border-0 cursor-pointer hover:opacity-50
+border-b border-black pb-2 lg:pb-0 lg:border-0 cursor-pointer hover:opacity-50
 `
 
 export const LanguageMenu = tw.div`
