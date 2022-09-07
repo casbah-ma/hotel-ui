@@ -6,6 +6,7 @@ import { PlusIcon } from '@heroicons/react/24/solid'
 import Paragraph from '@/components/Paragraph'
 
 function CategoryTag({ category, active, handleActive, variant }) {
+  console.log(active)
   return (
     <Tag
       onClick={() => handleActive(category.type)}
