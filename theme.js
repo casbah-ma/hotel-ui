@@ -2,7 +2,7 @@ export default {
   colors: {
     text: {
       primary: '#000',
-      secondary: '#000',
+      secondary: '#fff',
     },
     bg: {
       primary: '#fff',
