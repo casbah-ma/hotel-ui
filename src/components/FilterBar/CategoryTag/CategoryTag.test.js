@@ -7,7 +7,9 @@ const { V1 } = composeStories(stories)
 describe('CategoryTag component', () => {
   it('Renders the correct category name', () => {
     render(<V1 />)
-    const categoryName = screen.getByText(V1.args.categoryName)
+    const categoryName = screen.getByText(
+      `${V1.args.categoryName} (${V1.args.quantity})`
+    )
     expect(categoryName).toBeInTheDocument()
   })
 })
