@@ -13,7 +13,8 @@ function FilterBar({ categories, variant = 'v1', active, handleActive }) {
         categories.map((category) => (
           <CategoryTag
             key={category.type}
-            category={category}
+            categoryName={category.type}
+            quantity={category.quantity}
             handleActive={handleActive}
             active={active}
             variant={variant}

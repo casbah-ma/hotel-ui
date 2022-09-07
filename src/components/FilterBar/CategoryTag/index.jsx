@@ -12,7 +12,6 @@ function CategoryTag({
   handleActive,
   variant,
 }) {
-  console.log(active)
   return (
     <Tag
       onClick={() => handleActive(categoryName)}

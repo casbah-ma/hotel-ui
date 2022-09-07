@@ -1,5 +1,4 @@
 // const {getEntries} = require('./utils')
-const { log } = require('console')
 const fs = require('fs')
 const { getExportsEntries } = require('./scriptsHelper')
 
