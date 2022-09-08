@@ -27,6 +27,7 @@ export const Vertical = Template.bind({})
 Vertical.args = {
   ...Default.args,
   direction: 'vertical',
+  withBorder: true,
 }
 
 export const WithoutBorder = Template.bind({})

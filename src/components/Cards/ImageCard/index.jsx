@@ -59,7 +59,7 @@ const imageVariantsShapes = {
     xs: { width: 325, height: 317 },
     sm: { width: 325, height: 317 },
     md: { width: 325, height: 317 },
-    lg: { width: 500, height: 480 },
+    lg: { width: 580, height: 480 },
   },
   //for blog_V2
   imageHorizontal: {
