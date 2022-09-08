@@ -2,23 +2,22 @@ import PropTypes from 'prop-types'
 //component
 import Service from './Service'
 //styles
-import { Grid } from './ServicesGrid.styles'
+import { Grid, variants } from './ServicesGrid.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
 
-//icons
-import { PlusIcon } from '@heroicons/react/24/solid'
-
-function ServicesGrid({ services, circleBg }) {
+function ServicesGrid({ services, iconColor, bgColor, variant = 'v1' }) {
   return (
-    <Grid>
+    <Grid variant={variant}>
       {!isEmpty(services) &&
         services.map((service) => (
           <Service
             key={service.serviceName}
             serviceName={service.serviceName}
-            circleBg={circleBg}
+            bgColor={bgColor}
+            iconColor={iconColor}
             Icon={service.Icon}
+            variant={variant}
           />
         ))}
     </Grid>
@@ -27,7 +26,9 @@ function ServicesGrid({ services, circleBg }) {
 
 ServicesGrid.propTypes = {
   services: PropTypes.array.isRequired,
-  circleBg: PropTypes.string,
+  bgColor: PropTypes.string,
+  iconColor: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
 }
 
 export default ServicesGrid

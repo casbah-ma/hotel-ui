@@ -8,7 +8,7 @@ import Label from '@/components//Label'
 function InfoItem({ infoName, infoValue, space = true }) {
   return (
     <Container data-testid="information-room-items" space={space}>
-      <Paragraph description={infoName} />
+      <Paragraph description={`${infoName}:${''}`} />
       <Label
         color={space ? 'black' : 'white'}
         labelText={infoValue}

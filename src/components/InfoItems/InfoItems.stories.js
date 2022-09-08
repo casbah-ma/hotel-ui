@@ -3,19 +3,19 @@ import Centre from '@/components/Centre'
 
 const infos = [
   {
-    infoName: 'Name:',
+    infoName: 'Name',
     infoValue: 'Evolution',
   },
   {
-    infoName: 'Type:',
+    infoName: 'Type',
     infoValue: 'School Room',
   },
   {
-    infoName: 'Guests:',
+    infoName: 'Guests',
     infoValue: '32',
   },
   {
-    infoName: 'Sq M:',
+    infoName: 'Sq M',
     infoValue: '129M',
   },
 ]
