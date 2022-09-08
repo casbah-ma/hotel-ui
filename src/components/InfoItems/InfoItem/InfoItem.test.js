@@ -7,7 +7,7 @@ const { Default } = composeStories(stories)
 describe('InfoItem component', () => {
   it('Renders the correct name and and value text', () => {
     render(<Default />)
-    const name = screen.getByText(Default.args.infoName)
+    const name = screen.getByText(Default.args.infoName + ':')
     expect(name).toBeInTheDocument()
     const value = screen.getByText(Default.args.infoValue)
     expect(value).toBeInTheDocument()
