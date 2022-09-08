@@ -24,6 +24,7 @@ import PropTypes from 'prop-types'
 import { useTheme } from 'styled-components'
 import Button from '@/components/Button'
 import Image from 'next/image'
+import { useBreakpoint } from '@/hooks'
 
 function Footer({
   links,
@@ -36,6 +37,7 @@ function Footer({
   logo,
   t,
 }) {
+  const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
   const [inputValue, setInputValue] = useState({
     email: '',

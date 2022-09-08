@@ -64,7 +64,7 @@ function BookingBa_v2({
             <BookingContentLeft>
               <Label
                 role="label"
-                labelText={title_1}
+                labelText={title_1 || ''}
                 fontSize={bp}
                 color={theme.colors.DatesCore.text}
               />
@@ -89,7 +89,7 @@ function BookingBa_v2({
             <BookingContentRight>
               <Label
                 role="label"
-                labelText={title_2}
+                labelText={title_2 || ''}
                 fontSize={bp}
                 color={theme.colors.DatesCore.text}
               />

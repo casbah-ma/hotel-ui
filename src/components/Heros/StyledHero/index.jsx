@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import BookingBa_v2 from '../../Bookings/BookingBar_v2'
+import BookingBar_v2 from '../../Bookings/BookingBar_v2'
 import Paragraph from '../../Paragraph'
 import Title from '../../Title'
 import {
@@ -66,7 +66,7 @@ function StyledHero({ title, subtitle, children, image }) {
         />
       </StyledHeroImage>
       <StyledHeroChildren>
-        <BookingBa_v2
+        <BookingBar_v2
           bookingTitle={{
             title_1: 'Checkin - checkout',
             title_2: 'Guests',
