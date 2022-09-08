@@ -14,18 +14,21 @@ const getSize = (size) => {
   switch (size) {
     case 'small':
       return {
+        xs: { width: 340, height: 380 },
         sm: { width: 340, height: 380 },
         md: { width: 340, height: 340 },
         lg: { width: 340, height: 380 },
       }
     case 'medium':
       return {
+        xs: { width: 340, height: 290 },
         sm: { width: 340, height: 290 },
         md: { width: 593, height: 400 },
         lg: { width: 593, height: 380 },
       }
     case 'large':
       return {
+        xs: { width: 340, height: 290 },
         sm: { width: 340, height: 290 },
         md: { width: 593, height: 400 },
         lg: { width: 982, height: 380 },
