@@ -25,9 +25,9 @@ export default {
         <OrderForm
         formInputs={formInputs}
           onquantityChange={handleQuantityChange}
-          buttonProps={{
-            ...Button.Primary.args,        
-          }}
+          // buttonProps={{
+          //   ...Button.Primary.args,        
+          // }}
           onChange = {onChange}
           onClick = {onClick}
         />
