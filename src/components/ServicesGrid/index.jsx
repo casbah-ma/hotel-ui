@@ -6,7 +6,7 @@ import { Grid, variants } from './ServicesGrid.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
 
-function ServicesGrid({ services, bgColor, variant = 'v1' }) {
+function ServicesGrid({ services, iconColor, bgColor, variant = 'v1' }) {
   return (
     <Grid variant={variant}>
       {!isEmpty(services) &&
@@ -15,6 +15,7 @@ function ServicesGrid({ services, bgColor, variant = 'v1' }) {
             key={service.serviceName}
             serviceName={service.serviceName}
             bgColor={bgColor}
+            iconColor={iconColor}
             Icon={service.Icon}
             variant={variant}
           />
@@ -26,6 +27,7 @@ function ServicesGrid({ services, bgColor, variant = 'v1' }) {
 ServicesGrid.propTypes = {
   services: PropTypes.array.isRequired,
   bgColor: PropTypes.string,
+  iconColor: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(variants)),
 }
 

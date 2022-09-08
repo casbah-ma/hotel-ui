@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react'
 import { composeStories } from '@storybook/testing-react'
 import * as stories from './Service.stories'
 
-const { Default } = composeStories(stories)
+const { V1 } = composeStories(stories)
 
 describe('Service component', () => {
   it('Renders an service', () => {
-    render(<Default />)
-    const serviceName = screen.getByText(Default.args.serviceName)
+    render(<V1 />)
+    const serviceName = screen.getByText(V1.args.serviceName)
     expect(serviceName).toBeInTheDocument()
   })
 })
