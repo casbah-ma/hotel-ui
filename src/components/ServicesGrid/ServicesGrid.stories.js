@@ -1,4 +1,3 @@
-import { bgColors } from '@/styles/theming'
 //components
 import ServicesGrid from '.'
 //icons
@@ -11,6 +10,7 @@ import {
   Wifi,
   YogaMat,
 } from '@/components/Icons'
+import { variants } from './ServicesGrid.styles'
 
 const services = [
   { serviceName: 'Free Wifi', Icon: Wifi },
@@ -26,7 +26,8 @@ export default {
   title: 'Components/ServicesGrid',
   component: ServicesGrid,
   argTypes: {
-    circleBg: {
+    variant: {
+      options: Object.keys(variants),
       control: { type: 'radio' },
     },
   },
@@ -34,7 +35,20 @@ export default {
 
 const Template = (args) => <ServicesGrid {...args} />
 
-export const Default = Template.bind({})
-Default.args = {
+export const V1 = Template.bind({})
+V1.args = {
   services,
+  variant: 'v1',
+}
+
+export const V2 = Template.bind({})
+V2.args = {
+  services,
+  variant: 'v2',
+}
+
+export const V3 = Template.bind({})
+V3.args = {
+  services,
+  variant: 'v3',
 }
