@@ -18,8 +18,11 @@ export const BookingMobileButton = styled.button(({ theme }) => [
   `,
 ])
 
-export const BookngContainer = tw.section`h-[4.125rem] lg:h-[6.75rem] xs:w-[18rem] sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] rounded-3xl flex justify-between items-center shadow-card bg-white`
-
+export const BookngContainer = styled.div(({ theme }) => [
+  tw`h-[4.125rem] lg:h-[6.75rem] xs:w-[18rem] sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] rounded-3xl flex justify-between items-center shadow-card bg-white`,
+  `background-color: ${theme.colors.DatesCore.bg};
+  color: ${theme.colors.DatesCore.text};`,
+])
 export const BookingContent = tw.div`w-full lg:flex-1 h-full rounded-3xl md:rounded-r-none md:rounded-l-3xl 
 flex items-center justify-center divide-x divide-gray-300 py-3 md:px-2 lg:py-6`
 export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around`

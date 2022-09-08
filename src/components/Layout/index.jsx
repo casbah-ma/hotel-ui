@@ -21,7 +21,7 @@ Layout.defaultProps = {
 
 Layout.propTypes = {
   navVariant: PropTypes.oneOf(['v1', 'v2']),
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   navbarProps: PropTypes.object,
   footerProps: PropTypes.object,
 }

@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'DAHILA';
-  src: url('/fonts/Dahila/dahlia-regular.otf');
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Light.otf');
   font-display: fallback;
 }
+

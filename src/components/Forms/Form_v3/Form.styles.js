@@ -6,7 +6,7 @@ export const Formv2Container = tw.div`
 
 `
 
-export const StyledButton = tw.button`
+export const StyledButton = tw.div`
    w-full flex items-center justify-end
 `
 
