@@ -14,6 +14,7 @@ import {
   FooterLinkDivider,
   InputContainer,
   InputError,
+  FooterLinkWrapper,
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
@@ -96,7 +97,7 @@ function Footer({
       <FooterLinks data-testid="links">
         {!isEmpty(links) &&
           links.map((item, index) => (
-            <div key={index} className="flex justify-center items-center">
+            <FooterLinkWrapper key={index}>
               <FooterLink>
                 <Link
                   href={item.link}
@@ -111,7 +112,7 @@ function Footer({
                 </Link>
               </FooterLink>
               {index < links.length - 1 && <FooterLinkDivider />}
-            </div>
+            </FooterLinkWrapper>
           ))}
       </FooterLinks>
       <FooterDivider />

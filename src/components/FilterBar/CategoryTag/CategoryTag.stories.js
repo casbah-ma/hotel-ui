@@ -17,6 +17,7 @@ const Template = (args) => <CategoryTag {...args} />
 export const V1 = Template.bind({})
 V1.args = {
   categoryName: 'Theatre',
+  quantity: 3,
   active: '',
   variant: 'v1',
 }

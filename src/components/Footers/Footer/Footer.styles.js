@@ -24,4 +24,5 @@ export const FooterLinkDivider = tw.div`border-solid border-2 rounded-full mx-3 
 export const FooterDivider = tw.div`border-solid border w-[19.37rem] md:w-[85vw] lg:w-[90vw] mt-3 rounded-full`
 export const FooterDividerText = tw.div`p-0 w-[19.37rem]  md:w-[85vw] lg:w-[90vw] flex items-center justify-between text-xs -mt-5`
 
+export const FooterLinkWrapper = tw.li`flex justify-center items-center`
 export const FooterLink = tw.li`text-center cursor-pointer mx-auto`

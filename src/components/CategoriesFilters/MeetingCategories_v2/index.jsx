@@ -10,9 +10,34 @@ import { SwiperSlide } from 'swiper/react'
 import { Container, Wrapper } from './MeetingCategories_v2.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
+import { useState } from 'react'
 
 function MeetingCategories_v2({ categories, headerProps }) {
-  const types = categories.map((obejct) => obejct.type)
+  //handle active category
+  const [active, setActive] = useState('All')
+  const handleActive = (category) => {
+    setActive(category)
+  }
+  //function to get all types and how many rooms they have
+  const getTypes = (categories) => {
+    categories.length
+    const types = []
+    categories.forEach((category) => {
+      let index = types.findIndex(
+        (_category) => _category.type === category.type
+      )
+      if (index === -1) {
+        //add the category if doesn't exist
+        types.push({ type: category.type, quantity: 1 })
+      } else {
+        //increase the quantity if it does exist
+        types[index].quantity = types[index].quantity + 1
+      }
+    })
+    types.unshift({ type: 'All', quantity: categories.length })
+    return types
+  }
+  //function to get the arrray infos from the data
   const getInfos = (category) => {
     return Object.entries(category)
       .filter((item) => !(item[0] === 'image' || item[0] === 'subtitle'))
@@ -21,15 +46,24 @@ function MeetingCategories_v2({ categories, headerProps }) {
         infoValue: item[1],
       }))
   }
+  //filter
+  const filteredCategories = categories.filter((category) =>
+    active === 'All' ? true : category.type === active
+  )
   return (
     <Container>
       <Wrapper>
         <Header {...headerProps} />
-        <FilterBar categories={types} variant="v2" />
+        <FilterBar
+          categories={getTypes(categories)}
+          variant="v2"
+          active={active}
+          handleActive={handleActive}
+        />
       </Wrapper>
       <Swiper_v2 navigation={true}>
-        {!isEmpty(categories) &&
-          categories.map((category, index) => (
+        {!isEmpty(filteredCategories) &&
+          filteredCategories.map((category, index) => (
             <SwiperSlide key={index}>
               <RoomCard
                 image={category.image}

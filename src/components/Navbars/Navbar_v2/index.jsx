@@ -80,6 +80,7 @@ function Navbar_v2({
         alt="logo"
         width={bp === 'lg' ? 224 : 138}
         height={bp === 'lg' ? 76 : 48}
+        objectFit="contain"
       />
       <Nav>
         <LinksList>

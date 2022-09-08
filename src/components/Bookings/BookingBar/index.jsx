@@ -2,7 +2,7 @@ import { useBreakpoint } from '@/hooks'
 import { getBreakpoint } from './Bars'
 import PropTypes from 'prop-types'
 
-const BookingBar = function (props) {
+function BookingBar(props) {
   const bp = useBreakpoint()
   return getBreakpoint(bp, props)
 }
