@@ -2,24 +2,33 @@ import PropTypes from 'prop-types'
 //components
 import Paragraph from '@/components/Paragraph'
 //styles
-import { FlexWrapper, IconCircle } from './Service.styles'
+import { FlexWrapper, IconWrapper, variants } from './Service.styles'
 //hooks
 import { useBreakpoint } from '@/hooks'
 import { useEffect, useState } from 'react'
 
-function Service({ serviceName, circleBg, Icon }) {
+function Service({
+  variant = 'v1',
+  serviceName,
+  bgColor = '#FDFDFD',
+  iconColor,
+  Icon,
+}) {
   const [width, setWidth] = useState('3.5rem')
   const bp = useBreakpoint()
 
   useEffect(() => {
-    if (bp === 'lg') setWidth('3.5rem')
-    if (bp === 'md') setWidth('2rem')
+    if (bp === 'lg') setWidth('2rem')
+    if (bp !== 'lg') setWidth('1.5rem')
   }, [bp])
   return (
-    <FlexWrapper data-testid="service">
-      <IconCircle circleBg={circleBg}>
-        <Icon width={width} />
-      </IconCircle>
+    <FlexWrapper bgColor={bgColor} variant={variant} data-testid="service">
+      {variant !== 'v2' && (
+        <IconWrapper variant={variant}>
+          <Icon color={iconColor} width={width} />
+        </IconWrapper>
+      )}
+      {variant === 'v2' && <Icon color={iconColor} width={width} />}
       <Paragraph description={serviceName} />
     </FlexWrapper>
   )
@@ -28,7 +37,8 @@ function Service({ serviceName, circleBg, Icon }) {
 Service.propTypes = {
   serviceName: PropTypes.string.isRequired,
   iconName: PropTypes.string,
-  circleBg: PropTypes.string,
+  bgColor: PropTypes.string,
+  variant: PropTypes.oneOf(Object.keys(variants)),
 }
 
 export default Service
