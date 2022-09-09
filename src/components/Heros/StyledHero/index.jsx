@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import BookingBar_v2 from '../../Bookings/BookingBar_v2'
-import Paragraph from '../../Paragraph'
-import Title from '../../Title'
+import BookingBar_v2 from '@/components/Bookings/BookingBar_v2'
+import Paragraph from '@/components/Paragraph'
+import Title from '@/components/Title'
 import {
   StyledHeroChildren,
   StyledHeroContainer,

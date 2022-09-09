@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { ImageCard } from '@/components/Cards'
 //components
 import { Text, ImageWrapper } from './TextCard.styles'
-import Label from '../../Label'
+import Label from '@/components/Label'
 
 function TextCard({ src, variant, text }) {
   return (

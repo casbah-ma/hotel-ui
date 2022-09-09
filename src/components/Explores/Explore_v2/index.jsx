@@ -1,10 +1,4 @@
-import {
-  ExploreCard,
-  ExploreCards,
-  ExploreContainer,
-  ExploreContent,
-  ExploreHeader,
-} from './Explore.styles'
+import { ExploreCard, ExploreCards, ExploreContainer } from './Explore.styles'
 import PropTypes from 'prop-types'
 import Header from '@/components/Header'
 import { TextCard } from '@/components/Cards'
@@ -26,6 +20,9 @@ function Explore_v2({ header, data }) {
   )
 }
 
-Explore_v2.propTypes = {}
+Explore_v2.propTypes = {
+  header: PropTypes.object,
+  data: PropTypes.array,
+}
 
 export default Explore_v2

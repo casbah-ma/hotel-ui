@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Button from '@/components/Button'
 import InfoHeader from '@/components/InfoHeader'
 import { Container, StyledChildren } from './RoomCard_v2.styles'
-import Paragraph from '../../Paragraph'
+import Paragraph from '@/components/Paragraph'
 
 function RoomCard_v2({ title, subtitle, actionProps, bgColor, text }) {
   return (

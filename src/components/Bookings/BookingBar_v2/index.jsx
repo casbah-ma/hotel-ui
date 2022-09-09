@@ -3,11 +3,11 @@ import { Popover } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
 import { useRef, useState } from 'react'
-import Button from '../../Button'
-import Guests from '../../Cards/GuestsCard'
-import DatePicker from '../../DatePicker'
-import Label from '../../Label'
-import theme from '../../../../theme'
+import Button from '@/components/Button'
+import Guests from '@/components/Cards/GuestsCard'
+import DatePicker from '@/components/DatePicker'
+import Label from '@/components/Label'
+import theme from '@/components/../../theme'
 import {
   BookingWrapper,
   BookingButton,

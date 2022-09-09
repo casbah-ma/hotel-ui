@@ -8,6 +8,7 @@ import Image from 'next/image'
 import Paragraph from '@/components/Paragraph'
 import Label from '@/components/Label'
 import { useBreakpoint } from '@/hooks'
+import LinkComponent from '@/components/Link'
 
 // Optimize image size for each breakpoint
 const getSize = (size) => {
@@ -44,26 +45,30 @@ const getBreakpoint = (size, bp) => {
   return sizes[bp]
 }
 
-function Card_v2({ size, image, date, description }) {
+function Card_v2({ size, image, date, description, link }) {
   const bp = useBreakpoint()
   return (
-    <CardContainer size={size}>
-      <CardImageContainer>
-        <Image
-          className="radius-xl"
-          role="img"
-          src={image}
-          alt="Card_image"
-          width={getBreakpoint(size, bp) ? getBreakpoint(size, bp).width : 0}
-          height={getBreakpoint(size, bp) ? getBreakpoint(size, bp).height : 0}
-          objectFit="cover"
-        />
-      </CardImageContainer>
-      <CardInfosContainer data-testid="info">
-        <Paragraph description={description} fontSize="rg" />
-        {date && <Label labelText={date} />}
-      </CardInfosContainer>
-    </CardContainer>
+    <LinkComponent {...link}>
+      <CardContainer size={size}>
+        <CardImageContainer>
+          <Image
+            className="radius-xl"
+            role="img"
+            src={image}
+            alt="Card_image"
+            width={getBreakpoint(size, bp) ? getBreakpoint(size, bp).width : 0}
+            height={
+              getBreakpoint(size, bp) ? getBreakpoint(size, bp).height : 0
+            }
+            objectFit="cover"
+          />
+        </CardImageContainer>
+        <CardInfosContainer data-testid="info">
+          <Paragraph description={description} fontSize="rg" />
+          {date && <Label labelText={date} />}
+        </CardInfosContainer>
+      </CardContainer>
+    </LinkComponent>
   )
 }
 

@@ -18,11 +18,11 @@ Version1.args = {
   },
   cards: [
     {
-      variant: 'link',
+      size: 'lg',
       direction: 'horizontal',
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
-      ImgUrl: 'https://source.unsplash.com/random/?hotel',
+      image: 'https://source.unsplash.com/random/?hotel',
       linkCard: {
         description:
           'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
@@ -30,11 +30,11 @@ Version1.args = {
       },
     },
     {
-      variant: 'link',
+      size: 'lg',
       direction: 'horizontal',
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
-      ImgUrl: 'https://source.unsplash.com/random/?room',
+      image: 'https://source.unsplash.com/random/?room',
       linkCard: {
         description:
           'Le Lorem Ipsum est simplement du faux texte employé dans la composition',

@@ -11,7 +11,7 @@ import Label from '@/components/Label'
 import { useBreakpoint } from '@/hooks'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import theme from '../../../../theme'
+import theme from '@/components/../../theme'
 
 const Hero = function ({
   position,
