@@ -1,20 +1,20 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { composeStories } from '@storybook/testing-react'
-import * as stories from './Form.stories'
+import * as stories from './OrderForm.stories'
 
 const { Default } = composeStories(stories)
 
-describe('Form_v4 component', () => {
+describe('OrderForm component', () => {
   it('should render correctly', () => {
     render(<Default />)
-    const Formv4Container = screen.getByTestId('Form_v4-container')
-    expect(Formv4Container).toBeInTheDocument()
+    const OrderForm = screen.getByTestId('OrderForm-container')
+    expect(OrderForm).toBeInTheDocument()
   })
 
   it('should render correctly with props', () => {
     render(<Default />)
-    const Formv4Container = screen.getByTestId('Form_v4-container')
-    expect(Formv4Container).toBeInTheDocument()
+    const OrderForm = screen.getByTestId('OrderForm-container')
+    expect(OrderForm).toBeInTheDocument()
   })
 
   it('should render with amount input', () => {

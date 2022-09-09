@@ -1,10 +1,10 @@
-import Form_v4 from '.'
+import OrderForm_v2 from '.'
 import useState from 'storybook-addon-state'
 import * as Button from '@/components/Button/Button.stories'
 
 export default {
-  title: 'Forms/Form_v4',
-  component: Form_v4,
+  title: 'Forms/OrderForm_v2',
+  component: OrderForm_v2,
   decorators: [
     (story) => {
       const [formInputs, setFormInputs] = useState('click', {
@@ -22,7 +22,7 @@ export default {
         setFormInputs({ ...formInputs, [type]: value })
       }
       return (
-        <Form_v4
+        <OrderForm_v2
           formInputs={formInputs}
           onquantityChange={handleQuantityChange}
           // buttonProps={{
@@ -36,7 +36,7 @@ export default {
   ],
 }
 
-const Template = (args) => <Form_v4 {...args} />
+const Template = (args) => <OrderForm_v2 {...args} />
 export const Default = Template.bind({})
 Default.args = {
   formInputs: {
@@ -48,6 +48,7 @@ Default.args = {
     currency: 'MAD',
     totalText: 'Total Value:',
   },
+  onquantityChange: () => {},
   onChange: () => {},
   onClick: () => {},
 }
