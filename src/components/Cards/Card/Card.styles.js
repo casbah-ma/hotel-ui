@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 export const StyledCard = styled.section(({ direction }) => [
   tw`
-    w-full lg:w-[33.875rem] flex flex-col justify-between items-start
+    w-full lg:w-[50rem] flex flex-col justify-between items-start
     rounded-lg cursor-pointer
     `,
   direction === 'vertical' &&

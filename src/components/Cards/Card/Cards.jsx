@@ -57,7 +57,7 @@ export const LinkCard = function ({ linkCard, ImgUrl, direction }) {
           <Image
             className="radius-lg"
             src={ImgUrl}
-            width={direction === 'vertical' ? 400 : 542}
+            width={direction === 'vertical' ? 400 : 800}
             height={direction === 'vertical' ? 480 : 342}
             alt="card"
             objectFit="cover"
