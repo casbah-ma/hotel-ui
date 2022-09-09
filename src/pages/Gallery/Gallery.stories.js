@@ -12,7 +12,7 @@ export default {
 const Template = (args) => <Gallery {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   heroProps: { ...HeroProps.Example1.args, title: 'Gallery' },
   masonryProps: { ...MasonryProps.Default.args },
 }

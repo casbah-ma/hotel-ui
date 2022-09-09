@@ -11,7 +11,7 @@ export default {
 const Template = (args) => <ContactUs {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   heroProps: { ...HeroProps.Example1.args, title: 'Contact Us' },
   ContactsProps: {
     email: 'reservations@palazzoversace.com',

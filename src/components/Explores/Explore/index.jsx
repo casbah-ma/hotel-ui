@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import { Card_v2, Card } from '@/componenets/Cards'
-import Header from '@/componenets/Header'
+import { Card_v2, Card } from '@/components/Cards'
+import Header from '@/components/Header'
 import { ExploreWrapper } from './Explore.styles'
 
 function Explore({ variant, header, cards }) {

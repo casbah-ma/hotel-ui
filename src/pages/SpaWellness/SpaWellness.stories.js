@@ -15,7 +15,7 @@ export default {
 const Template = (args) => <SpaWellness {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   actionProps: { ...ButtonStories.Dark.args, label: 'Book your something' },
   spaCategoriesProps: { ...SpaCategoriesStories.Default.args },
   BlogProps: { ...BlogStories.Default.args },

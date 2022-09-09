@@ -61,7 +61,7 @@ function Card_v2({ size, image, date, description }) {
       </CardImageContainer>
       <CardInfosContainer data-testid="info">
         <Paragraph description={description} fontSize="rg" />
-        <Label labelText={date} />
+        {date && <Label labelText={date} />}
       </CardInfosContainer>
     </CardContainer>
   )

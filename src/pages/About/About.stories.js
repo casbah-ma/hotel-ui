@@ -13,7 +13,7 @@ export default {
 const Template = (args) => <About {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   heroProps: { ...HeroProps.Example1.args, title: 'About The Hotel' },
   blogProps: {
     ...BlogStories.ThreeColumns.args,

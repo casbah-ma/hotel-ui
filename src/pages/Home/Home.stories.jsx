@@ -14,7 +14,7 @@ export default {
 const Template = (args) => <Home {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   GalleryProps: { ...GalleryStories.Default.args },
   BlogProps: { ...BlogStories.ImageAtBottom.args },
   BlogProps1: { ...BlogStories.ImageOnRight.args },
