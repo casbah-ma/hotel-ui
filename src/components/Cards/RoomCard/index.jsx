@@ -4,6 +4,7 @@ import Button from '@/components/Button'
 import InfoHeader from '@/components/InfoHeader'
 //styles
 import { Container, StyledChildren } from './RoomCard.styles'
+import LinkComponent from '../../LinkComponent'
 
 function RoomCard({
   children,
@@ -13,18 +14,21 @@ function RoomCard({
   actionProps,
   bgColor,
   variant,
+  link,
 }) {
   return (
-    <Container bgColor={bgColor} variant={variant}>
-      <InfoHeader
-        variant={variant}
-        roomImage={image}
-        title={title}
-        subtitle={subtitle}
-      />
-      <StyledChildren>{children}</StyledChildren>
-      {actionProps && <Button {...actionProps} />}
-    </Container>
+    <LinkComponent {...link}>
+      <Container bgColor={bgColor} variant={variant}>
+        <InfoHeader
+          variant={variant}
+          roomImage={image}
+          title={title}
+          subtitle={subtitle}
+        />
+        <StyledChildren>{children}</StyledChildren>
+        {actionProps && <Button {...actionProps} />}
+      </Container>
+    </LinkComponent>
   )
 }
 
@@ -37,6 +41,7 @@ RoomCard.propTypes = {
   }),
   actionProps: PropTypes.shape({ ...Button.propTypes }),
   bgColor: PropTypes.string,
+  link: PropTypes.shape(LinkComponent.propTypes),
 }
 
 export default RoomCard

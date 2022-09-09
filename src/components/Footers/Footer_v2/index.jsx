@@ -1,6 +1,6 @@
 import Paragraph from '@/components/Paragraph'
 import Label from '@/components/Label'
-import Link from '@/components/Link'
+import Link from '@/components/LinkComponent'
 import { useState } from 'react'
 import {
   FooterContainer,
@@ -33,7 +33,6 @@ function Footer({
   defaultLanguage,
   color = 'white',
   bgColor = 'black',
-  hotelName,
   logo,
   t,
 }) {

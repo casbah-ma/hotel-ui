@@ -4,7 +4,6 @@ import { isEmpty } from '@/helpers/utils'
 import Header from '@/components/Header'
 import Link from 'next/link'
 import Paragraph from '@/components/Paragraph'
-import { CloudinaryContext, Transformation } from 'cloudinary-react'
 import Image from 'next/image'
 
 // Default Card component

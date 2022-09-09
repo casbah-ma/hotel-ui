@@ -30,6 +30,11 @@ WithImage.args = {
   name: 'Room 1',
   imageSrc: 'https://source.unsplash.com/random/?hotel',
   subtitle: '13M X 7M',
+  link: {
+    href: '/',
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }
 
 export const WithFreeText = Template2.bind({})

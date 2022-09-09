@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 //components
-import Link from '@/components/Link'
+import Link from '@/components/LinkComponent'
 import Label from '@/components/Label'
 import Button from '@/components/Button'
 import Dropdown from '@/components/Dropdown'
