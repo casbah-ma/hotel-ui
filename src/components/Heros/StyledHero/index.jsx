@@ -30,20 +30,7 @@ const getImageSize = (bp) => {
 }
 
 function StyledHero({ title, subtitle, children, image }) {
-  const [dates, setDates] = useState({ startDate: null, endDate: null })
   const bp = useBreakpoint()
-  const [guestValues, setGuestValues] = useState({
-    adults: 1,
-    kids: 0,
-  })
-  // handle dates change
-  const onDatesChange = (dates) => {
-    setDates(dates)
-  }
-  // handle guest values change
-  const onGuestChange = (type, value) => {
-    setGuestValues({ ...guestValues, [type]: value })
-  }
   return (
     <StyledHeroContainer data-testid="hero-container">
       <StyledHeroContent>
@@ -65,21 +52,7 @@ function StyledHero({ title, subtitle, children, image }) {
           objectFit="cover"
         />
       </StyledHeroImage>
-      <StyledHeroChildren>
-        <BookingBar_v2
-          bookingTitle={{
-            title_1: 'Checkin - checkout',
-            title_2: 'Guests',
-          }}
-          dates={dates}
-          guestValues={guestValues}
-          onDatesChange={onDatesChange}
-          onGuestChange={onGuestChange}
-          buttonProps={{
-            text: 'Check Availability',
-          }}
-        />
-      </StyledHeroChildren>
+      <StyledHeroChildren>{children}</StyledHeroChildren>
     </StyledHeroContainer>
   )
 }

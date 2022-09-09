@@ -62,12 +62,7 @@ function BookingBa_v2({
         <BookngContainer data-testid="booking-bar">
           <BookingContent>
             <BookingContentLeft>
-              <Label
-                role="label"
-                labelText={title_1 || ''}
-                fontSize={bp}
-                color={theme.colors.DatesCore.text}
-              />
+              <Label role="label" labelText={title_1 || ''} fontSize={bp} />
               <Popover>
                 <Popover.Button>
                   <Button
@@ -87,12 +82,7 @@ function BookingBa_v2({
               </Popover>
             </BookingContentLeft>
             <BookingContentRight>
-              <Label
-                role="label"
-                labelText={title_2 || ''}
-                fontSize={bp}
-                color={theme.colors.DatesCore.text}
-              />
+              <Label role="label" labelText={title_2 || ''} fontSize={bp} />
               <Popover>
                 <Popover.Button ref={guestbtn}>
                   <Button
