@@ -1,4 +1,4 @@
-import * as CardStories from '@/src/components/Cards/Card/Card.stories'
+import * as CardStories from '@/components/Cards/Card/Card.stories'
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
 
 export const paragraphProps = {
@@ -34,23 +34,23 @@ export const categoriesDetails = [
 ]
 export const Carddata = [
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     ImgUrl: 'https://source.unsplash.com/random/?hotel',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     ImgUrl: 'https://source.unsplash.com/random/?motel',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     ImgUrl: 'https://source.unsplash.com/random/?Interiors',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     ImgUrl: 'https://source.unsplash.com/random/?Hotel_Room',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     ImgUrl: 'https://source.unsplash.com/random/?B&b',
   },
 ]
@@ -81,27 +81,27 @@ export const Imagesdata = [
 
 export const VerticalCardesdata = [
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     direction: 'vertical',
     ImgUrl: 'https://source.unsplash.com/random/?hotel',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     direction: 'vertical',
     ImgUrl: 'https://source.unsplash.com/random/?motel',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     direction: 'vertical',
     ImgUrl: 'https://source.unsplash.com/random/?Interiors',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     direction: 'vertical',
     ImgUrl: 'https://source.unsplash.com/random/?Hotel_Room',
   },
   {
-    ...CardStories.LinkCard.args,
+    ...CardStories.Small.args,
     direction: 'vertical',
     ImgUrl: 'https://source.unsplash.com/random/?B&b',
   },

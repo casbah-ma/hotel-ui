@@ -12,7 +12,7 @@ import Image from 'next/image'
 import { useBreakpoint } from '@/hooks'
 import Label from '@/components/Label'
 import { PropTypes } from 'prop-types'
-import LinkComponent from '@/components/Link'
+import LinkComponent from '@/components/LinkComponent'
 
 // Optimize image size for each breakpoint
 const getSize = (size) => {

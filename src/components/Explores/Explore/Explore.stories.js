@@ -26,7 +26,11 @@ Version1.args = {
       linkCard: {
         description:
           'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
-        link: '#',
+        link: {
+          href: '/',
+          defaultLanguage: 'en',
+          languages: ['en', 'fr', 'ar'],
+        },
       },
     },
     {
@@ -38,7 +42,11 @@ Version1.args = {
       linkCard: {
         description:
           'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
-        link: '#',
+        link: {
+          href: '/',
+          defaultLanguage: 'en',
+          languages: ['en', 'fr', 'ar'],
+        },
       },
     },
   ],
@@ -59,12 +67,22 @@ Version2.args = {
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
       image: 'https://source.unsplash.com/random/?hotel',
+      link: {
+        href: '/',
+        defaultLanguage: 'en',
+        languages: ['en', 'fr', 'ar'],
+      },
     },
     {
       size: 'large',
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
       image: 'https://source.unsplash.com/random/?room',
+      link: {
+        href: '/',
+        defaultLanguage: 'en',
+        languages: ['en', 'fr', 'ar'],
+      },
     },
   ],
 }
