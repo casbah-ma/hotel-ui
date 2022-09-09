@@ -70,6 +70,7 @@ function MeetingCategories_v2({ categories, headerProps }) {
                 title={category.name}
                 subtitle={category.subtitle}
                 variant="v2"
+                link={category.link}
               >
                 <InfoItems infos={getInfos(category)} />
               </RoomCard>

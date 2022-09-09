@@ -61,6 +61,7 @@ function CategoriesFilterSpa_V3({ categories, headerProps, actionProps }) {
               <RoomCard_v3
                 name={category.name}
                 subtitle={category.subtitle}
+                link={category.link}
                 actionProps={actionProps}
               >
                 <Paragraph description={category.description} fontSize="sm" />

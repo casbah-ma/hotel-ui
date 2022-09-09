@@ -60,8 +60,9 @@ function CategoriesFilter_v2({ categories, headerProps, actionProps }) {
               <RoomCard_v2
                 title={category.name}
                 subtitle={category.subtitle}
-                actionProps={actionProps}
                 text={category.description}
+                link={category.link}
+                actionProps={actionProps}
               />
             </SwiperSlide>
           ))}

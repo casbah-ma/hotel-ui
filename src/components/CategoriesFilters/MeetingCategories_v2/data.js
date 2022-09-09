@@ -9,6 +9,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'School Room',
@@ -20,6 +25,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'School Room',
@@ -31,6 +41,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'School Room',
@@ -42,6 +57,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Banquet',
@@ -53,6 +73,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Banquet',
@@ -64,6 +89,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Banquet',
@@ -75,6 +105,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Reception',
@@ -86,6 +121,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Reception',
@@ -97,6 +137,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'Theatre',
@@ -108,6 +153,11 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
   {
     type: 'U-Shape',
@@ -119,5 +169,10 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    link: {
+      href: '/',
+      defaultLanguage: 'en',
+      languages: ['en', 'fr', 'ar'],
+    },
   },
 ]

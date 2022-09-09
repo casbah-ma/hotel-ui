@@ -5,7 +5,7 @@ import {
   FormContent,
   QuantityField,
   TotalField,
-} from './Orderform.styles'
+} from './OrderForm.styles'
 import PropTypes from 'prop-types'
 import Quantity from '@/components/Quantity'
 import { useEffect } from 'react'

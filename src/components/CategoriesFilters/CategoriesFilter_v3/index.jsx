@@ -71,6 +71,7 @@ function CategoriesFilter_v3({ categories, headerProps }) {
                 imageSrc={category.imageSrc}
                 name={category.name}
                 subtitle={category.subtitle}
+                link={category.link}
               >
                 <InfoItems infos={getInfos(category)} space={false} />
               </RoomCard_v3>
