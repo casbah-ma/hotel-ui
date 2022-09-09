@@ -2,10 +2,10 @@ import { useBreakpoint } from '@/hooks'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import Button from '../../Button'
-import GuestCard from '../../Cards/GuestCard'
-import Label from '../../Label'
-import Title from '../../Title'
+import Button from '@/components/Button'
+import GuestCard from '@/components/Cards/GuestCard'
+import Label from '@/components/Label'
+import Title from '@/components/Title'
 import {
   BookingBarContainer,
   BookingButton,

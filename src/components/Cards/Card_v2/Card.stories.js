@@ -5,7 +5,7 @@ export default {
   component: Card_v2,
   argTypes: {
     size: {
-      options: ['small', 'medium', 'large'],
+      options: ['dm', 'md', 'lg'],
       control: { type: 'radio' },
     },
   },
@@ -18,21 +18,26 @@ export const Large = Template.bind({})
 
 // Small card with image and title
 Small.args = {
-  size: 'small',
+  size: 'sm',
   date: 'Posted in 20 March 2022',
   description:
     'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
   image: 'https://source.unsplash.com/random/?hotel',
+  link: {
+    href: '/',
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }
 
 // Medium card with image and title
 Medium.args = {
   ...Small.args,
-  size: 'medium',
+  size: 'md',
 }
 
 // Large card with image and title
 Large.args = {
   ...Small.args,
-  size: 'large',
+  size: 'lg',
 }

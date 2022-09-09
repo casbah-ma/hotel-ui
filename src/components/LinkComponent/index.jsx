@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 
 function LinkComponent(props) {
@@ -39,6 +40,13 @@ function LinkComponent(props) {
       <a {...rest}>{children}</a>
     </Link>
   )
+}
+
+LinkComponent.propTypes = {
+  href: PropTypes.string,
+  locale: PropTypes.string,
+  defaultLanguage: PropTypes.string,
+  languages: PropTypes.array,
 }
 
 export default LinkComponent

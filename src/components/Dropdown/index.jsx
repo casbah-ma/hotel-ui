@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { Fragment, useState } from 'react'
 import Label from '@/components/Label'
 import { List, ListItem, ToggleButton } from './Dropdown.styles'
-import Link from '@/components/Link'
+import Link from '@/components/LinkComponent'
 import { useRouter } from 'next/router'
 
 function Dropdown({ languages, defaultLanguage }) {

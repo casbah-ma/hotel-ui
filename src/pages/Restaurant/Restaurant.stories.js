@@ -15,7 +15,7 @@ export default {
 const Template = (args) => <Restaurant {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   actionProps: { ...ButtonStories.Dark.args },
   importantInfoProps: { ...ImportantInfoStories.Default.args },
   headerProps: { ...HeaderStories.Contact.args },

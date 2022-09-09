@@ -14,7 +14,7 @@ export default {
 const Template = (args) => <Meeting {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   actionProps: { ...ButtonStories.Dark.args, label: 'Book your Meeting' },
   meetingCategoriesProps: { ...MeetingCategoriesStories.Default.args },
   blogProps: {

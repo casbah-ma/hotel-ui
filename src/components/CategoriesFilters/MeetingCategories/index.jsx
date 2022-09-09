@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import FilterBar from '@/components/FilterBar'
 import RoomCard from '@/components/Cards/RoomCard'
 import Header from '@/components/Header'
-import InfoItems from '../../InfoItems'
+import InfoItems from '@/components/InfoItems'
 import Swiper from '@/components/Swipers/Swiper'
 import { SwiperSlide } from 'swiper/react'
 //styles

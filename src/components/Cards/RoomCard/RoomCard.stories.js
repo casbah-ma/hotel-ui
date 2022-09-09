@@ -32,6 +32,11 @@ WithInfoItems.args = {
     src: 'https://source.unsplash.com/random/?hotel',
   },
   variant: 'v1',
+  link: {
+    href: '/',
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }
 export const WithInfoItems_V2 = Template.bind({})
 WithInfoItems_V2.args = {
@@ -49,4 +54,9 @@ WithFreeText.args = {
   subtitle: '13M X 7M',
   actionProps: { ...ButtonStories.Dark.args },
   variant: 'v1',
+  link: {
+    href: '/',
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }

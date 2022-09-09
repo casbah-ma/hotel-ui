@@ -13,7 +13,7 @@ import {
 //helpers
 import { isEmpty } from '@/helpers/utils'
 
-function Header({ title, description, contact, direction, withBorder = true }) {
+function Header({ title, description, contact, direction, withBorder }) {
   const isContact = !isEmpty(contact)
   return (
     <StyledHeader

@@ -1,13 +1,13 @@
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
-import Button from '../../Button'
-import Label from '../../Label'
+import Button from '@/components/Button'
+import Label from '@/components/Label'
 import {
   GuestActionsContainer,
   GuestContainer,
   GuestActions,
 } from './GuestCard.styles'
-import theme from '../../../../theme'
+import theme from '@/components/../../theme'
 
 function GuestCard({ title, onMinusClick, onPlusClick, value }) {
   return (

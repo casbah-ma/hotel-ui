@@ -14,7 +14,7 @@ export default {
 const Template = (args) => <Dine {...args} />
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   HeroProps: { ...HeroProps.Example1.args, title: 'Dine with us' },
   BlogProps: { ...BlogStories.Default.args },
   BlogProps1: { ...BlogStories.ImageOnRight.args },

@@ -34,7 +34,6 @@ export default {
 
       // handle Dates Changes
       const onDatesChange = (dates) => {
-        console.log('dates', dates)
         setDates(dates)
       }
       return (

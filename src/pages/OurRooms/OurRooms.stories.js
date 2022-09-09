@@ -16,7 +16,7 @@ const Template = (args) => <OurRooms {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  layoutProps: { ...LayoutStories.Default.args },
+  layoutProps: { ...LayoutStories.Version1.args },
   heroProps: { ...HeroProps.Example1.args, title: 'Rooms & Suites' },
   blogProps: { ...BlogStories.ThreeColumns.args },
   categoriesCardsProps: { ...CategoriesSectionStories.Default.args },
