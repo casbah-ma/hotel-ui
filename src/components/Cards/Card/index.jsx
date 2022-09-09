@@ -45,7 +45,7 @@ const getBreakpoint = (size, bp) => {
 const Card = function ({ size, linkCard, image, direction }) {
   const { description, link } = linkCard
   const bp = useBreakpoint()
-  console.log(size)
+
   return (
     <LinkComponent {...link}>
       <StyledCard data-testid="category-card" direction={direction} size={size}>
@@ -82,7 +82,11 @@ Card.propTypes = {
   direction: PropTypes.string.isRequired,
   linkCard: PropTypes.shape({
     description: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
+    link: PropTypes.shape({
+      href: PropTypes.string,
+      defaultLanguage: PropTypes.string,
+      languages: PropTypes.arrayOf(PropTypes.string),
+    }).isRequired,
   }),
 }
 export default Card

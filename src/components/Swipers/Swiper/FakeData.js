@@ -35,23 +35,23 @@ export const categoriesDetails = [
 export const Carddata = [
   {
     ...CardStories.Small.args,
-    ImgUrl: 'https://source.unsplash.com/random/?hotel',
+    image: 'https://source.unsplash.com/random/?hotel',
   },
   {
     ...CardStories.Small.args,
-    ImgUrl: 'https://source.unsplash.com/random/?motel',
+    image: 'https://source.unsplash.com/random/?motel',
   },
   {
     ...CardStories.Small.args,
-    ImgUrl: 'https://source.unsplash.com/random/?Interiors',
+    image: 'https://source.unsplash.com/random/?Interiors',
   },
   {
     ...CardStories.Small.args,
-    ImgUrl: 'https://source.unsplash.com/random/?Hotel_Room',
+    image: 'https://source.unsplash.com/random/?Hotel_Room',
   },
   {
     ...CardStories.Small.args,
-    ImgUrl: 'https://source.unsplash.com/random/?B&b',
+    image: 'https://source.unsplash.com/random/?B&b',
   },
 ]
 
@@ -83,26 +83,26 @@ export const VerticalCardesdata = [
   {
     ...CardStories.Small.args,
     direction: 'vertical',
-    ImgUrl: 'https://source.unsplash.com/random/?hotel',
+    image: 'https://source.unsplash.com/random/?hotel',
   },
   {
     ...CardStories.Small.args,
     direction: 'vertical',
-    ImgUrl: 'https://source.unsplash.com/random/?motel',
+    image: 'https://source.unsplash.com/random/?motel',
   },
   {
     ...CardStories.Small.args,
     direction: 'vertical',
-    ImgUrl: 'https://source.unsplash.com/random/?Interiors',
+    image: 'https://source.unsplash.com/random/?Interiors',
   },
   {
     ...CardStories.Small.args,
     direction: 'vertical',
-    ImgUrl: 'https://source.unsplash.com/random/?Hotel_Room',
+    image: 'https://source.unsplash.com/random/?Hotel_Room',
   },
   {
     ...CardStories.Small.args,
     direction: 'vertical',
-    ImgUrl: 'https://source.unsplash.com/random/?B&b',
+    image: 'https://source.unsplash.com/random/?B&b',
   },
 ]
