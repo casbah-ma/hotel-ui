@@ -1,7 +1,7 @@
 import Paragraph from '@/components/Paragraph'
 import Input from '@/components/Inputs/Input'
 import Label from '@/components/Label'
-import Link from '@/components/Link'
+import Link from '@/components/LinkComponent'
 import { useState } from 'react'
 import {
   FooterContainer,
@@ -13,7 +13,6 @@ import {
   FooterLogo,
   FooterLinkDivider,
   InputContainer,
-  InputError,
   FooterLinkWrapper,
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'

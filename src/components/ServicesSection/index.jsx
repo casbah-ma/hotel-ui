@@ -5,18 +5,18 @@ import ServicesGrid from '@/components/ServicesGrid'
 //stories
 import { FlexWrapper } from './ServicesSection.styles'
 
-function ServicesSection({ blogProps, services }) {
+function ServicesSection({ blogProps, servicesProps }) {
   return (
     <FlexWrapper>
       <Blog {...blogProps} />
-      <ServicesGrid services={services} />
+      <ServicesGrid {...servicesProps} />
     </FlexWrapper>
   )
 }
 
 ServicesSection.propTypes = {
   blogProps: PropTypes.shape({ ...Blog.propTypes }),
-  servicesProps: PropTypes.shape(ServicesGrid.propTypes.services),
+  servicesProps: PropTypes.shape(ServicesGrid.propTypes),
 }
 
 export default ServicesSection

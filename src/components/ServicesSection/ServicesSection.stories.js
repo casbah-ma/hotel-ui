@@ -17,5 +17,5 @@ Default.args = {
     ...BlogStories.Default.args,
     title: { ...TitleStories.H2, title: 'Included Services' },
   },
-  services: ServicesGridStories.Default.args.services,
+  servicesProps: ServicesGridStories.V2.args,
 }
