@@ -31,7 +31,7 @@ export const images = [
 
 export const cards = [
   {
-    size: 'small',
+    size: 'sm',
     date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
@@ -43,7 +43,7 @@ export const cards = [
     },
   },
   {
-    size: 'medium',
+    size: 'md',
     date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
@@ -55,7 +55,7 @@ export const cards = [
     },
   },
   {
-    size: 'small',
+    size: 'sm',
     date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
@@ -67,7 +67,7 @@ export const cards = [
     },
   },
   {
-    size: 'small',
+    size: 'sm',
     date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
@@ -79,7 +79,7 @@ export const cards = [
     },
   },
   {
-    size: 'medium',
+    size: 'md',
     date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',

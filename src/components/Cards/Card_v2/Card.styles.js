@@ -9,7 +9,7 @@ export const CardContainer = styled.div(({ size }) => [
   size === 'md' &&
     tw`sm:w-[21.438rem] lg:w-[39.063rem] xs:h-[25.813rem] lg:h-[34.063rem] sm:pb-4 lg:pb-6`,
   size === 'lg' &&
-    tw`sm:w-[21.438rem] lg:w-[63.375rem] xs:h-[25.813rem] lg:h-[31.563rem] sm:pb-4`,
+    tw`sm:w-[21.438rem] md:w-[50rem] lg:w-[63.375rem] xs:h-[25.813rem] md:h-[30rem] lg:h-[31.563rem] sm:pb-4`,
 ])
 
 export const CardImageContainer = styled.div(({ size }) => [

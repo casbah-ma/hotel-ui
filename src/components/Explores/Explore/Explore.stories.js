@@ -63,7 +63,7 @@ Version2.args = {
   },
   cards: [
     {
-      size: 'large',
+      size: 'lg',
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
       image: 'https://source.unsplash.com/random/?hotel',
@@ -74,7 +74,7 @@ Version2.args = {
       },
     },
     {
-      size: 'large',
+      size: 'lg',
       description:
         'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
       image: 'https://source.unsplash.com/random/?room',

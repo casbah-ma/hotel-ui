@@ -31,7 +31,7 @@ const getSize = (size) => {
       return {
         xs: { width: 340, height: 290 },
         sm: { width: 340, height: 290 },
-        md: { width: 593, height: 400 },
+        md: { width: 800, height: 380 },
         lg: { width: 982, height: 380 },
       }
     default:
