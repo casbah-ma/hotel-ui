@@ -12,7 +12,7 @@ import { Container, Wrapper } from './MeetingCategories_v2.styles'
 import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
-function MeetingCategories_v2({ categories, headerProps }) {
+function MeetingCategories_v2({ categories, headerProps, link }) {
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {
@@ -40,7 +40,10 @@ function MeetingCategories_v2({ categories, headerProps }) {
   //function to get the arrray infos from the data
   const getInfos = (category) => {
     return Object.entries(category)
-      .filter((item) => !(item[0] === 'image' || item[0] === 'subtitle'))
+      .filter(
+        (item) =>
+          !(item[0] === 'image' || item[0] === 'subtitle' || item[0] === 'href')
+      )
       .map((item) => ({
         infoName: item[0],
         infoValue: item[1],
@@ -70,7 +73,8 @@ function MeetingCategories_v2({ categories, headerProps }) {
                 title={category.name}
                 subtitle={category.subtitle}
                 variant="v2"
-                link={category.link}
+                href={category.href}
+                link={link}
               >
                 <InfoItems infos={getInfos(category)} />
               </RoomCard>

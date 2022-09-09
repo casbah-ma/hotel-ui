@@ -19,10 +19,11 @@ function RoomCard_v3({
   name,
   subtitle,
   actionProps,
+  href,
   link,
 }) {
   return (
-    <LinkComponent {...link}>
+    <LinkComponent href={href} {...link}>
       <Container imageSrc={imageSrc}>
         {imageSrc && (
           <ImageContainer>
@@ -45,6 +46,11 @@ RoomCard_v3.propTypes = {
   name: PropTypes.string,
   subtitle: PropTypes.string,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
+  href: PropTypes.string,
+  link: PropTypes.shape({
+    defaultLanguage: PropTypes.string,
+    languages: PropTypes.array,
+  }),
 }
 
 export default RoomCard_v3

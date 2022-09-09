@@ -13,7 +13,12 @@ import { Container, Wrapper } from './CategoriesFilterSpa_v3.styles'
 import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
-function CategoriesFilterSpa_V3({ categories, headerProps, actionProps }) {
+function CategoriesFilterSpa_V3({
+  categories,
+  headerProps,
+  actionProps,
+  link,
+}) {
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {
@@ -63,6 +68,8 @@ function CategoriesFilterSpa_V3({ categories, headerProps, actionProps }) {
                 subtitle={category.subtitle}
                 link={category.link}
                 actionProps={actionProps}
+                href={category.href}
+                link={link}
               >
                 <Paragraph description={category.description} fontSize="sm" />
               </RoomCard_v3>

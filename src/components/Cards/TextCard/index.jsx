@@ -5,9 +5,9 @@ import { Text, ImageWrapper } from './TextCard.styles'
 import Label from '@/components/Label'
 import LinkComponent from '../../LinkComponent'
 
-function TextCard({ src, variant, text, link }) {
+function TextCard({ src, variant, text, link, href }) {
   return (
-    <LinkComponent {...link}>
+    <LinkComponent href={href} {...link}>
       <ImageWrapper>
         <ImageCard src={src} variant={variant} />
         <Text>
@@ -22,7 +22,11 @@ TextCard.propTypes = {
   variant: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  link: PropTypes.shape(LinkComponent.propTypes),
+  href: PropTypes.string,
+  link: PropTypes.shape({
+    defaultLanguage: PropTypes.string,
+    languages: PropTypes.array,
+  }),
 }
 
 export default TextCard

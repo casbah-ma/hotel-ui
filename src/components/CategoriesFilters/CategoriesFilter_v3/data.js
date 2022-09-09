@@ -6,11 +6,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
-    link: {
-      href: '/',
-      defaultLanguage: 'en',
-      languages: ['en', 'fr', 'ar'],
-    },
+    href: '/',
   },
   {
     type: 'Banquet',
@@ -19,11 +15,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
-    link: {
-      href: '/',
-      defaultLanguage: 'en',
-      languages: ['en', 'fr', 'ar'],
-    },
+    href: '/',
   },
   {
     type: 'Reception',
@@ -32,11 +24,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
-    link: {
-      href: '/',
-      defaultLanguage: 'en',
-      languages: ['en', 'fr', 'ar'],
-    },
+    href: '/',
   },
   {
     type: 'Theatre',
@@ -45,11 +33,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
-    link: {
-      href: '/',
-      defaultLanguage: 'en',
-      languages: ['en', 'fr', 'ar'],
-    },
+    href: '/',
   },
   {
     type: 'U-Shape',
@@ -58,10 +42,6 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
-    link: {
-      href: '/',
-      defaultLanguage: 'en',
-      languages: ['en', 'fr', 'ar'],
-    },
+    href: '/',
   },
 ]

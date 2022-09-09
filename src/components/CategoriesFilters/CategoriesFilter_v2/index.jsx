@@ -12,7 +12,7 @@ import { Container, Wrapper } from './CategoriesFilter_v2.styles'
 import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
-function CategoriesFilter_v2({ categories, headerProps, actionProps }) {
+function CategoriesFilter_v2({ categories, headerProps, actionProps, link }) {
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {
@@ -61,8 +61,8 @@ function CategoriesFilter_v2({ categories, headerProps, actionProps }) {
                 title={category.name}
                 subtitle={category.subtitle}
                 text={category.description}
-                link={category.link}
-                actionProps={actionProps}
+                href={category.href}
+                link={link}
               />
             </SwiperSlide>
           ))}
