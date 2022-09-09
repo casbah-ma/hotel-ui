@@ -18,4 +18,8 @@ Default.args = {
   headerProps: HeaderStories.WithoutBorder.args,
   actionProps: ButtonStories.Secondary.args,
   categories: data,
+  link: {
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }

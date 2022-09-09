@@ -12,8 +12,8 @@ Small.args = {
   variant: 'smallWithText',
   src: 'https://source.unsplash.com/random/?hotel',
   text: 'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
+  href: '/',
   link: {
-    href: '/',
     defaultLanguage: 'en',
     languages: ['en', 'fr', 'ar'],
   },
