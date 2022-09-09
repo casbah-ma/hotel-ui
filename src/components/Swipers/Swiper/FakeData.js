@@ -1,4 +1,4 @@
-import * as CardStories from '@/components/Cards/Card/Card.stories'
+import * as CardStories from '@/src/components/Cards/Card/Card.stories'
 import * as RoomCardStories from '@/components/Cards/RoomCard/RoomCard.stories'
 
 export const paragraphProps = {

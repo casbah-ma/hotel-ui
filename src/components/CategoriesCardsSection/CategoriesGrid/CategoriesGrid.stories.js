@@ -1,5 +1,5 @@
 import CategoriesGrid from '.'
-import * as CardsStories from '@/components/Cards/Card/Card.stories'
+import * as CardsStories from '@/src/components/Cards/Card/Card.stories'
 
 export default {
   title: 'Components/CategoriesGrid',
