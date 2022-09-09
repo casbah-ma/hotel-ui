@@ -7,7 +7,8 @@ export const Formv2Container = styled.div(
    sm:w-[21.438rem]
 
 `,
-  `box-shadow: 2px 4px 24px 10px rgba(0, 0, 0, 0.04);`
+  `box-shadow: 2px 4px 24px 10px rgba(0, 0, 0, 0.04);`,
+  `background-color: white`
 )
 
 export const FormContent = tw.div`
