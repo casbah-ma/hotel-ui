@@ -18,6 +18,7 @@ const multiexports = [
   'Inputs',
   'Footers',
   'CategoriesFilters',
+  'Explores',
 ]
 
 components.forEach((component) => {

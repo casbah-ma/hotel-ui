@@ -1,17 +1,9 @@
 import PropTypes from 'prop-types'
 //components
-import { ImageCard } from '@/components/Cards'
 import Paragraph from '@/components/Paragraph'
 import Title from '@/components/Title'
-import Button from '@/components/Button'
 //styles
-import {
-  Container,
-  Content,
-  Image,
-  imagePositions,
-  SmallImage,
-} from './Blog_v4.styles'
+import { Container, Content } from './Blog_v4.styles'
 
 function Blog_v4({ title, text, children, bgColor, color }) {
   return (

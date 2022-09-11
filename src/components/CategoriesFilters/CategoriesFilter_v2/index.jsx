@@ -60,7 +60,6 @@ function CategoriesFilter_v2({ categories, headerProps, actionProps, link }) {
               <RoomCard_v2
                 title={category.name}
                 subtitle={category.subtitle}
-                actionProps={actionProps}
                 text={category.description}
                 href={category.href}
                 link={link}

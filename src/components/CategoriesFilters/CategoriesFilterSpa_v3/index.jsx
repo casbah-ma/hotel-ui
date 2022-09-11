@@ -66,6 +66,7 @@ function CategoriesFilterSpa_V3({
               <RoomCard_v3
                 name={category.name}
                 subtitle={category.subtitle}
+                link={category.link}
                 actionProps={actionProps}
                 href={category.href}
                 link={link}
