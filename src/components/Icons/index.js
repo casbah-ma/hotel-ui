@@ -29,7 +29,7 @@ export { default as Safe } from './Safe'
 export { default as SeaView } from './SeaView'
 export { default as Spa } from './Spa'
 export { default as Taxi } from './Taxi'
-export { default as TwinBed } from './TwinBed
+export { default as TwinBed } from './TwinBed'
 export { default as Valet } from './Valet'
 export { default as WaterBoiler } from './WaterBoiler'
 export { default as ToiletTries } from './ToiletTries'
