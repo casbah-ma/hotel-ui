@@ -189,6 +189,7 @@ const CustomStyles = createGlobalStyle`
   .CalendarDay__default {
     border-radius: 50%;
   }
+.DayPicker,
 .CalendarMonthGrid,
 .CalendarMonth,
 .CalendarMonth_caption,
@@ -201,7 +202,7 @@ const CustomStyles = createGlobalStyle`
 .DayPicker_weekHeader_li,
 .DayPicker__horizontal {
   ${tw`outline-none rounded-2xl`}
-  background:  ${({ theme }) => theme.colors.DatesCore.bg};
+  background: ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
   fill: ${({ theme }) => theme.colors.DatesCore.text};
  }

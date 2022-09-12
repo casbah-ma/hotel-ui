@@ -17,6 +17,7 @@ import {
   BookingContentRight,
   BookingMobileButton,
 } from './BookingBar.styles'
+import { bookingUrl } from '@/helpers/utils'
 
 function BookingBa_v2({
   dates,
@@ -68,9 +69,9 @@ function BookingBa_v2({
                   <Button
                     as="div"
                     variant="rounded"
-                    bgColor={theme.colors.DatesCore.text}
+                    bgcolor={theme.colors.DatesCore.bg}
                     Icon={ChevronUpIcon}
-                    color={theme.colors.DatesCore.bg}
+                    color={theme.colors.DatesCore.text}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">
@@ -89,8 +90,9 @@ function BookingBa_v2({
                     as="div"
                     variant="rounded"
                     bgColor="white"
-                    color={theme.colors.DatesCore.bg}
+                    color={theme.colors.DatesCore.text}
                     Icon={ChevronUpIcon}
+                    bgcolor={theme.colors.DatesCore.bg}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">

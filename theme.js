@@ -18,8 +18,8 @@ export default {
       white: '#fff',
     },
     DatesCore: {
-      bg: '#000',
-      text: '#fff',
+      bg: '#fff',
+      text: '#000',
     },
   },
 }
