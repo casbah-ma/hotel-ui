@@ -17,7 +17,7 @@ export const StyledButton = styled.button(
     md:text-base lg:text-xl transform hover:scale-100 `,
     //variants
     ({ variant }) => buttonsVariant[variant],
-    color ? `color: ${color};` : `color: ${theme.colors.text.primary};`,
+    color ? `color: ${color};` : `color: ${theme.colors.text.secondary};`,
     bgColor
       ? `background-color: ${bgColor};`
       : `background-color: ${theme.colors.bg.primary};`,

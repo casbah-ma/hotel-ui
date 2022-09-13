@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 export const BookingWrapper = tw.section`w-full h-full flex flex-col justify-center items-center relative`
 export const BookingButton = styled.button(({ theme }) => [
-  tw`w-[10.688rem] lg:w-[15.438rem] h-[4.125rem] lg:h-[6.813rem] rounded-r-3xl text-xs lg:text-base text-white font-bold text-center flex items-center justify-center self-end`,
+  tw`w-[10.688rem] lg:w-[15.438rem] h-[4.125rem] lg:h-[6.813rem] rounded-r-3xl text-xs lg:text-xl text-white font-bold text-center flex items-center justify-center self-end`,
   `background-color: ${theme.colors.bg.primary};
   color: ${theme.colors.DatesCore.bg};
   `,

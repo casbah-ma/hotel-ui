@@ -118,7 +118,6 @@ function BookingBa_v2({
           <BookingMobileButton
             onClick={() => checkAvailability(dates, guestValues, baseUrl)}
           >
-            {' '}
             {text}
           </BookingMobileButton>
         )}

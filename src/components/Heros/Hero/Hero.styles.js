@@ -3,21 +3,21 @@ import tw, { styled } from 'twin.macro'
 export const HeroContainer = styled.div(({ gradient }) => [
   tw`w-full h-[51.313rem] lg:h-screen relative`,
   gradient &&
-    'background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)',
+    'background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;',
 ])
 
 export const HeroImage = styled.div(({}) => [
-  `filter: brightness(.7) !important;`,
+  `background: rgba(14, 13, 18, 0.4);`,
   tw`
-    w-full h-full bg-no-repeat bg-cover object-cover bg-center brightness-50 opacity-20
+    w-full h-full bg-no-repeat bg-cover object-cover bg-center brightness-50 opacity-90
     `,
 ])
 
 export const HeroInfo = styled.div(({ position }) => [
-  tw`w-full absolute top-[9.188rem] md:top-[19.563rem] text-center
+  tw`w-full absolute top-[9.188rem] md:top-[14.563rem] text-center
   flex flex-col justify-center items-center gap-6`,
   position === 'start' &&
-    tw`items-start justify-start pl-3 sm:pl-8 md:pl-[5.5rem] lg:pl-[12.5rem] md:top-[10.438rem] lg:top-[16.313rem] gap-2`,
+    tw`items-start justify-start pl-3 sm:pl-8 md:pl-[5.5rem] lg:pl-[12.5rem] md:top-[10.438rem] lg:top-[14.313rem] gap-2`,
 ])
 
 export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
@@ -47,7 +47,7 @@ export const HeroSubtitle = styled.div(({ position }) => [
 
 export const HeroAction = styled.div(({ position }) => [
   tw`
-     w-full animate-bounce absolute bottom-[10rem] md:bottom-[5rem]  
+     w-full animate-bounce absolute bottom-[10rem] md:bottom-[2rem]  
       px-2 flex justify-center items-center
     `,
   position === 'start' && tw`lg:justify-end items-center lg:pr-[11.188rem]`,

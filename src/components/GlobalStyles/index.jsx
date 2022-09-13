@@ -20,12 +20,12 @@ const CustomStyles = createGlobalStyle`
 }
 //BookingBar
 .panel {
-  ${tw`p-10 rounded-xl h-[34.5rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
+  ${tw`p-10 rounded-xl h-[26.25rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
 .datesPanel{
-  ${tw`xs:w-full sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] xs:h-[20rem] sm:h-[24.375rem] md:h-[23.5rem] 
+  ${tw`xs:w-full sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] xs:h-[20rem] sm:h-[24.375rem] md:h-[26.25rem] 
   p-10 rounded-xl absolute left-0 bottom-36 md:bottom-24 lg:bottom-32 flex justify-center items-center shadow-card`}
   background-color:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};

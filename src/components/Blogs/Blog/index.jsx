@@ -38,7 +38,7 @@ function Blog({
                 <Article key={index} columns={columns} rows={rows}>
                   <Paragraph
                     fontSize={
-                      columns > 2 && rows !== 1 && index === 0 ? 'md' : 'sm'
+                      columns > 2 && rows !== 1 && index === 0 ? 'sm' : 'rg'
                     }
                     description={article}
                   />
