@@ -3,9 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
+@font-face {
   font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Light.otf');
+  src: url('/fonts/Gilroy-Medium.ttf');
   font-display: fallback;
-} */
+}
 

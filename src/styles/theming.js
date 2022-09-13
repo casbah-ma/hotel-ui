@@ -14,7 +14,7 @@ export const borderBottomColors = {
 }
 
 export const titleLeveles = {
-  1: tw`text-[3.5rem] leading-[5.1rem] lg:text-[6.25rem] lg:leading-[7.5rem]`,
+  1: tw`text-[3.125rem] leading-[3rem] lg:text-[6.25rem] lg:leading-[6rem]`,
   2: tw`text-[2.5rem] leading-[3rem] lg:text-[4.25rem] lg:leading-[5.1rem]`,
   3: tw`text-[2rem] leading-[2.4rem] lg:text-5xl lg:leading-[3.6rem]`,
 }

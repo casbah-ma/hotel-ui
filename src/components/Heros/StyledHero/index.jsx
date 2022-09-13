@@ -17,13 +17,11 @@ import { useBreakpoint } from '@/hooks'
 const getImageSize = (bp) => {
   switch (bp) {
     case 'xs':
-      return 'fill'
+      return 'white'
     case 'sm':
-      return 'fill'
+      return 'white'
     case 'md':
-      return 'fill'
-    case 'lg':
-      return ''
+      return 'white'
     default:
       return ''
   }
@@ -35,23 +33,13 @@ function StyledHero({ title, subtitle, children, image }) {
     <StyledHeroContainer data-testid="hero-container">
       <StyledHeroContent>
         <StyledHeroTitle>
-          <Title level="1" title={title} />
+          <Title level="1" title={title} color={getImageSize(bp)} />
         </StyledHeroTitle>
         <StyledHeroSubtitle>
           <Paragraph fontSize="sm" description={subtitle} />
         </StyledHeroSubtitle>
       </StyledHeroContent>
-      <StyledHeroImage>
-        <Image
-          style={{ borderRadius: '10px' }}
-          alt="imageHero"
-          src={image}
-          width={720}
-          height={821}
-          layout={getImageSize(bp)}
-          objectFit="cover"
-        />
-      </StyledHeroImage>
+      <StyledHeroImage src={image} alt="imageHero" />
       <StyledHeroChildren>{children}</StyledHeroChildren>
     </StyledHeroContainer>
   )
