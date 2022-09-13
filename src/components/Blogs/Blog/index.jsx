@@ -49,7 +49,7 @@ function Blog({
         </Text>
       </Content>
       <Image imagePosition={imagePosition}>
-        {image && <ImageCard {...image} />}
+        {image && <ImageCard {...image} imagePosition={imagePosition} />}
       </Image>
     </Container>
   )
