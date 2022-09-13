@@ -1,4 +1,5 @@
 export default {
+  letterSpacing: '',
   colors: {
     text: {
       primary: '#000',

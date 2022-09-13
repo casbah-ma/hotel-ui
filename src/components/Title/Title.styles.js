@@ -4,6 +4,8 @@ import tw, { styled } from 'twin.macro'
 export const Heading = styled.h1(({ color, level, theme, withLine }) => [
   //base styles
   tw`font-primary font-medium  relative`,
+  //spacing
+  `letter-spacing: ${theme.letterSpacing};`,
   //styles based on level
   ({ level }) => titleLeveles[level],
   //border bottom for v2
