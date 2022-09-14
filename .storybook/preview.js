@@ -6,6 +6,7 @@ import { WithNextRouter } from 'storybook-addon-next-router/dist/decorators'
 //styles
 import '@/styles/global.css'
 // import '@/styles/datepicker.css'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import GlobalStyles from '@/components/GlobalStyles'

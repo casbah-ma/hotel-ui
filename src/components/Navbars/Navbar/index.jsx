@@ -25,13 +25,14 @@ import { useBreakpoint, useScrollPosition, useScrollDirection } from '@/hooks'
 //icons
 import { Bars3BottomRightIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import Paragraph from '../../Paragraph'
 
 function Navbar({
   links,
   languages,
   defaultLanguage,
   actionProps,
+  color = 'white',
+  bgColor = 'black',
   logo,
   bookingUrl,
   t,
@@ -93,8 +94,7 @@ function Navbar({
                     languages={languages}
                     defaultLanguage={defaultLanguage}
                   >
-                    {/* <Label labelText={t(item.label)} /> */}
-                    <Paragraph description={t(item.label)} />
+                    <Label labelText={t(item.label)} fontSize="sm" />
                   </Link>
                 </ListItem>
               ))}

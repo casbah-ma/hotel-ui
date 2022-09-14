@@ -19,6 +19,8 @@ Default.args = {
   logo: 'https://d3lq8p6p6r1qxf.cloudfront.net/1660584751398.png',
   t: (string) => string,
   defaultLanguage: 'en',
+  width: 224,
+  height: 76,
 }
 
 export const Transparent = Template.bind({})

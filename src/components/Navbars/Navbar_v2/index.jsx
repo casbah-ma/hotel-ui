@@ -32,6 +32,8 @@ function Navbar_v2({
   logo,
   bookingUrl,
   t,
+  width,
+  height,
 }) {
   const [isOpen, setIsOpen] = useState(false)
   const [hasBackground, setHasBackground] = useState(false)
@@ -75,13 +77,15 @@ function Navbar_v2({
       hasBackground={hasBackground}
       transparent={transparent}
     >
-      <Image
-        src={logo}
-        alt="logo"
-        width={bp === 'lg' ? 224 : 138}
-        height={bp === 'lg' ? 76 : 48}
-        objectFit="contain"
-      />
+      <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
+        <Image
+          src={logo}
+          alt="logo"
+          width={bp === 'lg' ? width : 138}
+          height={bp === 'lg' ? height : 48}
+          objectFit="contain"
+        />
+      </Link>
       <Nav>
         <LinksList>
           {!isEmpty(links) &&
