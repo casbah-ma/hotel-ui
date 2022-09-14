@@ -10,9 +10,9 @@ function InfoHeader({ title, subtitle, roomImage, variant = 'v1' }) {
   return (
     <HeaderContainer variant={variant}>
       <TextWrapper variant={variant}>
-        <Title title={title} level="3" />
+        <Title title={title} level="4" />
         <Label
-          labelText={variant === 'v1' ? subtitle : `(${subtitle})`}
+          labelText={variant === 'v1' ? subtitle : subtitle && `(${subtitle})`}
           fontSize="md"
           color="#787777"
         />

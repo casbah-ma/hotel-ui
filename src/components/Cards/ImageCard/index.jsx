@@ -130,7 +130,7 @@ const ImageCard = function ({ variant, src, imagePosition }) {
   const bp = useBreakpoint()
   return (
     <Image
-      className={!imagePosition && 'rounded-xl'}
+      className={!imagePosition ? 'rounded-xl' : ''}
       style={getBorderImage(imagePosition)}
       width={getVariant(variant, bp) ? getVariant(variant, bp).width : 0}
       height={getVariant(variant, bp) ? getVariant(variant, bp).height : 0}

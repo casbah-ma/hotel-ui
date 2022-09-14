@@ -3,7 +3,8 @@ const merge = require('deepmerge')
 
 const fonts = {
   primary: ['Gilroy', 'sans-serif'],
-  secondary: ['Gilroy', 'sans-serif'],
+  secondary: ['Gilroy-rg', 'sans-serif'],
+  tertiary: ['Gilroy-semibold', 'sans-serif'],
   indie: ['Indie Flower', 'cursive'],
 }
 

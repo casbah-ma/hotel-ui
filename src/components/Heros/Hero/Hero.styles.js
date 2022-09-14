@@ -29,7 +29,7 @@ export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
   &:after {
     content: "";
     position: absolute;
-    bottom: -30px;
+    bottom: -25px;
     left: ${position === 'start' ? '0' : 'unset'};
     height: 0.6rem;
     width: 8.75rem;

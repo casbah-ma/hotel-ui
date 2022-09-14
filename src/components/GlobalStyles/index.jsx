@@ -162,34 +162,10 @@ const CustomStyles = createGlobalStyle`
     width: fit-content;
     height: fit-content;
   }
-  .mySwiper_v2 .swiper-button-next {
-    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
-  }
-  .mySwiper_v2 .swiper-button-prev {
-    left: unset;
-    ${tw`invisible lg:visible top-6 right-20 rounded-full w-10 h-10 bg-white active:text-white border `}
-  }
-  .mySwiper_v2 .swiper-button-next, .mySwiper_v2 .swiper-button-prev {
-    &:active {
-      background-color: ${({ theme }) => theme.colors.bg.primary} !important;
-      color: white;
-     }
-  }
   .mySwiper_v3 {
     ${tw`w-full h-[40rem] bg-transparent`}
   }
-  .mySwiper_v3 .swiper-button-next {
-    ${tw`invisible lg:visible top-6 right-5 rounded-full w-10 h-10 bg-white active:text-white border`}
-  }
-  .mySwiper_v3 .swiper-button-prev {
-    ${tw`invisible lg:visible top-6  z-30 rounded-full w-10 h-10 bg-white active:text-white border `}
-  }
-  .mySwiper_v3 .swiper-button-next, .mySwiper_v3 .swiper-button-prev {
-    &:active {
-      background-color: ${({ theme }) => theme.colors.bg.primary} !important;
-      color:  ${({ theme }) => theme.colors.text.primary};
-     }
-  }
+
   .CalendarDay__default {
     border-radius: 50%;
   }

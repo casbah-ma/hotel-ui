@@ -8,4 +8,14 @@
   src: url('/fonts/Gilroy-Medium.ttf');
   font-display: fallback;
 }
+@font-face {
+  font-family: 'Gilroy-rg';
+  src: url('/fonts/Gilroy-Regular.ttf');
+  font-display: fallback;
+}
 
+@font-face {
+  font-family: 'Gilroy-semibold';
+  src: url('/fonts/Gilroy-Semibold.ttf');
+  font-display: fallback;
+}
