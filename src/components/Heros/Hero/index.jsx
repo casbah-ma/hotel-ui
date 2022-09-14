@@ -40,13 +40,13 @@ const Hero = function ({
       </HeroImage>
       <HeroInfo position={position}>
         <HeroTitle position={position} withBorder={withBorder}>
-          <Title level="1" title={title} color={theme.colors.text.primary} />
+          <Title level="1" title={title} color={theme.colors.text.secondary} />
         </HeroTitle>
         <HeroSubtitle position={position}>
           <Label
             fontSize={bp}
             labelText={subtitle}
-            color={theme.colors.text.primary}
+            color={theme.colors.text.secondary}
           />
         </HeroSubtitle>
       </HeroInfo>

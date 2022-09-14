@@ -1,5 +1,4 @@
 import Paragraph from '@/components/Paragraph'
-import Input from '@/components/Inputs/Input'
 import Label from '@/components/Label'
 import Link from '@/components/LinkComponent'
 import { useState } from 'react'
@@ -12,10 +11,11 @@ import {
   FooterDividerText,
   FooterLogo,
   FooterLinkDivider,
-  InputContainer,
+  AddressContainer,
   FooterLinkWrapper,
+  ContactContainer,
 } from './Footer.styles'
-import { isEmpty, isEmail } from '@/helpers/utils'
+import { isEmpty } from '@/helpers/utils'
 import PropTypes from 'prop-types'
 import { useTheme } from 'styled-components'
 import Image from 'next/image'
@@ -26,37 +26,16 @@ function Footer({
   languages,
   description,
   defaultLanguage,
-  color = 'white',
-  bgColor = 'black',
+  color,
+  bgColor,
+  Address,
   hotelName,
   logo,
+  contacts,
   t,
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
-  const [inputValue, setInputValue] = useState({
-    email: '',
-    error: false,
-    errorMessage: '',
-  })
-
-  // Handle input change
-  const handleInputChange = (e) => {
-    const { value } = e.target
-    isEmail(value)
-      ? setInputValue({ email: value, error: false })
-      : setInputValue({
-          email: value,
-          error: true,
-          errorMessage: 'Invalid email',
-        })
-  }
-
-  // Handle input submit
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    !isEmpty(inputValue.email) && alert('Thank you for subscribing!')
-  }
 
   const theme = useTheme()
   return (
@@ -77,22 +56,15 @@ function Footer({
       <FooterText>
         <Paragraph description={description} />
       </FooterText>
-      <InputContainer>
-        {/* <InputError>{inputValue.errorMessage}</InputError> */}
-        <Input
-          testID="footer-input"
-          onChange={handleInputChange}
-          placeHolder="Enter an email address"
-          color="white"
-          error={inputValue.error}
-          withButton
-          buttonProps={{
-            buttonTestID: 'footer-button',
-            buttonLabel: 'submit',
-            onClick: handleSubmit,
-          }}
-        />
-      </InputContainer>
+      <AddressContainer>
+        <Label labelText={Address} color={theme.colors.text.secondary} />
+        {(contacts?.phone || contacts?.email) && (
+          <ContactContainer>
+            <Paragraph description={`Tel: ${contacts?.phone}`} />
+            <Paragraph description={`Email: ${contacts?.email}`} />
+          </ContactContainer>
+        )}
+      </AddressContainer>
       <FooterLinks data-testid="links">
         {!isEmpty(links) &&
           links.map((item, index) => (

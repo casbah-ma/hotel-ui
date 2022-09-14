@@ -14,14 +14,15 @@ export const borderBottomColors = {
 }
 
 export const titleLeveles = {
-  1: tw`text-[3.5rem] leading-[5.1rem] lg:text-[6.25rem] lg:leading-[7.5rem]`,
+  1: tw`text-[3.125rem] leading-[3rem] lg:text-[6.25rem] lg:leading-[6.875rem]`,
   2: tw`text-[2.5rem] leading-[3rem] lg:text-[4.25rem] lg:leading-[5.1rem]`,
   3: tw`text-[2rem] leading-[2.4rem] lg:text-5xl lg:leading-[3.6rem]`,
+  4: tw`text-[1.5rem] leading-[2rem] lg:text-[2rem] lg:leading-[2.8rem]`,
 }
 export const fontSizes = {
   xs: tw`text-xs leading-[1rem] md:text-base md:leading-[1.2rem]`,
   sm: tw`text-sm leading-[1rem] md:text-base md:leading-[1.2rem]`,
-  rg: tw`text-base leading-[1.2rem] md:text-xl md:leading-6`,
+  rg: tw`leading-[1.2rem] md:leading-7`,
   md: tw`text-xl leading-6 md:text-[1.75rem] md:leading-[2.1rem]`,
 }
 

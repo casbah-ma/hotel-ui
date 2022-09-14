@@ -13,8 +13,8 @@ export const FooterContainer = styled.footer(({ color, bgColor, theme }) => [
   ,
 ])
 
-export const InputContainer = tw.div`w-full flex flex-col items-center justify-center`
-export const InputError = tw.span`text-red-500 self-start mt-2`
+export const AddressContainer = tw.div`w-full flex flex-col items-center justify-center sm:gap-5`
+export const ContactContainer = tw.div`w-full flex flex-wrap items-center justify-center sm:gap-10`
 
 export const FooterLogo = tw.div`flex flex-col items-center justify-center w-56 md:w-96`
 export const FooterText = tw.div`w-[15.68rem] md:w-[32.813rem] text-center`

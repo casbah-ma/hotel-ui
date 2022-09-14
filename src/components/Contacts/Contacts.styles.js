@@ -12,10 +12,10 @@ export const ContactsTitle = styled.div(({ withBorder, theme }) => [
 &:after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -25px;
   height: 0.6rem;
   width: 8.75rem;
-  background-color: ${theme.colors.text.primary};
+  background-color: ${theme.colors.bg.primary};
   border-radius: 20px;
 }
 `,

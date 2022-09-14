@@ -6,12 +6,12 @@ export const imagePositions = {
 }
 
 export const Container = styled.div(({ imagePosition }) => [
-  tw`flex w-full gap-10 md:gap-12`,
+  tw`flex w-full gap-10 md:gap-9`,
   ({ imagePosition }) => imagePositions[imagePosition],
 ])
 
 export const Content = styled.div(({ contentIsCentred }) => [
-  tw`flex flex-col justify-between gap-10`,
+  tw`flex flex-col justify-between gap-14`,
   contentIsCentred && tw`justify-center`,
 ])
 
