@@ -81,8 +81,8 @@ function Navbar_v2({
         <Image
           src={logo}
           alt="logo"
-          width={bp === 'lg' ? width : 138}
-          height={bp === 'lg' ? height : 48}
+          width={width}
+          height={height}
           objectFit="contain"
         />
       </Link>

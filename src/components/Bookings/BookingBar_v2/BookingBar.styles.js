@@ -19,11 +19,13 @@ export const BookingMobileButton = styled.button(({ theme }) => [
 ])
 
 export const BookngContainer = styled.div(({ theme }) => [
-  tw`h-[4.125rem] lg:h-[6.75rem] xs:w-[18rem] sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] rounded-3xl flex justify-between items-center shadow-card bg-white`,
+  tw`
+  h-[4.125rem] lg:h-[6.75rem] xs:w-full sm:w-[22.438rem] md:w-[45.5rem] lg:w-[68.75rem] rounded-3xl flex justify-between items-center shadow-card bg-white`,
   `background-color: ${theme.colors.DatesCore.bg};
   color: ${theme.colors.DatesCore.text};`,
 ])
 export const BookingContent = tw.div`w-full lg:flex-1 h-full rounded-3xl md:rounded-r-none md:rounded-l-3xl 
 flex items-center justify-center divide-x divide-gray-300 py-3 md:px-2 lg:py-6`
-export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around`
-export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around`
+export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around  
+[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5`
+export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around [&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5`

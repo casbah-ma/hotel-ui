@@ -29,7 +29,7 @@ const Hero = function ({
       position={position}
       data-testid="hero-container"
     >
-      <HeroImage>
+      <HeroImage gradient={gradient}>
         <Image
           role="img"
           alt="hero"

@@ -3,14 +3,16 @@ import tw, { styled } from 'twin.macro'
 export const HeroContainer = styled.div(({ gradient }) => [
   tw`w-full h-[51.313rem] lg:h-screen relative`,
   gradient &&
-    'background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%) !important;',
+    'background: linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)',
 ])
 
-export const HeroImage = styled.div(({}) => [
-  `background: rgba(14, 13, 18, 0.4);`,
+export const HeroImage = styled.div(({ gradient }) => [
   tw`
-    w-full h-full bg-no-repeat bg-cover object-cover bg-center brightness-50 opacity-90
+    w-full h-full bg-no-repeat bg-cover object-cover bg-center brightness-50 opacity-90 
     `,
+  gradient &&
+    tw`    before:content before:absolute before:inset-0 before:z-10 
+    before:background[linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)]  `,
 ])
 
 export const HeroInfo = styled.div(({ position }) => [
