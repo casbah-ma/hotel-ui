@@ -27,5 +27,5 @@ export const BookngContainer = styled.div(({ theme }) => [
 export const BookingContent = tw.div`w-full lg:flex-1 h-full rounded-3xl md:rounded-r-none md:rounded-l-3xl 
 flex items-center justify-center divide-x divide-gray-300 py-3 md:px-2 lg:py-6`
 export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around  
-[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5`
-export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around [&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5`
+xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto`
+export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto`

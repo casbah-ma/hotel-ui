@@ -12,6 +12,7 @@ function Modal({ children, isOpen, closeModal }) {
         as="div"
         className="dialog"
         onClose={closeModal}
+        style={{ zIndex: 40 }}
       >
         <Transition.Child
           data-testid="modal-child"
