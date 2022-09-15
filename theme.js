@@ -7,6 +7,7 @@ export default {
     },
     bg: {
       primary: '#21B67C',
+      primaryLight: '#21b67c29',
       secondary: '#000',
       tertiary: '#fafafa',
       additional: '#00bcd4',

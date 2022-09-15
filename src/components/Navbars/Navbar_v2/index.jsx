@@ -32,8 +32,8 @@ function Navbar_v2({
   logo,
   bookingUrl,
   t,
-  width,
-  height,
+  width = 0,
+  height = 0,
 }) {
   const [isOpen, setIsOpen] = useState(false)
   const [hasBackground, setHasBackground] = useState(false)
