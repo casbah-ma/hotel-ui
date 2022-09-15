@@ -82,7 +82,7 @@ function Navbar_v2({
           src={logo}
           alt="logo"
           width={width}
-          height={height}
+          height={bp === 'lg' ? height : 48}
           objectFit="contain"
         />
       </Link>
