@@ -7,11 +7,6 @@ export const Container = styled.div(({ imageSrc }) => [
     : tw`justify-start gap-9 min-h-[17.625rem] lg:min-h-[30rem] text-black bg-[#FAFAFA]`,
 ])
 
-export const ImageContainer = tw.div`
-    absolute z-0 inset-0 before:content before:rounded-2xl before:absolute before:inset-0 before:z-20 
-    before:background[linear-gradient(180deg, #000000 12.97%, rgba(0, 0, 0, 0) 100%)] 
-`
-
 export const InfoHeader = tw.div`
     flex flex-row justify-between items-center z-10 
 `
