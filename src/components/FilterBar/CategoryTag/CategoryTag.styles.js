@@ -13,7 +13,7 @@ export const Tag = styled.li(({ active, variant, theme }) => [
   variant === 'v1' && active && tw`border-b border-black font-semibold`,
   variant === 'v2' &&
     active &&
-    `background-color: ${theme.colors.bg.primary};
+    `background-color: ${theme.colors.bg.primaryLight};
   border: 1px solid #21B67C;
   opacity: 0.8;
   `,

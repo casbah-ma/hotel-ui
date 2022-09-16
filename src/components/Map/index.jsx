@@ -11,10 +11,8 @@ const token =
 
 const Map = ({ long, lat }) => {
   const [viewState, setViewState] = useState({
-    width: '100%',
-    height: '100%',
-    latitude: '',
-    longitude: '',
+    latitude: lat,
+    longitude: long,
     zoom: 15,
   })
   return (

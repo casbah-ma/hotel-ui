@@ -37,14 +37,14 @@ export const spacingTop = {
   none: tw`mt-0`,
   xs: tw`mt-6`,
   sm: tw`mt-6 md:mt-12`,
-  lg: tw`mt-[7.5rem] md:mt-[12.5rem]`,
+  lg: tw`mt-[7.5rem] md:mt-[9.22rem]`,
 }
 
 export const sapcingBottom = {
   none: tw`mt-0`,
   xs: tw`mb-6`,
   sm: tw`mb-6 md:mb-12`,
-  lg: tw`mb-[7.5rem] md:mb-[12.5rem]`,
+  lg: tw`mb-[7.5rem] md:mb-[9.22rem]`,
 }
 
 export const sapcingLeft = {
