@@ -183,7 +183,7 @@ function Footer({
             bgColor={bgColor}
           />
           <Button
-            color={color}
+            color={color != 'white' ? color : 'black'}
             label="Submit"
             variant="secondary"
             handleClick={() => handleSubmit()}
