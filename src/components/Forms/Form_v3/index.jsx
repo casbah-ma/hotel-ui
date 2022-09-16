@@ -13,6 +13,8 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     message,
     messageError,
     buttonLabel,
+    whithline,
+    color= '#000000',
   } = formInputs
   return (
     <Formv2Container data-testid="Formv3-container">
@@ -25,7 +27,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
       bgColor="#FAFAFA"
       onChange={onChange}
       placeHolder="Full Name"
-      focus="#000000"
+      focus={color}
     />
     <Input
       testID="email"
@@ -36,7 +38,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
       onChange={onChange}
       placeHolder="Email"
       value={email}
-      focus="#000000"
+      focus={color}
     />
     <Input
       testID="message"
@@ -49,15 +51,18 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
       placeHolder="Message"
       value={message}
       size="12.5rem"
-      focus="#000000"
+      focus={color}
     />
+    {
+      whithline && 
     <StyledLine></StyledLine>
+    }
     <StyledButton>
     <Button
         testID="submit-button"
-        bgColor="#000000"
+        bgColor={color}
         color="#fff"
-        label="Submit your message"
+        label={buttonLabel}
         onClick={onClick}
         variant="secondary"
       />
@@ -75,6 +80,8 @@ Form_v2.propTypes = {
     message: PropTypes.string,
     messageError: PropTypes.string,
     buttonLabel: PropTypes.string,
+    whithline:PropTypes.boolean,
+    color:PropTypes.string,
   }),
   onChange: PropTypes.func,
   onClick: PropTypes.func,

@@ -16,6 +16,8 @@ Default.args = {
     message: 'Test message',
     messageError: '',
     buttonLabel:'Submit your message',
+    whithline: false,
+    color: '#000000',
   },
   onChange: () => {},
   onClick: () => {},

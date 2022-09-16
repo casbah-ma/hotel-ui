@@ -10,7 +10,7 @@ export const FooterContainer = styled.footer(({ color, bgColor, theme }) => [
  flex flex-col items-center
  justify-between
 `,
-  color ? `color: ${color};` : tw`text-white`,
+  color ? `color: ${color};` : `color: white;`,
   bgColor
     ? `background-color: ${bgColor};`
     : `background-color: ${theme.colors.bg.primary};`,
@@ -21,8 +21,8 @@ export const TopContent = tw.div`w-full pb-[3.938rem] flex
 xs:flex-col md:flex-row md:flex-wrap lg:flex-row 
 justify-between`
 
-export const FooterLogo = tw.div`flex flex-col items-center justify-center w-[14rem]`
-export const FooterText = tw.div`w-full lg:w-[20.25rem] xs:pt-[4.188rem]`
+export const FooterLogo = tw.div`flex flex-col items-center justify-center w-[14rem] lg:mt-[-5.25rem]`
+export const FooterText = tw.div`w-full lg:w-[20.25rem] md:pt-0 xs:pt-[4.188rem]`
 export const BottomContent = tw.div`w-full`
 export const FooterLinks = tw.div`w-full [&>div]:mt-[1.938rem]`
 export const FooterLink = tw.div`w-full mb-4`
