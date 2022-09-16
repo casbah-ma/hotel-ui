@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 import '../../styles/datepicker.css'
-import 'mapbox-gl/dist/mapbox-gl.css'
 
 const CustomStyles = createGlobalStyle`
 .full-width {
