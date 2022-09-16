@@ -90,7 +90,6 @@ function Footer({
         <Rows>
           <Section>
             <Label
-              color={theme.colors.text.secondary}
               fontSize="sm"
               labelText="get in touch"
               textTransform="uppercase"
@@ -98,12 +97,12 @@ function Footer({
             />
             <Element>
               <Label
-                color={theme.colors.text.secondary}
+              color={color}
                 fontSize="xs"
                 labelText="MON-FRIDAY"
               />
               <Label
-                color={theme.colors.text.secondary}
+              color={color}
                 fontSize="xs"
                 labelText="10AM-11PM"
               />
@@ -111,7 +110,7 @@ function Footer({
           </Section>
           <Section>
             <Label
-              color={theme.colors.text.secondary}
+              // color={theme.colors.text.secondary}
               fontSize="sm"
               labelText="contact"
               textTransform="uppercase"
@@ -128,10 +127,10 @@ function Footer({
                     >
                       <IconLabel>
                         <Icon>
-                          <item.icon width="24px" height="24px" color="white" />
+                          <item.icon width="24px" height="24px" color={color} />
                         </Icon>
                         <Label
-                          color={theme.colors.text.secondary}
+                        color={color}
                           fontSize="sm"
                           labelText={t(item.label)}
                         />
@@ -145,7 +144,6 @@ function Footer({
         <Rows>
           <FooterLinks data-testid="links">
             <Label
-              color={theme.colors.text.secondary}
               fontSize="sm"
               labelText="quck links"
               textTransform="uppercase"
@@ -161,7 +159,7 @@ function Footer({
                       defaultLanguage={defaultLanguage}
                     >
                       <Label
-                        color={theme.colors.text.secondary}
+                      color={color}
                         fontSize="xs"
                         labelText={t(item.label)}
                       />
@@ -173,7 +171,6 @@ function Footer({
         </Rows>
         <Rows>
           <Label
-            color={theme.colors.text.secondary}
             fontSize="sm"
             labelText="hAVE A BLAST?"
             textTransform="uppercase"
@@ -186,8 +183,7 @@ function Footer({
             bgColor={bgColor}
           />
           <Button
-            color="#000000"
-            bgColor="#fff"
+            color={color}
             label="Submit"
             variant="secondary"
             handleClick={() => handleSubmit()}
@@ -198,13 +194,12 @@ function Footer({
         <FooterDivider />
         <FooterDividerText data-testid="copyright">
           <Label
-            color={theme.colors.text.secondary}
+            // color={theme.colors.text.secondary}
             fontSize="xs"
             labelText="Terms of service"
             textTransform="uppercase"
           />
           <Label
-            color={theme.colors.text.secondary}
             fontSize="xs"
             labelText={`Copyrights © ${year.getFullYear()}`}
             textTransform="uppercase"
