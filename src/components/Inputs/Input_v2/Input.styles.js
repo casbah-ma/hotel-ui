@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const InputContainer = tw.div`relative w-full`
 
 export const Placeholder = styled.label(
-  tw`absolute left-0 p-[1.4rem]`,
+  tw`absolute left-0 p-[1.4rem] font-secondary`,
   `pointer-events: none ;
   font-size:1em;
   transition: 0.5s`
@@ -30,24 +30,29 @@ export const StyledInput = styled.input(
       : `&:valid, &:focus{border-color: ${theme.colors.border.primary}};`,
 
     focus
-      ? `&:focus ~ label, &:valid ~ label{ color: ${focus}; 
-      font-size:1.2em;
+      ? `&:focus ~ label, &:valid ~ label{ 
+        color: ${focus}; 
+        font-size:1.2em;
         transform: translateX(22px) translateY(-12px);
-        padding: 0 10px;
-        background-color:white;
+        padding: 0 6px;
      }`
       : `&:focus ~ label, &:valid ~ label{
         color: ${theme.colors.border.primary};
         font-size:1.2em;
-        transform: translateX(22px) translateY(-12px);
-        padding: 0 10px;
-        background-color:white
-      }`,
+        transform: translateX(22px) translateY(-14px);
+        padding: 0 px;
+        }`,
 
-    // bgColor && focus
-    // ? `&:focus ~ label{background-color: ${bgColor}};`
-    // : `&:focus ~ label{background-color: ${theme.colors.bg.primary}};`,
-
+      bgColor ? `&:focus ~ label, &:valid ~ label{ 
+        background: ${bgColor};
+background: conic-gradient(from 90deg,${bgColor} 180deg, white 180deg);
+    
+     }` :
+     `&:focus ~ label, &:valid ~ label{ 
+      background: ${theme.colors.bg.primary};
+background: conic-gradient(from 90deg,${theme.colors.bg.primary} 180deg, white 180deg);
+    
+   }`,
     error && tw`border-red-500`,
 
     isTextaria && tw`w-full min-h-[4.375rem] max-h-[15rem] pt-[1.2rem] pl-6 `,

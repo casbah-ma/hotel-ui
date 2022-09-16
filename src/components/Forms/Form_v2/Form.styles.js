@@ -12,16 +12,14 @@ export const Formv2Container = styled.div(
 )
 
 export const FormContent = tw.div`
-   w-full pt-[3rem] px-[2rem]
-   font-secondary flex flex-col
-   outline-none text-xs gap-[2rem]
-   font-medium max-h-[16.25rem]
+   w-full pt-[3rem] px-[2rem] flex flex-col
+   outline-none gap-[2rem] font-normal 
 `
 
 export const StyledButton = styled.button(({ theme }) => [
   tw`
          w-full h-[5.188rem] text-white rounded-b-[1.5rem]
-         font-secondary font-semibold
+         font-secondary font-semibold text-[1.5rem] leading-[1.8rem]
     `,
   `background-color: ${theme.colors.border.primary};`,
 ])
