@@ -17,7 +17,7 @@ const Contacts = function ({
   phone,
   phoneLabel,
   withBorder,
-  variant = v1,
+  variant = 'v1',
 }) {
   return (
     <ContactsContainer data-testid="container" variant={variant}>
@@ -26,11 +26,11 @@ const Contacts = function ({
         {variant == 'v2' && <StyledTitle>{title}</StyledTitle>}
       </ContactsTitle>
       <StyledPara>
-      {variant == 'v2' && <StyledText>{emailLabel}</StyledText> }
+        {variant == 'v2' && <StyledText>{emailLabel}</StyledText>}
         <Paragraph description={email} />
       </StyledPara>
       <StyledPara>
-      {variant == 'v2' && <StyledText>{phoneLabel}</StyledText> }
+        {variant == 'v2' && <StyledText>{phoneLabel}</StyledText>}
         <Paragraph description={phone} />
       </StyledPara>
     </ContactsContainer>

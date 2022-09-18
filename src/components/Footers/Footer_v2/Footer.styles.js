@@ -34,7 +34,8 @@ export const Rows = tw.div`flex flex-col lg:p-0 xs:pt-[1.813rem]
 [&>Button]:mt-[2rem] [&>Label]:mb-[1.938rem]
 `
 export const Input = styled.input(({ theme, bgColor }) => [
-  tw`w-[14.125rem] lg:w-[18.125rem] h-[4.25rem] border-b-[0.063rem] font-secondary
+  `font-family: ${theme.fontFamily.secondary};`,
+  tw`w-[14.125rem] lg:w-[18.125rem] h-[4.25rem] border-b-[0.063rem]
 outline-none text-base`,
   bgColor
     ? `background-color: ${bgColor};`

@@ -21,6 +21,7 @@ const Hero = function ({
   subtitle,
   children,
   image,
+  playVideo,
 }) {
   const bp = useBreakpoint()
   return (

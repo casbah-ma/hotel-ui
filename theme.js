@@ -1,6 +1,5 @@
 export default {
   letterSpacing: '',
-  gradientRgba: 'rgba(72, 109, 195, 0.1)',
   colors: {
     text: {
       primary: '#000',
@@ -28,5 +27,10 @@ export default {
       primary: 'rgba(72, 109, 195, 0.1) 0%',
       secondary: '#486DC3 96.03%',
     },
+  },
+  fontFamily: {
+    primary: [],
+    secondary: [],
+    indie: [],
   },
 }

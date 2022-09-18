@@ -19,7 +19,7 @@ export const Example2 = Template.bind({})
 export const Example3 = Template.bind({})
 export const Example4 = Template.bind({})
 Example1.args = {
-  image: 'https://source.unsplash.com/random/?hotel',
+  image: 'https://www.youtube.com/watch?v=UZacXStxhIc',
   title: 'Feel the vibrancy',
   subtitle:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',

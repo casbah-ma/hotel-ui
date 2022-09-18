@@ -14,9 +14,15 @@ export const ContactsContainer = styled.div(({ theme }) => [
 
 export const StyledPara = tw.div`flex items-center`
 
-export const StyledTitle = tw.div`text-[1.75rem] font-bold leading-[33.6rem] font-secondary`
+export const StyledTitle = styled.div(({ theme }) => [
+  `font-family: ${theme.fontFamily.secondary};`,
+  tw`text-[1.75rem] font-bold leading-[33.6rem] `,
+])
 
-export const StyledText = tw.div`text-[1.25rem] font-normal leading-[1.5rem] font-secondary mr-[1.25rem] opacity-40`
+export const StyledText = styled.div(({ theme }) => [
+  `font-family: ${theme.fontFamily.secondary};`,
+  tw`text-[1.25rem] font-normal leading-[1.5rem] mr-[1.25rem] opacity-40`,
+])
 
 export const ContactsTitle = styled.div(({ withBorder, variant, theme }) => [
   // tw`w-full flex items-center justify-center relative mb-5`,

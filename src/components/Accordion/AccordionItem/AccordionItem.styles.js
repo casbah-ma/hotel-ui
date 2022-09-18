@@ -10,8 +10,9 @@ const contentVariants = {
   version2: tw`border-t border-[#DBDBDB] py-4 pl-6 pr-28 w-full`,
 }
 
-export const Item = styled.div(() => [
-  tw`font-secondary text-xl text-black leading-6 w-full flex flex-col justify-center items-center mx-auto`,
+export const Item = styled.div(({ theme }) => [
+  tw`text-xl text-black leading-6 w-full flex flex-col justify-center items-center mx-auto`,
+  `font-family: ${theme.fontFamily.secondary};`,
   ({ variant }) => variants[variant],
 ])
 export const ItemName = styled.button(({ isOpened }) => [
