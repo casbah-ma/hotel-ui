@@ -17,6 +17,7 @@ const Contacts = function ({
   phone,
   phoneLabel,
   withBorder,
+  color = 'black',
   variant = 'v1',
 }) {
   return (
@@ -27,11 +28,11 @@ const Contacts = function ({
       </ContactsTitle>
       <StyledPara>
         {variant == 'v2' && <StyledText>{emailLabel}</StyledText>}
-        <Paragraph description={email} />
+        <Paragraph color={color} description={email} />
       </StyledPara>
       <StyledPara>
         {variant == 'v2' && <StyledText>{phoneLabel}</StyledText>}
-        <Paragraph description={phone} />
+        <Paragraph color={color} description={phone} />
       </StyledPara>
     </ContactsContainer>
   )
@@ -44,6 +45,7 @@ Contacts.propTypes = {
   phone: PropTypes.string,
   phoneLabel: PropTypes.string,
   withBorder: PropTypes.bool,
+  color: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(ContactsVariant)),
 }
 

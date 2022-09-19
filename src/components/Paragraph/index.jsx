@@ -2,13 +2,14 @@ import { Description } from './Paragraph.styles'
 import PropTypes from 'prop-types'
 import { fontSizes } from '@/styles/theming'
 
-const Paragraph = function ({ description, fontSize = 'rg' }) {
-  return <Description fontSize={fontSize}>{description}</Description>
+const Paragraph = function ({ description, fontSize = 'rg', color }) {
+  return <Description fontSize={fontSize} color={color}>{description}</Description>
 }
 
 Paragraph.propTypes = {
   description: PropTypes.string.isRequired,
   fontSize: PropTypes.oneOf(Object.keys(fontSizes)),
+  color: PropTypes.string,
 }
 
 Paragraph.defaultProps = {

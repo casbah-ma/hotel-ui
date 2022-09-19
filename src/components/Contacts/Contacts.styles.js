@@ -5,11 +5,14 @@ export const ContactsVariant = {
   v2: tw` h-[10.625rem] flex items-center justify-around`,
 }
 
-export const ContactsContainer = styled.div(({ theme }) => [
+export const ContactsContainer = styled.div(({ theme, color }) => [
   tw`w-full gap-8 `,
   //variants
   ({ variant }) => ContactsVariant[variant],
   `background-color: ${theme.colors.bg.tertiary};`,
+
+  color && `color: ${color};`,
+  ,
 ])
 
 export const StyledPara = tw.div`flex items-center`
