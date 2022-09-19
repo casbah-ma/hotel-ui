@@ -39,8 +39,8 @@ export const StyledInput = styled.input(
       : `&:focus ~ label, &:valid ~ label{
         color: ${theme.colors.border.primary};
         font-size:1.2em;
-        transform: translateX(22px) translateY(-14px);
-        padding: 0 px;
+        transform: translateX(22px) translateY(-12px);
+        padding: 0 6px;
         }`,
 
       bgColor ? `&:focus ~ label, &:valid ~ label{ 
