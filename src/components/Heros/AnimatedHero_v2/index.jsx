@@ -47,7 +47,7 @@ function AnimatedHero_v2({
       <AnimatedHeroChildrens position={position}>
         <AnimatedHeroContent position={position}>
           <Title title={title} color="white" level="2" />
-          <AnimatedHeroTitle>
+          <AnimatedHeroTitle position={position}>
             <Paragraph description={subtitle} color="white" />
           </AnimatedHeroTitle>
         </AnimatedHeroContent>

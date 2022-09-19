@@ -57,6 +57,7 @@ function Navbar_v2({
   const scrollDirection = useScrollDirection()
   useEffect(() => {
     if (scrollPosition > 100) {
+      color = 'black'
       setHasBackground(true)
     } else {
       setHasBackground(false)
@@ -96,7 +97,11 @@ function Navbar_v2({
                   languages={languages}
                   defaultLanguage={defaultLanguage}
                 >
-                  <Label labelText={t(item.label)} fontSize="sm" />
+                  <Label
+                    labelText={t(item.label)}
+                    fontSize="sm"
+                    color={hasBackground ? 'black' : color}
+                  />
                 </Link>
               </ListItem>
             ))}
