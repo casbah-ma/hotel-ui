@@ -7,10 +7,16 @@ export const NavbarContainer = styled.nav(
       pl-[0.813rem]  lg:pl-[57px] pr-[22px] py-[23px]  shadow-card rounded-3xl`,
     transparent &&
       tw`bg-transparent shadow-none w-full lg:justify-start items-center  lg:px-12
-      [&>nav]:mr-auto [&>nav]:border-l [&>nav]:border-black [&>nav]:pl-[62px] [&>nav]:ml-5`,
+      [&>nav]:mr-auto [&>nav]:border-l  [&>nav]:pl-[62px] [&>nav]:ml-5`,
+
     hasBackground && tw`py-4 bg-white shadow-xl`,
     bgColor && `background-color: ${bgColor};`,
-    color && `color: ${color};`,
+    color &&
+      `color: ${color}; 
+      nav{
+        border-color: ${color};
+      }
+      `,
   ]
 )
 
@@ -29,7 +35,7 @@ export const LanguageMenu = tw.div`
  flex flex-row gap-1.5 justify-center items-center
 `
 export const ButtonWithLanguages = tw.div`
-   hidden lg:flex flex-row gap-6 justify-center items-center
+   hidden lg:flex flex-row gap-6 justify-center items-center text-white
 `
 
 export const Menu = tw.div`

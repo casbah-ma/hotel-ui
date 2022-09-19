@@ -8,7 +8,7 @@ import { List, ListItem, ToggleButton } from './Dropdown.styles'
 import Link from '@/components/LinkComponent'
 import { useRouter } from 'next/router'
 
-function Dropdown({ languages, defaultLanguage }) {
+function Dropdown({ languages, defaultLanguage, color }) {
   const router = useRouter()
   const { query, asPath } = router
   // Detect current language
@@ -23,10 +23,14 @@ function Dropdown({ languages, defaultLanguage }) {
         <>
           <Menu.Button>
             {!isEmpty(languages) && (
-              <Label labelText={activeLanguage.toUpperCase()} fontSize="sm" />
+              <Label
+                labelText={activeLanguage.toUpperCase()}
+                fontSize="sm"
+                color={color}
+              />
             )}
             <ToggleButton open={open}>
-              <ChevronDownIcon />
+              <ChevronDownIcon style={{ fill: color }} />
             </ToggleButton>
           </Menu.Button>
           <Transition
