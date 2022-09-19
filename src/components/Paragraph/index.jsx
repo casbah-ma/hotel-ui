@@ -2,7 +2,7 @@ import { Description } from './Paragraph.styles'
 import PropTypes from 'prop-types'
 import { fontSizes } from '@/styles/theming'
 
-const Paragraph = function ({ description, fontSize = 'rg', color = 'black' }) {
+const Paragraph = function ({ description, fontSize = 'rg', color }) {
   return <Description fontSize={fontSize} color={color}>{description}</Description>
 }
 
