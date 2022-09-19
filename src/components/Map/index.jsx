@@ -11,20 +11,10 @@ const token =
 
 const Map = ({ long, lat }) => {
   const [viewState, setViewState] = useState({
-    width: '100%',
-    height: '100%',
-    latitude: '35.775781158640214',
-    longitude: '-5.796029414390299',
+    latitude: lat,
+    longitude: long,
     zoom: 15,
   })
-  const [markers, setMarkers] = useState([
-    {
-      latitude: lat ? lat : '35.775781158640214',
-      longitude: long ? long : '-5.796029414390299',
-      offsetLeft: '-20px',
-      offsetTop: '-20px',
-    },
-  ])
   return (
     <MapContainer>
       <ReactMapGl

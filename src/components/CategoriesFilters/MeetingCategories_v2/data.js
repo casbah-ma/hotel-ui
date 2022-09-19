@@ -9,6 +9,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'School Room',
@@ -20,6 +21,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'School Room',
@@ -31,6 +33,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'School Room',
@@ -42,6 +45,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Banquet',
@@ -53,6 +57,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Banquet',
@@ -64,6 +69,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Banquet',
@@ -75,6 +81,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Reception',
@@ -86,6 +93,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Reception',
@@ -97,6 +105,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'Theatre',
@@ -108,6 +117,7 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
   {
     type: 'U-Shape',
@@ -119,5 +129,6 @@ export default [
     subtitle: '13M X 7M',
     sq_M: '129M',
     guests: '32',
+    href: '/',
   },
 ]

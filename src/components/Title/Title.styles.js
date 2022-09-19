@@ -3,7 +3,9 @@ import tw, { styled } from 'twin.macro'
 
 export const Heading = styled.h1(({ color, level, theme, withLine }) => [
   //base styles
-  tw`font-primary font-bold tracking-wider relative`,
+  tw`font-primary font-medium  relative`,
+  //spacing
+  `letter-spacing: ${theme.letterSpacing};`,
   //styles based on level
   ({ level }) => titleLeveles[level],
   //border bottom for v2
@@ -13,10 +15,10 @@ export const Heading = styled.h1(({ color, level, theme, withLine }) => [
       content: "";
       position: absolute;
       left: 0;
-      bottom: -30px;
+      bottom: -25px;
       height: 0.6rem;
       width: 8.75rem;
-      background-color: ${theme.colors.text.primary};
+      background-color: ${theme.colors.bg.primary};
       border-radius: 20px;
     }
    `,

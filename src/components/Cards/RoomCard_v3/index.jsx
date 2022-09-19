@@ -11,7 +11,8 @@ import {
   StyledChildren,
   Subtitle,
 } from './RoomCard_v3.styles'
-import LinkComponent from '../../LinkComponent'
+import LinkComponent from '@/components/LinkComponent'
+import { isEmpty } from '@/helpers/utils'
 
 function RoomCard_v3({
   children,
@@ -19,10 +20,11 @@ function RoomCard_v3({
   name,
   subtitle,
   actionProps,
+  href,
   link,
 }) {
   return (
-    <LinkComponent {...link}>
+    <LinkComponent href={href} {...link}>
       <Container imageSrc={imageSrc}>
         {imageSrc && (
           <ImageContainer>
@@ -31,7 +33,7 @@ function RoomCard_v3({
         )}
         <InfoHeader>
           <Title color={imageSrc ? 'white' : 'black'} level="3" title={name} />
-          <Subtitle>{subtitle}</Subtitle>
+          {!isEmpty(subtitle) && <Subtitle>{subtitle}</Subtitle>}
         </InfoHeader>
         <StyledChildren>{children}</StyledChildren>
         {actionProps && <Button {...actionProps} />}
@@ -45,6 +47,11 @@ RoomCard_v3.propTypes = {
   name: PropTypes.string,
   subtitle: PropTypes.string,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
+  href: PropTypes.string,
+  link: PropTypes.shape({
+    defaultLanguage: PropTypes.string,
+    languages: PropTypes.array,
+  }),
 }
 
 export default RoomCard_v3

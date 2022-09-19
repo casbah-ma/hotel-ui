@@ -23,7 +23,7 @@
 }
 .PresetDateRangePicker_button__selected {
   color: #000;
-  background: #fff;
+
 }
 .SingleDatePickerInput {
   display: inline-block;
@@ -176,7 +176,7 @@
 
 .DayPickerKeyboardShortcuts_panel {
   overflow: auto;
-  background: #000;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -226,7 +226,7 @@
 .CalendarDay__default {
   border-radius: 50%;
   color: #fff;
-  background: #000;
+
 }
 .CalendarDay__default:hover {
   background: #e4e7e7;
@@ -237,19 +237,19 @@
   color: inherit;
 }
 .CalendarDay__outside {
-  background: #fff;
+
   color: #484848;
 }
 .CalendarDay__outside:hover {
   border: 0;
 }
 .CalendarDay__blocked_minimum_nights {
-  background: #fff;
+
   color: #cacccd;
 }
 .CalendarDay__blocked_minimum_nights:active,
 .CalendarDay__blocked_minimum_nights:hover {
-  background: #fff;
+
   color: #cacccd;
 }
 .CalendarDay__highlighted_calendar {
@@ -273,7 +273,7 @@
 .CalendarDay__selected,
 .CalendarDay__selected:active,
 .CalendarDay__selected:hover {
-  background: #fff;
+
   color: #000;
 }
 .CalendarDay__hovered_span,
@@ -297,7 +297,7 @@
 .CalendarDay__blocked_out_of_range,
 .CalendarDay__blocked_out_of_range:active,
 .CalendarDay__blocked_out_of_range:hover {
-  background: #000;
+
 
   color: #cacccd;
 }
@@ -310,7 +310,7 @@
   border: 1px double #e4e7e7;
 }
 .CalendarMonth {
-  background: #000;
+
   text-align: center;
   vertical-align: top;
   -webkit-user-select: none;
@@ -338,7 +338,7 @@
   padding-bottom: 7px;
 }
 .CalendarMonthGrid {
-  background: #000;
+
   text-align: left;
   z-index: 0;
 }
@@ -417,7 +417,7 @@
 }
 
 .DayPickerNavigation_button__default:active {
-  background: #000;
+
 }
 .DayPickerNavigation_button__disabled {
   cursor: default;
@@ -442,7 +442,7 @@
 }
 .DayPickerNavigation_button__verticalDefault {
   padding: 5px;
-  background: #000;
+
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   position: relative;
   display: inline-block;
@@ -526,7 +526,7 @@
   top: 0;
   display: table-row;
   border-bottom: 1px solid #dbdbdb;
-  background: #000;
+
   margin-left: 0;
   left: 0;
   width: 100%;

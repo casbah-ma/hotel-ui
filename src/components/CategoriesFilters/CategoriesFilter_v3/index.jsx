@@ -12,7 +12,7 @@ import { Container, Wrapper } from './CategoriesFilter_v3.styles'
 import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
-function CategoriesFilter_v3({ categories, headerProps }) {
+function CategoriesFilter_v3({ categories, headerProps, link }) {
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {
@@ -46,7 +46,13 @@ function CategoriesFilter_v3({ categories, headerProps }) {
   //function to get infos
   const getInfos = (category) => {
     return Object.entries(category)
-      .filter((item) => !(item[0] === 'imageSrc' || item[0] === 'subtitle'))
+      .filter(
+        (item) =>
+          !(
+            item[0] === 'imageSrc' ||
+            (item[0] === 'subtitle') | (item[0] === 'href')
+          )
+      )
       .map((item) => ({
         infoName: item[0],
         infoValue: item[1],
@@ -71,6 +77,8 @@ function CategoriesFilter_v3({ categories, headerProps }) {
                 imageSrc={category.imageSrc}
                 name={category.name}
                 subtitle={category.subtitle}
+                href={category.href}
+                link={link}
               >
                 <InfoItems infos={getInfos(category)} space={false} />
               </RoomCard_v3>

@@ -16,4 +16,8 @@ export const Default = Template.bind({})
 Default.args = {
   headerProps: HeaderStories.WithoutBorder.args,
   categories: data,
+  link: {
+    defaultLanguage: 'en',
+    languages: ['en', 'fr', 'ar'],
+  },
 }

@@ -115,11 +115,32 @@ const getVariant = (variant, bp) => {
   return imageShape[bp]
 }
 
-const ImageCard = function ({ variant, src }) {
+const getBorderImage = (imagePosition) => {
+  switch (imagePosition) {
+    case 'left':
+      return {
+        borderTopRightRadius: '12px',
+        borderBottomRightRadius: '12px',
+        borderBottomLeftRadius: '0px',
+        borderTopLeftRadius: '0px',
+      }
+    case 'right':
+      return {
+        borderTopLeftRadius: '12px',
+        borderBottomLeftRadius: '12px',
+        borderBottomRightRadius: '0px',
+        borderTopRightRadius: '0px',
+      }
+    default:
+      return { borderRadius: '12px' }
+  }
+}
+
+const ImageCard = function ({ variant, src, imagePosition }) {
   const bp = useBreakpoint()
   return (
     <Image
-      className="radius-xl"
+      style={getBorderImage(imagePosition)}
       width={getVariant(variant, bp) ? getVariant(variant, bp).width : 0}
       height={getVariant(variant, bp) ? getVariant(variant, bp).height : 0}
       src={src}

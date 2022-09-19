@@ -14,10 +14,11 @@ function RoomCard({
   actionProps,
   bgColor,
   variant,
+  href,
   link,
 }) {
   return (
-    <LinkComponent {...link}>
+    <LinkComponent href={href} {...link}>
       <Container bgColor={bgColor} variant={variant}>
         <InfoHeader
           variant={variant}
@@ -41,7 +42,11 @@ RoomCard.propTypes = {
   }),
   actionProps: PropTypes.shape({ ...Button.propTypes }),
   bgColor: PropTypes.string,
-  link: PropTypes.shape(LinkComponent.propTypes),
+  href: PropTypes.string,
+  link: PropTypes.shape({
+    defaultLanguage: PropTypes.string,
+    languages: PropTypes.array,
+  }),
 }
 
 export default RoomCard

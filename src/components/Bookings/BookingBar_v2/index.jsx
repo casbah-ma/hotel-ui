@@ -17,6 +17,7 @@ import {
   BookingContentRight,
   BookingMobileButton,
 } from './BookingBar.styles'
+import { bookingUrl } from '@/helpers/utils'
 
 function BookingBa_v2({
   dates,
@@ -62,20 +63,15 @@ function BookingBa_v2({
         <BookngContainer data-testid="booking-bar">
           <BookingContent>
             <BookingContentLeft>
-              <Label
-                role="label"
-                labelText={title_1 || ''}
-                fontSize={bp}
-                color={theme.colors.DatesCore.text}
-              />
+              <Label role="label" labelText={title_1 || ''} fontSize={bp} />
               <Popover>
                 <Popover.Button>
                   <Button
                     as="div"
                     variant="rounded"
-                    bgColor={theme.colors.DatesCore.text}
+                    bgColor="white"
                     Icon={ChevronUpIcon}
-                    color={theme.colors.DatesCore.bg}
+                    color={theme.colors.DatesCore.text}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">
@@ -87,19 +83,14 @@ function BookingBa_v2({
               </Popover>
             </BookingContentLeft>
             <BookingContentRight>
-              <Label
-                role="label"
-                labelText={title_2 || ''}
-                fontSize={bp}
-                color={theme.colors.DatesCore.text}
-              />
+              <Label role="label" labelText={title_2 || ''} fontSize={bp} />
               <Popover>
                 <Popover.Button ref={guestbtn}>
                   <Button
                     as="div"
                     variant="rounded"
                     bgColor="white"
-                    color={theme.colors.DatesCore.bg}
+                    color={theme.colors.DatesCore.text}
                     Icon={ChevronUpIcon}
                   />
                 </Popover.Button>
@@ -127,7 +118,6 @@ function BookingBa_v2({
           <BookingMobileButton
             onClick={() => checkAvailability(dates, guestValues, baseUrl)}
           >
-            {' '}
             {text}
           </BookingMobileButton>
         )}

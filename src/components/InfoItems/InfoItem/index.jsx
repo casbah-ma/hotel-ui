@@ -9,11 +9,7 @@ function InfoItem({ infoName, infoValue, space = true }) {
   return (
     <Container data-testid="information-room-items" space={space}>
       <Paragraph description={`${infoName}:${''}`} />
-      <Label
-        color={space ? 'black' : 'white'}
-        labelText={infoValue}
-        fontSize="sm"
-      />
+      <Label color={space ? 'black' : 'white'} labelText={infoValue} />
     </Container>
   )
 }
