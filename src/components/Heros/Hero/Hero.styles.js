@@ -30,7 +30,7 @@ export const HeroInfo = styled.div(({ position }) => [
   tw`w-full absolute top-[9.188rem] md:top-[14.563rem] text-center z-20
   flex flex-col justify-center items-center gap-6`,
   position === 'start' &&
-    tw`items-start justify-start pl-3 sm:pl-8 md:pl-[5.5rem] lg:pl-[12.5rem] md:top-[10.438rem] lg:top-[14.313rem] gap-2`,
+    tw`items-start justify-start pl-3 sm:pl-8 md:pl-[5.5rem] lg:pl-[12.5rem] 2xl:pl-[20rem]  md:top-[10.438rem] lg:top-[14.313rem] 2xl:top-[20rem] gap-2`,
 ])
 
 export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
@@ -55,15 +55,15 @@ export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
 export const HeroSubtitle = styled.div(({ position }) => [
   tw`w-full h-full flex justify-center items-start`,
   position === 'start' &&
-    tw`justify-center md:justify-end md:pr-8 lg:pr-[11.188rem] mb-20 -mt-24`,
+    tw`justify-center md:justify-end md:pr-8 lg:pr-[11.188rem]  mb-20 `,
 ])
 
 export const HeroAction = styled.div(({ position }) => [
   tw`
-     w-full animate-bounce absolute bottom-[10rem] md:bottom-[2rem]  
+     w-full animate-bounce absolute bottom-[10rem] md:bottom-8 2xl:bottom-32
       px-2 flex justify-center items-center z-20
     `,
-  position === 'start' && tw`lg:justify-end items-center lg:pr-[11.188rem]`,
+  position === 'start' && tw`lg:justify-end items-center lg:pr-[11.188rem] `,
   ` animation: fadeInBottom 1.5s both;
     @keyframes fadeInBottom{
       0%{
