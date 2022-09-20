@@ -1,5 +1,5 @@
 import Footer from '.'
-import { links, media } from '@/components/Navbars/Navbar/data'
+import { links, media, touch } from '@/components/Navbars/Navbar/data'
 //stories
 import * as DropdownStories from '@/components/Dropdown/Dropdown.stories'
 export default {
@@ -13,6 +13,7 @@ export const Default = Template.bind({})
 Default.args = {
   links,
   media,
+  touch,
   languages: [...DropdownStories.Default.args.languages],
   logo: 'https://d3lq8p6p6r1qxf.cloudfront.net/1660584751398.png',
   t: (string) => string,

@@ -29,12 +29,20 @@ import { useBreakpoint } from '@/hooks'
 function Footer({
   links,
   media,
+  touch,
   languages,
   defaultLanguage,
   color = 'white',
   bgColor = 'black',
   logo,
   t,
+  linksLabel="quck links",
+  contact = "contact",
+  inTouch = "get in touch",
+  emailLabel = "hAVE A BLAST?",
+  placeholder = "ENTER EMAIL",
+  submit = "Submit",
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor id placerat ornare sit dignissim senectus. Tortor ut eget est risus nisi venenatis."
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -83,7 +91,7 @@ function Footer({
           <FooterText>
             <Paragraph
               fontSize="sm"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor id placerat ornare sit dignissim senectus. Tortor ut eget est risus nisi venenatis."
+              description={description}
             />
           </FooterText>
         </div>
@@ -91,33 +99,31 @@ function Footer({
           <Section>
             <Label
               fontSize="sm"
-              labelText="get in touch"
+              labelText={inTouch}
               textTransform="uppercase"
               weight="700"
             />
             <Element>
-              <Label
-              color={color}
-                fontSize="xs"
-                labelText="MON-FRIDAY"
-              />
-              <Label
-              color={color}
-                fontSize="xs"
-                labelText="10AM-11PM"
-              />
+            {!isEmpty(touch) &&
+                touch.map((item, index) => (
+                  <Label
+                  key={index}
+                  color={color}
+                    fontSize="xs"
+                    labelText={item.label}
+                  />
+                ))}
             </Element>
           </Section>
           <Section>
             <Label
-              // color={theme.colors.text.secondary}
               fontSize="sm"
-              labelText="contact"
+              labelText={contact}
               textTransform="uppercase"
               weight="700"
             />
             <div>
-              {!isEmpty(links) &&
+              {!isEmpty(media) &&
                 media.map((item, index) => (
                   <FooterLink key={index}>
                     <Link
@@ -145,7 +151,7 @@ function Footer({
           <FooterLinks data-testid="links">
             <Label
               fontSize="sm"
-              labelText="quck links"
+              labelText={linksLabel}
               textTransform="uppercase"
               weight="700"
             />
@@ -172,19 +178,20 @@ function Footer({
         <Rows>
           <Label
             fontSize="sm"
-            labelText="hAVE A BLAST?"
+            labelText={emailLabel}
             textTransform="uppercase"
             weight="700"
           />
           <Input
             onChange={handleInputChange}
-            placeholder="ENTER EMAIL"
+            placeholder={placeholder}
             error={inputValue.error}
             bgColor={bgColor}
           />
           <Button
             color={bgColor}
-            label="Submit"
+            bgColor="white"
+            label={submit}
             variant="secondary"
             handleClick={() => handleSubmit()}
           />
@@ -213,6 +220,13 @@ function Footer({
 Footer.propTypes = {
   color: PropTypes.string,
   bgColor: PropTypes.string,
+  inTouch: PropTypes.string,
+  description: PropTypes.string,
+  contact: PropTypes.string,
+  linksLabel: PropTypes.string,
+  emailLabel: PropTypes.string,
+  placeholder: PropTypes.string,
+  submit: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,

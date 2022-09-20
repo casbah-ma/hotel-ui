@@ -40,3 +40,14 @@ export const media = [
     icon: LinkedIn
   },
 ]
+
+export const touch = [
+  {
+    label: 'MON-FRIDAY',
+  },
+  {
+    label: '10AM-11PM',
+  },
+]
+
+
