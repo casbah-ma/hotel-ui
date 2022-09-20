@@ -18,4 +18,9 @@ Default.args = {
   logo: 'https://d3lq8p6p6r1qxf.cloudfront.net/1660584751398.png',
   t: (string) => string,
   defaultLanguage: 'en',
+  Address: '1234 Street Name, City Name, United States',
+  contacts: {
+    phone: '+1 234 567 890',
+    email: 'hotelui@ctd.ma',
+  },
 }

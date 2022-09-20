@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Light.otf');
+  src: url('/fonts/Gilroy-Medium.ttf');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'Gilroy-rg';
+  src: url('/fonts/Gilroy-Regular.ttf');
   font-display: fallback;
 }
 
+@font-face {
+  font-family: 'Gilroy-semibold';
+  src: url('/fonts/Gilroy-Semibold.ttf');
+  font-display: fallback;
+}

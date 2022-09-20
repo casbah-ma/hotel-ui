@@ -54,8 +54,8 @@ WithFreeText.args = {
   subtitle: '13M X 7M',
   actionProps: { ...ButtonStories.Dark.args },
   variant: 'v1',
+  href: '/',
   link: {
-    href: '/',
     defaultLanguage: 'en',
     languages: ['en', 'fr', 'ar'],
   },

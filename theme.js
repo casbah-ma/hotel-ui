@@ -1,11 +1,14 @@
 export default {
+  letterSpacing: '',
+  gradientRgba: 'rgba(72, 109, 195, 0.1)',
   colors: {
     text: {
       primary: '#000',
       secondary: '#fff',
     },
     bg: {
-      primary: '#fff',
+      primary: '#486DC3',
+      primaryLight: '#21b67c29',
       secondary: '#000',
       tertiary: '#fafafa',
       additional: '#00bcd4',
@@ -18,8 +21,12 @@ export default {
       white: '#fff',
     },
     DatesCore: {
-      bg: '#000',
-      text: '#fff',
+      bg: '#fff',
+      text: '#000',
+    },
+    gradient: {
+      primary: 'rgba(72, 109, 195, 0.1) 0%',
+      secondary: '#486DC3 96.03%',
     },
   },
 }

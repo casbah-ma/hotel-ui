@@ -19,7 +19,7 @@ function Swiper_v2({ header, navigation, children, autoplay }) {
   const [swiperRef, setSwiperRef] = useState(null)
 
   return (
-    <SwiperContainer role="slider">
+    <SwiperContainer role="slider" header={!!header}>
       <SwiperInfo>
         {!isEmpty(header) && <Header {...header} />}
         {navigation && bp === 'lg' && (
