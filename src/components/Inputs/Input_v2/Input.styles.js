@@ -2,20 +2,19 @@ import tw, { styled } from 'twin.macro'
 
 export const InputContainer = tw.div`relative w-full`
 
-export const Placeholder = styled.label(({ theme }) => [
-  `font-family: ${theme.fontFamily.secondary}; pointer-events: none ;
-  font-size:1em;
-  transition: 0.5s`,
+export const Placeholder = styled.label(
   tw`absolute left-0 p-[1.4rem]`,
-])
+  `pointer-events: none ;
+  font-size:1em;
+  transition: 0.5s`
+)
 
 export const StyledInput = styled.input(
   ({ color, bgColor, error, isTextaria, theme, size, focus }) => [
     //base styles
-    `font-family: ${theme.fontFamily.secondary};`,
     tw`
        w-full h-[4.25rem] p-2 pl-2 md:pl-6 rounded-xl
-       border-[0.063rem] border-solid 
+       border-[0.063rem] border-solid
        outline-none text-base leading-7 relative
     `,
     bgColor
@@ -44,13 +43,12 @@ export const StyledInput = styled.input(
         padding: 0 6px;
         }`,
 
-    bgColor
-      ? `&:focus ~ label, &:valid ~ label{ 
+      bgColor ? `&:focus ~ label, &:valid ~ label{ 
         background: ${bgColor};
 background: conic-gradient(from 90deg,${bgColor} 180deg, white 180deg);
     
-     }`
-      : `&:focus ~ label, &:valid ~ label{ 
+     }` :
+     `&:focus ~ label, &:valid ~ label{ 
       background: ${theme.colors.bg.primary};
 background: conic-gradient(from 90deg,${theme.colors.bg.primary} 180deg, white 180deg);
     
