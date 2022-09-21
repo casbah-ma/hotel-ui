@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 export const InputContainer = tw.div`relative w-full`
 
 export const Placeholder = styled.label(
-  tw`absolute left-0 p-[1.4rem] font-secondary`,
+  tw`absolute left-0 p-[1.4rem]`,
   `pointer-events: none ;
   font-size:1em;
   transition: 0.5s`
@@ -14,7 +14,7 @@ export const StyledInput = styled.input(
     //base styles
     tw`
        w-full h-[4.25rem] p-2 pl-2 md:pl-6 rounded-xl
-       border-[0.063rem] border-solid font-secondary
+       border-[0.063rem] border-solid
        outline-none text-base leading-7 relative
     `,
     bgColor
