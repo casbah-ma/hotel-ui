@@ -21,7 +21,7 @@ export const AnimatedHeroContent = styled.div(({ position }) => [
 ])
 
 export const AnimatedHeroTitle = styled.div(({ position }) => [
-  position === 'start' && tw`w-[37.5rem]`,
+  position === 'start' && tw`lg:w-[37.5rem]`,
 ])
 
 export const AnimatedHeroButtonText = styled.span(({ theme }) => [
