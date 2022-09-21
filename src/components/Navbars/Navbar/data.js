@@ -1,5 +1,4 @@
-import {Instagram,LinkedIn} from '@/components/Icons'
-
+import { Instagram, LinkedIn } from '@/components/Icons'
 
 export const links = [
   {
@@ -32,11 +31,20 @@ export const media = [
   {
     label: 'Instagram',
     link: '/Instagram',
-    icon: Instagram
+    icon: Instagram,
   },
   {
     label: 'LinkedIn',
     link: '/Instagram',
-    icon: LinkedIn
+    icon: LinkedIn,
+  },
+]
+
+export const touch = [
+  {
+    label: 'MON-FRIDAY',
+  },
+  {
+    label: '10AM-11PM',
   },
 ]

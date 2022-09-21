@@ -1,13 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const merge = require('deepmerge')
 
-const fonts = {
-  primary: ['Gilroy', 'sans-serif'],
-  secondary: ['Gilroy-rg', 'sans-serif'],
-  tertiary: ['Gilroy-semibold', 'sans-serif'],
-  indie: ['Indie Flower', 'cursive'],
-}
-
 const hotelUiTailwindConfig = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -31,7 +24,6 @@ const hotelUiTailwindConfig = {
       boxShadow: {
         card: '2px 4px 24px 10px rgba(0, 0, 0, 0.04)',
       },
-      fontFamily: fonts,
     },
   },
 }

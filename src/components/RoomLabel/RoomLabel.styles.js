@@ -17,6 +17,13 @@ export const Container = styled.div(
   ]
 )
 
-export const Number = tw.p`self-start font-primary text-2xl md:text-4xl mb-2`
+export const Number = styled.p(({ color, theme }) => [
+  //base styles
+  `font-family: ${theme.fontFamily.primary};`,
+  tw`self-start  text-2xl md:text-4xl mb-2`,
+])
 
-export const Name = tw.p`font-secondary text-xs md:text-sm`
+export const Name = styled.p(({ theme }) => [
+  `font-family: ${theme.fontFamily.secondary};`,
+  tw`text-xs md:text-sm`,
+])

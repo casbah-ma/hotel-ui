@@ -16,8 +16,9 @@ import {
   Input,
   Icon,
   Section,
-  Element,
   IconLabel,
+  FooterShapes,
+  ShapesSection,
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
@@ -35,6 +36,12 @@ function Footer({
   bgColor = 'black',
   logo,
   t,
+  linksLabel,
+  emailLabel,
+  placeholder,
+  submit,
+  description,
+  shapes,
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -64,161 +71,154 @@ function Footer({
 
   const theme = useTheme()
   return (
-    <FooterContainer
-      data-testid="footer-container"
-      color={color}
-      bgColor={bgColor}
-    >
-      <TopContent>
-        <div>
-          <FooterLogo>
-            <Image
-              src={logo}
-              alt="logo"
-              width={200}
-              height={bp === 'md' || bp === 'lg' ? 200 : 100}
-              objectFit="contain"
-            />
-          </FooterLogo>
-          <FooterText>
-            <Paragraph
-              fontSize="sm"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor id placerat ornare sit dignissim senectus. Tortor ut eget est risus nisi venenatis."
-            />
-          </FooterText>
-        </div>
-        <Rows>
-          <Section>
-            <Label
-              fontSize="sm"
-              labelText="get in touch"
-              textTransform="uppercase"
-              weight="700"
-            />
-            <Element>
-              <Label
-              color={color}
-                fontSize="xs"
-                labelText="MON-FRIDAY"
+    <ShapesSection color={color} bgColor={bgColor}>
+      <FooterShapes>{shapes}</FooterShapes>
+      <FooterContainer data-testid="footer-container">
+        <TopContent>
+          <div>
+            <FooterLogo>
+              <Image
+                src={logo}
+                alt="logo"
+                width={200}
+                height={bp === 'md' || bp === 'lg' ? 200 : 100}
+                objectFit="contain"
               />
-              <Label
-              color={color}
-                fontSize="xs"
-                labelText="10AM-11PM"
+            </FooterLogo>
+            <FooterText>
+              <Paragraph
+                fontSize="sm"
+                description={description ? description : t('footerDescription')}
               />
-            </Element>
-          </Section>
-          <Section>
-            <Label
-              // color={theme.colors.text.secondary}
-              fontSize="sm"
-              labelText="contact"
-              textTransform="uppercase"
-              weight="700"
-            />
-            <div>
-              {!isEmpty(links) &&
-                media.map((item, index) => (
-                  <FooterLink key={index}>
-                    <Link
-                      href={item.link}
-                      languages={languages}
-                      defaultLanguage={defaultLanguage}
-                    >
-                      <IconLabel>
-                        <Icon>
-                          <item.icon width="24px" height="24px" color={color} />
-                        </Icon>
+            </FooterText>
+          </div>
+          <Rows>
+            <Section>
+              <Label
+                fontSize="sm"
+                labelText={t('social')}
+                textTransform="uppercase"
+                weight="700"
+              />
+              <div>
+                {!isEmpty(media) &&
+                  media.map((item, index) => (
+                    <FooterLink key={index}>
+                      <a target="_blank" href={item.link}>
+                        <IconLabel>
+                          <Icon>
+                            <item.icon
+                              width="24px"
+                              height="24px"
+                              color={color}
+                            />
+                          </Icon>
+                          <Label
+                            color={color}
+                            fontSize="sm"
+                            labelText={t(item.label)}
+                          />
+                        </IconLabel>
+                      </a>
+                    </FooterLink>
+                  ))}
+              </div>
+            </Section>
+          </Rows>
+          <Rows>
+            <FooterLinks data-testid="links">
+              <Label
+                fontSize="sm"
+                labelText={linksLabel ? linksLabel : t('navigation')}
+                textTransform="uppercase"
+                weight="700"
+              />
+              <div>
+                {!isEmpty(links) &&
+                  links.map((item, index) => (
+                    <FooterLink key={index}>
+                      <Link
+                        href={item.link}
+                        languages={languages}
+                        defaultLanguage={defaultLanguage}
+                      >
                         <Label
-                        color={color}
-                          fontSize="sm"
+                          color={color}
+                          fontSize="xs"
                           labelText={t(item.label)}
                         />
-                      </IconLabel>
-                    </Link>
-                  </FooterLink>
-                ))}
-            </div>
-          </Section>
-        </Rows>
-        <Rows>
-          <FooterLinks data-testid="links">
+                      </Link>
+                    </FooterLink>
+                  ))}
+              </div>
+            </FooterLinks>
+          </Rows>
+          <Rows>
             <Label
               fontSize="sm"
-              labelText="quck links"
+              labelText={emailLabel ? emailLabel : t('footeremailLabel')}
               textTransform="uppercase"
               weight="700"
             />
-            <div>
-              {!isEmpty(links) &&
-                links.map((item, index) => (
-                  <FooterLink key={index}>
-                    <Link
-                      href={item.link}
-                      languages={languages}
-                      defaultLanguage={defaultLanguage}
-                    >
-                      <Label
-                      color={color}
-                        fontSize="xs"
-                        labelText={t(item.label)}
-                      />
-                    </Link>
-                  </FooterLink>
-                ))}
-            </div>
-          </FooterLinks>
-        </Rows>
-        <Rows>
-          <Label
-            fontSize="sm"
-            labelText="hAVE A BLAST?"
-            textTransform="uppercase"
-            weight="700"
-          />
-          <Input
-            onChange={handleInputChange}
-            placeholder="ENTER EMAIL"
-            error={inputValue.error}
-            bgColor={bgColor}
-          />
-          <Button
-            color={bgColor}
-            label="Submit"
-            variant="secondary"
-            handleClick={() => handleSubmit()}
-          />
-        </Rows>
-      </TopContent>
-      <BottomContent>
-        <FooterDivider />
-        <FooterDividerText data-testid="copyright">
-          <Label
-            // color={theme.colors.text.secondary}
-            fontSize="xs"
-            labelText="Terms of service"
-            textTransform="uppercase"
-          />
-          <Label
-            fontSize="xs"
-            labelText={`Copyrights © ${year.getFullYear()}`}
-            textTransform="uppercase"
-          />
-        </FooterDividerText>
-      </BottomContent>
-    </FooterContainer>
+            <Input
+              value={inputValue.email}
+              onChange={handleInputChange}
+              placeholder={placeholder ? placeholder : t('footerplaceholder')}
+              error={inputValue.error}
+              bgColor={bgColor}
+            />
+            <Button
+              color={bgColor}
+              bgColor="white"
+              label={submit ? submit : t('submit')}
+              variant="secondary"
+              handleClick={() => handleSubmit()}
+            />
+          </Rows>
+        </TopContent>
+        <BottomContent>
+          <FooterDivider />
+          <FooterDividerText data-testid="copyright">
+            <Link
+              href="/policies"
+              defaultLanguage={defaultLanguage}
+              languages={languages}
+            >
+              <Label
+                fontSize="xs"
+                labelText={t('terms')}
+                textTransform="uppercase"
+              />
+            </Link>
+            <Label
+              fontSize="xs"
+              labelText={`Copyrights © ${year.getFullYear()}`}
+              textTransform="uppercase"
+            />
+          </FooterDividerText>
+        </BottomContent>
+      </FooterContainer>
+    </ShapesSection>
   )
 }
 
 Footer.propTypes = {
   color: PropTypes.string,
   bgColor: PropTypes.string,
+  inTouch: PropTypes.string,
+  description: PropTypes.string,
+  contact: PropTypes.string,
+  linksLabel: PropTypes.string,
+  emailLabel: PropTypes.string,
+  placeholder: PropTypes.string,
+  submit: PropTypes.string,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       link: PropTypes.string,
     })
   ),
+  shapes: PropTypes.element,
 }
 
 export default Footer

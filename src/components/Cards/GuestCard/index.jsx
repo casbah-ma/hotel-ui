@@ -7,7 +7,7 @@ import {
   GuestContainer,
   GuestActions,
 } from './GuestCard.styles'
-import theme from '@/components/../../theme'
+import theme from '../../../../theme'
 
 function GuestCard({ title, onMinusClick, onPlusClick, value }) {
   return (
@@ -31,6 +31,7 @@ function GuestCard({ title, onMinusClick, onPlusClick, value }) {
               disabled: value === 0,
             }}
             handleClick={onMinusClick}
+            bgColor={theme.colors.bg.secondary}
           />
           <Button
             testID={'plus-button'}
@@ -42,6 +43,7 @@ function GuestCard({ title, onMinusClick, onPlusClick, value }) {
               label: '',
             }}
             handleClick={onPlusClick}
+            bgColor={theme.colors.bg.secondary}
           />
         </GuestActions>
       </GuestActionsContainer>

@@ -9,8 +9,11 @@ import {
   AnimatedHeroChildrens,
   AnimatedHeroButton,
   AnimatedHeroButtonText,
+  AnimatedHeroVideo,
+  AnimatedHeroTitle,
 } from './AnimatedHero_v2.styles'
 import { StyledArrow } from '@/components/Icons'
+import { isVideoUrl } from '@/helpers/utils'
 
 function AnimatedHero_v2({
   image,
@@ -20,24 +23,33 @@ function AnimatedHero_v2({
   children,
   position,
   gradient,
+  playVideo = true,
 }) {
   return (
     <AnimatedHeroContainer position={position} gradient={gradient}>
       <AnimatedHeroImage>
-        <Image
-          style={{
-            borderRadius: '8px',
-          }}
-          alt="hero"
-          src={image}
-          layout="fill"
-          objectFit="cover"
-        />
+        {isVideoUrl(image) ? (
+          <AnimatedHeroVideo loop muted autoPlay={playVideo}>
+            <source src={image} type="video/mp4" />
+          </AnimatedHeroVideo>
+        ) : (
+          <Image
+            style={{
+              borderRadius: '8px',
+            }}
+            alt="hero"
+            src={image}
+            layout="fill"
+            objectFit="cover"
+          />
+        )}
       </AnimatedHeroImage>
       <AnimatedHeroChildrens position={position}>
         <AnimatedHeroContent position={position}>
           <Title title={title} color="white" level="2" />
-          <Paragraph description={subtitle} color="white" />
+          <AnimatedHeroTitle position={position}>
+            <Paragraph description={subtitle} color="white" />
+          </AnimatedHeroTitle>
         </AnimatedHeroContent>
         <AnimatedHeroButton>
           {children}
