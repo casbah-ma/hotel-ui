@@ -14,12 +14,14 @@ import {
   AddressContainer,
   FooterLinkWrapper,
   ContactContainer,
+  InputContainer,
 } from './Footer.styles'
-import { isEmpty } from '@/helpers/utils'
+import { isEmail, isEmpty } from '@/helpers/utils'
 import PropTypes from 'prop-types'
 import { useTheme } from 'styled-components'
 import Image from 'next/image'
 import { useBreakpoint } from '@/hooks'
+import Input from '@/components/Inputs/Input'
 
 function Footer({
   links,
@@ -29,6 +31,8 @@ function Footer({
   color,
   bgColor,
   Address,
+  placeholder = "Enter an email address",
+  submit= "Submit",
   hotelName,
   logo,
   contacts,
@@ -38,6 +42,31 @@ function Footer({
   const [year, setYear] = useState(new Date())
 
   const theme = useTheme()
+
+  const [inputValue, setInputValue] = useState({
+    email: '',
+    error: false,
+    errorMessage: '',
+  })
+
+  // Handle input change
+  const handleInputChange = (e) => {
+    const { value } = e.target
+    isEmail(value)
+      ? setInputValue({ email: value, error: false })
+      : setInputValue({
+          email: value,
+          error: true,
+          errorMessage: 'Invalid email',
+        })
+  }
+
+  // Handle input submit
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    !isEmpty(inputValue.email) && alert('Thank you!')
+  }
+
   return (
     <FooterContainer
       data-testid="footer-container"
@@ -53,11 +82,31 @@ function Footer({
           alt="logo"
         />
       </FooterLogo>
-      <FooterText>
-        <Paragraph description={description} />
-      </FooterText>
+      {description && (
+        <FooterText>
+          <Paragraph description={description} />
+        </FooterText>
+      )}
+      <InputContainer>
+        {/* <InputError>{inputValue.errorMessage}</InputError> */}
+        <Input
+          testID="footer-input"
+          onChange={handleInputChange}
+          placeHolder={placeholder}
+          color="white"
+          error={inputValue.error}
+          withButton
+          buttonProps={{
+            buttonTestID: 'footer-button',
+            buttonLabel: submit,
+            onClick: handleSubmit,
+          }}
+        />
+      </InputContainer>
       <AddressContainer>
-        <Label labelText={Address} color={theme.colors.text.secondary} />
+        {Address && (
+          <Label labelText={Address} color={theme.colors.text.secondary} />
+        )}
         {(contacts?.phone || contacts?.email) && (
           <ContactContainer>
             <Paragraph description={`Tel: ${contacts?.phone}`} />
@@ -114,6 +163,16 @@ function Footer({
 Footer.propTypes = {
   color: PropTypes.string,
   bgColor: PropTypes.string,
+  description: PropTypes.string,
+  Address: PropTypes.string,
+  placeholder: PropTypes.string,
+  submit: PropTypes.string,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      phone: PropTypes.string,
+      email: PropTypes.string,
+    })
+  ),
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
