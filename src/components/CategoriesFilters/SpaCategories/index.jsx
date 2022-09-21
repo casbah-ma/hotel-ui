@@ -1,18 +1,25 @@
 import PropTypes from 'prop-types'
 //components
+import Paragraph from '@/components/Paragraph'
 import FilterBar from '@/components/FilterBar'
-import RoomCard_v2 from '@/components/Cards/RoomCard_v2'
+import RoomCard from '@/components/Cards/RoomCard'
 import Header from '@/components/Header'
-import Swiper_v2 from '@/components/Swipers/Swiper_v2'
-import { SwiperSlide } from 'swiper/react'
 import Button from '@/components/Button'
+import Swiper from '@/components/Swipers/Swiper'
+import { SwiperSlide } from 'swiper/react'
 //styles
-import { Container, Wrapper } from './CategoriesFilter_v2.styles'
+import { Container } from './SpaCategories.styles'
 //helpers
 import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
-function CategoriesFilter_v2({ categories, headerProps, actionProps, link }) {
+function SpaCategories({
+  headerProps,
+  categories,
+  bgColor,
+  actionProps,
+  link,
+}) {
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {
@@ -44,35 +51,36 @@ function CategoriesFilter_v2({ categories, headerProps, actionProps, link }) {
   )
   return (
     <Container>
-      <Wrapper>
-        <Header {...headerProps} />
-        <FilterBar
-          active={active}
-          handleActive={handleActive}
-          categories={getTypes(categories)}
-          variant="v2"
-        />
-      </Wrapper>
-      <Swiper_v2 navigation={true}>
+      <Header {...headerProps} />
+      <FilterBar
+        active={active}
+        handleActive={handleActive}
+        categories={getTypes(categories)}
+        variant="v1"
+      />
+      <Swiper type="card">
         {!isEmpty(filteredCategories) &&
           filteredCategories.map((category, index) => (
-            <SwiperSlide key={index}>
-              <RoomCard_v2
+            <SwiperSlide key={index} className="md:w-[25rem]">
+              <RoomCard
                 actionProps={actionProps}
                 title={category.name}
                 subtitle={category.subtitle}
-                text={category.description}
                 href={category.href}
                 link={link}
-              />
+                variant="v1"
+                bgColor={bgColor}
+              >
+                <Paragraph fontSize="sm" description={category.description} />
+              </RoomCard>
             </SwiperSlide>
           ))}
-      </Swiper_v2>
+      </Swiper>
     </Container>
   )
 }
 
-CategoriesFilter_v2.propTypes = {
+SpaCategories.propTypes = {
   headerProps: PropTypes.shape(Header.propTypes),
   actionProps: PropTypes.shape(Button.prototype),
   categories: PropTypes.arrayOf(
@@ -85,4 +93,4 @@ CategoriesFilter_v2.propTypes = {
   ),
 }
 
-export default CategoriesFilter_v2
+export default SpaCategories
