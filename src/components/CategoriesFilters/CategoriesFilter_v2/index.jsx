@@ -58,6 +58,7 @@ function CategoriesFilter_v2({ categories, headerProps, actionProps, link }) {
           filteredCategories.map((category, index) => (
             <SwiperSlide key={index}>
               <RoomCard_v2
+                actionProps={actionProps}
                 title={category.name}
                 subtitle={category.subtitle}
                 text={category.description}
@@ -79,7 +80,7 @@ CategoriesFilter_v2.propTypes = {
       type: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string,
-      subtitle: PropTypes.string.isRequired,
+      subtitle: PropTypes.string,
     })
   ),
 }
