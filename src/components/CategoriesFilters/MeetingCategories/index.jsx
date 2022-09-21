@@ -85,12 +85,18 @@ function MeetingCategories({ categories, headerProps, link }) {
 }
 
 MeetingCategories.propTypes = {
-  categories: PropTypes.shape(FilterBar.propTypes),
   headerProps: PropTypes.shape(Header.propTypes),
-  filteredCategories: PropTypes.arrayOf(
+  categories: PropTypes.arrayOf(
     PropTypes.shape({
-      ...RoomCard.propTypes,
-      ...InfoItems.propTypes,
+      type: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        variant: PropTypes.string,
+        src: PropTypes.string,
+      }),
+      subtitle: PropTypes.string.isRequired,
+      sq_M: PropTypes.string.isRequired,
+      guests: PropTypes.string.isRequired,
     })
   ),
 }
