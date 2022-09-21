@@ -1,4 +1,5 @@
 import { isValid, format } from 'date-fns'
+const validYoutubeUrl = /^.*\.(mp4)$/
 
 export const isEmpty = (any) => {
   if (!any) return true
@@ -55,6 +56,18 @@ export const bookingUrl = (filters, baseUrl) => {
       })
     )
   )
+}
+
+export const isYoutubeUrl = (url) => {
+  if (isEmpty(url)) return false
+  if (url.match(validYoutubeUrl)) return true
+  return false
+}
+
+export const isVideoUrl = (url) => {
+  if (isEmpty(url)) return false
+  if (url.match(validYoutubeUrl)) return true
+  return false
 }
 
 export const bookNow = (baseUrl) => {

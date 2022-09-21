@@ -50,7 +50,7 @@ export const sapcingBottom = {
 export const sapcingLeft = {
   none: tw`pl-0`,
   xs: tw`pl-1 md:pl-6`,
-  sm: tw`pl-1 md:pl-0 lg:pl-[7.5rem]`,
+  sm: tw`pl-1 md:pl-0 lg:pl-[7.5rem] 2xl:pl-[15rem]`,
   md: tw`pl-1 md:pl-32 lg:pl-60`,
   lg: tw`pl-[7.5rem] md:pl-[15rem] lg:pl-[25rem]`,
 }
@@ -58,7 +58,7 @@ export const sapcingLeft = {
 export const sapcingRight = {
   none: tw`pr-0`,
   xs: tw`pr-1 md:pr-6`,
-  sm: tw`pr-1 md:pr-0 lg:pr-[7.5rem]`,
+  sm: tw`pr-1 md:pr-0 lg:pr-[7.5rem] 2xl:pr-[15rem]`,
   md: tw`pr-1 md:pr-40 lg:pr-60`,
   lg: tw`pr-1 md:pr-[15rem] lg:pr-[25rem]`,
 }

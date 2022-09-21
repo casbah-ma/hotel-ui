@@ -71,7 +71,7 @@ function Navbar_v2({
 
   return (
     <NavbarContainer
-      bgColor={bgColor}
+      bgColor={hasBackground ? bgColor : ''}
       color={color}
       isHidden={isHidden}
       hasBackground={hasBackground}
@@ -96,7 +96,11 @@ function Navbar_v2({
                   languages={languages}
                   defaultLanguage={defaultLanguage}
                 >
-                  <Label labelText={t(item.label)} fontSize="sm" />
+                  <Label
+                    labelText={t(item.label)}
+                    fontSize="sm"
+                    color={color}
+                  />
                 </Link>
               </ListItem>
             ))}
@@ -105,7 +109,11 @@ function Navbar_v2({
       <ButtonWithLanguages>
         <LanguageMenu>
           <GlobeAltIcon width={21} />
-          <Dropdown languages={languages} defaultLanguage={defaultLanguage} />
+          <Dropdown
+            languages={languages}
+            defaultLanguage={defaultLanguage}
+            color={color}
+          />
         </LanguageMenu>
         <Button {...actionProps} handleClick={() => bookNow(bookingUrl)} />
       </ButtonWithLanguages>

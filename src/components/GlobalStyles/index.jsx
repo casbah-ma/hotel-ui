@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 import '../../styles/datepicker.css'
+import '@/styles/global.css'
 
 const CustomStyles = createGlobalStyle`
 .full-width {
@@ -99,7 +100,7 @@ const CustomStyles = createGlobalStyle`
 .menu {
      ${tw`relative inline-block text-left`}
      button {
-      ${tw`inline-flex justify-center gap-[0.8rem] bg-transparent`}
+      ${tw`inline-flex justify-center gap-[0.2rem] bg-transparent`}
      }
 
      svg {

@@ -20,16 +20,12 @@ function BookingBar_v3({
   guestValues,
   onGuestChange,
   bookingTitles,
-  onDatesChanges,
+  onDatesChange,
   buttonProps,
   baseUrl,
 }) {
   const bp = useBreakpoint()
   const [showContent, setShowContent] = useState(false)
-  const [datesValues, setDatesValues] = useState({
-    startDate: null,
-    endDate: null,
-  })
 
   // get breakPoint for mobile version (p.s: i will change it to useMemo for performonce)
   useEffect(() => {
@@ -49,9 +45,21 @@ function BookingBar_v3({
   const handleDatesChanges = (e) => {
     e.preventDefault()
     const { name, value } = e?.target
-    onDatesChanges(name, value)
+    onDatesChange(name, value)
   }
 
+  // Handle availability of guests
+  const checkAvailability = (dates, guestValues, baseUrl) => {
+    const filters = {
+      checkin_date: dates?.startDate,
+      checkout_date: dates?.endDate,
+      adult_count: guestValues?.adults,
+      child_count: guestValues?.kids,
+    }
+    buttonProps.onClick
+      ? buttonProps.onClick()
+      : window.open(bookingUrl(filters, baseUrl), '_blank')
+  }
   return (
     <BookingBarContainer showContent={showContent}>
       {!showContent ? (
@@ -78,7 +86,9 @@ function BookingBar_v3({
           <ChevronDownIcon width={16} height={16} />
         </ShowContentButton>
       ) : (
-        <BookingButton onClick={buttonProps.onClick}>
+        <BookingButton
+          onClick={() => checkAvailability(dates, guestValues, baseUrl)}
+        >
           {buttonProps?.text}
         </BookingButton>
       )}

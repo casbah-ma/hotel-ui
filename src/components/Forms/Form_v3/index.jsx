@@ -3,7 +3,6 @@ import { Formv2Container, StyledButton, StyledLine } from './Form.styles'
 import PropTypes from 'prop-types'
 import Button from '@/components/Button'
 
-
 const Form_v2 = function ({ formInputs, onChange, onClick }) {
   const {
     fullName,
@@ -14,60 +13,57 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     messageError,
     buttonLabel,
     whithline,
-    color= '#000000',
+    color = '#000000',
   } = formInputs
   return (
     <Formv2Container data-testid="Formv3-container">
-    <Input
-      testID="fullName"
-      name="fullName"
-      value={fullName}
-      error={!!fullNameError}
-      color="#CBCBCB"
-      bgColor="#FAFAFA"
-      onChange={onChange}
-      placeHolder="Full Name"
-      focus={color}
-    />
-    <Input
-      testID="email"
-      name="email"
-      error={!!emailError}
-      color="#CBCBCB"
-      bgColor="#FAFAFA"
-      onChange={onChange}
-      placeHolder="Email"
-      value={email}
-      focus={color}
-    />
-    <Input
-      testID="message"
-      name="message"
-      error={!!messageError}
-      type="textarea"
-      color="#CBCBCB"
-      bgColor="#FAFAFA"
-      onChange={onChange}
-      placeHolder="Message"
-      value={message}
-      size="12.5rem"
-      focus={color}
-    />
-    {
-      whithline && 
-    <StyledLine></StyledLine>
-    }
-    <StyledButton>
-    <Button
-        testID="submit-button"
-        bgColor={color}
-        color="#fff"
-        label={buttonLabel}
-        onClick={onClick}
-        variant="secondary"
+      <Input
+        testID="fullName"
+        name="fullName"
+        value={fullName}
+        error={!!fullNameError}
+        color="#CBCBCB"
+        bgColor="#FAFAFA"
+        onChange={onChange}
+        placeHolder="Full Name"
+        focus={color}
       />
-    </StyledButton>
-  </Formv2Container>
+      <Input
+        testID="email"
+        name="email"
+        error={!!emailError}
+        color="#CBCBCB"
+        bgColor="#FAFAFA"
+        onChange={onChange}
+        placeHolder="Email"
+        value={email}
+        focus={color}
+      />
+      <Input
+        testID="message"
+        name="message"
+        error={!!messageError}
+        type="textarea"
+        color="#CBCBCB"
+        bgColor="#FAFAFA"
+        onChange={onChange}
+        placeHolder="Message"
+        value={message}
+        size="12.5rem"
+        focus={color}
+      />
+      {whithline && <StyledLine></StyledLine>}
+      <StyledButton>
+        <Button
+          testID="submit-button"
+          bgColor={color}
+          color="#fff"
+          label={buttonLabel}
+          onClick={onClick}
+          variant="secondary"
+        />
+      </StyledButton>
+    </Formv2Container>
   )
 }
 
@@ -80,8 +76,7 @@ Form_v2.propTypes = {
     message: PropTypes.string,
     messageError: PropTypes.string,
     buttonLabel: PropTypes.string,
-    whithline:PropTypes.boolean,
-    color:PropTypes.string,
+    color: PropTypes.string,
   }),
   onChange: PropTypes.func,
   onClick: PropTypes.func,

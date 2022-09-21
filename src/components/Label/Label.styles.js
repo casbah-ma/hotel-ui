@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 
 export const LabelText = styled.span(
   ({ color, theme, textTransform, weight }) => [
-    tw`font-primary`,
+    `font-family: ${theme.fontFamily.primary};`,
     ({ fontSize }) => labelFontSizes[fontSize],
     color ? `color: ${color};` : `color: ${theme.colors.text.primary}`,
     textTransform ? `text-transform: ${textTransform};` : ``,

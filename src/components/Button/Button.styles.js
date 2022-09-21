@@ -12,8 +12,9 @@ export const buttonsVariant = {
 export const StyledButton = styled.button(
   ({ disabled, color, bgColor, theme }) => [
     //base style
+    `font-family: ${theme.fontFamily.secondary};`,
     tw`px-3 py-3 lg:px-5 border border-gray-700
-    font-secondary font-semibold text-sm 
+    font-semibold text-sm 
     md:text-base lg:text-xl transform hover:scale-100 `,
     //variants
     ({ variant }) => buttonsVariant[variant],
@@ -21,7 +22,7 @@ export const StyledButton = styled.button(
     bgColor
       ? `background-color: ${bgColor};`
       : `background-color: ${theme.colors.bg.primary};`,
-    disabled && tw`bg-gray-100`,
+    disabled && tw`bg-gray-100 text-black`,
   ]
 )
 

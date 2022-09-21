@@ -21,7 +21,7 @@ export default {
       }
 
       // handle Dates Changes
-      const onDatesChanges = (name, value) => {
+      const onDatesChange = (name, value) => {
         setDates({ ...dates, [name]: value })
       }
       return (
@@ -42,7 +42,7 @@ export default {
           dates={dates}
           guestValues={guestValues}
           onGuestChange={onGuestChange}
-          onDatesChanges={onDatesChanges}
+          onDatesChange={onDatesChange}
         />
       )
     },

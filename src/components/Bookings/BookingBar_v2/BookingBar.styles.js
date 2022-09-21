@@ -10,11 +10,12 @@ export const BookingButton = styled.button(({ theme }) => [
 
 export const BookingMobileButton = styled.button(({ theme }) => [
   tw`py-3 px-5 border border-gray-700 mt-4
-  font-secondary font-semibold text-sm 
+   font-semibold text-sm 
   md:text-base lg:text-xl transform hover:scale-100 
   rounded-xl border-none max-w-[160px] min-w-min whitespace-nowrap`,
   `background-color: ${theme.colors.bg.primary};
   color: ${theme.colors.text.primary};
+  font-family: ${theme.fontFamily.secondary};
   `,
 ])
 

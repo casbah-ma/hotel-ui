@@ -14,7 +14,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { Next, Prev } from '@/components/Icons'
 
-function Swiper_v3({ header, autoplay, children }) {
+function Swiper_v3({ header, autoplay = true, children }) {
   const [swiperRef, setSwiperRef] = useState(null)
   const bp = useBreakpoint()
 
