@@ -1,7 +1,8 @@
 import CategoriesSwiper from '.'
 import categories from './data'
+import * as ButtonStories from '@/components/Button/Button.stories'
 export default {
-  title: 'Sections/SpaCategories',
+  title: 'Sections/CategoriesFilters/SpaCategories',
   component: CategoriesSwiper,
 }
 
@@ -19,6 +20,7 @@ export const Default = Template.bind({})
 Default.args = {
   categories,
   headerProps,
+  actionProps: ButtonStories.Primary.args,
   link: {
     defaultLanguage: 'en',
     languages: ['en', 'fr', 'ar'],

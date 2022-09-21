@@ -4,7 +4,7 @@ import Blog from '@/components/Blogs/Blog'
 import Swiper from '@/components/Swipers/Swiper'
 import Spacing from '@/components/Spacing'
 import Button from '@/components/Button'
-import SpaCategories from '@/components/SpaCategories'
+import SpaCategories from '@/components/CategoriesFilters/SpaCategories'
 import Layout from '@/components/Layout'
 
 const image =
