@@ -35,6 +35,10 @@ outline-none text-base z-10`,
   bgColor
     ? `background-color: ${bgColor};`
     : `background-color: ${theme.colors.bg.primary};`,
+  `::placeholder{
+      color: #FFFFFF;
+      opacity: 0.6;
+    }`,
 ])
 
 export const FooterDivider = styled.div(({ theme }) => [

@@ -13,6 +13,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     messageError,
     buttonLabel,
     whithline,
+    placeHolder="Full Name",
     color = '#000000',
   } = formInputs
   return (
@@ -25,7 +26,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
         color="#CBCBCB"
         bgColor="#FAFAFA"
         onChange={onChange}
-        placeHolder="Full Name"
+        placeHolder={placeHolder}
         focus={color}
       />
       <Input
@@ -71,6 +72,7 @@ Form_v2.propTypes = {
   formInputs: PropTypes.shape({
     fullName: PropTypes.string,
     fullNameError: PropTypes.string,
+    placeHolder: PropTypes.string,
     email: PropTypes.string,
     emailError: PropTypes.string,
     message: PropTypes.string,

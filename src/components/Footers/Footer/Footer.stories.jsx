@@ -23,4 +23,6 @@ Default.args = {
     phone: '+1 234 567 890',
     email: 'hotelui@ctd.ma',
   },
+  submit: 'Submit',
+  placeholder: 'Enter an email address',
 }

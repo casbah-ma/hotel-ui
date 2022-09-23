@@ -26,7 +26,7 @@ export const List = styled.ul(({ position }) => [
   position === 'right' && tw`left-[205px]`,
 ])
 
-export const Logo = tw.div`bg-opacity-0 mt-2 w-[11rem] h-[4rem]`
+export const Logo = tw.div`bg-opacity-0 mt-2 w-[11rem] h-[4rem] flex-shrink-0`
 
 // mobile
 export const MobileNav = tw.nav`flex flex-col lg:hidden items-start justify-center gap-2.5`
