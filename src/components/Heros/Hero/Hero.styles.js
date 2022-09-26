@@ -60,7 +60,7 @@ export const HeroSubtitle = styled.div(({ position }) => [
 
 export const HeroAction = styled.div(({ position }) => [
   tw`
-     w-full animate-bounce absolute bottom-[10rem] md:bottom-8 2xl:bottom-32
+     w-full animate-bounce absolute bottom-[10rem] md:bottom-8 2xl:bottom-3
       px-2 flex justify-center items-center z-20
     `,
   position === 'start' && tw`lg:justify-end items-center lg:pr-[11.188rem] `,

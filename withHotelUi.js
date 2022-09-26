@@ -16,6 +16,7 @@ const hotelUiTailwindConfig = {
       xs: '320px',
       ...defaultTheme.screens,
       sm: '414px',
+      xxxl: '1920px',
     },
     extend: {
       columns: {
