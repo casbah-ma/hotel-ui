@@ -17,7 +17,7 @@ export const AnimatedHeroChildrens = styled.div(({ position }) => [
 
 export const AnimatedHeroContent = styled.div(({ position }) => [
   tw`xs:w-[17rem] sm:w-[20.563rem] md:w-[30.063rem] lg:w-[48.875rem] text-center  text-sm h-1/2 lg:h-1/3 flex flex-col items-center justify-around gap-y-10`,
-  position === 'start' && tw`items-start text-left  lg:pt-[5.5rem]`,
+  position === 'start' && tw`items-start text-left  lg:pt-[16rem]`,
 ])
 
 export const AnimatedHeroTitle = styled.div(({ position }) => [
@@ -31,9 +31,10 @@ export const AnimatedHeroButtonText = styled.span(({ theme }) => [
 
 export const AnimatedHeroVideo = tw.video`w-full h-full rounded-lg object-cover bg-no-repeat bg-center`
 
-export const AnimatedHeroButton = styled.div(() => [
-  tw`animate-bounce mt-10 relative [&>button]:w-16 [&>button]:h-16 
+export const AnimatedHeroButton = styled.div(({ position }) => [
+  tw`animate-bounce mt-20 relative [&>button]:w-16 [&>button]:h-16 
   [&>button]:[&>span]:w-6 [&>button]:[&>span]:[&>svg]:w-6 [&>button]:[&>span]:[&>svg]:h-6`,
+  position && tw`mt-44`,
   `animation: fadeInBottom 1.5s both ;
     @keyframes fadeInBottom{
         0%{
