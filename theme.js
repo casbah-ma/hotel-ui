@@ -7,14 +7,14 @@ export default {
     },
     bg: {
       primary: '#486DC3',
-      primaryLight: '#21b67c29',
+      primaryLight: '#486DC329',
       secondary: '#000',
       tertiary: '#fafafa',
       additional: '#00bcd4',
       colorgrey: 'rgba(250,250,250, 0.08)',
     },
     border: {
-      primary: '#21B67C',
+      primary: '#486DC3',
       secondary: '#000',
       transparent: '#FFFFFF32',
       white: '#fff',

@@ -24,8 +24,8 @@ function Service({
   return (
     <FlexWrapper bgColor={bgColor} variant={variant} data-testid="service">
       {variant !== 'v2' && (
-        <IconWrapper variant={variant}>
-          <Icon color={iconColor} width={width} />
+        <IconWrapper variant={variant} bgColor={bgColor}>
+          <Icon color={iconColor} width={width}  />
         </IconWrapper>
       )}
       {variant === 'v2' && <Icon color={iconColor} width={width} />}
