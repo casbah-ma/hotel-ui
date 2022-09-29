@@ -9,7 +9,7 @@ const Template = (args) => <Contactus {...args} />
 export const Default = Template.bind({})
 Default.args = {
   formInputs: {
-    fullName: '',
+    fullName: 'Test test',
     fullNameError: '',
     placeHolder:"Full Name",
     email: 'test@test.com',
