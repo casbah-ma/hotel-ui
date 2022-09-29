@@ -17,7 +17,6 @@ const Telephone = function ({ width, height, color }) {
     >
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -25,7 +24,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -33,7 +31,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -41,7 +38,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -49,7 +45,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -57,7 +52,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -65,7 +59,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -73,7 +66,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -81,7 +73,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -89,7 +80,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -97,7 +87,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -105,7 +94,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -113,7 +101,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -121,7 +108,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -129,7 +115,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -137,7 +122,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -145,7 +129,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -153,7 +136,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -161,7 +143,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -169,7 +150,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -177,7 +157,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -185,14 +164,12 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
         d="  M951.551,906.618c0,38.696-31.038,69.382-69.734,69.382h-39.266V35h39.266c38.696,0,69.734,31.723,69.734,70.42V906.618z   M22.551,906.618c0,38.696,31.556,69.382,70.252,69.382h39.748V35H92.803c-38.696,0-70.252,31.723-70.252,70.42V906.618z   M249.551,60.895c0-14.301-11.593-25.895-25.894-25.895h-0.212c-14.301,0-25.894,11.593-25.894,25.895v889.211  c0,14.301,11.593,25.895,25.894,25.895h0.212c14.301,0,25.894-11.594,25.894-25.895V60.895z M381.551,60.895  c0-14.301-11.593-25.895-25.895-25.895h-0.211c-14.301,0-25.895,11.593-25.895,25.895v889.211c0,14.301,11.593,25.895,25.895,25.895  h0.211c14.301,0,25.895-11.594,25.895-25.895V60.895z M512.551,60.895c0-14.301-11.593-25.895-25.894-25.895h-0.212  c-14.301,0-25.894,11.593-25.894,25.895v889.211c0,14.301,11.593,25.895,25.894,25.895h0.212c14.301,0,25.894-11.594,25.894-25.895  V60.895z M644.551,60.895c0-14.301-11.593-25.895-25.894-25.895h-0.213c-14.301,0-25.894,11.593-25.894,25.895v889.211  c0,14.301,11.593,25.895,25.894,25.895h0.213c14.301,0,25.894-11.594,25.894-25.895V60.895z M775.551,60.895  c0-14.301-11.594-25.895-25.896-25.895h-0.209c-14.302,0-25.896,11.593-25.896,25.895v889.211c0,14.301,11.594,25.895,25.896,25.895  h0.209c14.302,0,25.896-11.594,25.896-25.895V60.895z M982.551,197.826c0-10.655-7.826-18.826-18.481-18.826h-12.519v85h12.519  c10.655,0,18.481-8.807,18.481-19.462V197.826z M982.551,332.883c0-10.655-7.826-19.883-18.481-19.883h-12.519v85h12.519  c10.655,0,18.481-7.75,18.481-18.406V332.883z M982.551,833.424c0-10.655-7.826-19.424-18.481-19.424h-12.519v56h12.519  c10.655,0,18.481-7.394,18.481-18.05V833.424z"
       ></path>
       <path
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -200,7 +177,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -208,7 +184,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -216,7 +191,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -224,7 +198,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -232,7 +205,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -240,7 +212,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"
@@ -248,7 +219,6 @@ const Telephone = function ({ width, height, color }) {
       ></path>
       <path
         display="none"
-        fill="none"
         stroke="#000000"
         stroke-width="16"
         stroke-miterlimit="10"

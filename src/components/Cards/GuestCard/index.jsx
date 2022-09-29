@@ -8,8 +8,16 @@ import {
   GuestActions,
 } from './GuestCard.styles'
 import theme from '../../../../theme'
+import { bg } from 'date-fns/locale'
 
-function GuestCard({ title, onMinusClick, onPlusClick, value }) {
+function GuestCard({
+  title,
+  onMinusClick,
+  onPlusClick,
+  value,
+  color,
+  bgColor,
+}) {
   return (
     <GuestContainer data-testid="guest-card-container">
       <Label labelText={title} color={theme.colors.DatesCore.text} />
@@ -31,7 +39,7 @@ function GuestCard({ title, onMinusClick, onPlusClick, value }) {
               disabled: value === 0,
             }}
             handleClick={onMinusClick}
-            bgColor={theme.colors.bg.secondary}
+            bgColor={bgColor}
           />
           <Button
             testID={'plus-button'}
@@ -43,7 +51,7 @@ function GuestCard({ title, onMinusClick, onPlusClick, value }) {
               label: '',
             }}
             handleClick={onPlusClick}
-            bgColor={theme.colors.bg.secondary}
+            bgColor={bgColor}
           />
         </GuestActions>
       </GuestActionsContainer>

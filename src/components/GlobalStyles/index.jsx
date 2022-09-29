@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 import '../../styles/datepicker.css'
-import '@/styles/global.css'
 
 const CustomStyles = createGlobalStyle`
 .full-width {
@@ -100,7 +99,7 @@ const CustomStyles = createGlobalStyle`
 .menu {
      ${tw`relative inline-block text-left`}
      button {
-      ${tw`inline-flex justify-center gap-[0.2rem] bg-transparent`}
+      ${tw`inline-flex justify-center gap-[0.8rem] bg-transparent`}
      }
 
      svg {
@@ -148,7 +147,6 @@ const CustomStyles = createGlobalStyle`
   .swiper-button-prev {
     ${tw`invisible bg-white group-hover:visible rounded-full text-3xl after:text-black after:content-["next"] cursor-pointer`}
     &:after {
-      background-color: ${({ theme }) => theme.colors.bg.primary} !important;
       color: white;
      }
   }
@@ -188,35 +186,33 @@ const CustomStyles = createGlobalStyle`
   fill: ${({ theme }) => theme.colors.DatesCore.text} !important;
  }
 .CalendarDay__selected_span {
-  background: ${({ theme }) => theme.colors.bg.primary} !important !important;
+  background: ${({ theme }) => theme.colors.bg.secondary} !important;
   color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.primary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
+    background: ${({ theme }) => theme.colors.bg.secondary} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   }
 }
 .CalendarDay__highlighted_calendar {
-  background: #ffe8bc;
-  color: #484848;
+  background: ${({ theme }) => theme.colors.bg.secondary} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   &:hover, &:active {
-    background: #ffce71;
-    color: #484848;
+    background: ${({ theme }) => theme.colors.bg.secondary} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   }
 }
 .CalendarDay__selected {
-  background: ${({ theme }) => theme.colors.bg.primary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
+  background: ${({ theme }) => theme.colors.bg.secondary} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.primary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
+    background: ${({ theme }) => theme.colors.bg.secondary} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   }
 }
 .CalendarDay__hovered_span {
-  background: #ffe8bc;
-  color: #000;
   &:hover{
-    background: ${({ theme }) => theme.colors.bg.primary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
+    background: ${({ theme }) => theme.colors.bg.secondary} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   }
 }
 

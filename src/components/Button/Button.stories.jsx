@@ -23,6 +23,7 @@ const Template = (args) => <Button {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
+  border: false,
   variant: 'primary',
   label: 'Check Availability',
   disabled: false,

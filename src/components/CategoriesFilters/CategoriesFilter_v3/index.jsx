@@ -50,7 +50,9 @@ function CategoriesFilter_v3({ categories, headerProps, link }) {
         (item) =>
           !(
             item[0] === 'imageSrc' ||
-            (item[0] === 'subtitle') | (item[0] === 'href')
+            item[0] === 'subtitle' ||
+            item[0] === 'href' ||
+            item[0] === 'showItems'
           )
       )
       .map((item) => ({
@@ -79,6 +81,7 @@ function CategoriesFilter_v3({ categories, headerProps, link }) {
                 subtitle={category.subtitle}
                 href={category.href}
                 link={link}
+                showItems={category.showItems}
               >
                 <InfoItems infos={getInfos(category)} space={false} />
               </RoomCard_v3>

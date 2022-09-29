@@ -4,7 +4,7 @@ import { ContactusContainer } from './Contactus.styles'
 import PropTypes from 'prop-types'
 
 const ContactUs = function ({ formInputs, onChange, onClick }) {
-  const { fullName, fullNameError, email, emailError, message, messageError } =
+  const { fullName, fullNameError,placeHolder="Full Name", email, emailError, message, messageError, bgColor , color } =
     formInputs
   return (
     <ContactusContainer data-testid="contactus-container">
@@ -15,7 +15,7 @@ const ContactUs = function ({ formInputs, onChange, onClick }) {
         error={!!fullNameError}
         color="black"
         onChange={onChange}
-        placeHolder="Full Name"
+        placeHolder={placeHolder}
       />
       <Input
         testID="email"
@@ -38,8 +38,8 @@ const ContactUs = function ({ formInputs, onChange, onClick }) {
       />
       <Button
         testID="submit-button"
-        bgColor="secondary"
-        color="secondary"
+        bgColor={bgColor}
+        color={color}
         label="Submit"
         onClick={onClick}
         variant="primary"
@@ -52,6 +52,9 @@ ContactUs.propTypes = {
   formInputs: PropTypes.shape({
     fullName: PropTypes.string,
     fullNameError: PropTypes.string,
+    placeHolder: PropTypes.string,
+    bgColor: PropTypes.string,
+    color: PropTypes.string,
     email: PropTypes.string,
     emailError: PropTypes.string,
     message: PropTypes.string,

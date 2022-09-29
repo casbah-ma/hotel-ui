@@ -6,4 +6,4 @@ flex flex-col items-start justify-start`
 export const StyledHeroTitle = tw.div` w-full sm:w-[22.438rem] md:w-[32rem] lg:w-full mb-8`
 export const StyledHeroSubtitle = tw.div`sm:w-[19.625rem] md:w-[32rem] lg:w-[32.875rem]`
 export const StyledHeroImage = tw.img`w-full lg:w-1/2 h-full object-cover bg-center rounded-b-lg lg:rounded-l-lg brightness-50 lg:brightness-100 `
-export const StyledHeroChildren = tw.div`absolute bottom-12  lg:-bottom-12  lg:left-8 z-20`
+export const StyledHeroChildren = tw.div`absolute bottom-12  lg:-bottom-8 2xl:bottom-16  lg:left-8 z-20`

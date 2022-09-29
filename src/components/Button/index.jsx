@@ -7,6 +7,7 @@ const Button = ({
   Icon,
   color,
   bgColor,
+  border,
   disabled,
   handleClick,
   testID,
@@ -22,6 +23,7 @@ const Button = ({
       bgColor={bgColor}
       disabled={disabled}
       onClick={handleClick}
+      border={border}
     >
       {t ? t(label) : label}
       {Icon && (
@@ -38,6 +40,7 @@ Button.propTypes = {
   variant: PropTypes.oneOf(Object.keys(buttonsVariant)),
   bgColor: PropTypes.string,
   color: PropTypes.string,
+  border: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   as: PropTypes.string,
