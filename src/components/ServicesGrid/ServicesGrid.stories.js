@@ -3,24 +3,23 @@ import ServicesGrid from '.'
 //icons
 import {
   CheckOut,
-  Gym,
-  Massage,
+  RentalCar,
+  BusinessCenter,
   Shower,
   Tv,
-  Wifi,
   YogaMat,
-  DoorMan,
+  ChildCare,
 } from '@/components/Icons'
 import { variants } from './ServicesGrid.styles'
 
 const services = [
-  { serviceName: 'Doorman', Icon: DoorMan },
+  { serviceName: 'ChildCare', Icon: ChildCare },
   { serviceName: 'Rainfall Shower', Icon: Shower },
   { serviceName: '4K Television', Icon: Tv },
   { serviceName: 'Check-out', Icon: CheckOut },
   { serviceName: 'Yoga Mat', Icon: YogaMat },
-  { serviceName: 'Massage', Icon: Massage },
-  { serviceName: '24 Hour Gym', Icon: Gym },
+  { serviceName: 'BusinessCenter', Icon: BusinessCenter },
+  { serviceName: 'RentalCar', Icon: RentalCar },
 ]
 
 export default {
