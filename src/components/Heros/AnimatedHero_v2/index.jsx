@@ -51,7 +51,7 @@ function AnimatedHero_v2({
             <Paragraph description={subtitle} color="white" />
           </AnimatedHeroTitle>
         </AnimatedHeroContent>
-        <AnimatedHeroButton>
+        <AnimatedHeroButton position={position}>
           {children}
           {clickTitle && (
             <AnimatedHeroButtonText>

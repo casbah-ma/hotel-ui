@@ -2,10 +2,8 @@ import { useBreakpoint } from '@/hooks'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import Button from '@/components/Button'
 import GuestCard from '@/components/Cards/GuestCard'
 import Label from '@/components/Label'
-import Title from '@/components/Title'
 import {
   BookingBarContainer,
   BookingButton,
@@ -16,6 +14,8 @@ import {
 } from './BookingBar.styles'
 
 function BookingBar_v3({
+  color,
+  bgColor,
   dates,
   guestValues,
   onGuestChange,
@@ -64,6 +64,8 @@ function BookingBar_v3({
     <BookingBarContainer showContent={showContent}>
       {!showContent ? (
         <Desktop
+          color={color}
+          bgColor={bgColor}
           handleDatesChanges={handleDatesChanges}
           dates={dates}
           bookingTitles={bookingTitles}
@@ -73,6 +75,8 @@ function BookingBar_v3({
         />
       ) : (
         <Mobile
+          color={color}
+          bgColor={bgColor}
           handleDatesChanges={handleDatesChanges}
           dates={dates}
           bookingTitles={bookingTitles}
@@ -122,6 +126,8 @@ BookingBar_v3.propTypes = {
 export default BookingBar_v3
 
 function Desktop({
+  color,
+  bgColor,
   guestValues,
   handlePlusClick,
   handleMinusClick,
@@ -151,6 +157,8 @@ function Desktop({
       </Bookingcolumns>
       <Bookingcolumns>
         <GuestCard
+          color={color}
+          bgColor={bgColor}
           title={bookingTitles.column_3}
           value={guestValues.adults}
           onMinusClick={() => {
@@ -163,6 +171,8 @@ function Desktop({
       </Bookingcolumns>
       <Bookingcolumns>
         <GuestCard
+          color={color}
+          bgColor={bgColor}
           title={bookingTitles.column_4}
           value={guestValues.kids}
           onMinusClick={() => {
@@ -178,6 +188,8 @@ function Desktop({
 }
 
 function Mobile({
+  color,
+  bgColor,
   showContent,
   guestValues,
   handlePlusClick,
@@ -210,6 +222,8 @@ function Mobile({
           </Bookingcolumns>
           <Bookingcolumns>
             <GuestCard
+              color={color}
+              bgColor={bgColor}
               title={bookingTitles.column_3}
               value={guestValues.adults}
               onMinusClick={() => {
@@ -222,6 +236,8 @@ function Mobile({
           </Bookingcolumns>
           <Bookingcolumns>
             <GuestCard
+              color={color}
+              bgColor={bgColor}
               title={bookingTitles.column_4}
               value={guestValues.kids}
               onMinusClick={() => {

@@ -3,7 +3,7 @@ import SpaWellness from '.'
 import * as BlogStories from '@/components/Blogs/Blog/Blog.stories'
 import * as SwiperStories from '@/components/Swipers/Swiper/Swiper.stories'
 import * as ButtonStories from '@/components/Button/Button.stories'
-import * as SpaCategoriesStories from '@/components/SpaCategories/SpaCategories.stories'
+import * as SpaCategoriesStories from '@/components/CategoriesFilters/SpaCategories/SpaCategories.stories'
 import * as LayoutStories from '@/components/Layout/Layout.stories'
 import * as AnimatedHero from '@/components/Heros/AnimatedHero/AnimatedHero.stories'
 

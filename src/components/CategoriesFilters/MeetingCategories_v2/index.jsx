@@ -53,6 +53,7 @@ function MeetingCategories_v2({ categories, headerProps, link }) {
   const filteredCategories = categories.filter((category) =>
     active === 'All' ? true : category.type === active
   )
+
   return (
     <Container>
       <Wrapper>

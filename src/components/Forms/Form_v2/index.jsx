@@ -11,6 +11,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     message,
     messageError,
     buttonLabel,
+    placeHolder="Full Name",
   } = formInputs
   return (
     <Formv2Container data-testid="Formv2-container">
@@ -23,8 +24,8 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
           color="#CBCBCB"
           bgColor="#FAFAFA"
           onChange={onChange}
-          placeHolder="Full Name"
-        />
+          placeHolder={placeHolder}
+          />
         <Input
           testID="email"
           name="email"
@@ -58,6 +59,7 @@ Form_v2.propTypes = {
   formInputs: PropTypes.shape({
     fullName: PropTypes.string,
     fullNameError: PropTypes.string,
+    placeHolder: PropTypes.string,
     email: PropTypes.string,
     emailError: PropTypes.string,
     message: PropTypes.string,

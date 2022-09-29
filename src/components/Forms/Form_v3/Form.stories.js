@@ -11,6 +11,7 @@ Default.args = {
   formInputs: {
     fullName: 'Test test',
     fullNameError: '',
+    placeHolder:"Full Name",
     email: 'test@test.com',
     emailError: '',
     message: 'Test message',
