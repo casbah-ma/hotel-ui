@@ -3,7 +3,15 @@ import tw, { styled } from 'twin.macro'
 export const InputContainer = tw.div`relative w-full`
 
 export const StyledInput = styled.input(
-  ({ color, bgColor, error, isTextaria, withButton, theme }) => [
+  ({
+    color,
+    bgColor,
+    error,
+    isTextaria,
+    withButton,
+    theme,
+    placeHolderColor,
+  }) => [
     //base styles
     `font-family: ${theme.fontFamily.secondary};`,
     tw`
@@ -19,6 +27,11 @@ export const StyledInput = styled.input(
       ? `border-bottom-color: ${color};`
       : `border-bottom-color: ${theme.colors.bg.primary};`,
     ,
+    placeHolderColor &&
+      `::placeholder{
+      color: #FFFFFF;
+      opacity: 0.6;
+    }`,
     error && tw`border-b-red-500`,
     withButton && `background-color: ${theme.colors.bg.colorgrey};`,
     isTextaria && tw`w-full min-h-[12.5rem] pt-[1.625rem] pl-6`,

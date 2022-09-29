@@ -58,6 +58,7 @@ function Navbar_v2({
   useEffect(() => {
     if (scrollPosition > 100) {
       setHasBackground(true)
+      actionProps.border = true
     } else {
       setHasBackground(false)
     }

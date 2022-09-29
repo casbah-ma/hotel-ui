@@ -26,5 +26,6 @@ Default.args = {
 export const Transparent = Template.bind({})
 Transparent.args = {
   ...Default.args,
+  // actionProps: { ...ButtonStories.Secondary.args, label: 'Book Now', border: true },
   transparent: true,
 }

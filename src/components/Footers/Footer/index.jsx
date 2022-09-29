@@ -101,6 +101,7 @@ function Footer({
             buttonLabel: submit,
             onClick: handleSubmit,
           }}
+          placeHolderColor={true}
         />
       </InputContainer>
       <AddressContainer>

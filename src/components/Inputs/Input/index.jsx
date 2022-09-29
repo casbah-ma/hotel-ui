@@ -15,6 +15,7 @@ const Input = ({
   withButton,
   buttonProps,
   testID,
+  placeHolderColor,
 }) => {
   const { buttonLabel, buttonColor, buttonBgColor, onClick, buttonTestID } =
     buttonProps
@@ -34,6 +35,7 @@ const Input = ({
         placeholder={placeHolder}
         size={size}
         onChange={onChange}
+        placeHolderColor={placeHolderColor}
       />
       {withButton && (
         <InputButton
@@ -54,6 +56,7 @@ Input.propTypes = {
   placeHolder: PropTypes.string.isRequired,
   value: PropTypes.string,
   error: PropTypes.bool,
+  placeHolderColor: PropTypes.bool,
   onChange: PropTypes.func,
   withButton: PropTypes.bool,
   buttonProps: PropTypes.shape({
