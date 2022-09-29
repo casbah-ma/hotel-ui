@@ -14,7 +14,7 @@ export const Tag = styled.li(({ active, variant, theme }) => [
   variant === 'v2' &&
     active &&
     `background-color: ${theme.colors.bg.primaryLight};
-  border: 1px solid #21B67C;
+  border: 1px solid ${theme.colors.bg.primary};
   opacity: 0.8;
   `,
 ])
