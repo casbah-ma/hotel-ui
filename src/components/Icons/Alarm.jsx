@@ -1,5 +1,5 @@
 // Alarm
-const Alarm = function ({ width, height, color }) {
+const Alarm = function ({ width, height, color, className, style }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,6 +9,8 @@ const Alarm = function ({ width, height, color }) {
       width={width}
       height={height}
       fill={color}
+      className={className}
+      style={style}
     >
       <g>
         <path d="M57,10H7a5.006,5.006,0,0,0-5,5V45a5.006,5.006,0,0,0,5,5H8v3a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V50H46v3a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V50h1a5.006,5.006,0,0,0,5-5V15A5.006,5.006,0,0,0,57,10ZM16,52H10V50h6Zm38,0H48V50h6Zm6-7a3,3,0,0,1-3,3H7a3,3,0,0,1-3-3V33a3,3,0,0,1,3-3H57a3,3,0,0,1,3,3Zm0-15.974A4.948,4.948,0,0,0,57,28H7a4.948,4.948,0,0,0-3,1.026V15a3,3,0,0,1,3-3H57a3,3,0,0,1,3,3Z"></path>
