@@ -6,13 +6,13 @@ const RentalCar = function ({ width, height, color, className, style }) {
       height={height}
       className={className}
       fill={color}
+      style={style}
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
       x="0px"
       y="0px"
       viewBox="0 0 100 100"
-      style="enable-background:new 0 0 100 100;"
       xmlSpace="preserve"
     >
       <path d="M54.6,80.5H34.2l0.1-2h20.2L54.6,80.5z M67.5,78.5h9.3c1,0,1.8-0.8,1.8-1.8v-9.2c0-4.1-3.4-7.5-7.5-7.5H17  c-1,0-1.8,0.8-1.8,1.8v14.9c0,0.9,0.9,1.8,1.8,1.8h4.3v2H17c-2.1,0-3.8-1.7-3.8-3.8V61.8c0-2.1,1.7-3.8,3.8-3.8h54.1  c5.2,0,9.5,4.3,9.5,9.5v9.2c0,2.1-1.7,3.8-3.8,3.8h-9.2L67.5,78.5z"></path>
