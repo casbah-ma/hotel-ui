@@ -7,6 +7,7 @@ export default [
     sq_M: '129M',
     guests: '32',
     href: '/',
+    showItems: true,
   },
   {
     type: 'Banquet',
@@ -16,6 +17,7 @@ export default [
     sq_M: '129M',
     guests: '32',
     href: '/',
+    showItems: true,
   },
   {
     type: 'Reception',
@@ -25,6 +27,7 @@ export default [
     sq_M: '129M',
     guests: '32',
     href: '/',
+    showItems: true,
   },
   {
     type: 'Theatre',
@@ -34,6 +37,7 @@ export default [
     sq_M: '129M',
     guests: '32',
     href: '/',
+    showItems: true,
   },
   {
     type: 'U-Shape',
@@ -43,5 +47,6 @@ export default [
     sq_M: '129M',
     guests: '32',
     href: '/',
+    showItems: true,
   },
 ]
