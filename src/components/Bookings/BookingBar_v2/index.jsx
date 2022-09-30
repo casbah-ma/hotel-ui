@@ -72,6 +72,7 @@ function BookingBa_v2({
                     bgColor="white"
                     Icon={ChevronUpIcon}
                     color={theme.colors.DatesCore.text}
+                    border={true}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">
@@ -92,6 +93,7 @@ function BookingBa_v2({
                     bgColor="white"
                     color={theme.colors.DatesCore.text}
                     Icon={ChevronUpIcon}
+                    border={true}
                   />
                 </Popover.Button>
                 <Popover.Panel className="datesPanel">
