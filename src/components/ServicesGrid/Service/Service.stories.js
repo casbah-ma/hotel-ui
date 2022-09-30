@@ -20,8 +20,10 @@ const Template = (args) => <Service {...args} />
 export const V1 = Template.bind({})
 V1.args = {
   serviceName: 'Free wifi',
-  circleBg: 'gray',
+  // circleBg: 'gray',
   Icon: PlusIcon,
+  bgColor: '#fafa',
+  iconColor: '#21B67C',
 }
 
 export const V2 = Template.bind({})
@@ -38,4 +40,5 @@ V3.args = {
   serviceName:
     'La connexion Wifi gratuite dans les parties communes et privées',
   variant: 'v3',
+  bgColor: '#fafa',
 }

@@ -14,6 +14,7 @@ const Slippers = function ({ width, height, color, className, style }) {
       viewBox="0 0 100 100"
       enableBackground="new 0 0 100 100"
       xmlSpace="preserve"
+      fill={color}
     >
       <g>
         <path

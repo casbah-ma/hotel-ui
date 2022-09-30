@@ -61,6 +61,7 @@ function Navbar_v2({
       actionProps.border = true
     } else {
       setHasBackground(false)
+      actionProps.border = false
     }
 
     if (scrollDirection === 'down') {

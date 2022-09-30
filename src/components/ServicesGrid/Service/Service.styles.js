@@ -20,6 +20,6 @@ export const IconWrapper = styled.div(({ bgColor, theme, variant }) => [
   bgColor
     ? `background-color: ${bgColor};
        border-color: ${bgColor};`
-    : `background-color: ${theme.colors.bg.tertiary};
-      border-color:${theme.colors.bg.tertiary}`,
+    : `background-color: ${theme.colors.bg.primaryLight};
+      border-color:${theme.colors.bg.primaryLight}`,
 ])

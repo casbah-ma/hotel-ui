@@ -31,8 +31,8 @@ function Footer({
   color,
   bgColor,
   Address,
-  placeholder = "Enter an email address",
-  submit= "Submit",
+  placeholder,
+  submit,
   hotelName,
   logo,
   contacts,
@@ -84,7 +84,7 @@ function Footer({
       </FooterLogo>
       {description && (
         <FooterText>
-          <Paragraph description={description} />
+          <Paragraph description={t('description')} />
         </FooterText>
       )}
       <InputContainer>
@@ -92,13 +92,13 @@ function Footer({
         <Input
           testID="footer-input"
           onChange={handleInputChange}
-          placeHolder={placeholder}
+          placeHolder={t('placeholder')}
           color="white"
           error={inputValue.error}
           withButton
           buttonProps={{
             buttonTestID: 'footer-button',
-            buttonLabel: submit,
+            buttonLabel: t('submit'),
             onClick: handleSubmit,
           }}
           placeHolderColor={true}
