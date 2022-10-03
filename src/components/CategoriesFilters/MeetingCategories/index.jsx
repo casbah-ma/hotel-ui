@@ -69,7 +69,7 @@ function MeetingCategories({ categories, headerProps, link }) {
             <SwiperSlide key={index} className="lg:w-[25rem]">
               <RoomCard
                 image={category.image}
-                title={category.name}
+                title={category.title}
                 subtitle={category.subtitle}
                 variant="v1"
                 href={category.href}
@@ -90,6 +90,7 @@ MeetingCategories.propTypes = {
     PropTypes.shape({
       type: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
       image: PropTypes.shape({
         variant: PropTypes.string,
         src: PropTypes.string,

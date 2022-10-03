@@ -77,6 +77,7 @@ function Footer({
         <TopContent>
           <div>
             <FooterLogo>
+            <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
               <Image
                 src={logo}
                 alt="logo"
@@ -84,6 +85,7 @@ function Footer({
                 height={bp === 'md' || bp === 'lg' ? 200 : 100}
                 objectFit="contain"
               />
+            </Link>
             </FooterLogo>
             <FooterText>
               <Paragraph

@@ -1,6 +1,6 @@
 import tw, { styled } from 'twin.macro'
 export const containerVariants = {
-  v1: tw`py-10 px-6 w-[22.5rem] max-w-max  rounded-xl gap-10 bg-[#fafafa]`,
+  v1: tw`py-10 px-6 xs:w-[18rem] sm:w-[22rem] md:w-[22.5rem] lg:w-[22.5rem] max-w-max  rounded-xl gap-10 bg-[#fafafa]`,
   v2: tw`p-4 pb-16  max-w-max gap-6  bg-white rounded-3xl`,
 }
 export const Container = styled.div(({ bgColor, theme }) => [

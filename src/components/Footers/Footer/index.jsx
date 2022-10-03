@@ -74,6 +74,7 @@ function Footer({
       bgColor={bgColor}
     >
       <FooterLogo>
+      <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
         <Image
           src={logo}
           width={200}
@@ -81,6 +82,7 @@ function Footer({
           objectFit="contain"
           alt="logo"
         />
+      </Link>
       </FooterLogo>
       {description && (
         <FooterText>
