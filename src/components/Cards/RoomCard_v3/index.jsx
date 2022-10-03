@@ -33,7 +33,7 @@ function RoomCard_v3({
         )}
         <InfoHeader>
           <Title color={imageSrc ? 'white' : 'black'} level="3" title={name} />
-          <Subtitle>{subtitle}</Subtitle>
+          {subtitle && <Subtitle>{subtitle}</Subtitle>}
         </InfoHeader>
         {showItems && <StyledChildren>{children}</StyledChildren>}
         {actionProps && <Button {...actionProps} />}
