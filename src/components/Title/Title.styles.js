@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 
 export const Heading = styled.h1(({ color, level, theme, withLine }) => [
   //base styles
-  tw`font-medium  relative`,
+  tw`font-medium  relative xs:p-2`,
   `font-family: ${theme.fontFamily.primary};`,
   //spacing
   `letter-spacing: ${theme.letterSpacing};`,

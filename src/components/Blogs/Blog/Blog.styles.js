@@ -16,7 +16,7 @@ export const Content = styled.div(({ contentIsCentred }) => [
 ])
 
 export const Text = tw.div`
-  flex flex-col gap-y-[3.2rem]
+  flex flex-col gap-y-[3.2rem] xs:p-2
 `
 
 export const Grid = styled.section(({ rows }) => [

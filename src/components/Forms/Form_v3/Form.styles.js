@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const Formv2Container = tw.div`
-  w-3/4 flex flex-col items-center justify-center
+  w-full flex flex-col items-center justify-center
   gap-10
 
 `
