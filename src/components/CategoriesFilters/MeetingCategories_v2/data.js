@@ -1,5 +1,6 @@
 export default [
   {
+    title:'School',
     type: 'School Room',
     name: 'Evolution',
     image: {

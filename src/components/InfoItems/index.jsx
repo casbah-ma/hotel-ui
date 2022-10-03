@@ -10,6 +10,7 @@ function InfoItems({ infos, space }) {
     <Container>
       {!isEmpty(infos) &&
         infos.map((info) => (
+          info.infoName != "title" &&
           <InfoItem
             key={info.infoName}
             infoName={info.infoName}
