@@ -21,7 +21,7 @@ export const Text = tw.div`
 
 export const Grid = styled.section(({ rows }) => [
   rows === 1
-    ? tw`grid grid-cols-3 gap-[3.75rem] md:gap-12`
+    ? tw`grid lg:grid-cols-3 gap-[3.75rem] md:gap-12`
     : tw`grid grid-cols-2 gap-4 md:gap-12`,
 ])
 

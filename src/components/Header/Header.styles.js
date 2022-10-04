@@ -27,7 +27,7 @@ export const DescriptionWrapper = styled.div(
     // border top on small mobiles
     direction === 'horizontal' &&
       tw`before:content-[""] before:absolute before:left-0 before:top-0
-  before:h-[1px] before:w-1/4 before:bg-black before:md:h-0`,
+  before:h-[1px] before:w-1/4 before:bg-black before:md:h-0 xs:before:left-2`,
     // border-left on large screens
     direction === 'horizontal' &&
       tw`md:w-2/5 md:pt-0 md:mt-0 md:border-l md:border-l-black md:pl-9 md:ml-8 md:self-end`,

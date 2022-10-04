@@ -31,6 +31,7 @@ WithImage.args = {
   imageSrc: 'https://source.unsplash.com/random/?hotel',
   subtitle: '13M X 7M',
   showItems: true,
+  color: '',
   href: '/',
   link: {
     defaultLanguage: 'en',
