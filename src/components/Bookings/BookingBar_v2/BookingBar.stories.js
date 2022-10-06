@@ -39,7 +39,7 @@ export default {
             title_1="Check in  -  Check out"
             title_2="Guests"
             buttonProps={{
-              text: 'Check Availability',
+              text: 'Vérifier la disponibilité',
               onClick: () => {
                 console.log('dates', dates)
                 console.log('guestValues', guestValues)
