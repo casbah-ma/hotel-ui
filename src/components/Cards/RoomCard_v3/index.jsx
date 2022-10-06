@@ -15,6 +15,7 @@ import LinkComponent from '../../LinkComponent'
 
 function RoomCard_v3({
   children,
+  color,
   imageSrc,
   name,
   subtitle,
@@ -27,7 +28,7 @@ function RoomCard_v3({
     <LinkComponent href={href} {...link}>
       <Container imageSrc={imageSrc}>
         {imageSrc && (
-          <ImageContainer>
+          <ImageContainer color={color}>
             <ImageCard src={imageSrc} variant="medium" />
           </ImageContainer>
         )}
@@ -48,6 +49,7 @@ RoomCard_v3.propTypes = {
   subtitle: PropTypes.string,
   actionProps: PropTypes.shape({ ...Button.propTypes }),
   showItems: PropTypes.bool,
+  color: PropTypes.string,
   href: PropTypes.string,
   link: PropTypes.shape({
     defaultLanguage: PropTypes.string,

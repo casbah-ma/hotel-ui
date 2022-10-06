@@ -9,6 +9,7 @@ const Template = (args) => <Contactus {...args} />
 export const Default = Template.bind({})
 Default.args = {
   formInputs: {
+    buttonLabel:'submit',
     fullName: 'Test test',
     fullNameError: '',
     placeHolder:"Full Name",
