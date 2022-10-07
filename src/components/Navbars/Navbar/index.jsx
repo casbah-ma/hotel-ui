@@ -58,6 +58,7 @@ function Navbar({
   const scrollPosition = useScrollPosition()
   const scrollDirection = useScrollDirection()
   useEffect(() => {
+    const delta = 20
     if (scrollPosition > 100) {
       setHasBackground(true)
       actionProps.border = true
@@ -65,8 +66,8 @@ function Navbar({
       setHasBackground(false)
       actionProps.border = false
     }
-
-    if (scrollDirection === 'down') {
+    console.log(scrollDirection)
+    if (scrollDirection === 'down' && scrollPosition > delta) {
       setIsHidden(true)
     } else if (scrollDirection === 'up') {
       setIsHidden(false)
