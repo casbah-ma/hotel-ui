@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 //Object variants
 export const buttonsVariant = {
   primary: tw`rounded-full w-1/6 max-w-[160px] min-w-min whitespace-nowrap`,
-  secondary: tw`rounded-xl w-1/6 max-w-[160px] min-w-min whitespace-nowrap`,
+  secondary: tw`rounded-xl w-1/6  min-w-min whitespace-nowrap`,
   rounded: tw`flex justify-center items-center p-1 md:p-1.5 lg:p-3 rounded-full`,
   horizontal: tw`flex flex-col justify-around items-center rounded-full focus:outline-none active:outline-none
       h-16 w-7 px-5 py-8 md:h-24 md:w-14 lg:h-36 lg:w-20`,
