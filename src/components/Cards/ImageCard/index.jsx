@@ -112,7 +112,8 @@ const imageVariantsShapes = {
 // get image variant breakpoints
 const getVariant = (variant, bp) => {
   const imageShape = imageVariantsShapes[variant]
-  return imageShape[bp]
+  console.log(bp)
+  if (bp) return imageShape[bp]
 }
 
 const getBorderImage = (imagePosition) => {
@@ -136,7 +137,7 @@ const getBorderImage = (imagePosition) => {
   }
 }
 
-const ImageCard = function ({ variant, src, imagePosition }) {
+function ImageCard({ variant, src, imagePosition }) {
   const bp = useBreakpoint()
   return (
     <Image
