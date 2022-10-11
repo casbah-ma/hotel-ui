@@ -112,7 +112,6 @@ const imageVariantsShapes = {
 // get image variant breakpoints
 const getVariant = (variant, bp) => {
   const imageShape = imageVariantsShapes[variant]
-  console.log(bp)
   if (bp) return imageShape[bp]
 }
 
