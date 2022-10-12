@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const CardContainer = styled.div(({ size }) => [
-  tw`rounded-3xl p-4 pb-6 shadow-card
+  tw`rounded-3xl p-4 pb-6 shadow-md
     flex flex-col justify-start items-center cursor-pointer
     `,
   size === 'sm' &&

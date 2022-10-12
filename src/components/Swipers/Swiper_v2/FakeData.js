@@ -32,7 +32,7 @@ export const images = [
 export const cards = [
   {
     size: 'sm',
-    date: 'Posted in 20 March 2022',
+    // date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
     image: 'https://source.unsplash.com/random/?hotel',
@@ -44,7 +44,7 @@ export const cards = [
   },
   {
     size: 'md',
-    date: 'Posted in 20 March 2022',
+    // date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
     image: 'https://source.unsplash.com/random/?room',
@@ -56,7 +56,7 @@ export const cards = [
   },
   {
     size: 'sm',
-    date: 'Posted in 20 March 2022',
+    // date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
     image: 'https://source.unsplash.com/random/?motel',
@@ -68,7 +68,7 @@ export const cards = [
   },
   {
     size: 'sm',
-    date: 'Posted in 20 March 2022',
+    // date: 'Posted in 20 March 2022',
     description:
       'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
     image: 'https://source.unsplash.com/random/?hotel',
@@ -80,9 +80,9 @@ export const cards = [
   },
   {
     size: 'md',
-    date: 'Posted in 20 March 2022',
+    // date: 'Posted in 20 March 2022',
     description:
-      'Le Lorem Ipsum est simplement du faux texte employé dans la composition',
+      'Le Lorem Ipsum est simplement du faux texte employé dans la composition Le Lorem Ipsum est simplement du faux texte employé dans la composition',
     image: 'https://source.unsplash.com/random/?Bb',
     link: {
       href: '/',
