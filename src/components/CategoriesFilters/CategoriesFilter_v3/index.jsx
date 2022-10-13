@@ -82,6 +82,7 @@ function CategoriesFilter_v3({ categories, headerProps, link }) {
                 href={category.href}
                 link={link}
                 showItems={category.showItems}
+                color={category.color}
               >
                 <InfoItems infos={getInfos(category)} space={false} />
               </RoomCard_v3>
