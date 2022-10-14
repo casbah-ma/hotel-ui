@@ -164,6 +164,7 @@ const CustomStyles = createGlobalStyle`
   .mySwiper_v3 {
     ${tw`w-full h-[40rem] bg-transparent`}
   }
+ 
 
   .CalendarDay__default {
     border-radius: 50%;

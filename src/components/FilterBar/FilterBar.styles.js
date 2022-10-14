@@ -5,7 +5,6 @@ export const variants = {
   v2: tw`w-full [&>li]:mr-3`,
   v3: tw`pb-0 mr-10`,
 }
-export const CategoriesList = styled.ul(() => [
-  tw`whitespace-nowrap  overflow-x-auto`,
+export const CategoriesList = styled.div(() => [
   ({ variant }) => variants[variant],
 ])
