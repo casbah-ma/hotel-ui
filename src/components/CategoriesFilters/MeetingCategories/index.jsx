@@ -13,7 +13,6 @@ import { isEmpty } from '@/helpers/utils'
 import { useState } from 'react'
 
 function MeetingCategories({ categories, headerProps, link }) {
-  console.log(categories)
   //handle active category
   const [active, setActive] = useState('All')
   const handleActive = (category) => {

@@ -2,9 +2,9 @@
 const DiningArea = function ({ width, height, color }) {
   return (
     <svg
-      xmlnsDc="http://purl.org/dc/elements/1.1/"
-      xmlnsCc="http://creativecommons.org/ns#"
-      xmlnsRdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlnsdc="http://purl.org/dc/elements/1.1/"
+      xmlnscc="http://creativecommons.org/ns#"
+      xmlnsrdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlnsSvg="http://www.w3.org/2000/svg"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
