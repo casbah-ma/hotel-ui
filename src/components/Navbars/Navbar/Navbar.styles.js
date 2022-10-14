@@ -1,6 +1,6 @@
 import tw, { styled } from 'twin.macro'
 
-export const NavbarContainer = styled.nav(
+export const NavbarContainer = styled.div(
   ({ bgColor, color, isHidden, hasBackground }) => [
     isHidden && tw`invisible`,
     tw`font-semibold text-black fixed z-10 top-0 w-full hidden lg:flex justify-between items-center py-10 px-12`,
