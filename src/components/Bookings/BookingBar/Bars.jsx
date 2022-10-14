@@ -17,7 +17,7 @@ import Guests from '@/components/Cards/GuestsCard'
 import { bookingUrl } from '@/helpers/utils'
 import { useBreakpoint } from '@/hooks'
 //icons
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'styled-components'
 
 // Handle availability of guests
@@ -80,9 +80,11 @@ export const Desktop = function ({
                   }
                 >
                   <Button
+                    {...buttonProps}
+                    label=""
                     as="div"
                     variant="rounded"
-                    Icon={ChevronDownIcon}
+                    Icon={ChevronUpIcon}
                     handleClick={() => {
                       setIsOpen({
                         ...isOpen,
@@ -124,7 +126,7 @@ export const Desktop = function ({
                     as="div"
                     {...buttonProps}
                     variant="rounded"
-                    Icon={ChevronDownIcon}
+                    Icon={ChevronUpIcon}
                     label=""
                     handleClick={() => {
                       setIsOpen({
@@ -206,7 +208,9 @@ export const Mobile = function ({
           <Button
             as="div"
             {...buttonProps}
-            {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+            variant="rounded"
+            Icon={ChevronUpIcon}
+            label=""
             handleClick={() => {
               setIsOpen({
                 ...isOpen,
@@ -238,7 +242,9 @@ export const Mobile = function ({
           <Button
             ref={guestbtn}
             {...buttonProps}
-            {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+            variant="rounded"
+            Icon={ChevronUpIcon}
+            label=""
             handleClick={() => {
               setIsOpen({
                 ...isOpen,
@@ -252,7 +258,7 @@ export const Mobile = function ({
       <div style={{ marginTop: '1.5rem' }}>
         <Button
           {...buttonProps}
-          {...{ label: 'Check Availability' }}
+          label="Check Availability"
           handleClick={() => {
             setIsOpen({
               ...isOpen,
