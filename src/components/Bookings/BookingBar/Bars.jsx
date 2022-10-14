@@ -70,6 +70,11 @@ export const Desktop = function ({
             {({ open }) => (
               <>
                 <Popover.Button
+                  className={
+                    open
+                      ? 'rotate-180 transform transition-transform duration-300'
+                      : 'transition-transform duration-300'
+                  }
                   aria-label={
                     open ? `close ${title_1} panel` : `open ${title_1} panel`
                   }
@@ -105,6 +110,11 @@ export const Desktop = function ({
             {({ open }) => (
               <>
                 <Popover.Button
+                  className={
+                    open
+                      ? 'rotate-180 transform transition-transform duration-300'
+                      : 'transition-transform duration-300'
+                  }
                   aria-label={
                     open ? `close ${title_2} panel` : `open ${title_2} panel`
                   }
