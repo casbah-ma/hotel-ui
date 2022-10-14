@@ -67,25 +67,31 @@ export const Desktop = function ({
             fontSize="sm"
           />
           <Popover>
-            <Popover.Button>
-              <Button
-                as="div"
-                {...buttonProps}
-                variant="rounded"
-                Icon={ChevronDownIcon}
-                label=""
-                handleClick={() => {
-                  setIsOpen({
-                    ...isOpen,
-                    dates: true,
-                    guests: false,
-                  })
-                }}
-              />
-            </Popover.Button>
-            <Popover.Panel className="panel">
-              <DatePicker dates={dates} onDatesChange={onDatesChanges} />
-            </Popover.Panel>
+            {({ open }) => (
+              <>
+                <Popover.Button
+                  aria-label={
+                    open ? `close ${title_1} panel` : `open ${title_1} panel`
+                  }
+                >
+                  <Button
+                    as="div"
+                    variant="rounded"
+                    Icon={ChevronDownIcon}
+                    handleClick={() => {
+                      setIsOpen({
+                        ...isOpen,
+                        dates: true,
+                        guests: false,
+                      })
+                    }}
+                  />
+                </Popover.Button>
+                <Popover.Panel className="panel">
+                  <DatePicker dates={dates} onDatesChange={onDatesChanges} />
+                </Popover.Panel>
+              </>
+            )}
           </Popover>
         </Column>
         <Column>
@@ -96,26 +102,39 @@ export const Desktop = function ({
             color={theme.colors.DatesCore.text}
           />
           <Popover style={{ zIndex: '10' }}>
-            <Popover.Button ref={guestbtn}>
-              <Button
-                as="div"
-                {...buttonProps}
-                variant="rounded"
-                Icon={ChevronDownIcon}
-                label=""
-                handleClick={() => {
-                  setIsOpen({ ...isOpen, dates: false, guests: !isOpen.guests })
-                }}
-              />
-            </Popover.Button>
-            <Popover.Panel className="panel">
-              <Guests
-                title={title_2}
-                guestValues={guestValues}
-                buttonProps={buttonProps}
-                onGuestChange={onGuestChange}
-              />
-            </Popover.Panel>
+            {({ open }) => (
+              <>
+                <Popover.Button
+                  aria-label={
+                    open ? `close ${title_2} panel` : `open ${title_2} panel`
+                  }
+                  ref={guestbtn}
+                >
+                  <Button
+                    as="div"
+                    {...buttonProps}
+                    variant="rounded"
+                    Icon={ChevronDownIcon}
+                    label=""
+                    handleClick={() => {
+                      setIsOpen({
+                        ...isOpen,
+                        dates: false,
+                        guests: !isOpen.guests,
+                      })
+                    }}
+                  />
+                </Popover.Button>
+                <Popover.Panel className="panel">
+                  <Guests
+                    title={title_2}
+                    guestValues={guestValues}
+                    buttonProps={buttonProps}
+                    onGuestChange={onGuestChange}
+                  />
+                </Popover.Panel>
+              </>
+            )}
           </Popover>
         </Column>
         <div className="desktop-action">
