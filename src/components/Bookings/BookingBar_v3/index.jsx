@@ -139,21 +139,25 @@ function Desktop({
     <BookingContent>
       <Bookingcolumns>
         <Label labelText={bookingTitles.column_1} />
-        <BookingDate
-          type="date"
-          value={dates?.startDate}
-          name="startDate"
-          onChange={handleDatesChanges}
-        />
+        <label htmlFor="startDate" aria-label={bookingTitles.column_1}>
+          <BookingDate
+            type="date"
+            value={dates?.startDate}
+            name="startDate"
+            onChange={handleDatesChanges}
+          />
+        </label>
       </Bookingcolumns>
       <Bookingcolumns>
         <Label labelText={bookingTitles.column_2} />
-        <BookingDate
-          type="date"
-          value={dates.endDate}
-          name="endDate"
-          onChange={handleDatesChanges}
-        />
+        <label htmlFor="endDate" aria-label={bookingTitles.column_2}>
+          <BookingDate
+            type="date"
+            value={dates.endDate}
+            name="endDate"
+            onChange={handleDatesChanges}
+          />
+        </label>
       </Bookingcolumns>
       <Bookingcolumns>
         <GuestCard
