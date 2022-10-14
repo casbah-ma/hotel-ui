@@ -6,7 +6,7 @@ export const variants = {
   v3: tw`pb-0 mr-10 `,
 }
 
-export const Tag = styled.li(({ active, variant, theme }) => [
+export const Tag = styled.div(({ active, variant, theme }) => [
   tw`inline-flex items-center max-w-max cursor-pointer last:mr-0`,
   ({ variant }) => variants[variant],
   //Active styles
