@@ -19,7 +19,7 @@ function Swiper_v3({ header, autoplay = true, children }) {
   const bp = useBreakpoint()
 
   return (
-    <SwiperContainer>
+    <SwiperContainer data-testid="slider-section">
       <SwiperContent>
         <SwiperHeader>
           {!isEmpty(header) && <Header {...header} />}
