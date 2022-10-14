@@ -29,9 +29,7 @@ function GuestCard({
         />
         <GuestActions>
           <Button
-            testID={'minus-button'}
-            aria-label="minus-button"
-            aria-hidden="false"
+            ariaLabel={`decrease ${title} amount`}
             {...{
               variant: 'rounded',
               Icon: MinusIcon,
@@ -42,9 +40,7 @@ function GuestCard({
             bgColor={bgColor}
           />
           <Button
-            testID={'plus-button'}
-            aria-label="plus-button"
-            aria-hidden="false"
+            ariaLabel={`increase ${title} amount`}
             {...{
               variant: 'rounded',
               Icon: PlusIcon,
