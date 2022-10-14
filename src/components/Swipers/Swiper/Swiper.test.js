@@ -6,11 +6,11 @@ const { CardsSlider, VerticalCardsSlider } = composeStories(stories)
 describe('Swiper', () => {
   it('should render', () => {
     render(<CardsSlider />)
-    expect(screen.getByRole('slider')).toBeInTheDocument()
+    expect(screen.getByTestId('slider-section')).toBeInTheDocument()
   })
 
   it('should render vertical', () => {
     render(<VerticalCardsSlider />)
-    expect(screen.getByRole('slider')).toBeInTheDocument()
+    expect(screen.getByTestId('slider-section')).toBeInTheDocument()
   })
 })

@@ -21,7 +21,7 @@ const getSlidesNumber = (bp) => {
 const Swiper = function ({ header, children }) {
   const bp = useBreakpoint()
   return (
-    <SwiperContainer>
+    <SwiperContainer data-testid="slider-section">
       {!isEmpty(header) && <Header {...header} />}
       <SwiperCore
         slidesPerView={getSlidesNumber(bp)}
