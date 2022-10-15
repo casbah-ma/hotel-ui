@@ -17,7 +17,7 @@ import Guests from '@/components/Cards/GuestsCard'
 import { bookingUrl } from '@/helpers/utils'
 import { useBreakpoint } from '@/hooks'
 //icons
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'styled-components'
 
 // Handle availability of guests
@@ -67,25 +67,38 @@ export const Desktop = function ({
             fontSize="sm"
           />
           <Popover>
-            <Popover.Button>
-              <Button
-                as="div"
-                {...buttonProps}
-                variant="rounded"
-                Icon={ChevronDownIcon}
-                label=""
-                handleClick={() => {
-                  setIsOpen({
-                    ...isOpen,
-                    dates: true,
-                    guests: false,
-                  })
-                }}
-              />
-            </Popover.Button>
-            <Popover.Panel className="panel">
-              <DatePicker dates={dates} onDatesChange={onDatesChanges} />
-            </Popover.Panel>
+            {({ open }) => (
+              <>
+                <Popover.Button
+                  className={
+                    open
+                      ? 'rotate-180 transform transition-transform duration-500'
+                      : 'transition-transform duration-500'
+                  }
+                  aria-label={
+                    open ? `close ${title_1} panel` : `open ${title_1} panel`
+                  }
+                >
+                  <Button
+                    {...buttonProps}
+                    label=""
+                    as="div"
+                    variant="rounded"
+                    Icon={ChevronUpIcon}
+                    handleClick={() => {
+                      setIsOpen({
+                        ...isOpen,
+                        dates: true,
+                        guests: false,
+                      })
+                    }}
+                  />
+                </Popover.Button>
+                <Popover.Panel className="panel">
+                  <DatePicker dates={dates} onDatesChange={onDatesChanges} />
+                </Popover.Panel>
+              </>
+            )}
           </Popover>
         </Column>
         <Column>
@@ -96,26 +109,44 @@ export const Desktop = function ({
             color={theme.colors.DatesCore.text}
           />
           <Popover style={{ zIndex: '10' }}>
-            <Popover.Button ref={guestbtn}>
-              <Button
-                as="div"
-                {...buttonProps}
-                variant="rounded"
-                Icon={ChevronDownIcon}
-                label=""
-                handleClick={() => {
-                  setIsOpen({ ...isOpen, dates: false, guests: !isOpen.guests })
-                }}
-              />
-            </Popover.Button>
-            <Popover.Panel className="panel">
-              <Guests
-                title={title_2}
-                guestValues={guestValues}
-                buttonProps={buttonProps}
-                onGuestChange={onGuestChange}
-              />
-            </Popover.Panel>
+            {({ open }) => (
+              <>
+                <Popover.Button
+                  className={
+                    open
+                      ? 'rotate-180 transform transition-transform duration-300'
+                      : 'transition-transform duration-300'
+                  }
+                  aria-label={
+                    open ? `close ${title_2} panel` : `open ${title_2} panel`
+                  }
+                  ref={guestbtn}
+                >
+                  <Button
+                    as="div"
+                    {...buttonProps}
+                    variant="rounded"
+                    Icon={ChevronUpIcon}
+                    label=""
+                    handleClick={() => {
+                      setIsOpen({
+                        ...isOpen,
+                        dates: false,
+                        guests: !isOpen.guests,
+                      })
+                    }}
+                  />
+                </Popover.Button>
+                <Popover.Panel className="panel">
+                  <Guests
+                    title={title_2}
+                    guestValues={guestValues}
+                    buttonProps={buttonProps}
+                    onGuestChange={onGuestChange}
+                  />
+                </Popover.Panel>
+              </>
+            )}
           </Popover>
         </Column>
         <div className="desktop-action">
@@ -177,7 +208,9 @@ export const Mobile = function ({
           <Button
             as="div"
             {...buttonProps}
-            {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+            variant="rounded"
+            Icon={ChevronUpIcon}
+            label=""
             handleClick={() => {
               setIsOpen({
                 ...isOpen,
@@ -209,7 +242,9 @@ export const Mobile = function ({
           <Button
             ref={guestbtn}
             {...buttonProps}
-            {...{ variant: 'rounded', Icon: ChevronDownIcon, label: '' }}
+            variant="rounded"
+            Icon={ChevronUpIcon}
+            label=""
             handleClick={() => {
               setIsOpen({
                 ...isOpen,
@@ -223,7 +258,7 @@ export const Mobile = function ({
       <div style={{ marginTop: '1.5rem' }}>
         <Button
           {...buttonProps}
-          {...{ label: 'Check Availability' }}
+          label="Check Availability"
           handleClick={() => {
             setIsOpen({
               ...isOpen,

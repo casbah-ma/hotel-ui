@@ -1,5 +1,5 @@
 import { Swiper } from 'swiper/react'
-import { Autoplay, Navigation } from 'swiper'
+import { Autoplay, A11y } from 'swiper'
 import {
   SwiperContainer,
   SwiperHeader,
@@ -19,16 +19,22 @@ function Swiper_v3({ header, autoplay = true, children }) {
   const bp = useBreakpoint()
 
   return (
-    <SwiperContainer role="slider">
+    <SwiperContainer data-testid="slider-section">
       <SwiperContent>
         <SwiperHeader>
           {!isEmpty(header) && <Header {...header} />}
         </SwiperHeader>
         <SwiperButtonsContainer>
-          <SwiperButton onClick={() => swiperRef.slidePrev()}>
+          <SwiperButton
+            aria-label="previous slide"
+            onClick={() => swiperRef.slidePrev()}
+          >
             <Prev width="24px" height="24px" />
           </SwiperButton>
-          <SwiperButton onClick={() => swiperRef.slideNext()}>
+          <SwiperButton
+            aria-label="next slide"
+            onClick={() => swiperRef.slideNext()}
+          >
             <Next width="24px" height="24px" />
           </SwiperButton>
         </SwiperButtonsContainer>
@@ -41,7 +47,7 @@ function Swiper_v3({ header, autoplay = true, children }) {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={autoplay && [Autoplay]}
+        modules={autoplay ? [Autoplay, A11y] : [A11y]}
         className="mySwiper_v3"
       >
         {children}

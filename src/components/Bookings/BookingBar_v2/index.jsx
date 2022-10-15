@@ -63,48 +63,79 @@ function BookingBa_v2({
         <BookngContainer data-testid="booking-bar">
           <BookingContent>
             <BookingContentLeft>
-              <Label role="label" labelText={title_1 || ''} fontSize={bp} />
+              <Label labelText={title_1 || ''} fontSize={bp} />
               <Popover>
-                <Popover.Button>
-                  <Button
-                    as="div"
-                    variant="rounded"
-                    bgColor="white"
-                    Icon={ChevronUpIcon}
-                    color={theme.colors.DatesCore.text}
-                    border={true}
-                  />
-                </Popover.Button>
-                <Popover.Panel className="datesPanel">
-                  <DatePicker
-                    dates={dates}
-                    onDatesChange={onDatesRangeChanges}
-                  />
-                </Popover.Panel>
+                {({ open }) => (
+                  <>
+                    <Popover.Button
+                      className={
+                        open
+                          ? 'rotate-180 transform transition-transform duration-300'
+                          : 'transition-transform duration-500'
+                      }
+                      aria-label={
+                        open
+                          ? `close ${title_1} panel`
+                          : `open ${title_1} panel`
+                      }
+                    >
+                      <Button
+                        as="div"
+                        variant="rounded"
+                        bgColor="white"
+                        Icon={ChevronUpIcon}
+                        color={theme.colors.DatesCore.text}
+                        border={true}
+                      />
+                    </Popover.Button>
+                    <Popover.Panel className="datesPanel">
+                      <DatePicker
+                        dates={dates}
+                        onDatesChange={onDatesRangeChanges}
+                      />
+                    </Popover.Panel>
+                  </>
+                )}
               </Popover>
             </BookingContentLeft>
             <BookingContentRight>
-              <Label role="label" labelText={title_2 || ''} fontSize={bp} />
+              <Label labelText={title_2 || ''} fontSize={bp} />
               <Popover>
-                <Popover.Button ref={guestbtn}>
-                  <Button
-                    as="div"
-                    variant="rounded"
-                    bgColor="white"
-                    color={theme.colors.DatesCore.text}
-                    Icon={ChevronUpIcon}
-                    border={true}
-                  />
-                </Popover.Button>
-                <Popover.Panel className="datesPanel">
-                  <Guests
-                    centred
-                    title={title_2}
-                    guestValues={guestValues}
-                    buttonProps={buttonProps}
-                    onGuestChange={onGuestChange}
-                  />
-                </Popover.Panel>
+                {({ open }) => (
+                  <>
+                    <Popover.Button
+                      className={
+                        open
+                          ? 'rotate-180 transform transition-transform duration-300'
+                          : 'transition-transform duration-500'
+                      }
+                      aria-label={
+                        open
+                          ? `close ${title_2} panel`
+                          : `open ${title_2} panel`
+                      }
+                      ref={guestbtn}
+                    >
+                      <Button
+                        as="div"
+                        variant="rounded"
+                        bgColor="white"
+                        color={theme.colors.DatesCore.text}
+                        Icon={ChevronUpIcon}
+                        border={true}
+                      />
+                    </Popover.Button>
+                    <Popover.Panel className="datesPanel">
+                      <Guests
+                        centred
+                        title={title_2}
+                        guestValues={guestValues}
+                        buttonProps={buttonProps}
+                        onGuestChange={onGuestChange}
+                      />
+                    </Popover.Panel>
+                  </>
+                )}
               </Popover>
             </BookingContentRight>
           </BookingContent>

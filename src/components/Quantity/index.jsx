@@ -17,29 +17,24 @@ const Quantity = function ({
       <Label labelText={title} color={theme.colors.DatesCore.text} />
       <QuantityButtonContainer>
         <Button
-          testID={'minus-button'}
-          aria-label="minus-button"
-          aria-hidden="false"
+          ariaLabel={`decrease ${title} amount`}
           {...buttonProps}
-          {...{
-            variant: 'rounded',
-            Icon: MinusIcon,
-            label: '',
-            disabled: value === 0,
-          }}
+          variant="rounded"
+          Icon={MinusIcon}
+          label=""
+          disabled={value === 0}
           handleClick={onMinusClick}
         />
         <Label
-          testID="value"
           labelText={value?.toString()}
           color={theme.colors.DatesCore.text}
         />
         <Button
-          testID={'plus-button'}
-          aria-label="plus-button"
-          aria-hidden="false"
+          ariaLabel={`increase ${title} amount`}
           {...buttonProps}
-          {...{ variant: 'rounded', Icon: PlusIcon, label: '' }}
+          variant="rounded"
+          Icon={PlusIcon}
+          label=""
           handleClick={onPlusClick}
         />
       </QuantityButtonContainer>

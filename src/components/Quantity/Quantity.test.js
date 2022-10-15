@@ -32,14 +32,18 @@ describe('Quantity', () => {
       <Default onMinusClick={mockOnMinusClick} onPlusClick={mockOnPlusClick} />
     )
     //plus button
-    const plusButton = screen.getByTestId('plus-button')
+    const plusButton = screen.getByLabelText(
+      `increase ${Default.args.title} amount`
+    )
     await user.click(plusButton)
     expect(mockOnPlusClick).toBeCalledTimes(1)
     await user.click(plusButton)
     await user.click(plusButton)
     expect(mockOnPlusClick).toBeCalledTimes(3)
     //minus button
-    const minusButton = screen.getByTestId('minus-button')
+    const minusButton = screen.getByLabelText(
+      `decrease ${Default.args.title} amount`
+    )
     await user.click(minusButton)
     expect(mockOnMinusClick).toBeCalledTimes(1)
   })

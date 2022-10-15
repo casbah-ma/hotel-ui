@@ -4,6 +4,7 @@ import { buttonsVariant, StyledButton, StyledIcon } from './Button.styles'
 const Button = ({
   variant,
   label,
+  ariaLabel,
   Icon,
   color,
   bgColor,
@@ -16,6 +17,7 @@ const Button = ({
 }) => {
   return (
     <StyledButton
+      aria-label={ariaLabel}
       as={as}
       data-testid={testID}
       variant={variant}
@@ -37,6 +39,7 @@ const Button = ({
 
 Button.propTypes = {
   label: PropTypes.string,
+  ariaLabel: PropTypes.string,
   variant: PropTypes.oneOf(Object.keys(buttonsVariant)),
   bgColor: PropTypes.string,
   color: PropTypes.string,

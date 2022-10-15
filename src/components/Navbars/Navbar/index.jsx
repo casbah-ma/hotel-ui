@@ -66,7 +66,7 @@ function Navbar({
       setHasBackground(false)
       actionProps.border = false
     }
-    console.log(scrollDirection)
+
     if (scrollDirection === 'down' && scrollPosition > delta) {
       setIsHidden(true)
     } else if (scrollDirection === 'up') {

@@ -29,27 +29,17 @@ function GuestCard({
         />
         <GuestActions>
           <Button
-            testID={'minus-button'}
-            aria-label="minus-button"
-            aria-hidden="false"
-            {...{
-              variant: 'rounded',
-              Icon: MinusIcon,
-              label: '',
-              disabled: value === 0,
-            }}
+            ariaLabel={`decrease ${title} amount`}
+            variant="rounded"
+            Icon={MinusIcon}
+            disabled={value === 0}
             handleClick={onMinusClick}
             bgColor={bgColor}
           />
           <Button
-            testID={'plus-button'}
-            aria-label="plus-button"
-            aria-hidden="false"
-            {...{
-              variant: 'rounded',
-              Icon: PlusIcon,
-              label: '',
-            }}
+            ariaLabel={`increase ${title} amount`}
+            variant="rounded"
+            Icon={PlusIcon}
             handleClick={onPlusClick}
             bgColor={bgColor}
           />

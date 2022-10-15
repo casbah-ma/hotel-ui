@@ -31,8 +31,6 @@ function Footer({
   color,
   bgColor,
   Address,
-  placeholder,
-  submit,
   hotelName,
   logo,
   contacts,
@@ -74,15 +72,15 @@ function Footer({
       bgColor={bgColor}
     >
       <FooterLogo>
-      <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
-        <Image
-          src={logo}
-          width={200}
-          height={bp === 'md' || bp === 'lg' ? 200 : 100}
-          objectFit="contain"
-          alt="logo"
-        />
-      </Link>
+        <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
+          <Image
+            src={logo}
+            width={200}
+            height={bp === 'md' || bp === 'lg' ? 200 : 100}
+            objectFit="contain"
+            alt="logo"
+          />
+        </Link>
       </FooterLogo>
       {description && (
         <FooterText>
@@ -170,12 +168,10 @@ Footer.propTypes = {
   Address: PropTypes.string,
   placeholder: PropTypes.string,
   submit: PropTypes.string,
-  contacts: PropTypes.arrayOf(
-    PropTypes.shape({
-      phone: PropTypes.string,
-      email: PropTypes.string,
-    })
-  ),
+  contacts: PropTypes.shape({
+    phone: PropTypes.string,
+    email: PropTypes.string,
+  }),
   links: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
