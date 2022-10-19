@@ -53,12 +53,6 @@ WithButton.args = {
   actionProps: ButtonProps.Dark.args,
 }
 
-export const WithButtonV2 = Template.bind({})
-WithButtonV2.args = {
-  ...ImageOnLeftV2.args,
-  actionProps: ButtonProps.Secondary.args,
-}
-
 export const TwoColumns = Template.bind({})
 TwoColumns.args = {
   ...Default.args,
@@ -70,6 +64,7 @@ TwoColumns.args = {
 export const TwoColumnsV2 = Template.bind({})
 TwoColumnsV2.args = {
   ...TwoColumns.args,
+  title: { ...TitleStories.WithLine.args },
   rows: 1,
 }
 
@@ -86,5 +81,6 @@ ThreeColumns.args = {
 export const ThreeColumnsV2 = Template.bind({})
 ThreeColumnsV2.args = {
   ...ThreeColumns.args,
+  title: { ...TitleStories.WithLine.args },
   rows: 1,
 }

@@ -5,23 +5,23 @@ export const imagePositions = {
   left: tw` flex-col md:flex-row gap-10 md:gap-[7.75rem]`,
 }
 
-export const Container = styled.div(({ imagePosition }) => [
-  tw`flex w-full gap-10 md:gap-9`,
+export const Container = styled.div(() => [
+  tw`flex w-full gap-10 md:gap-9 `,
   ({ imagePosition }) => imagePositions[imagePosition],
 ])
 
 export const Content = styled.div(({ contentIsCentred }) => [
-  tw`flex flex-col justify-between gap-14`,
+  tw`flex flex-col justify-between gap-9 md:gap-12`,
   contentIsCentred && tw`justify-center`,
 ])
 
 export const Text = tw.div`
-  flex flex-col gap-y-[3.2rem] xs:p-2
+  flex flex-col gap-y-[3.2rem] xs:p-2 sm:p-0
 `
 
 export const Grid = styled.section(({ rows }) => [
   rows === 1
-    ? tw`grid lg:grid-cols-3 gap-[3.75rem] md:gap-12`
+    ? tw`grid lg:grid-cols-3 gap-5 lg:gap-12`
     : tw`grid grid-cols-2 gap-4 md:gap-12`,
 ])
 
