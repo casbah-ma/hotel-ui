@@ -7,7 +7,7 @@ export const variants = {
 
 const contentVariants = {
   version1: tw`pb-4 px-6`,
-  version2: tw`border-t border-[#DBDBDB] py-4 pl-6 pr-28 w-full`,
+  version2: tw`border-t border-[#DBDBDB] py-4 pl-6 pr-6 lg:pr-28 w-full`,
 }
 
 export const Item = styled.div(({ theme }) => [
