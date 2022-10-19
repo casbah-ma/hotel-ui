@@ -8,6 +8,7 @@ export default [
     guests: '32',
     href: '/',
     showItems: true,
+    color: ''
   },
   {
     type: 'Banquet',
