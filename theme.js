@@ -22,6 +22,8 @@ export default {
     DatesCore: {
       bg: '#fff',
       text: '#000',
+      bgSelected: '#486DC3',
+      textSelected: '#fff',
     },
     gradient: {
       primary: 'rgba(72, 109, 195, 0.1) 0%',
