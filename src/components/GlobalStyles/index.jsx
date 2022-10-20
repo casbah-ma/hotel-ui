@@ -187,33 +187,33 @@ const CustomStyles = createGlobalStyle`
   fill: ${({ theme }) => theme.colors.DatesCore.text} !important;
  }
 .CalendarDay__selected_span {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.text} !important;
   color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   }
 }
 .CalendarDay__highlighted_calendar {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   }
 }
 .CalendarDay__selected {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   }
 }
 .CalendarDay__hovered_span {
   &:hover{
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   }
 }
 
