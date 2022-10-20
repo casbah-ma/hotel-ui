@@ -69,9 +69,7 @@ function BookingBa_v2({
                   <>
                     <Popover.Button
                       className={
-                        open
-                          ? 'rotate-180 transform transition-transform duration-300'
-                          : 'transition-transform duration-500'
+                        open ? 'animate-chevron-down' : 'animate-chevron-up'
                       }
                       aria-label={
                         open
@@ -105,9 +103,7 @@ function BookingBa_v2({
                   <>
                     <Popover.Button
                       className={
-                        open
-                          ? 'rotate-180 transform transition-transform duration-300'
-                          : 'transition-transform duration-500'
+                        open ? 'animate-chevron-down' : 'animate-chevron-up'
                       }
                       aria-label={
                         open

@@ -6,6 +6,13 @@ const CustomStyles = createGlobalStyle`
 .full-width {
   width: 100%;
 }
+
+.animate-chevron-down {
+  ${tw`rotate-180 transform transition-transform duration-500`}
+}
+.animate-chevron-up {
+  ${tw`transition-transform duration-500`}
+}
 //images
 .radius-lg {
   ${tw`rounded-lg`}
@@ -18,6 +25,8 @@ const CustomStyles = createGlobalStyle`
 .swiper {
   ${tw`w-full h-full`}
 }
+
+
 //BookingBar
 .panel {
   ${tw`p-10 rounded-xl h-[26.25rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
