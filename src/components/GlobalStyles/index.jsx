@@ -3,6 +3,11 @@ import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 import '../../styles/datepicker.css'
 
 const CustomStyles = createGlobalStyle`
+
+a {
+  font-size: 0
+}
+
 .full-width {
   width: 100%;
 }
