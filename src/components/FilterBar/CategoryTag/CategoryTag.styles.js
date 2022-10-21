@@ -1,9 +1,9 @@
 import tw, { styled } from 'twin.macro'
 
 export const variants = {
-  v1: tw`pb-3 mr-11 `,
-  v2: tw`px-8 py-3 border border-[#D4D4D4] rounded-full`,
-  v3: tw`pb-0 mr-10 `,
+  v1: tw`pb-3  `,
+  v2: tw`px-6 lg:px-8 py-3 border border-[#D4D4D4] rounded-full`,
+  v3: tw`pb-0  `,
 }
 
 export const Tag = styled.div(({ active, variant, theme }) => [

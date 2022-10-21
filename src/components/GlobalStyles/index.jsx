@@ -3,8 +3,20 @@ import tw, { GlobalStyles as BaseStyles } from 'twin.macro'
 import '../../styles/datepicker.css'
 
 const CustomStyles = createGlobalStyle`
+
+a {
+  font-size: 0
+}
+
 .full-width {
   width: 100%;
+}
+
+.animate-chevron-down {
+  ${tw`rotate-180 transform transition-transform duration-500`}
+}
+.animate-chevron-up {
+  ${tw`transition-transform duration-500`}
 }
 //images
 .radius-lg {
@@ -18,6 +30,8 @@ const CustomStyles = createGlobalStyle`
 .swiper {
   ${tw`w-full h-full`}
 }
+
+
 //BookingBar
 .panel {
   ${tw`p-10 rounded-xl h-[26.25rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
@@ -181,39 +195,39 @@ const CustomStyles = createGlobalStyle`
 .DayPicker_weekHeader__verticalScrollable,
 .DayPicker_weekHeader_li,
 .DayPicker__horizontal {
-  ${tw`outline-none rounded-2xl`}
+  ${tw`outline-none rounded-full`}
   background: ${({ theme }) => theme.colors.DatesCore.bg} !important;
   color: ${({ theme }) => theme.colors.DatesCore.text} !important;
   fill: ${({ theme }) => theme.colors.DatesCore.text} !important;
  }
 .CalendarDay__selected_span {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.bg} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   }
 }
 .CalendarDay__highlighted_calendar {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   }
 }
 .CalendarDay__selected {
-  background: ${({ theme }) => theme.colors.bg.secondary} !important;
-  color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+  background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+  color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   &:hover, &:active {
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   }
 }
 .CalendarDay__hovered_span {
   &:hover{
-    background: ${({ theme }) => theme.colors.bg.secondary} !important;
-    color: ${({ theme }) => theme.colors.DatesCore.text} !important;
+    background: ${({ theme }) => theme.colors.DatesCore.bgSelected} !important;
+    color: ${({ theme }) => theme.colors.DatesCore.textSelected} !important;
   }
 }
 

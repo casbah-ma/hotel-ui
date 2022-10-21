@@ -1,8 +1,8 @@
 import tw, { styled } from 'twin.macro'
 export const imagePositions = {
   bottom: tw`flex-col`,
-  right: tw`flex-col items-end md:flex-row gap-10 md:gap-[7.75rem]`,
-  left: tw` flex-col items-start md:flex-row gap-10 md:gap-[7.75rem]`,
+  right: tw`flex-col items-end md:flex-row md:items-stretch gap-10 md:gap-[7.75rem]`,
+  left: tw` flex-col items-start md:flex-row md:items-stretch gap-10 md:gap-[7.75rem]`,
 }
 
 export const Container = styled.div(() => [
@@ -16,8 +16,10 @@ export const Content = styled.div(({ contentIsCentred }) => [
 ])
 
 export const Image = styled.div(({ imagePosition }) => [
-  tw`relative flex-shrink-0`,
-  imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
+  tw`relative flex-shrink-0 self-start`,
+  imagePosition === 'left'
+    ? tw`order-last md:order-first `
+    : tw`order-last self-end`,
 ])
 
 export const SmallImage = styled.div(({ imagePosition }) => [

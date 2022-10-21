@@ -59,7 +59,7 @@ function Navbar_v2({
     const delta = 20
     if (scrollPosition > 100) {
       setHasBackground(true)
-      transparent ? actionProps.border = true : ''
+      transparent ? (actionProps.border = true) : ''
     } else {
       setHasBackground(false)
       actionProps.border = false

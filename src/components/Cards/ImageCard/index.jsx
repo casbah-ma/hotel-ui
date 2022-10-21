@@ -96,13 +96,13 @@ const imageVariantsShapes = {
   },
   //for blog V3
   imageVertical: {
-    xs: { width: 236, height: 262 },
+    xs: { width: 200, height: 220 },
     sm: { width: 236, height: 262 },
     md: { width: 280, height: 310 },
     lg: { width: 540, height: 600 },
   },
   extraSmall: {
-    xs: { width: 118, height: 131 },
+    xs: { width: 108, height: 111 },
     sm: { width: 118, height: 131 },
     md: { width: 131, height: 151 },
     lg: { width: 332, height: 258 },
