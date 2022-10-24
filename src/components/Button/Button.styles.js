@@ -13,8 +13,7 @@ export const StyledButton = styled.button(
   ({ disabled, color, bgColor, theme, border }) => [
     //base style
     `font-family: ${theme.fontFamily.secondary};`,
-    tw`px-3 py-3 lg:px-5 
-    font-semibold text-sm 
+    tw`px-3 py-3 lg:px-5 font-semibold text-sm 
     md:text-base lg:text-xl transform hover:scale-100 `,
     //variants
     ({ variant }) => buttonsVariant[variant],

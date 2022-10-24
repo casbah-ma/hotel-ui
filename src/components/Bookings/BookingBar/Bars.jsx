@@ -192,7 +192,6 @@ export const Mobile = function ({
   title_2,
   guestsTitles,
 }) {
-  const bp = useBreakpoint()
   const guestbtn = useRef(null) // ref for guests button
   const [isOpen, setIsOpen] = useState({
     dates: false,
@@ -206,6 +205,12 @@ export const Mobile = function ({
     }
   }
   const theme = useTheme()
+
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+
   return (
     <MobileContainer data-testid="booking-bar">
       {isOpen.dates && (
@@ -220,11 +225,18 @@ export const Mobile = function ({
 
       <MobileSection>
         <Column>
-          <Label
-            role="label"
-            labelText={title_1}
-            color={theme.colors.DatesCore.text}
-          />
+          <Row>
+            <Label
+              role="label"
+              labelText={title_1}
+              color={theme.colors.DatesCore.text}
+            />
+            <Values>
+              {startDate &&
+                endDate &&
+                `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
+            </Values>
+          </Row>
           <Button
             as="div"
             {...buttonProps}
@@ -253,12 +265,18 @@ export const Mobile = function ({
       )}
       <MobileSection>
         <Column>
-          <Label
-            role="label"
-            labelText={title_2}
-            fontSize="sm"
-            color={theme.colors.DatesCore.text}
-          />
+          <Row>
+            <Label
+              role="label"
+              labelText={title_2}
+              fontSize="sm"
+              color={theme.colors.DatesCore.text}
+            />
+            <Values>
+              {guestValues?.adults > 0 &&
+                `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
+            </Values>
+          </Row>
           <Button
             ref={guestbtn}
             {...buttonProps}
