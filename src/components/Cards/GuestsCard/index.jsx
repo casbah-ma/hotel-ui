@@ -9,6 +9,7 @@ const Guests = ({
   buttonProps,
   onGuestChange,
   title,
+  guestsTitles,
   centred,
 }) => {
   const theme = useTheme()
@@ -25,14 +26,14 @@ const Guests = ({
       )}
       <GuestValues>
         <Quantity
-          title="Adults :"
+          title={guestsTitles?.adults + ':'}
           value={guestValues?.adults}
           buttonProps={buttonProps}
           onPlusClick={() => handlePlusClick('adults')}
           onMinusClick={() => handleMinusClick('adults')}
         />
         <Quantity
-          title="Kids :"
+          title={guestsTitles?.kids + ':'}
           value={guestValues?.kids}
           buttonProps={buttonProps}
           onPlusClick={() => handlePlusClick('kids')}
@@ -47,6 +48,10 @@ Guests.propTypes = {
   guestValues: PropTypes.shape({
     adults: PropTypes.number,
     kids: PropTypes.number,
+  }),
+  guestsTitles: PropTypes.shape({
+    adults: PropTypes.string,
+    kids: PropTypes.string,
   }),
   buttonProps: PropTypes.object,
   handleGuestChange: PropTypes.func,
