@@ -7,6 +7,7 @@ const props = {
   title_2: 'Guests',
   dates: { startDate: new Date(), endDate: new Date() },
   guestValues: { adults: 1, kids: 0 },
+  guestsTitles: { adults: 'Adults', kids: 'Kids' },
   buttonProps: { ...Button.Primary.args },
   onDatesChange: () => {},
   onGuestChange: () => {},
@@ -23,7 +24,7 @@ export default {
         endDate: null,
       })
       const [guestValues, setGuestValues] = useState('guests', {
-        adults: 1,
+        adults: 0,
         kids: 0,
       })
 
@@ -45,6 +46,7 @@ export default {
               ...Button.Primary.args,
             }}
             dates={dates}
+            guestsTitles={{ adults: 'Adults', kids: 'Kids' }}
             guestValues={guestValues}
             onGuestChange={onGuestChange}
             onDatesChange={onDatesChange}
