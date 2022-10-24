@@ -4,7 +4,7 @@ import '../../styles/datepicker.css'
 
 const CustomStyles = createGlobalStyle`
 
-a {
+.logo {
   font-size: 0
 }
 
