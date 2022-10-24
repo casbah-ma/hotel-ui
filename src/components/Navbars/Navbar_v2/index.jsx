@@ -80,7 +80,12 @@ function Navbar_v2({
       hasBackground={hasBackground}
       transparent={transparent}
     >
-      <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
+      <Link
+        isLogo={true}
+        href="/"
+        languages={languages}
+        defaultLanguage={defaultLanguage}
+      >
         <Image
           src={logo}
           alt="logo"

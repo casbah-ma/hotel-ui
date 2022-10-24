@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { useRouter } from 'next/router'
 
 function LinkComponent(props) {
-  let { children, locale, languages, defaultLanguage, ...rest } = props
+  let { children, locale, languages, defaultLanguage, isLogo, ...rest } = props
   const router = useRouter()
   const { pathname, query, asPath } = router
   // Detect current language
@@ -37,7 +37,9 @@ function LinkComponent(props) {
   href = href.replace(/([^:]\/)\/+/g, '$1').replace('//', '/')
   return (
     <Link href={href} passHref>
-      <a {...rest}>{children}</a>
+      <a className={isLogo ? 'logo' : ''} {...rest}>
+        {children}
+      </a>
     </Link>
   )
 }
