@@ -1,11 +1,14 @@
-//styles
 import { useRef, useState } from 'react'
+import moment from 'moment'
+
 //styles
 import {
   DesktopContainer,
   MobileContainer,
   MobileSection,
   Column,
+  Row,
+  Values,
 } from './BookingBar.styles'
 //components
 import Button from '@/components/Button'
@@ -40,6 +43,7 @@ export const Desktop = function ({
   baseUrl,
   title_1,
   title_2,
+  guestsTitles,
 }) {
   const guestbtn = useRef(null) // ref for guests button
   const [isOpen, setIsOpen] = useState({
@@ -56,16 +60,28 @@ export const Desktop = function ({
     }
   }
   const theme = useTheme()
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+
   return (
     <Popover.Group style={{ position: 'relative' }}>
       <DesktopContainer data-testid="booking-bar">
         <Column>
-          <Label
-            color={theme.colors.DatesCore.text}
-            role="label"
-            labelText={title_1}
-            fontSize="sm"
-          />
+          <Row>
+            <Label
+              color={theme.colors.DatesCore.text}
+              role="label"
+              labelText={title_1}
+              fontSize="sm"
+            />
+            <Values>
+              {startDate &&
+                endDate &&
+                `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
+            </Values>
+          </Row>
           <Popover>
             {({ open }) => (
               <>
@@ -100,12 +116,18 @@ export const Desktop = function ({
           </Popover>
         </Column>
         <Column>
-          <Label
-            role="label"
-            labelText={title_2}
-            fontSize="sm"
-            color={theme.colors.DatesCore.text}
-          />
+          <Row>
+            <Label
+              role="label"
+              labelText={title_2}
+              fontSize="sm"
+              color={theme.colors.DatesCore.text}
+            />
+            <Values>
+              {guestValues?.adults > 0 &&
+                `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
+            </Values>
+          </Row>
           <Popover style={{ zIndex: '10' }}>
             {({ open }) => (
               <>
@@ -139,6 +161,7 @@ export const Desktop = function ({
                     guestValues={guestValues}
                     buttonProps={buttonProps}
                     onGuestChange={onGuestChange}
+                    guestsTitles={guestsTitles}
                   />
                 </Popover.Panel>
               </>
@@ -167,6 +190,7 @@ export const Mobile = function ({
   baseUrl,
   title_1,
   title_2,
+  guestsTitles,
 }) {
   const bp = useBreakpoint()
   const guestbtn = useRef(null) // ref for guests button
