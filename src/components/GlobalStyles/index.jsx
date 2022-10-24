@@ -13,10 +13,10 @@ const CustomStyles = createGlobalStyle`
 }
 
 .animate-chevron-down {
-  ${tw`rotate-180 transform transition-transform duration-500`}
+  ${tw`rotate-180 transform transition-transform duration-500 focus:outline-none`}
 }
 .animate-chevron-up {
-  ${tw`transition-transform duration-500`}
+  ${tw`transition-transform duration-500 focus:outline-none`}
 }
 //images
 .radius-lg {
