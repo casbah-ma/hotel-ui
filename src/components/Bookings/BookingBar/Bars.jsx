@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import moment from 'moment'
-
 //styles
 import {
   DesktopContainer,
@@ -16,12 +15,11 @@ import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'
 import { Popover } from '@headlessui/react'
 import Guests from '@/components/Cards/GuestsCard'
-//
+//utils
 import { bookingUrl } from '@/helpers/utils'
-import { useBreakpoint } from '@/hooks'
 //icons
-import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'styled-components'
+import { ChevronUpIcon } from '@heroicons/react/24/solid'
 
 // Handle availability of guests
 const checkAvailability = (dates, guestValues, baseUrl) => {

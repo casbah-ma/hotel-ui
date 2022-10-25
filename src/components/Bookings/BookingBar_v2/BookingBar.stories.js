@@ -29,9 +29,8 @@ export default {
       }
 
       // handle Dates Changes
-      const onDatesChange = (dates) => {
-        console.log('dates', dates)
-        setDates(dates)
+      const onDatesChange = (name, value) => {
+        setDates({ ...dates, [name]: value })
       }
       return (
         <div className="h-screen pb-24 flex justify-center items-end">

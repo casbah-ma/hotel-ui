@@ -17,11 +17,7 @@ export const BookingContent = styled.div(({ showContent }) => [
 ])
 
 export const Bookingcolumns = styled.div(({ theme }) => [
-  tw`flex flex-col items-center justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5 `,
-])
-
-export const BookingDate = styled.input(({ theme }) => [
-  tw`w-auto h-auto text-black cursor-pointer focus:outline-none `,
+  tw`flex flex-col items-center justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5`,
 ])
 
 export const BookingButton = styled.button(({ theme }) => [
