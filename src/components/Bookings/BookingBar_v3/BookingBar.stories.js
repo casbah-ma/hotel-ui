@@ -21,29 +21,32 @@ export default {
       }
 
       // handle Dates Changes
-      const onDatesChange = (name, value) => {
-        setDates({ ...dates, [name]: value })
+      const onDatesChange = (dates) => {
+        console.log('dates', dates)
+        setDates(dates)
       }
       return (
-        <BookingBar_v3
-          bookingTitles={{
-            column_1: 'Check in',
-            column_2: 'Check out',
-            column_3: 'Adults',
-            column_4: 'Kids',
-          }}
-          buttonProps={{
-            text: 'Check Availability',
-            onClick: () => {
-              console.log('dates', dates)
-              console.log('guestValues', guestValues)
-            },
-          }}
-          dates={dates}
-          guestValues={guestValues}
-          onGuestChange={onGuestChange}
-          onDatesChange={onDatesChange}
-        />
+        <div className="h-screen pb-24 flex justify-center items-end">
+          <BookingBar_v3
+            bookingTitles={{
+              column_1: 'Check in',
+              column_2: 'Check out',
+              column_3: 'Adults',
+              column_4: 'Kids',
+            }}
+            buttonProps={{
+              text: 'Check Availability',
+              onClick: () => {
+                console.log('dates', dates)
+                console.log('guestValues', guestValues)
+              },
+            }}
+            dates={dates}
+            guestValues={guestValues}
+            onGuestChange={onGuestChange}
+            onDatesChange={onDatesChange}
+          />
+        </div>
       )
     },
   ],

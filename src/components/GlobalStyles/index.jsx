@@ -33,8 +33,24 @@ const CustomStyles = createGlobalStyle`
 
 
 //BookingBar
+.booking-wrapper {
+  ${tw` w-full h-full`}
+}
+
+.booking-columns {
+  ${tw`flex flex-col items-center justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5`}
+}
+
+.booking-columns-button {
+  ${tw`flex gap-3 justify-center items-center [&>span]:text-gray-500 text-gray-500`}
+}
+
+.panel.v3 {
+  ${tw`right-0 bottom-32 lg:bottom-36`}
+}
+
 .panel {
-  ${tw`p-10 rounded-xl h-[26.25rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
+  ${tw`p-10 rounded-xl h-[26.25rem] absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
