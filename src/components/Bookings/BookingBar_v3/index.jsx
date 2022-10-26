@@ -75,7 +75,7 @@ function BookingBar_v3({
         <Mobile
           color={color}
           bgColor={bgColor}
-          handleDatesChanges={handleDatesChanges}
+          onDatesChange={onDatesChange}
           dates={dates}
           bookingTitles={bookingTitles}
           guestValues={guestValues}
@@ -162,7 +162,7 @@ function Desktop({
         </Popover>
 
         <Popover className="booking-columns">
-          <Label labelText={bookingTitles.column_1} />
+          <Label labelText={bookingTitles.column_2} />
           <Popover.Button
             className="booking-columns-button"
             aria-label={bookingTitles.column_1}
@@ -216,29 +216,44 @@ function Mobile({
   handleMinusClick,
   bookingTitles,
   dates,
-  handleDatesChanges,
+  onDatesChange,
 }) {
+  // handle Dates Changes
+  const onDatesChanges = async (dates) => {
+    await onDatesChange(dates)
+  }
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+
   return (
     <BookingContent>
       <Bookingcolumns>
-        <Label labelText={bookingTitles.column_1} />
-        <BookingDate
-          type="date"
-          value={dates.startDate}
-          name="startDate"
-          onChange={handleDatesChanges}
-        />
+        <Popover>
+          <Popover.Button
+            className="booking-columns-button"
+            aria-label={bookingTitles.column_1}
+          >
+            <Label labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'} />
+            <CalendarDaysIcon width={20} height={20} />
+          </Popover.Button>
+        </Popover>
       </Bookingcolumns>
       {showContent && (
         <>
           <Bookingcolumns>
-            <Label labelText={bookingTitles.column_2} />
-            <BookingDate
-              type="date"
-              value={dates.endDate}
-              name="endDate"
-              onChange={handleDatesChanges}
-            />
+            <Popover>
+              <Popover.Button
+                className="booking-columns-button"
+                aria-label={bookingTitles.column_2}
+              >
+                <Label
+                  labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'}
+                />
+                <CalendarDaysIcon width={20} height={20} />
+              </Popover.Button>
+            </Popover>
           </Bookingcolumns>
           <Bookingcolumns>
             <GuestCard
