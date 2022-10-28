@@ -16,7 +16,10 @@ import {
   Bookingcolumns,
   BookingDate,
   ShowContentButton,
+  BackButton
 } from './BookingBar.styles'
+import { ChevronRight } from '../../Icons'
+import RightChevron from '../../Icons/RightChevron'
 
 function BookingBar_v3({
   color,
@@ -60,6 +63,10 @@ function BookingBar_v3({
   }
   return (
     <BookingBarContainer className="relative" showContent={showContent}>
+      {/* {!showContent && <BackButton>back
+        <RightChevron width={19} height={19} color={'#6B7280'} className="ml-2" />
+        </BackButton>} */}
+
       {!showContent ? (
         <Desktop
           color={color}
@@ -146,6 +153,9 @@ function Desktop({
     <Popover.Group className="booking-wrapper">
       <BookingContent>
         <Popover className="booking-columns">
+        <BackButton>back
+        <RightChevron width={19} height={19} color={'#6B7280'} />
+        </BackButton>
           <Label labelText={bookingTitles.column_1} />
           <Popover.Button
             className="booking-columns-button"
