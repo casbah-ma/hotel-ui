@@ -46,7 +46,9 @@ const CustomStyles = createGlobalStyle`
 }
 
 .panel.v3 {
-  ${tw`right-0 bottom-32 lg:bottom-36`}
+  ${tw`right-0 xs:bottom-[4.6rem] bottom-32 lg:bottom-36
+ xs:top-[1.5rem] lg:top-auto xs:overflow-hidden lg:overflow-auto xs:z-10 xs:h-auto xs:ml-0 xs:rounded-b-none lg:rounded-xl xs:shadow-none lg:shadow-card
+  `}
 }
 
 .panel {
