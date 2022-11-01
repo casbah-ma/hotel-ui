@@ -17,6 +17,7 @@ Default.args = {
     emailError: '',
     message: 'Test message',
     messageError: '',
+    t: (string) => string,
   },
   onChange: () => {},
   onClick: () => {},

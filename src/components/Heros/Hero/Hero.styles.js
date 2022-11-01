@@ -13,7 +13,7 @@ export const HeroContainer = styled.div(({ gradient, theme }) => [
 
 export const HeroImage = styled.div(({ gradient, theme }) => [
   tw`
-    w-full h-full bg-no-repeat bg-cover object-cover bg-center  brightness-50 bg-opacity-90
+    w-full h-full bg-no-repeat bg-cover object-cover bg-center  brightness-[.76] bg-opacity-90
     `,
   gradient && tw`bg-opacity-100 brightness-100`,
   gradient &&
