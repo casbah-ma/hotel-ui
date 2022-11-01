@@ -148,18 +148,20 @@ function Desktop({
   const formatDate = (date) => {
     return moment(date).format('MMM DD')
   }
+  const [showBackBtn, setShowBackBtn] = useState(false)
 
   return (
     <Popover.Group className="booking-wrapper">
       <BookingContent>
         <Popover className="booking-columns">
-        <BackButton>back
+       {showBackBtn && <BackButton onClick={()=>setShowBackBtn(false)}>back
         <RightChevron width={19} height={19} color={'#6B7280'} />
-        </BackButton>
+        </BackButton>}
           <Label labelText={bookingTitles.column_1} />
           <Popover.Button
             className="booking-columns-button"
             aria-label={bookingTitles.column_1}
+            onClick={()=>setShowBackBtn(true)}
           >
             <Label
               labelText={startDate ? formatDate(startDate) : 'DD/MM/YYY'}
@@ -176,6 +178,7 @@ function Desktop({
           <Popover.Button
             className="booking-columns-button"
             aria-label={bookingTitles.column_1}
+            onClick={()=>setShowBackBtn(true)}
           >
             <Label labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'} />
             <CalendarDaysIcon width={20} height={20} />
