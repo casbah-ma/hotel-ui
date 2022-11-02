@@ -13,8 +13,9 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     messageError,
     buttonLabel,
     whithline,
-    placeHolder="Full Name",
+    placeHolder,
     color = '#000000',
+    t,
   } = formInputs
   return (
     <Formv2Container data-testid="Formv3-container">
@@ -26,7 +27,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
         color="#CBCBCB"
         bgColor="#FAFAFA"
         onChange={onChange}
-        placeHolder={placeHolder}
+        placeHolder={t("placeHolder")}
         focus={color}
       />
       <Input
@@ -59,7 +60,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
           testID="submit-button"
           bgColor={color}
           color="#fff"
-          label={buttonLabel}
+          label={t("buttonLabel")}
           onClick={onClick}
           variant="secondary"
         />
