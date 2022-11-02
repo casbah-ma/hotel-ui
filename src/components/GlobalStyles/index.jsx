@@ -52,7 +52,7 @@ const CustomStyles = createGlobalStyle`
 }
 
 .panel {
-  ${tw`p-10 rounded-xl h-[26.25rem] absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
+  ${tw`p-10 w-full rounded-xl h-[26.25rem] absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }
