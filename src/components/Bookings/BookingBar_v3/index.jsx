@@ -1,9 +1,14 @@
-import { useBreakpoint } from '@/hooks'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import { useEffect, useState } from 'react'
+import { useBreakpoint } from '@/hooks'
+import { ChevronDownIcon, CalendarDaysIcon } from '@heroicons/react/24/solid'
+//components
+import { Popover } from '@headlessui/react'
 import GuestCard from '@/components/Cards/GuestCard'
 import Label from '@/components/Label'
+import DatePicker from '@/components/DatePicker'
+//styles
 import {
   BookingBarContainer,
   BookingButton,
@@ -11,7 +16,10 @@ import {
   Bookingcolumns,
   BookingDate,
   ShowContentButton,
+  BackButton
 } from './BookingBar.styles'
+import { ChevronRight } from '../../Icons'
+import RightChevron from '../../Icons/RightChevron'
 
 function BookingBar_v3({
   color,
@@ -41,13 +49,6 @@ function BookingBar_v3({
     onGuestChange(type, guestValues[type] - 1)
   }
 
-  // handle Dates Changes
-  const handleDatesChanges = (e) => {
-    e.preventDefault()
-    const { name, value } = e?.target
-    onDatesChange(name, value)
-  }
-
   // Handle availability of guests
   const checkAvailability = (dates, guestValues, baseUrl) => {
     const filters = {
@@ -61,12 +62,16 @@ function BookingBar_v3({
       : window.open(bookingUrl(filters, baseUrl), '_blank')
   }
   return (
-    <BookingBarContainer showContent={showContent}>
+    <BookingBarContainer className="relative" showContent={showContent}>
+      {/* {!showContent && <BackButton>back
+        <RightChevron width={19} height={19} color={'#6B7280'} className="ml-2" />
+        </BackButton>} */}
+
       {!showContent ? (
         <Desktop
           color={color}
           bgColor={bgColor}
-          handleDatesChanges={handleDatesChanges}
+          onDatesChange={onDatesChange}
           dates={dates}
           bookingTitles={bookingTitles}
           guestValues={guestValues}
@@ -77,7 +82,7 @@ function BookingBar_v3({
         <Mobile
           color={color}
           bgColor={bgColor}
-          handleDatesChanges={handleDatesChanges}
+          onDatesChange={onDatesChange}
           dates={dates}
           bookingTitles={bookingTitles}
           guestValues={guestValues}
@@ -133,61 +138,85 @@ function Desktop({
   handleMinusClick,
   bookingTitles,
   dates,
-  handleDatesChanges,
+  onDatesChange,
 }) {
+  // handle Dates Changes
+  const onDatesChanges = async (dates) => {
+    await onDatesChange(dates)
+  }
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+  const [showBackBtn, setShowBackBtn] = useState(false)
+
   return (
-    <BookingContent>
-      <Bookingcolumns>
-        <Label labelText={bookingTitles.column_1} />
-        <label htmlFor="startDate" aria-label={bookingTitles.column_1}>
-          <BookingDate
-            type="date"
-            value={dates?.startDate}
-            name="startDate"
-            onChange={handleDatesChanges}
+    <Popover.Group className="booking-wrapper">
+      <BookingContent>
+        <Popover className="booking-columns">
+       {showBackBtn && <BackButton onClick={()=>setShowBackBtn(false)}>back
+        <RightChevron width={19} height={19} color={'#6B7280'} />
+        </BackButton>}
+          <Label labelText={bookingTitles.column_1} />
+          <Popover.Button
+            className="booking-columns-button"
+            aria-label={bookingTitles.column_1}
+            onClick={()=>setShowBackBtn(true)}
+          >
+            <Label
+              labelText={startDate ? formatDate(startDate) : 'DD/MM/YYY'}
+            />
+            <CalendarDaysIcon width={20} height={20} />
+          </Popover.Button>
+          <Popover.Panel className="panel v3">
+            <DatePicker dates={dates} onDatesChange={onDatesChanges} />
+          </Popover.Panel>
+        </Popover>
+
+        <Popover className="booking-columns">
+          <Label labelText={bookingTitles.column_2} />
+          <Popover.Button
+            className="booking-columns-button"
+            aria-label={bookingTitles.column_1}
+            onClick={()=>setShowBackBtn(true)}
+          >
+            <Label labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'} />
+            <CalendarDaysIcon width={20} height={20} />
+          </Popover.Button>
+          <Popover.Panel className="panel v3">
+            <DatePicker dates={dates} onDatesChange={onDatesChanges} />
+          </Popover.Panel>
+        </Popover>
+        <Bookingcolumns>
+          <GuestCard
+            color={color}
+            bgColor={bgColor}
+            title={bookingTitles.column_3}
+            value={guestValues.adults}
+            onMinusClick={() => {
+              handleMinusClick('adults')
+            }}
+            onPlusClick={() => {
+              handlePlusClick('adults')
+            }}
           />
-        </label>
-      </Bookingcolumns>
-      <Bookingcolumns>
-        <Label labelText={bookingTitles.column_2} />
-        <label htmlFor="endDate" aria-label={bookingTitles.column_2}>
-          <BookingDate
-            type="date"
-            value={dates.endDate}
-            name="endDate"
-            onChange={handleDatesChanges}
+        </Bookingcolumns>
+        <Bookingcolumns>
+          <GuestCard
+            color={color}
+            bgColor={bgColor}
+            title={bookingTitles.column_4}
+            value={guestValues.kids}
+            onMinusClick={() => {
+              handleMinusClick('kids')
+            }}
+            onPlusClick={() => {
+              handlePlusClick('kids')
+            }}
           />
-        </label>
-      </Bookingcolumns>
-      <Bookingcolumns>
-        <GuestCard
-          color={color}
-          bgColor={bgColor}
-          title={bookingTitles.column_3}
-          value={guestValues.adults}
-          onMinusClick={() => {
-            handleMinusClick('adults')
-          }}
-          onPlusClick={() => {
-            handlePlusClick('adults')
-          }}
-        />
-      </Bookingcolumns>
-      <Bookingcolumns>
-        <GuestCard
-          color={color}
-          bgColor={bgColor}
-          title={bookingTitles.column_4}
-          value={guestValues.kids}
-          onMinusClick={() => {
-            handleMinusClick('kids')
-          }}
-          onPlusClick={() => {
-            handlePlusClick('kids')
-          }}
-        />
-      </Bookingcolumns>
-    </BookingContent>
+        </Bookingcolumns>
+      </BookingContent>
+    </Popover.Group>
   )
 }
 
@@ -200,29 +229,44 @@ function Mobile({
   handleMinusClick,
   bookingTitles,
   dates,
-  handleDatesChanges,
+  onDatesChange,
 }) {
+  // handle Dates Changes
+  const onDatesChanges = async (dates) => {
+    await onDatesChange(dates)
+  }
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+
   return (
     <BookingContent>
       <Bookingcolumns>
-        <Label labelText={bookingTitles.column_1} />
-        <BookingDate
-          type="date"
-          value={dates.startDate}
-          name="startDate"
-          onChange={handleDatesChanges}
-        />
+        <Popover>
+          <Popover.Button
+            className="booking-columns-button"
+            aria-label={bookingTitles.column_1}
+          >
+            <Label labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'} />
+            <CalendarDaysIcon width={20} height={20} />
+          </Popover.Button>
+        </Popover>
       </Bookingcolumns>
       {showContent && (
         <>
           <Bookingcolumns>
-            <Label labelText={bookingTitles.column_2} />
-            <BookingDate
-              type="date"
-              value={dates.endDate}
-              name="endDate"
-              onChange={handleDatesChanges}
-            />
+            <Popover>
+              <Popover.Button
+                className="booking-columns-button"
+                aria-label={bookingTitles.column_2}
+              >
+                <Label
+                  labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'}
+                />
+                <CalendarDaysIcon width={20} height={20} />
+              </Popover.Button>
+            </Popover>
           </Bookingcolumns>
           <Bookingcolumns>
             <GuestCard

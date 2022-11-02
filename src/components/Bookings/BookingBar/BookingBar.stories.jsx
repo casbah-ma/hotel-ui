@@ -2,17 +2,6 @@ import BookingBar from '.'
 import * as Button from '@/components/Button/Button.stories'
 import useState from 'storybook-addon-state'
 
-const props = {
-  title_1: 'Check-in - Check-out',
-  title_2: 'Guests',
-  dates: { startDate: new Date(), endDate: new Date() },
-  guestValues: { adults: 1, kids: 0 },
-  buttonProps: { ...Button.Primary.args },
-  onDatesChange: () => {},
-  onGuestChange: () => {},
-  baseUrl: 'https://Hotel UI-garden-tanger-malabata.hotelrunner.com/',
-}
-
 export default {
   title: 'Components/Bookings/BookingBar',
   component: BookingBar,
@@ -23,7 +12,7 @@ export default {
         endDate: null,
       })
       const [guestValues, setGuestValues] = useState('guests', {
-        adults: 1,
+        adults: 0,
         kids: 0,
       })
 
@@ -45,6 +34,7 @@ export default {
               ...Button.Primary.args,
             }}
             dates={dates}
+            guestsTitles={{ adults: 'Adults', kids: 'Kids' }}
             guestValues={guestValues}
             onGuestChange={onGuestChange}
             onDatesChange={onDatesChange}
@@ -58,6 +48,4 @@ export default {
 const Template = (args) => <BookingBar {...args} />
 
 export const Default = Template.bind({})
-Default.args = {
-  ...props,
-}
+Default.args = {}

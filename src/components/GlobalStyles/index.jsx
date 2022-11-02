@@ -4,7 +4,7 @@ import '../../styles/datepicker.css'
 
 const CustomStyles = createGlobalStyle`
 
-a {
+.logo {
   font-size: 0
 }
 
@@ -13,10 +13,10 @@ a {
 }
 
 .animate-chevron-down {
-  ${tw`rotate-180 transform transition-transform duration-500`}
+  ${tw`rotate-180 transform transition-transform duration-500 focus:outline-none`}
 }
 .animate-chevron-up {
-  ${tw`transition-transform duration-500`}
+  ${tw`transition-transform duration-500 focus:outline-none`}
 }
 //images
 .radius-lg {
@@ -33,8 +33,26 @@ a {
 
 
 //BookingBar
+.booking-wrapper {
+  ${tw` w-full h-full`}
+}
+
+.booking-columns {
+  ${tw`flex flex-col items-center justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5`}
+}
+
+.booking-columns-button {
+  ${tw`flex gap-3 justify-center items-center [&>span]:text-gray-500 text-gray-500`}
+}
+
+.panel.v3 {
+  ${tw`right-0 xs:bottom-[4.6rem] bottom-32 lg:bottom-36
+ xs:top-[1.5rem] lg:top-auto xs:overflow-hidden lg:overflow-auto xs:z-10 xs:h-auto xs:ml-0 xs:rounded-b-none lg:rounded-xl xs:shadow-none lg:shadow-card
+  `}
+}
+
 .panel {
-  ${tw`p-10 rounded-xl h-[26.25rem] w-full absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
+  ${tw`p-10 w-full rounded-xl h-[26.25rem] absolute left-0 bottom-24 flex justify-center items-center shadow-card`}
   background:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
 }

@@ -1,14 +1,6 @@
 import BookingBa_v2 from '.'
 import useState from 'storybook-addon-state'
 
-const props = {
-  dates: { startDate: new Date(), endDate: new Date() },
-  guestValues: { adults: 1, kids: 0 },
-  onDatesChange: () => {},
-  onGuestChange: () => {},
-  baseUrl: 'https://Hotel UI-garden-tanger-malabata.hotelrunner.com/',
-}
-
 export default {
   title: 'Components/Bookings/BookingBar_v2',
   component: BookingBa_v2,
@@ -19,7 +11,7 @@ export default {
         endDate: null,
       })
       const [guestValues, setGuestValues] = useState('guests', {
-        adults: 1,
+        adults: 0,
         kids: 0,
       })
 
@@ -30,7 +22,6 @@ export default {
 
       // handle Dates Changes
       const onDatesChange = (dates) => {
-        console.log('dates', dates)
         setDates(dates)
       }
       return (
@@ -49,6 +40,7 @@ export default {
             guestValues={guestValues}
             onGuestChange={onGuestChange}
             onDatesChange={onDatesChange}
+            guestsTitles={{ adults: 'Adults', kids: 'Kids' }}
           />
         </div>
       )
@@ -58,15 +50,4 @@ export default {
 
 const Template = (args) => <BookingBa_v2 {...args} />
 export const Default = Template.bind({})
-Default.args = {
-  dates: {
-    startDate: '',
-    endDate: '',
-  },
-  title_1: 'Check in  -  Check out',
-  title_2: 'Guests',
-  buttonProps: {
-    text: 'Check Availability',
-    onClick: () => console.log('Book Now'),
-  },
-}
+Default.args = {}

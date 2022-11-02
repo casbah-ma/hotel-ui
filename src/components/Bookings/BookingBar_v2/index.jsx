@@ -1,3 +1,4 @@
+import moment from 'moment'
 import { useBreakpoint } from '@/hooks'
 import { Popover } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
@@ -16,6 +17,8 @@ import {
   BookingContentLeft,
   BookingContentRight,
   BookingMobileButton,
+  Row,
+  Values,
 } from './BookingBar.styles'
 import { bookingUrl } from '@/helpers/utils'
 
@@ -28,6 +31,7 @@ function BookingBa_v2({
   buttonProps,
   onDatesChange,
   baseUrl,
+  guestsTitles,
 }) {
   const guestbtn = useRef(null) // ref for guests button
   const { text, onClick } = buttonProps // button props
@@ -57,13 +61,25 @@ function BookingBa_v2({
     onClick ? onClick() : window.open(bookingUrl(filters, baseUrl), '_blank')
   }
 
+  const { startDate, endDate } = dates
+  const formatDate = (date) => {
+    return moment(date).format('MMM DD')
+  }
+
   return (
     <Popover.Group>
       <BookingWrapper>
         <BookngContainer data-testid="booking-bar">
           <BookingContent>
             <BookingContentLeft>
-              <Label labelText={title_1 || ''} fontSize={bp} />
+              <Row>
+                <Label labelText={title_1 || ''} fontSize={bp} />
+                <Values>
+                  {startDate &&
+                    endDate &&
+                    `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
+                </Values>
+              </Row>
               <Popover>
                 {({ open }) => (
                   <>
@@ -97,7 +113,13 @@ function BookingBa_v2({
               </Popover>
             </BookingContentLeft>
             <BookingContentRight>
-              <Label labelText={title_2 || ''} fontSize={bp} />
+              <Row>
+                <Label labelText={title_2 || ''} fontSize={bp} />
+                <Values>
+                  {guestValues?.adults > 0 &&
+                    `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
+                </Values>
+              </Row>
               <Popover>
                 {({ open }) => (
                   <>
@@ -128,6 +150,7 @@ function BookingBa_v2({
                         guestValues={guestValues}
                         buttonProps={buttonProps}
                         onGuestChange={onGuestChange}
+                        guestsTitles={guestsTitles}
                       />
                     </Popover.Panel>
                   </>

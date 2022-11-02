@@ -10,11 +10,19 @@ export const DesktopContainer = styled.section(({ theme }) => [
    color: ${theme.colors.DatesCore.text};
   `,
 ])
+
 export const Column = tw.div`
        w-full xs:h-16 md:h-full flex 
        justify-between items-center
       sm:p-1  md:p-4
     `
+export const Row = tw.div`
+    flex flex-col justify-center items-start
+  `
+export const Values = tw.span`
+   text-base leading-[1.2rem] md:text-xl md:leading-6 text-[#767676] font-medium 
+  `
+
 // Mobile Booking Bar Styles
 export const MobileContainer = tw.section`
       w-[23.375rem]  pt-5 pb-5

@@ -30,3 +30,10 @@ flex items-center justify-center divide-x divide-gray-300 py-3 md:px-2 lg:py-6`
 export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around  
 xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto`
 export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto`
+
+export const Row = tw.div`
+    flex flex-col justify-center items-start
+  `
+export const Values = tw.span`
+   text-base leading-[1.2rem] md:text-xl md:leading-6 text-[#767676] font-medium 
+ `
