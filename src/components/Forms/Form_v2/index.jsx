@@ -2,7 +2,7 @@ import Input from '@/components/Inputs/Input_v2'
 import { Formv2Container, StyledButton, FormContent } from './Form.styles'
 import PropTypes from 'prop-types'
 
-const Form_v2 = function ({ formInputs, onChange, onClick }) {
+const Form_v2 = function ({ formInputs, onChange, onClick}) {
   const {
     fullName,
     fullNameError,
@@ -11,7 +11,8 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
     message,
     messageError,
     buttonLabel,
-    placeHolder="Full Name",
+    placeHolder,
+    t,
   } = formInputs
   return (
     <Formv2Container data-testid="Formv2-container">
@@ -24,7 +25,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
           color="#CBCBCB"
           bgColor="#FAFAFA"
           onChange={onChange}
-          placeHolder={placeHolder}
+          placeHolder={t("placeHolder")}
           />
         <Input
           testID="email"
@@ -49,7 +50,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
         />
       </FormContent>
       <StyledButton data-testid="submit-button" onClick={onClick}>
-        {buttonLabel}
+        {t("buttonLabel")}
       </StyledButton>
     </Formv2Container>
   )

@@ -3,8 +3,8 @@ import Button from '@/components/Button'
 import { ContactusContainer } from './Contactus.styles'
 import PropTypes from 'prop-types'
 
-const ContactUs = function ({ formInputs, onChange, onClick }) {
-  const { fullName, fullNameError,placeHolder="Full Name", email, emailError, message, messageError, bgColor , color , buttonLabel} =
+const ContactUs = function ({ formInputs, onChange, onClick}) {
+  const { fullName, fullNameError,placeHolder, email, emailError, message, messageError, bgColor , color , buttonLabel, t } =
     formInputs
   return (
     <ContactusContainer data-testid="contactus-container">
@@ -15,7 +15,7 @@ const ContactUs = function ({ formInputs, onChange, onClick }) {
         error={!!fullNameError}
         color="black"
         onChange={onChange}
-        placeHolder={placeHolder}
+        placeHolder={t("placeHolder")}
       />
       <Input
         testID="email"
@@ -40,7 +40,7 @@ const ContactUs = function ({ formInputs, onChange, onClick }) {
         testID="submit-button"
         bgColor={bgColor}
         color={color}
-        label={buttonLabel}
+        label={t("buttonLabel")}
         onClick={onClick}
         variant="primary"
       />
