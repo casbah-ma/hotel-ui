@@ -60,4 +60,6 @@ export default {
 const Template = (args) => <BookingBar {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+  ...props,
+}
