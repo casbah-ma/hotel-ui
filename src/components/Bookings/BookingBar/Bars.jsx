@@ -74,7 +74,7 @@ export const Desktop = function ({
               labelText={title_1}
               fontSize="sm"
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {startDate &&
                 endDate &&
                 `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
@@ -121,7 +121,7 @@ export const Desktop = function ({
               fontSize="sm"
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {guestValues?.adults > 0 &&
                 `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
             </Values>
@@ -229,7 +229,7 @@ export const Mobile = function ({
               labelText={title_1}
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {startDate &&
                 endDate &&
                 `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
@@ -270,7 +270,7 @@ export const Mobile = function ({
               fontSize="sm"
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {guestValues?.adults > 0 &&
                 `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
             </Values>
