@@ -41,6 +41,10 @@ const CustomStyles = createGlobalStyle`
   ${tw`flex flex-col items-center justify-center w-full h-full [&>*]:ml-2 [&>span]:mt-3 gap-3.5`}
 }
 
+.booking-columns.v3{
+  ${tw`cursor-pointer`}
+}
+
 .booking-columns-button {
   ${tw`flex gap-3 justify-center items-center [&>span]:text-gray-500 text-gray-500`}
 }
@@ -61,6 +65,10 @@ const CustomStyles = createGlobalStyle`
   p-10 rounded-xl absolute left-0 bottom-36 md:bottom-24 lg:bottom-32 flex justify-center items-center shadow-card`}
   background-color:  ${({ theme }) => theme.colors.DatesCore.bg};
   color: ${({ theme }) => theme.colors.DatesCore.text};
+}
+
+.panel-mobile.v1{
+  ${tw` xs:w-[18rem] sm:w-full xs:overflow-hidden lg:overflow-auto`}
 }
 
 .panel-mobile { 
