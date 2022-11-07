@@ -34,6 +34,7 @@ function BookingBa_v2({
   guestsTitles,
 }) {
   const guestbtn = useRef(null) // ref for guests button
+  const datebtn = useRef(null) // ref for date button
   const { text, onClick } = buttonProps // button props
   const bp = useBreakpoint() // breakpoint
   const [isOpen, setIsOpen] = useState({
@@ -71,7 +72,16 @@ function BookingBa_v2({
       <BookingWrapper>
         <BookngContainer data-testid="booking-bar">
           <BookingContent>
-            <BookingContentLeft>
+            <BookingContentLeft
+              onClick={() => {
+                !isOpen.dates && datebtn.current.click()
+                setIsOpen({
+                  ...isOpen,
+                  dates: !isOpen.dates,
+                  guests: false,
+                })
+              }}
+            >
               <Row>
                 <Label labelText={title_1 || ''} fontSize={bp} />
                 <Values>
@@ -92,6 +102,7 @@ function BookingBa_v2({
                           ? `close ${title_1} panel`
                           : `open ${title_1} panel`
                       }
+                      ref={datebtn}
                     >
                       <Button
                         as="div"
@@ -112,7 +123,16 @@ function BookingBa_v2({
                 )}
               </Popover>
             </BookingContentLeft>
-            <BookingContentRight>
+            <BookingContentRight
+              onClick={() => {
+                !isOpen.guests && guestbtn.current.click()
+                setIsOpen({
+                  ...isOpen,
+                  dates: false,
+                  guests: !isOpen.guests,
+                })
+              }}
+            >
               <Row>
                 <Label labelText={title_2 || ''} fontSize={bp} />
                 <Values>

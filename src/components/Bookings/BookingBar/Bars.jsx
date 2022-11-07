@@ -44,6 +44,7 @@ export const Desktop = function ({
   guestsTitles,
 }) {
   const guestbtn = useRef(null) // ref for guests button
+  const datebtn = useRef(null) // ref for date button
   const [isOpen, setIsOpen] = useState({
     dates: false,
     guests: false,
@@ -66,7 +67,16 @@ export const Desktop = function ({
   return (
     <Popover.Group style={{ position: 'relative' }}>
       <DesktopContainer data-testid="booking-bar">
-        <Column>
+        <Column
+          onClick={() => {
+            !isOpen.dates && datebtn.current.click()
+            setIsOpen({
+              ...isOpen,
+              dates: !isOpen.dates,
+              guests: false,
+            })
+          }}
+        >
           <Row>
             <Label
               color={theme.colors.DatesCore.text}
@@ -74,7 +84,7 @@ export const Desktop = function ({
               labelText={title_1}
               fontSize="sm"
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {startDate &&
                 endDate &&
                 `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
@@ -90,6 +100,7 @@ export const Desktop = function ({
                   aria-label={
                     open ? `close ${title_1} panel` : `open ${title_1} panel`
                   }
+                  ref={datebtn}
                 >
                   <Button
                     {...buttonProps}
@@ -113,7 +124,16 @@ export const Desktop = function ({
             )}
           </Popover>
         </Column>
-        <Column>
+        <Column
+          onClick={() => {
+            !isOpen.guests && guestbtn.current.click()
+            setIsOpen({
+              ...isOpen,
+              dates: false,
+              guests: !isOpen.guests,
+            })
+          }}
+        >
           <Row>
             <Label
               role="label"
@@ -121,7 +141,7 @@ export const Desktop = function ({
               fontSize="sm"
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {guestValues?.adults > 0 &&
                 `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
             </Values>
@@ -212,7 +232,7 @@ export const Mobile = function ({
   return (
     <MobileContainer data-testid="booking-bar">
       {isOpen.dates && (
-        <div className="panel-mobile">
+        <div className="panel-mobile v1">
           <DatePicker
             dates={dates}
             onDatesChange={onDatesChanges}
@@ -222,14 +242,22 @@ export const Mobile = function ({
       )}
 
       <MobileSection>
-        <Column>
+        <Column
+          onClick={() => {
+            setIsOpen({
+              ...isOpen,
+              dates: !isOpen.dates,
+              guests: false,
+            })
+          }}
+        >
           <Row>
             <Label
               role="label"
               labelText={title_1}
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {startDate &&
                 endDate &&
                 `${formatDate(startDate)}   -   ${formatDate(endDate)}`}
@@ -262,7 +290,15 @@ export const Mobile = function ({
         </div>
       )}
       <MobileSection>
-        <Column>
+        <Column
+          onClick={() => {
+            setIsOpen({
+              ...isOpen,
+              dates: false,
+              guests: !isOpen.guests,
+            })
+          }}
+        >
           <Row>
             <Label
               role="label"
@@ -270,7 +306,7 @@ export const Mobile = function ({
               fontSize="sm"
               color={theme.colors.DatesCore.text}
             />
-            <Values>
+            <Values color={guestsTitles?.color}>
               {guestValues?.adults > 0 &&
                 `(${guestsTitles?.adults}: ${guestValues?.adults}) (${guestsTitles?.kids}: ${guestValues?.kids})`}
             </Values>
