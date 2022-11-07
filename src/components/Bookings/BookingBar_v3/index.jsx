@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import moment from 'moment'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useBreakpoint } from '@/hooks'
 import { ChevronDownIcon, CalendarDaysIcon } from '@heroicons/react/24/solid'
 //components
@@ -16,7 +16,7 @@ import {
   Bookingcolumns,
   BookingDate,
   ShowContentButton,
-  BackButton
+  BackButton,
 } from './BookingBar.styles'
 import { ChevronRight } from '../../Icons'
 import RightChevron from '../../Icons/RightChevron'
@@ -148,20 +148,32 @@ function Desktop({
   const formatDate = (date) => {
     return moment(date).format('MMM DD')
   }
+  const guestbtn = useRef(null) // ref for guests button
+  const datebtn = useRef(null) // ref for date button
+
   const [showBackBtn, setShowBackBtn] = useState(false)
 
   return (
     <Popover.Group className="booking-wrapper">
       <BookingContent>
-        <Popover className="booking-columns">
-       {showBackBtn && <BackButton onClick={()=>setShowBackBtn(false)}>back
-        <RightChevron width={19} height={19} color={'#6B7280'} />
-        </BackButton>}
+        <Popover
+          className="booking-columns v3"
+          onClick={() => {
+            datebtn.current.click()
+          }}
+        >
+          {showBackBtn && (
+            <BackButton onClick={() => setShowBackBtn(false)}>
+              back
+              <RightChevron width={19} height={19} color={'#6B7280'} />
+            </BackButton>
+          )}
           <Label labelText={bookingTitles.column_1} />
           <Popover.Button
             className="booking-columns-button"
             aria-label={bookingTitles.column_1}
-            onClick={()=>setShowBackBtn(true)}
+            onClick={() => setShowBackBtn(true)}
+            ref={datebtn}
           >
             <Label
               labelText={startDate ? formatDate(startDate) : 'DD/MM/YYY'}
@@ -173,12 +185,18 @@ function Desktop({
           </Popover.Panel>
         </Popover>
 
-        <Popover className="booking-columns">
+        <Popover 
+        className="booking-columns v3"
+        onClick={() => {
+          guestbtn.current.click()
+        }}
+        >
           <Label labelText={bookingTitles.column_2} />
           <Popover.Button
             className="booking-columns-button"
             aria-label={bookingTitles.column_1}
-            onClick={()=>setShowBackBtn(true)}
+            onClick={() => setShowBackBtn(true)}
+            ref={guestbtn}
           >
             <Label labelText={endDate ? formatDate(endDate) : 'DD/MM/YYY'} />
             <CalendarDaysIcon width={20} height={20} />

@@ -14,7 +14,7 @@ export const DesktopContainer = styled.section(({ theme }) => [
 export const Column = tw.div`
        w-full xs:h-16 md:h-full flex 
        justify-between items-center
-      sm:p-1  md:p-4
+      sm:p-1  md:p-4 cursor-pointer
     `
 export const Row = tw.div`
     flex flex-col justify-center items-start
