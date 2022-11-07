@@ -63,10 +63,6 @@ function BookingBar_v3({
   }
   return (
     <BookingBarContainer className="relative" showContent={showContent}>
-      {/* {!showContent && <BackButton>back
-        <RightChevron width={19} height={19} color={'#6B7280'} className="ml-2" />
-        </BackButton>} */}
-
       {!showContent ? (
         <Desktop
           color={color}
@@ -139,6 +135,7 @@ function Desktop({
   bookingTitles,
   dates,
   onDatesChange,
+  backLabel = 'Back'
 }) {
   // handle Dates Changes
   const onDatesChanges = async (dates) => {
@@ -164,7 +161,7 @@ function Desktop({
         >
           {showBackBtn && (
             <BackButton onClick={() => setShowBackBtn(false)}>
-              back
+              {backLabel}
               <RightChevron width={19} height={19} color={'#6B7280'} />
             </BackButton>
           )}
