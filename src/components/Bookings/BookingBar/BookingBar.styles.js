@@ -19,13 +19,15 @@ export const Column = tw.div`
 export const Row = tw.div`
     flex flex-col justify-center items-start
   `
-export const Values = styled.span(({ color }) => [
+
+export const Values = styled.span(({ theme, color }) => [
   tw`
    text-base leading-[1.2rem] md:text-xl md:leading-6 text-[#767676] font-medium 
   `,
   `
   color: ${color};
   `,
+  `font-family: ${theme.fontFamily.secondary};`,
 ])
 
 // Mobile Booking Bar Styles

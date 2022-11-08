@@ -15,6 +15,7 @@ import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'
 import { Popover } from '@headlessui/react'
 import Guests from '@/components/Cards/GuestsCard'
+import Link from '@/components/LinkComponent'
 //utils
 import { bookingUrl } from '@/helpers/utils'
 //icons
@@ -22,14 +23,28 @@ import { useTheme } from 'styled-components'
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
 
 // Handle availability of guests
-const checkAvailability = (dates, guestValues, baseUrl) => {
+const checkAvailability = (
+  dates,
+  guestValues,
+  baseUrl,
+  languages,
+  defaultLanguage
+) => {
   const filters = {
     checkin_date: dates?.startDate,
     checkout_date: dates?.endDate,
     adult_count: guestValues?.adults,
     child_count: guestValues?.kids,
   }
-  window.open(bookingUrl(filters, baseUrl), '_blank')
+  if (baseUrl) {
+    window.open(bookingUrl(filters, baseUrl), '_blank')
+  } else {
+    <Link
+      href="/contact"
+      languages={languages}
+      defaultLanguage={defaultLanguage}
+    ></Link>
+  }
 }
 // for Desktop and Tablet devices
 export const Desktop = function ({
@@ -39,6 +54,8 @@ export const Desktop = function ({
   onDatesChange,
   onGuestChange,
   baseUrl,
+  languages,
+  defaultLanguage,
   title_1,
   title_2,
   guestsTitles,
@@ -132,6 +149,7 @@ export const Desktop = function ({
               dates: false,
               guests: !isOpen.guests,
             })
+            console.log(isOpen.guests)
           }}
         >
           <Row>
@@ -190,7 +208,15 @@ export const Desktop = function ({
           <Button
             {...buttonProps}
             label="Check Availability"
-            handleClick={() => checkAvailability(dates, guestValues, baseUrl)}
+            handleClick={() =>
+              checkAvailability(
+                dates,
+                guestValues,
+                baseUrl,
+                languages,
+                defaultLanguage
+              )
+            }
           />
         </div>
       </DesktopContainer>
