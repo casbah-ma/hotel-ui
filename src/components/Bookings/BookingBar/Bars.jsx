@@ -21,30 +21,17 @@ import { bookingUrl } from '@/helpers/utils'
 //icons
 import { useTheme } from 'styled-components'
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
+import { useRouter } from 'next/router'
 
 // Handle availability of guests
-const checkAvailability = (
-  dates,
-  guestValues,
-  baseUrl,
-  languages,
-  defaultLanguage
-) => {
+const checkAvailability = (dates, guestValues, baseUrl) => {
   const filters = {
     checkin_date: dates?.startDate,
     checkout_date: dates?.endDate,
     adult_count: guestValues?.adults,
     child_count: guestValues?.kids,
   }
-  if (baseUrl) {
-    window.open(bookingUrl(filters, baseUrl), '_blank')
-  } else {
-    <Link
-      href="/contact"
-      languages={languages}
-      defaultLanguage={defaultLanguage}
-    ></Link>
-  }
+  window.open(bookingUrl(filters, baseUrl), '_blank')
 }
 // for Desktop and Tablet devices
 export const Desktop = function ({
@@ -54,8 +41,6 @@ export const Desktop = function ({
   onDatesChange,
   onGuestChange,
   baseUrl,
-  languages,
-  defaultLanguage,
   title_1,
   title_2,
   guestsTitles,
@@ -141,18 +126,17 @@ export const Desktop = function ({
             )}
           </Popover>
         </Column>
-        <Column
-          onClick={() => {
-            !isOpen.guests && guestbtn.current.click()
-            setIsOpen({
-              ...isOpen,
-              dates: false,
-              guests: !isOpen.guests,
-            })
-            console.log(isOpen.guests)
-          }}
-        >
-          <Row>
+        <Column>
+          <Row
+            onClick={() => {
+              !isOpen.guests && guestbtn.current.click()
+              setIsOpen({
+                ...isOpen,
+                dates: false,
+                guests: !isOpen.guests,
+              })
+            }}
+          >
             <Label
               role="label"
               labelText={title_2}
@@ -208,15 +192,7 @@ export const Desktop = function ({
           <Button
             {...buttonProps}
             label="Check Availability"
-            handleClick={() =>
-              checkAvailability(
-                dates,
-                guestValues,
-                baseUrl,
-                languages,
-                defaultLanguage
-              )
-            }
+            handleClick={() => checkAvailability(dates, guestValues, baseUrl)}
           />
         </div>
       </DesktopContainer>

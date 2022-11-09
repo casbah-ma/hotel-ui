@@ -123,17 +123,17 @@ function BookingBa_v2({
                 )}
               </Popover>
             </BookingContentLeft>
-            <BookingContentRight
-              onClick={() => {
-                !isOpen.guests && guestbtn.current.click()
-                setIsOpen({
-                  ...isOpen,
-                  dates: false,
-                  guests: !isOpen.guests,
-                })
-              }}
-            >
-              <Row>
+            <BookingContentRight>
+              <Row
+                onClick={() => {
+                  !isOpen.guests && guestbtn.current.click()
+                  setIsOpen({
+                    ...isOpen,
+                    dates: false,
+                    guests: !isOpen.guests,
+                  })
+                }}
+              >
                 <Label labelText={title_2 || ''} fontSize={bp} />
                 <Values>
                   {guestValues?.adults > 0 &&

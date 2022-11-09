@@ -12,8 +12,6 @@ const props = {
   buttonProps: { ...Button.Primary.args },
   onDatesChange: () => {},
   onGuestChange: () => {},
-  defaultLanguage: 'en',
-  languages: [...DropdownStories.Default.args.languages],
   baseUrl: 'https://Hotel UI-garden-tanger-malabata.hotelrunner.com/',
 }
 
