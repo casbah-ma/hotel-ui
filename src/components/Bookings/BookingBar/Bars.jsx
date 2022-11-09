@@ -20,7 +20,6 @@ import { bookingUrl } from '@/helpers/utils'
 //icons
 import { useTheme } from 'styled-components'
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
-import { useRouter } from 'next/router'
 
 // Handle availability of guests
 const checkAvailability = (dates, guestValues, baseUrl) => {
