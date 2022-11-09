@@ -15,7 +15,6 @@ import Label from '@/components/Label'
 import DatePicker from '@/components/DatePicker'
 import { Popover } from '@headlessui/react'
 import Guests from '@/components/Cards/GuestsCard'
-import Link from '@/components/LinkComponent'
 //utils
 import { bookingUrl } from '@/helpers/utils'
 //icons
