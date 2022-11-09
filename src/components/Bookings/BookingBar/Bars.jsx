@@ -124,17 +124,17 @@ export const Desktop = function ({
             )}
           </Popover>
         </Column>
-        <Column
-          onClick={() => {
-            !isOpen.guests && guestbtn.current.click()
-            setIsOpen({
-              ...isOpen,
-              dates: false,
-              guests: !isOpen.guests,
-            })
-          }}
-        >
-          <Row>
+        <Column>
+          <Row
+            onClick={() => {
+              !isOpen.guests && guestbtn.current.click()
+              setIsOpen({
+                ...isOpen,
+                dates: false,
+                guests: !isOpen.guests,
+              })
+            }}
+          >
             <Label
               role="label"
               labelText={title_2}

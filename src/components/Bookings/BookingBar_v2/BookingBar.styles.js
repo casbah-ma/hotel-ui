@@ -26,14 +26,16 @@ export const BookngContainer = styled.div(({ theme }) => [
   color: ${theme.colors.DatesCore.text};`,
 ])
 export const BookingContent = tw.div`w-full lg:flex-1 h-full rounded-3xl md:rounded-r-none md:rounded-l-3xl 
-flex items-center justify-center divide-x divide-gray-300 py-3 md:px-2 lg:py-6`
-export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around  
-xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto cursor-pointer`
-export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto cursor-pointer`
+flex items-center justify-center divide-x divide-gray-300 py-3 px-2 lg:py-6`
+export const BookingContentLeft = tw.div`w-[13.75rem] md:flex-1 h-full flex items-center justify-around  cursor-pointer
+xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto xs:pr-1 lg:pr-8`
+export const BookingContentRight = tw.div`w-[8.688rem] md:w-1/3 lg:flex-1 h-full flex items-center justify-around xs:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-2.5 md:[&>div]:[&>button]:[&>div]:[&>span]:[&>svg]:w-auto
+xs:pr-1 lg:pr-8
+`
 
 export const Row = tw.div`
-    flex flex-col justify-center items-start
+    flex flex-col justify-center items-start w-full xs:pl-[1rem] lg:pl-[3rem] h-full cursor-pointer
   `
 export const Values = tw.span`
-   text-base leading-[1.2rem] md:text-xl md:leading-6 text-[#767676] font-medium 
+   text-[0.79rem] leading-[1rem] md:text-xl md:leading-6 text-[#767676] font-medium 
  `

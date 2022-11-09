@@ -14,18 +14,20 @@ export const DesktopContainer = styled.section(({ theme }) => [
 export const Column = tw.div`
        w-full xs:h-16 md:h-full flex 
        justify-between items-center
-      sm:p-1  md:p-4 cursor-pointer
+      sm:p-1  md:p-4 
     `
 export const Row = tw.div`
-    flex flex-col justify-center items-start
+    flex flex-col justify-center items-start w-full cursor-pointer
   `
-export const Values = styled.span(({ color }) => [
+
+export const Values = styled.span(({ theme, color }) => [
   tw`
    text-base leading-[1.2rem] md:text-xl md:leading-6 text-[#767676] font-medium 
   `,
   `
   color: ${color};
   `,
+  `font-family: ${theme.fontFamily.secondary};`,
 ])
 
 // Mobile Booking Bar Styles

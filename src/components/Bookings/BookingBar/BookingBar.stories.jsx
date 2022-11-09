@@ -1,6 +1,7 @@
 import BookingBar from '.'
 import * as Button from '@/components/Button/Button.stories'
 import useState from 'storybook-addon-state'
+import * as DropdownStories from '@/components/Dropdown/Dropdown.stories'
 
 const props = {
   title_1: 'Check-in - Check-out',
