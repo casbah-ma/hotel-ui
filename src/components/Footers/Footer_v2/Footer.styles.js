@@ -18,7 +18,7 @@ justify-between z-10`
 
 export const FooterLogo = styled.div(({ marginTop }) => [
   tw`flex flex-col items-center justify-center w-[14rem]  z-10 cursor-pointer`,
-  marginTop ? `margin-top: ${marginTop}`:`margin-top: -5.25rem` ,
+  marginTop ? `margin-top: ${marginTop};`:`margin-top: -5.25rem;` ,
 ])
 export const FooterText = tw.div`w-full lg:w-[20.25rem] md:pt-0 xs:pt-[4.188rem] z-10`
 export const BottomContent = tw.div`w-full z-10`
