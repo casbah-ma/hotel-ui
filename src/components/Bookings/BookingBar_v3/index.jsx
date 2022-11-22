@@ -17,6 +17,7 @@ import {
   ShowContentButton,
   BackButton,
 } from './BookingBar.styles'
+import { ChevronRight } from '../../Icons'
 import RightChevron from '../../Icons/RightChevron'
 
 function BookingBar_v3({
