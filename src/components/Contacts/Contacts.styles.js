@@ -17,9 +17,10 @@ export const ContactsContainer = styled.div(({ theme, color }) => [
 
 export const StyledPara = tw.div`flex items-center`
 
-export const StyledTitle = styled.div(({ theme }) => [
+export const StyledTitle = styled.div(({ theme, titleColor }) => [
   `font-family: ${theme.fontFamily.secondary};`,
   tw`text-[1.75rem] font-bold  `,
+  titleColor && `color: ${titleColor};`,
 ])
 
 export const StyledText = styled.div(({ theme }) => [

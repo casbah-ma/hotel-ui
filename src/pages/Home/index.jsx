@@ -40,6 +40,7 @@ const Home = function ({
         subtitle="Watch anywhere. Cancel anytime."
         title="Bienvenue"
         image={image}
+        position="start"
       >
         <BookingBar
           title_1="Check in - Check out"

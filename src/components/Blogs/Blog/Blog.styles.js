@@ -11,7 +11,7 @@ export const Container = styled.div(() => [
 ])
 
 export const Content = styled.div(({ contentIsCentred }) => [
-  tw`flex flex-col justify-between gap-9 md:gap-12`,
+  tw`flex flex-col justify-between gap-4 md:gap-12`,
   contentIsCentred && tw`justify-center`,
 ])
 

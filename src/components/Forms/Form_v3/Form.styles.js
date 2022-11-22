@@ -1,10 +1,15 @@
 import tw, { styled } from 'twin.macro'
 
-export const Formv2Container = tw.div`
+export const Formv2Container = styled.div(({ theme }) => [
+  tw`
   w-full flex flex-col items-center justify-center
   gap-10 xs:p-3
 
+`,
 `
+font-family: ${theme.fontFamily.secondary};
+`,
+])
 
 export const StyledButton = tw.div`
    w-full flex items-center justify-end

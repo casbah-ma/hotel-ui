@@ -43,7 +43,7 @@ function Swiper_v2({ header, navigation, children, autoplay }) {
         <Swiper
           onSwiper={(swiper) => setSwiperRef(swiper)}
           slidesPerView={bp === 'xs' ? 1 : 'auto'}
-          spaceBetween={30}
+          spaceBetween={16}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,

@@ -11,10 +11,15 @@ export const Formv2Container = styled.div(
   `background-color: white`
 )
 
-export const FormContent = tw.div`
+export const FormContent = styled.div(({ theme }) => [
+  tw`
    w-full pt-[3rem] px-[2rem] flex flex-col
    outline-none gap-[2rem] font-normal 
-`
+`,
+  `
+font-family: ${theme.fontFamily.secondary};
+`,
+])
 
 export const StyledButton = styled.button(({ theme }) => [
   tw`

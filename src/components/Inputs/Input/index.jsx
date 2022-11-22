@@ -17,7 +17,7 @@ const Input = ({
   testID,
   placeHolderColor,
 }) => {
-  const { buttonLabel, buttonColor, buttonBgColor, onClick, buttonTestID } =
+  const { buttonLabel, buttonColor, buttonBgColor, onClick, buttonTestID, rounded=true } =
     buttonProps
   return (
     <InputContainer>
@@ -43,6 +43,7 @@ const Input = ({
           bgColor={buttonBgColor}
           color={buttonColor}
           onClick={onClick}
+          rounded={rounded}
         >
           {buttonLabel}
         </InputButton>

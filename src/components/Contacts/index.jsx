@@ -18,13 +18,16 @@ const Contacts = function ({
   phoneLabel,
   withBorder,
   color = 'black',
+  titleColor = 'black',
   variant = 'v1',
 }) {
   return (
     <ContactsContainer data-testid="container" variant={variant}>
       <ContactsTitle withBorder={withBorder} variant={variant}>
-        {variant == 'v1' && <Title title={title} />}
-        {variant == 'v2' && <StyledTitle>{title}</StyledTitle>}
+        {variant == 'v1' && <Title title={title} color={titleColor}/>}
+        {variant == 'v2' && (
+          <StyledTitle titleColor={titleColor}>{title}</StyledTitle>
+        )}
       </ContactsTitle>
       <StyledPara>
         {variant == 'v2' && <StyledText>{emailLabel}</StyledText>}

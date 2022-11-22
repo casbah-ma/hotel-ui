@@ -42,6 +42,7 @@ function Footer({
   submit,
   description,
   shapes,
+  marginTop
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -76,7 +77,7 @@ function Footer({
       <FooterContainer data-testid="footer-container">
         <TopContent>
           <div>
-            <FooterLogo>
+            <FooterLogo marginTop={marginTop}>
             <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
               <Image
                 src={logo}
