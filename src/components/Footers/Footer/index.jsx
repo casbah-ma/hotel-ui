@@ -35,6 +35,9 @@ function Footer({
   logo,
   contacts,
   t,
+  buttonColor,
+  buttonBgColor,
+  rounded,
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -100,6 +103,9 @@ function Footer({
             buttonTestID: 'footer-button',
             buttonLabel: t('submit'),
             onClick: handleSubmit,
+            buttonColor: buttonColor,
+            buttonBgColor: buttonBgColor,
+            rounded: rounded,
           }}
           placeHolderColor={true}
         />
@@ -141,7 +147,7 @@ function Footer({
         <Label
           color={theme.colors.text.secondary}
           fontSize="sm"
-          labelText={`${year.getFullYear()} © Copyrighted by ${hotelName}`}
+          labelText={`${year.getFullYear()} © Copyrights by ${hotelName}`}
         />
         {(bp !== 'xs' || bp !== 'sm') && (
           <Link

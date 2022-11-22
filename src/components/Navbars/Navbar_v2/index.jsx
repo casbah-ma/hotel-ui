@@ -22,13 +22,13 @@ import {
 } from './Navbar_v2.styles'
 
 function Navbar_v2({
-  transparent = false,
+  transparent = true,
   links,
   languages,
   defaultLanguage,
   actionProps,
-  color,
-  bgColor,
+  color = 'white',
+  bgColor = '#1B95D4',
   logo,
   bookingUrl,
   t,
@@ -59,10 +59,10 @@ function Navbar_v2({
     const delta = 20
     if (scrollPosition > 100) {
       setHasBackground(true)
-      transparent ? (actionProps.border = true) : ''
+      // transparent ? (actionProps.border = true) : ''
     } else {
       setHasBackground(false)
-      actionProps.border = false
+      // actionProps.border = false
     }
 
     if (scrollDirection === 'down' && scrollPosition > delta) {
@@ -108,6 +108,7 @@ function Navbar_v2({
                     labelText={t(item.label)}
                     fontSize="sm"
                     color={color}
+                    secondary={true}
                   />
                 </Link>
               </ListItem>
@@ -123,7 +124,12 @@ function Navbar_v2({
             color={color}
           />
         </LanguageMenu>
-        <Button {...actionProps} handleClick={() => bookNow(bookingUrl)} />
+        <Button
+          {...actionProps}
+          bgColor={hasBackground && transparent ? color : bgColor}
+          color={hasBackground && transparent ? bgColor : color}
+          handleClick={() => bookNow(bookingUrl)}
+        />
       </ButtonWithLanguages>
       {!isOpen && (
         <Menu onClick={handleOpen} aria-label="hamburger menu">

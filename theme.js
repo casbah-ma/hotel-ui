@@ -31,8 +31,8 @@ export default {
     },
   },
   fontFamily: {
-    primary: [],
-    secondary: [],
-    indie: [],
+    primary: ['DAHLIA', 'serif'],
+    secondary: ['Raleway', 'sans-serif'],
+    indie: ['Indie Flower', 'cursive'],
   },
 }

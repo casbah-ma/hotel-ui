@@ -39,17 +39,19 @@ export const StyledInput = styled.input(
 )
 
 export const InputButton = styled.button(
-  ({ disabled, variant, color, bgColor, theme }) => [
+  ({ disabled, variant, color, bgColor, theme, rounded }) => [
     //base style
     `font-family: ${theme.fontFamily.secondary};`,
     tw`absolute  w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem] border border-gray-700 
     font-semibold text-sm
     rounded-full max-w-[160px] min-w-min whitespace-nowrap
     `,
+    !rounded && tw`rounded-xl`,
     //variants
-    color ? `color: ${color}` : `color: ${theme.colors.bg.primary}`,
+    color ? `color: ${color};` : `color: ${theme.colors.bg.secondary};`,
+    console.log(bgColor),
     bgColor
-      ? `background-color: ${bgColor}`
+      ? `background-color: ${bgColor} !important;`
       : `background-color: ${theme.colors.bg.primary};`,
     disabled && tw`bg-gray-100`,
   ]

@@ -17,6 +17,7 @@ export const Tag = styled.div(({ active, variant, theme }) => [
   border: 1px solid ${theme.colors.bg.primary};
   opacity: 0.8;
   `,
+  variant === 'v3' && active && `color: ${theme.colors.bg.primary};`,
 ])
 
 export const StyledIcon = tw.span`w-3.5 md:w-5 mr-5`

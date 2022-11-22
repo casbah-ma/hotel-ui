@@ -10,7 +10,7 @@ import { isEmpty } from '@/helpers/utils'
 function FilterBar({ categories, variant = 'v1', active, handleActive }) {
   return (
     <CategoriesList variant={variant}>
-      <Swiper modules={[A11y]} slidesPerView="auto" spaceBetween={32}>
+      <Swiper modules={[A11y]} slidesPerView="auto" spaceBetween={6}>
         {!isEmpty(categories) &&
           categories.map((category) => (
             <SwiperSlide key={category.type}>

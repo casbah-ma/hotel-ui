@@ -27,7 +27,7 @@ export const fontSizes = {
 }
 
 export const labelFontSizes = {
-  xs: tw`text-xs leading-[1rem] md:text-lg md:leading-6`,
+  xs: tw`text-[1rem] leading-[1rem] md:text-lg md:leading-6`,
   sm: tw`text-base leading-[1.2rem] md:text-xl md:leading-6`,
   md: tw`text-lg leading-[1.35rem] md:text-2xl md:leading-[1.8rem]`,
   lg: tw`text-xl leading-5 md:text-2xl md:leading-[1.8rem]`,
@@ -37,14 +37,14 @@ export const spacingTop = {
   none: tw`mt-0`,
   xs: tw`mt-6`,
   sm: tw`mt-6 md:mt-12`,
-  lg: tw`mt-[7.5rem] md:mt-[9.22rem]`,
+  lg: tw`lg:mt-[7.5rem] mt-[3.125rem]`,
 }
 
 export const sapcingBottom = {
   none: tw`mt-0`,
   xs: tw`mb-6`,
   sm: tw`mb-6 md:mb-12`,
-  lg: tw`mb-[7.5rem] md:mb-[9.22rem]`,
+  lg: tw`lg:mb-[7.5rem] mb-[3.125rem]`,
 }
 
 export const sapcingLeft = {

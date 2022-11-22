@@ -14,7 +14,7 @@ export const BookingMobileButton = styled.button(({ theme }) => [
   md:text-base lg:text-xl transform hover:scale-100 
   rounded-xl border-none max-w-[160px] min-w-min whitespace-nowrap`,
   `background-color: ${theme.colors.bg.primary};
-  color: ${theme.colors.text.primary};
+  color: ${theme.colors.DatesCore.bg};
   font-family: ${theme.fontFamily.secondary};
   `,
 ])
