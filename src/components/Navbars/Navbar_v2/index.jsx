@@ -7,7 +7,13 @@ import Button from '@/components/Button'
 import Dropdown from '@/components/Dropdown'
 import Modal from '@/components/Modal'
 //styles
-import { ListItem, Nav, NavbarContainer, Menu } from './Navbar_v2.styles'
+import {
+  ListItem,
+  Nav,
+  NavbarContainer,
+  Menu,
+  ImageContainer,
+} from './Navbar_v2.styles'
 //helpers
 import { isEmpty, bookNow } from '@/helpers/utils'
 import { useBreakpoint, useScrollPosition, useScrollDirection } from '@/hooks'
@@ -27,8 +33,8 @@ function Navbar_v2({
   languages,
   defaultLanguage,
   actionProps,
-  color = 'white',
-  bgColor = '#1B95D4',
+  color,
+  bgColor,
   logo,
   bookingUrl,
   t,
@@ -86,13 +92,9 @@ function Navbar_v2({
         languages={languages}
         defaultLanguage={defaultLanguage}
       >
-        <Image
-          src={logo}
-          alt="logo"
-          width={width}
-          height={bp === 'lg' ? height : 48}
-          objectFit="contain"
-        />
+        <ImageContainer width={width} height={height}>
+          <Image src={logo} alt="logo" layout="fill" objectFit="contain" />
+        </ImageContainer>
       </Link>
       <Nav>
         <LinksList>
