@@ -7,7 +7,7 @@ export const NavbarContainer = styled.div(
       pl-[0.813rem]  lg:pl-[57px] pr-[22px] py-[23px]  shadow-card rounded-3xl`,
     transparent &&
       tw`bg-transparent shadow-none w-full lg:justify-start items-center  lg:px-12
-      [&>nav]:mr-auto [&>nav]:border-l  [&>nav]:pl-[62px] [&>nav]:ml-5`,
+      [&>nav]:mr-auto [&>nav]:border-l  [&>nav]:pl-[40px] [&>nav]:ml-5`,
 
     hasBackground && tw`py-4 bg-white shadow-xl`,
     bgColor && `background-color: ${bgColor};`,
@@ -41,3 +41,8 @@ export const ButtonWithLanguages = tw.div`
 export const Menu = tw.div`
  block lg:hidden cursor-pointer w-8 
 `
+export const ImageContainer = styled.div(({ width, height }) => [
+  tw`relative`,
+  width && `width: ${width};`,
+  height && `height: ${height};`,
+])
