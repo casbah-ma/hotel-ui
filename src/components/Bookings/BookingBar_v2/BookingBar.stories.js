@@ -32,8 +32,8 @@ export default {
             buttonProps={{
               text: 'Vérifier la disponibilité',
               onClick: () => {
-                console.log('dates', dates)
-                console.log('guestValues', guestValues)
+                // console.log('dates', dates)
+                // console.log('guestValues', guestValues)
               },
             }}
             dates={dates}

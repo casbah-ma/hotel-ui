@@ -22,7 +22,7 @@ export default {
 
       // handle Dates Changes
       const onDatesChange = (dates) => {
-        console.log('dates', dates)
+        // console.log('dates', dates)
         setDates(dates)
       }
       return (
@@ -37,8 +37,8 @@ export default {
             buttonProps={{
               text: 'Check Availability',
               onClick: () => {
-                console.log('dates', dates)
-                console.log('guestValues', guestValues)
+                // console.log('dates', dates)
+                // console.log('guestValues', guestValues)
               },
             }}
             dates={dates}

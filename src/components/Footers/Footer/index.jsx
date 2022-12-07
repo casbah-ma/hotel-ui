@@ -15,6 +15,8 @@ import {
   FooterLinkWrapper,
   ContactContainer,
   InputContainer,
+  ShapesSection,
+  FooterShapes,
 } from './Footer.styles'
 import { isEmail, isEmpty } from '@/helpers/utils'
 import PropTypes from 'prop-types'
@@ -38,6 +40,8 @@ function Footer({
   buttonColor,
   buttonBgColor,
   rounded,
+  shapes,
+  newsletter = true,
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -69,6 +73,8 @@ function Footer({
   }
 
   return (
+    <ShapesSection color={color} bgColor={bgColor}>
+    <FooterShapes>{shapes}</FooterShapes>
     <FooterContainer
       data-testid="footer-container"
       color={color}
@@ -90,26 +96,28 @@ function Footer({
           <Paragraph description={t('description')} />
         </FooterText>
       )}
-      <InputContainer>
-        {/* <InputError>{inputValue.errorMessage}</InputError> */}
-        <Input
-          testID="footer-input"
-          onChange={handleInputChange}
-          placeHolder={t('placeholder')}
-          color="white"
-          error={inputValue.error}
-          withButton
-          buttonProps={{
-            buttonTestID: 'footer-button',
-            buttonLabel: t('submit'),
-            onClick: handleSubmit,
-            buttonColor: buttonColor,
-            buttonBgColor: buttonBgColor,
-            rounded: rounded,
-          }}
-          placeHolderColor={true}
-        />
-      </InputContainer>
+      {newsletter && (
+        <InputContainer>
+          {/* <InputError>{inputValue.errorMessage}</InputError> */}
+          <Input
+            testID="footer-input"
+            onChange={handleInputChange}
+            placeHolder={t('placeholder')}
+            color="white"
+            error={inputValue.error}
+            withButton
+            buttonProps={{
+              buttonTestID: 'footer-button',
+              buttonLabel: t('submit'),
+              onClick: handleSubmit,
+              buttonColor: buttonColor,
+              buttonBgColor: buttonBgColor,
+              rounded: rounded,
+            }}
+            placeHolderColor={true}
+          />
+        </InputContainer>
+      )}
       <AddressContainer>
         {Address && (
           <Label labelText={Address} color={theme.colors.text.secondary} />
@@ -164,6 +172,7 @@ function Footer({
         )}
       </FooterDividerText>
     </FooterContainer>
+    </ShapesSection>
   )
 }
 
@@ -184,6 +193,7 @@ Footer.propTypes = {
       link: PropTypes.string,
     })
   ),
+  shapes: PropTypes.element,
 }
 
 export default Footer

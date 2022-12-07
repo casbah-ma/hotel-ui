@@ -49,7 +49,6 @@ export const InputButton = styled.button(
     !rounded && tw`rounded-xl`,
     //variants
     color ? `color: ${color};` : `color: ${theme.colors.bg.secondary};`,
-    console.log(bgColor),
     bgColor
       ? `background-color: ${bgColor} !important;`
       : `background-color: ${theme.colors.bg.primary};`,

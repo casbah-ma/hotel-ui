@@ -28,7 +28,7 @@ import {
 } from './Navbar_v2.styles'
 
 function Navbar_v2({
-  transparent = true,
+  transparent = false,
   links,
   languages,
   defaultLanguage,
