@@ -128,8 +128,8 @@ function Navbar_v2({
         </LanguageMenu>
         <Button
           {...actionProps}
-          bgColor={hasBackground && transparent ? color : ''}
-          color={hasBackground && transparent ? bgColor : ''}
+          bgColor={hasBackground && transparent ? color : actionProps.bgColor}
+          color={hasBackground && transparent ? bgColor : actionProps.color}
           handleClick={() => bookNow(bookingUrl)}
         />
       </ButtonWithLanguages>
