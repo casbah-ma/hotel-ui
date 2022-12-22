@@ -25,5 +25,5 @@ Default.args = {
   },
   submit: 'Submit',
   placeholder: 'Enter an email address',
-  newsletter: false
+  newsletter: true
 }

@@ -42,7 +42,7 @@ export const InputButton = styled.button(
   ({ disabled, variant, color, bgColor, theme, rounded }) => [
     //base style
     `font-family: ${theme.fontFamily.secondary};`,
-    tw`absolute  w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem] border border-gray-700 
+    tw`absolute  w-20 md:w-[6.75rem] h-[2.375rem] right-3  md:right-6 top-[0.938rem]
     font-semibold text-sm
     rounded-full max-w-[160px] min-w-min whitespace-nowrap
     `,
