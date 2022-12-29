@@ -19,8 +19,15 @@ export const Heading = styled.h1(({ color, level, theme, withLine }) => [
       bottom: -25px;
       height: 0.6rem;
       width: 8.75rem;
+     
       background-color: ${theme.colors.bg.primary};
       border-radius: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      &:after {
+        margin-left:1rem;
+      }
     }
    `,
   //dynamic color

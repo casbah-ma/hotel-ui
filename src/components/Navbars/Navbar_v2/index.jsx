@@ -38,6 +38,7 @@ function Navbar_v2({
   logo,
   bookingUrl,
   t,
+  onClick,
   width = 0,
   height = 0,
 }) {
@@ -130,7 +131,7 @@ function Navbar_v2({
           {...actionProps}
           bgColor={hasBackground && transparent ? color : actionProps.bgColor}
           color={hasBackground && transparent ? bgColor : actionProps.color}
-          handleClick={() => bookNow(bookingUrl)}
+          handleClick={onClick ? onClick : () => bookNow(bookingUrl)}
         />
       </ButtonWithLanguages>
       {!isOpen && (

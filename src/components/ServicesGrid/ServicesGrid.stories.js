@@ -9,12 +9,11 @@ import {
   Tv,
   YogaMat,
   ChildCare,
-  Breakfast
 } from '@/components/Icons'
 import { variants } from './ServicesGrid.styles'
 
 const services = [
-  { serviceName: 'ChildCare', Icon: Breakfast },
+  { serviceName: 'ChildCare', Icon: ChildCare },
   { serviceName: 'Rainfall Shower', Icon: Shower },
   { serviceName: '4K Television', Icon: Tv },
   { serviceName: 'Check-out', Icon: CheckOut },
