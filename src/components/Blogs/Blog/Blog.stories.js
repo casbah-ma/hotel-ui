@@ -12,7 +12,7 @@ const Template = (args) => <Blog {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  title: { ...TitleStories.H2.args },
+  title: { ...TitleStories.WithLine.args },
   articles: [
     'Located in an idyllic green scenery right at the foot of Cape Malataba, the Hotel UI Tangier combines modernism and sustainable values. Uniting traditional Moroccan hospitality with the dynamism of the city of Tangier, the Hotel UI Tangier welcomes you in a unique Pop-art inspired décor.\n Live differently! Immerse yourself in the lively streets of the old medina, have a unique culinary experience worthy of La Boqueria, and most of all unwind at the pool or at the bar.',
   ],

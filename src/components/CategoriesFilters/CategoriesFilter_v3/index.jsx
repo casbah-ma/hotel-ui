@@ -52,7 +52,9 @@ function CategoriesFilter_v3({ categories, headerProps, link }) {
             item[0] === 'imageSrc' ||
             item[0] === 'subtitle' ||
             item[0] === 'href' ||
-            item[0] === 'showItems'
+            item[0] === 'showItems'||
+            item[0] === 'color'||
+            item[0] === 'name'
           )
       )
       .map((item) => ({

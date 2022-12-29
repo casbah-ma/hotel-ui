@@ -1,12 +1,15 @@
 import tw, { styled } from 'twin.macro'
 
 export const ContactsVariant = {
-  v1: tw` h-[23.75rem] flex flex-col items-center justify-center`,
-  v2: tw` h-[10.625rem] flex xs:flex-col md:flex-col lg:flex-row items-center justify-around`,
+  v1: tw` h-[23.75rem] flex flex-col items-center justify-center  gap-8`,
+  v2: tw` xs:h-[15.625rem] md:h-[10.625rem] lg:h-[10.625rem] 
+  flex xs:flex-col md:flex-col lg:flex-row items-center 
+  xs:justify-center md:justify-center lg:justify-around
+  xs:gap[1rem]  lg:gap-8`,
 }
 
 export const ContactsContainer = styled.div(({ theme, color }) => [
-  tw`w-full gap-8 `,
+  tw`w-full`,
   //variants
   ({ variant }) => ContactsVariant[variant],
   `background-color: ${theme.colors.bg.tertiary};`,

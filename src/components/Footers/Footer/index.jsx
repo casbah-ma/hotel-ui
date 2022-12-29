@@ -155,7 +155,7 @@ function Footer({
         <Label
           color={theme.colors.text.secondary}
           fontSize="sm"
-          labelText={`${year.getFullYear()} © Copyrights by ${hotelName}`}
+          labelText={`Copyrights © ${year.getFullYear()}`}
         />
         {(bp !== 'xs' || bp !== 'sm') && (
           <Link

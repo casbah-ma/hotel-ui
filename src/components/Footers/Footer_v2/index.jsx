@@ -42,7 +42,7 @@ function Footer({
   submit,
   description,
   shapes,
-  marginTop
+  marginTop,
 }) {
   const bp = useBreakpoint()
   const [year, setYear] = useState(new Date())
@@ -78,15 +78,19 @@ function Footer({
         <TopContent>
           <div>
             <FooterLogo marginTop={marginTop}>
-            <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
-              <Image
-                src={logo}
-                alt="logo"
-                width={200}
-                height={bp === 'md' || bp === 'lg' ? 200 : 100}
-                objectFit="contain"
-              />
-            </Link>
+              <Link
+                href="/"
+                languages={languages}
+                defaultLanguage={defaultLanguage}
+              >
+                <Image
+                  src={logo}
+                  alt="logo"
+                  width={200}
+                  height={bp === 'md' || bp === 'lg' ? 200 : 100}
+                  objectFit="contain"
+                />
+              </Link>
             </FooterLogo>
             <FooterText>
               <Paragraph

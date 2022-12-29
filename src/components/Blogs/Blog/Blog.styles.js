@@ -11,7 +11,7 @@ export const Container = styled.div(() => [
 ])
 
 export const Content = styled.div(({ contentIsCentred }) => [
-  tw`flex flex-col justify-between gap-4 md:gap-12`,
+  tw`flex flex-col justify-between gap-10 md:gap-12`,
   contentIsCentred && tw`justify-center`,
 ])
 
@@ -36,6 +36,6 @@ export const Article = styled.article(({ columns, rows }) => [
 ])
 
 export const Image = styled.div(({ imagePosition, varaint }) => [
-  tw`flex-shrink-0`,
+  tw`flex-shrink-0 inline-grid`,
   imagePosition === 'left' ? tw`order-last md:order-first` : tw`order-last`,
 ])

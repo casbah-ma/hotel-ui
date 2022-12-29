@@ -35,6 +35,7 @@ function Navbar({
   bgColor = 'black',
   logo,
   bookingUrl,
+  onClick,
   t,
 }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -126,7 +127,7 @@ function Navbar({
               ))}
           </List>
         </Nav>
-        <Button {...actionProps} handleClick={() => bookNow(bookingUrl)} />
+        <Button {...actionProps} handleClick={onClick ? onClick : () => bookNow(bookingUrl)} />
       </NavbarContainer>
       {!isOpen && (
         <Menu onClick={handleOpen} aria-label="hamburger menu">

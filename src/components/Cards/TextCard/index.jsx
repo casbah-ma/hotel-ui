@@ -5,10 +5,10 @@ import { Text, ImageWrapper } from './TextCard.styles'
 import Label from '@/components/Label'
 import LinkComponent from '../../LinkComponent'
 
-function TextCard({ src, variant, text, link, href, gradient = true }) {
+function TextCard({ src, variant, text, link, href, gradient = true, color }) {
   return (
     <LinkComponent href={href} {...link}>
-      <ImageWrapper gradient={gradient}>
+      <ImageWrapper gradient={gradient} color={color}>
         <ImageCard src={src} variant={variant} />
         <Text>
           <Label color="white" labelText={text} fontSize="sm" />
