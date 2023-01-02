@@ -30,7 +30,7 @@ const Unfound = function ({
   )
 }
 
-NotFound.propTypes = {
+Unfound.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   btnLabel: PropTypes.string,
