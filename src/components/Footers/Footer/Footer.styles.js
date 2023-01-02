@@ -25,11 +25,11 @@ export const FooterText = tw.div`w-[15.68rem] md:w-[40.813rem] text-center justi
 export const FooterLinks = tw.ul`text-center flex flex-wrap items-center justify-center w-72 md:w-full z-10`
 export const FooterLinkDivider = tw.div`border-solid border-2 rounded-full mx-3 md:mx-5 z-10`
 export const FooterDivider = tw.div`border-solid border w-full sm:w-[19.37rem] md:w-[85vw] lg:w-[90vw] mt-3 rounded-full z-10 xs:mb-3`
-export const FooterDividerText = tw.div`p-0 w-[16rem] sm:w-[19.37rem] md:w-[85vw] lg:w-[90vw] flex items-center justify-between text-xs -mt-5 xs:flex-col md:flex-row z-10`
+export const FooterDividerText = tw.div`p-0 w-[16rem] sm:w-[19.37rem] md:w-[85vw] lg:w-[90vw] flex items-center justify-between text-xs -mt-5 xs:flex-col md:flex-row z-10 xs:gap-[0.8rem]`
 
 export const FooterLinkWrapper = tw.li`flex justify-center items-center z-10`
 export const FooterLink = tw.div`text-center cursor-pointer mx-auto z-10`
-export const Signature = tw.img`lg:w-[6rem] xs:w-[4rem]`
+export const Signature = tw.img`lg:w-[2.5rem] xs:w-[2rem]`
 
 
 export const ShapesSection = styled.section(({ color, bgColor, theme }) => [

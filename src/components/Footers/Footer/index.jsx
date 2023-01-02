@@ -165,7 +165,7 @@ function Footer({
 
           <a href="https://www.upoui.com" target="_blank">
             <Signature
-              src="https://res.cloudinary.com/casbah/image/upload/v1672395192/UPoui_White_Favicon_n8skih.svg"
+              src="https://res.cloudinary.com/casbah/image/upload/v1672655541/UPoui_White_Favicon-cropped_syv3tt.svg"
               alt="signature"
             />
           </a>
