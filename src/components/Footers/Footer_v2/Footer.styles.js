@@ -6,13 +6,13 @@ export const FooterContainer = styled.footer(({ color, bgColor, theme }) => [
  h-full lg:h-[38.25rem]
  px-[1rem] py-[2rem]
  md:px-[1.438rem] md:py-[2.938rem] 
- lg:px-[6.5rem] lg:py-[5.25rem]
+ lg:px-[6.5rem] lg:pt-[5.25rem] lg:pb-[2.25rem]
  flex flex-col items-center
  justify-between z-50
 `,
 ])
 
-export const TopContent = tw.div`w-full pb-[3.938rem] flex 
+export const TopContent = tw.div`w-full lg:pb-[3.938rem] xs:pb-[1.938rem] flex 
 xs:flex-col md:flex-row md:flex-wrap lg:flex-row 
 justify-between z-10`
 
@@ -20,7 +20,7 @@ export const FooterLogo = styled.div(({ marginTop }) => [
   tw`flex flex-col items-center justify-center w-[14rem]  z-10 cursor-pointer sm:mt-[1rem] md:mt-[-3.25rem]`,
   marginTop && `margin-top: ${marginTop} !important;`,
 ])
-export const FooterText = tw.div`w-full lg:w-[20.25rem] md:pt-0 xs:pt-[4.188rem] z-10`
+export const FooterText = tw.div`w-full lg:w-[20.25rem] z-10`
 export const BottomContent = tw.div`w-full z-10`
 export const FooterLinks = tw.div`w-full [&>div]:mt-[1.938rem] z-10`
 export const FooterLink = tw.div`w-full mb-4 z-10`
@@ -49,8 +49,8 @@ export const FooterDivider = styled.div(({ theme }) => [
   `border-color: ${theme.colors.border.transparent};`,
 ])
 
-export const FooterDividerText = tw.div`z-10 w-full flex items-center justify-between pt-[1.5rem] xs:flex-col md:flex-row`
-export const Signature = tw.img`lg:w-[6rem] xs:w-[4rem]`
+export const FooterDividerText = tw.div`z-10 w-full flex items-center justify-between pt-[1.5rem] xs:flex-col md:flex-row xs:gap-[0.8rem]`
+export const Signature = tw.img`lg:w-[2.5rem] xs:w-[2rem]`
 
 export const ShapesSection = styled.section(({ color, bgColor, theme }) => [
   tw`w-full h-full relative bg-red-400`,

@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 export const ContactsV2Container = styled.div(({ theme, color }) => [
-    tw` w-full xs:h-[15.625rem] md:h-[10.625rem] lg:h-[17.375rem] 
+    tw` w-full xs:h-[15.625rem] md:h-[10.625rem] lg:h-[14.375rem] 
     flex xs:flex-col md:flex-row lg:flex-row  
     xs:justify-center md:justify-center lg:justify-around
     xs:gap[1rem] md:gap-[4rem] lg:gap-8 xs:items-center`,
@@ -11,8 +11,8 @@ export const ContactsV2Container = styled.div(({ theme, color }) => [
   ,
 ])
 
-export const StyledPara = tw.div`flex flex-col`
-export const StyledCol = tw.div`flex flex-col justify-center`
+export const StyledPara = tw.div`flex flex-col xs:items-center md:items-start lg:items-start`
+export const StyledCol = tw.div`flex flex-col justify-center lg:gap-[1.5rem]`
 
 
 export const StyledText = styled.div(({ theme }) => [
@@ -26,6 +26,6 @@ export const ContactsTitle = styled.div(({ theme }) => [
 
 export const StyledTitle = styled.div(({ theme, titleColor }) => [
   `font-family: ${theme.fontFamily.secondary};`,
-  tw`lg:text-[3.25rem] font-bold  leading-[3.9rem] lg:mt-[3.813rem] md:mt-2 xs:mt-0 xs:text-[2rem]`,
+  tw`lg:text-[3.25rem] font-bold  leading-[3.9rem] lg:mt-[1.813rem] md:mt-2 xs:mt-0 xs:text-[2rem]`,
   titleColor && `color: ${titleColor};`,
 ])
