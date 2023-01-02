@@ -19,6 +19,7 @@ import {
   IconLabel,
   FooterShapes,
   ShapesSection,
+  Signature,
 } from './Footer.styles'
 import { isEmpty, isEmail } from '@/helpers/utils'
 import PropTypes from 'prop-types'
@@ -197,6 +198,12 @@ function Footer({
                 textTransform="uppercase"
               />
             </Link>
+            <a href="https://www.upoui.com" target="_blank">
+              <Signature
+                src="https://res.cloudinary.com/casbah/image/upload/v1672395192/UPoui_White_Favicon_n8skih.svg"
+                alt="signature"
+              />
+            </a>
             <Label
               fontSize="xs"
               labelText={`Copyrights © ${year.getFullYear()}`}

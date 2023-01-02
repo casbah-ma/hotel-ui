@@ -27,7 +27,7 @@ export const HeroImage = styled.div(({ gradient, theme }) => [
 ])
 
 export const HeroInfo = styled.div(({ position }) => [
-  tw`w-full absolute lg:top-[9.188rem] md:top-[14.563rem] xs:top-[15.188rem] 2xl:top-[20rem] text-center z-20
+  tw`w-full absolute lg:top-[11.188rem] md:top-[14.563rem] xs:top-[15.188rem] 2xl:top-[20rem] text-center z-20
   flex flex-col justify-center items-center gap-4`,
   position === 'start' &&
     tw`items-start justify-start pl-3 sm:pl-8 md:pl-[5.5rem] lg:pl-[12.5rem] 2xl:pl-[20rem]  md:top-[10.438rem] lg:top-[14.313rem] 2xl:top-[20rem] gap-2`,
@@ -55,7 +55,7 @@ export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
 export const HeroSubtitle = styled.div(({ position }) => [
   tw`w-full h-full flex justify-center items-start`,
   position === 'start' &&
-    tw`justify-center md:justify-end md:pr-8 lg:pr-[11.188rem]  mb-20 `,
+    tw`justify-end md:pr-8 pr-4 lg:pr-[11.188rem]  mb-20 `,
 ])
 
 export const HeroAction = styled.div(({ position }) => [

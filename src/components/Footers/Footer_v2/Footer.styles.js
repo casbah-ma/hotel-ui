@@ -49,7 +49,8 @@ export const FooterDivider = styled.div(({ theme }) => [
   `border-color: ${theme.colors.border.transparent};`,
 ])
 
-export const FooterDividerText = tw.div`z-10 w-full flex items-center justify-between pt-[1.5rem]`
+export const FooterDividerText = tw.div`z-10 w-full flex items-center justify-between pt-[1.5rem] xs:flex-col md:flex-row`
+export const Signature = tw.img`lg:w-[6rem] xs:w-[4rem]`
 
 export const ShapesSection = styled.section(({ color, bgColor, theme }) => [
   tw`w-full h-full relative bg-red-400`,

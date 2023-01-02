@@ -1,8 +1,17 @@
 import Paragraph from '@/components/Paragraph'
-import { ContactsV2Container, StyledCol, StyledPara, StyledText } from './ContactsV2.styles'
+import {
+  ContactsTitle,
+  ContactsV2Container,
+  StyledCol,
+  StyledPara,
+  StyledText,
+  StyledTitle,
+} from './ContactsV2.styles'
 import PropTypes from 'prop-types'
 
 const ContactsV2 = function ({
+  title,
+  titleColor = 'black',
   email,
   emailLabel,
   phone,
@@ -15,6 +24,9 @@ const ContactsV2 = function ({
 }) {
   return (
     <ContactsV2Container data-testid="container">
+      <ContactsTitle>
+        <StyledTitle titleColor={titleColor}>{title}</StyledTitle>
+      </ContactsTitle>
       <StyledCol>
         <StyledPara>
           <StyledText>{emailLabel}</StyledText>

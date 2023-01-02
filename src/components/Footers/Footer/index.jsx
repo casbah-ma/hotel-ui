@@ -17,6 +17,7 @@ import {
   InputContainer,
   ShapesSection,
   FooterShapes,
+  Signature,
 } from './Footer.styles'
 import { isEmail, isEmpty } from '@/helpers/utils'
 import PropTypes from 'prop-types'
@@ -74,104 +75,116 @@ function Footer({
 
   return (
     <ShapesSection color={color} bgColor={bgColor}>
-    <FooterShapes>{shapes}</FooterShapes>
-    <FooterContainer
-      data-testid="footer-container"
-      color={color}
-      bgColor={bgColor}
-    >
-      <FooterLogo>
-        <Link href="/" languages={languages} defaultLanguage={defaultLanguage}>
-          <Image
-            src={logo}
-            width={200}
-            height={bp === 'md' || bp === 'lg' ? 200 : 100}
-            objectFit="contain"
-            alt="logo"
-          />
-        </Link>
-      </FooterLogo>
-      {description && (
-        <FooterText>
-          <Paragraph description={t('description')} />
-        </FooterText>
-      )}
-      {newsletter && (
-        <InputContainer>
-          {/* <InputError>{inputValue.errorMessage}</InputError> */}
-          <Input
-            testID="footer-input"
-            onChange={handleInputChange}
-            placeHolder={t('placeholder')}
-            color="white"
-            error={inputValue.error}
-            withButton
-            buttonProps={{
-              buttonTestID: 'footer-button',
-              buttonLabel: t('submit'),
-              onClick: handleSubmit,
-              buttonColor: buttonColor,
-              buttonBgColor: buttonBgColor,
-              rounded: rounded,
-            }}
-            placeHolderColor={true}
-          />
-        </InputContainer>
-      )}
-      <AddressContainer>
-        {Address && (
-          <Label labelText={Address} color={theme.colors.text.secondary} />
-        )}
-        {(contacts?.phone || contacts?.email) && (
-          <ContactContainer>
-            <Paragraph description={`Tel: ${contacts?.phone}`} />
-            <Paragraph description={`Email: ${contacts?.email}`} />
-          </ContactContainer>
-        )}
-      </AddressContainer>
-      <FooterLinks data-testid="links">
-        {!isEmpty(links) &&
-          links.map((item, index) => (
-            <FooterLinkWrapper key={index}>
-              <FooterLink>
-                <Link
-                  href={item.link}
-                  languages={languages}
-                  defaultLanguage={defaultLanguage}
-                >
-                  <Label
-                    color={theme.colors.text.secondary}
-                    fontSize="sm"
-                    labelText={t(item.label)}
-                  />
-                </Link>
-              </FooterLink>
-              {index < links.length - 1 && <FooterLinkDivider />}
-            </FooterLinkWrapper>
-          ))}
-      </FooterLinks>
-      <FooterDivider />
-      <FooterDividerText data-testid="copyright">
-        <Label
-          color={theme.colors.text.secondary}
-          fontSize="sm"
-          labelText={`Copyrights © ${year.getFullYear()}`}
-        />
-        {(bp !== 'xs' || bp !== 'sm') && (
+      <FooterShapes>{shapes}</FooterShapes>
+      <FooterContainer
+        data-testid="footer-container"
+        color={color}
+        bgColor={bgColor}
+      >
+        <FooterLogo>
           <Link
-            href="/policies"
+            href="/"
             languages={languages}
             defaultLanguage={defaultLanguage}
           >
-            <Label
-              color={theme.colors.text.secondary}
-              fontSize="sm"
-              labelText="Terms & Conditions"
+            <Image
+              src={logo}
+              width={200}
+              height={bp === 'md' || bp === 'lg' ? 200 : 100}
+              objectFit="contain"
+              alt="logo"
             />
           </Link>
+        </FooterLogo>
+        {description && (
+          <FooterText>
+            <Paragraph description={t('description')} />
+          </FooterText>
         )}
-      </FooterDividerText>
-    </FooterContainer>
+        {newsletter && (
+          <InputContainer>
+            {/* <InputError>{inputValue.errorMessage}</InputError> */}
+            <Input
+              testID="footer-input"
+              onChange={handleInputChange}
+              placeHolder={t('placeholder')}
+              color="white"
+              error={inputValue.error}
+              withButton
+              buttonProps={{
+                buttonTestID: 'footer-button',
+                buttonLabel: t('submit'),
+                onClick: handleSubmit,
+                buttonColor: buttonColor,
+                buttonBgColor: buttonBgColor,
+                rounded: rounded,
+              }}
+              placeHolderColor={true}
+            />
+          </InputContainer>
+        )}
+        <AddressContainer>
+          {Address && (
+            <Label labelText={Address} color={theme.colors.text.secondary} />
+          )}
+          {(contacts?.phone || contacts?.email) && (
+            <ContactContainer>
+              <Paragraph description={`Tel: ${contacts?.phone}`} />
+              <Paragraph description={`Email: ${contacts?.email}`} />
+            </ContactContainer>
+          )}
+        </AddressContainer>
+        <FooterLinks data-testid="links">
+          {!isEmpty(links) &&
+            links.map((item, index) => (
+              <FooterLinkWrapper key={index}>
+                <FooterLink>
+                  <Link
+                    href={item.link}
+                    languages={languages}
+                    defaultLanguage={defaultLanguage}
+                  >
+                    <Label
+                      color={theme.colors.text.secondary}
+                      fontSize="sm"
+                      labelText={t(item.label)}
+                    />
+                  </Link>
+                </FooterLink>
+                {index < links.length - 1 && <FooterLinkDivider />}
+              </FooterLinkWrapper>
+            ))}
+        </FooterLinks>
+        <FooterDivider />
+        <FooterDividerText data-testid="copyright">
+          <Label
+            color={theme.colors.text.secondary}
+            fontSize="sm"
+            labelText={`Copyrights © ${year.getFullYear()}`}
+          />
+
+          <a href="https://www.upoui.com" target="_blank">
+            <Signature
+              src="https://res.cloudinary.com/casbah/image/upload/v1672395192/UPoui_White_Favicon_n8skih.svg"
+              alt="signature"
+            />
+          </a>
+
+          {(bp !== 'xs' || bp !== 'sm') && (
+            <Link
+              href="/policies"
+              languages={languages}
+              defaultLanguage={defaultLanguage}
+            >
+              <Label
+                color={theme.colors.text.secondary}
+                fontSize="sm"
+                labelText="Terms & Conditions"
+              />
+            </Link>
+          )}
+        </FooterDividerText>
+      </FooterContainer>
     </ShapesSection>
   )
 }
