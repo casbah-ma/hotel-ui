@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { NotFound2, NotFoundVector } from '../Icons'
 import Button from '../Button'
 
-const NotFound = function ({
+const Unfound = function ({
   title,
   text,
   btnLabel,
@@ -36,4 +36,4 @@ NotFound.propTypes = {
   btnLabel: PropTypes.string,
 }
 
-export default NotFound
+export default Unfound
