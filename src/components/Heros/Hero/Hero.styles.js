@@ -55,7 +55,7 @@ export const HeroTitle = styled.div(({ position, withBorder, theme }) => [
 export const HeroSubtitle = styled.div(({ position }) => [
   tw`w-full h-full flex justify-center items-start`,
   position === 'start' &&
-    tw`justify-center md:justify-end md:pr-8 lg:pr-[11.188rem]  mb-20 `,
+    tw`justify-end md:pr-8 pr-4 lg:pr-[11.188rem]  mb-20 `,
 ])
 
 export const HeroAction = styled.div(({ position }) => [
