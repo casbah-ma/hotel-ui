@@ -41,7 +41,7 @@ const ContactUs = function ({ formInputs, onChange, onClick}) {
         bgColor={bgColor}
         color={color}
         label={t("buttonLabel")}
-        onClick={onClick}
+        handleClick={onClick}
         variant="primary"
       />
     </ContactusContainer>

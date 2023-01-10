@@ -4,6 +4,7 @@ import {
   ContactsV2Container,
   StyledCol,
   StyledPara,
+  StyledParagraph,
   StyledText,
   StyledTitle,
 } from './ContactsV2.styles'
@@ -30,21 +31,21 @@ const ContactsV2 = function ({
       <StyledCol>
         <StyledPara>
           <StyledText>{emailLabel}</StyledText>
-          <Paragraph color={color} description={email} />
+          <StyledParagraph color={color}>{email}</StyledParagraph>
         </StyledPara>
         <StyledPara>
           <StyledText>{adresseLabel}</StyledText>
-          <Paragraph color={color} description={adresse} />
+          <StyledParagraph color={color}>{adresse}</StyledParagraph>
         </StyledPara>
       </StyledCol>
       <StyledCol>
         <StyledPara>
           <StyledText>{phoneLabel}</StyledText>
-          <Paragraph color={color} description={phone} />
+          <StyledParagraph color={color}>{phone}</StyledParagraph>
         </StyledPara>
         <StyledPara>
           <StyledText>{faxLabel}</StyledText>
-          <Paragraph color={color} description={fax} />
+          <StyledParagraph color={color}>{fax}</StyledParagraph>
         </StyledPara>
       </StyledCol>
     </ContactsV2Container>

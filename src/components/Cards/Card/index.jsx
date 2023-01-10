@@ -69,9 +69,9 @@ const Card = function ({ size, linkCard, image, direction }) {
             </CardLink>
           </CardAction>
         )}
-        <CardDate>
+        {/* <CardDate>
           <Label labelText="Posted in 20 March 2022" />
-        </CardDate>
+        </CardDate> */}
       </StyledCard>
     </LinkComponent>
   )
