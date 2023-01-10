@@ -61,7 +61,7 @@ const Form_v2 = function ({ formInputs, onChange, onClick }) {
           bgColor={color}
           color="#fff"
           label={t("buttonLabel")}
-          onClick={onClick}
+          handleClick={onClick}
           variant="secondary"
         />
       </StyledButton>
